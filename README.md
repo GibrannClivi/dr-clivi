@@ -1,192 +1,375 @@
-# Dr. Clivi - Multi-Agent Healthcare Assistant
+# 🏥 Dr. Clivi - Asistente Médico Multi-Agente
 
 ![Python](https://img.shields.io/badge/python-v3.11+-blue.svg)
-![ADK](https://img.shields.io/badge/ADK-v1.0.0-green.svg)
+![ADK](https://img.shields.io/badge/ADK-Ready-green.svg)
+![WhatsApp](https://img.shields.io/badge/WhatsApp-Business%20API-25D366.svg)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
-## Overview
+## 📋 Resumen
 
-Dr. Clivi is a sophisticated multi-agent healthcare assistant built with Google's Agent Development Kit (ADK). Originally migrated from Dialogflow CX, this system provides specialized support for diabetes and obesity management via WhatsApp.
+Dr. Clivi es un sistema avanzado de asistencia médica multi-agente construido para migrar desde Google Cloud Conversational Agents (ex-Dialogflow CX) a Google ADK (Agent Development Kit). El sistema proporciona atención especializada para diabetes y obesidad a través de WhatsApp, usando agentes especializados con inteligencia artificial.
 
-### Key Features
+### 🚀 Características Principales
 
-- 🤖 **Multi-Agent Architecture**: Specialized agents for diabetes and obesity flows
-- 🔄 **A2A Protocol**: Agent-to-agent communication for complex workflows  
-- 📱 **WhatsApp Integration**: Native messaging support via Twilio
-- 🏥 **Healthcare Focused**: Evidence-based medical guidance and support
-- ☁️ **Vertex AI Ready**: Optimized for deployment on Google Cloud
-- 🔒 **HIPAA Considerations**: Privacy and security-first design
+- 🤖 **Arquitectura Multi-Agente**: Agentes especializados para diabetes y obesidad
+- 🔄 **Protocolo A2A**: Comunicación entre agentes para flujos complejos  
+- 📱 **Integración WhatsApp**: Soporte nativo via WhatsApp Business API
+- 🏥 **Enfoque Médico**: Guías basadas en evidencia médica y soporte profesional
+- ☁️ **Vertex AI Ready**: Optimizado para despliegue en Google Cloud
+- 🔒 **Privacidad Médica**: Diseño que considera estándares de privacidad sanitaria
+- 📊 **Analytics Avanzado**: Seguimiento de actividad y métricas de uso
 
-### Architecture
+### 🏗️ Arquitectura del Sistema
 
 ```
-Dr. Clivi System
-├── Coordinator Agent (Main Router)
-├── Diabetes Flow Agent (Glucose management, education)
-├── Obesity Flow Agent (Weight management, nutrition)
-└── Integration Layer (WhatsApp, Clivi API, A2A)
+Sistema Dr. Clivi
+├── 🎯 DrCliviCoordinator (Enrutador Principal)
+│   ├── Validación de plan de usuario
+│   ├── Enrutamiento inteligente por especialidad
+│   └── Manejo de usuarios desconocidos
+│
+├── 🩺 DiabetesAgent (Especialista en Diabetes)
+│   ├── Registro de glucosa (ayunas/postprandial)
+│   ├── Tutoriales de medicamentos GLP-1
+│   ├── Citas con endocrinología
+│   └── Reportes de mediciones
+│
+├── ⚖️ ObesityAgent (Especialista en Obesidad)
+│   ├── Categorías de ejercicio personalizadas
+│   ├── Línea directa nutricional
+│   ├── Seguimiento de peso y medidas
+│   └── Medicina deportiva
+│
+└── 🔧 Capa de Integración
+    ├── WhatsApp Business API
+    ├── n8n Webhooks
+    ├── Clivi API
+    └── Vertex AI
 ```
 
-## Quick Start
+## 🚀 Inicio Rápido
 
-### Prerequisites
+### 📋 Prerrequisitos
 
 - Python 3.11+
-- Google Cloud Project with Vertex AI enabled
-- Poetry for dependency management
-- Twilio account for WhatsApp (optional for development)
+- Proyecto de Google Cloud con Vertex AI habilitado
+- Poetry para gestión de dependencias
+- Cuenta de WhatsApp Business (opcional para desarrollo)
 
-### Installation
+### 💻 Instalación
 
-1. **Clone the repository**
+1. **Clonar el repositorio**
    ```bash
    git clone https://github.com/GibrannClivi/dr-clivi.git
    cd dr-clivi
    ```
 
-2. **Set up the environment**
+2. **Configurar el entorno**
    ```bash
-   cd drClivi
    poetry install
    ```
 
-3. **Configure environment variables**
+3. **Configurar variables de entorno**
    ```bash
    cp .env.example .env
-   # Edit .env with your credentials
+   # Editar .env con tus credenciales
    ```
 
-4. **Run the agent**
+4. **Ejecutar pruebas**
    ```bash
-   poetry run adk run .
+   poetry run python test_agents.py
    ```
 
-### Environment Configuration
+### ⚙️ Configuración de Entorno
 
-Copy `.env.example` to `.env` and configure:
+Copia `.env.example` a `.env` y configura:
 
 ```bash
 # Google Cloud
-GOOGLE_CLOUD_PROJECT=your-project-id
+GOOGLE_CLOUD_PROJECT=tu-proyecto-id
 GOOGLE_CLOUD_LOCATION=us-central1
+GOOGLE_CLOUD_STORAGE_BUCKET=tu-bucket
 
-# WhatsApp (Twilio)
-TWILIO_ACCOUNT_SID=your-account-sid
-TWILIO_AUTH_TOKEN=your-auth-token
+# WhatsApp Business API
+WHATSAPP_BUSINESS_API_URL=https://graph.facebook.com/v17.0
+WHATSAPP_BUSINESS_TOKEN=tu-token
+WHATSAPP_PHONE_ID=tu-phone-id
 
 # Clivi API
-CLIVI_API_BASE_URL=your-api-url
-CLIVI_API_KEY=your-api-key
+CLIVI_API_BASE_URL=https://api.clivi.com.mx
+CLIVI_API_KEY=tu-api-key
+CLIVI_N8N_WEBHOOK_BASE=https://n8n.clivi.com.mx/webhook
+
+# A2A Protocol
+A2A_REGISTRY_URL=https://registry.a2a.ai
+A2A_AGENT_ID=dr-clivi-coordinator
+A2A_SECRET_KEY=tu-secret-key
+
+# Configuración de Flows
+SESSION_TIMEOUT_MINUTES=30
+NO_INPUT_TIMEOUT_SECONDS=300
+ACTIVITY_LOGGING_ENABLED=true
 ```
 
-## Project Structure
+## � Estructura del Proyecto
 
 ```
-drClivi/
-├── dr_clivi/
+dr-clivi/
+├── dr_clivi/                    # Código principal
 │   ├── __init__.py
-│   ├── agent.py              # Main coordinator agent
-│   ├── config.py             # Configuration management
-│   ├── prompts.py            # Agent instructions and prompts
-│   ├── agents/               # Specialized agent implementations
-│   ├── flows/                # Diabetes and obesity flows  
-│   ├── tools/                # Custom tools and integrations
-│   └── integrations/         # External service integrations
-├── tests/                    # Unit and integration tests
-├── eval/                     # Agent evaluation scripts
-├── deployment/               # Deployment configurations
-├── pyproject.toml           # Dependencies and project config
+│   ├── config.py               # Configuración con Pydantic
+│   ├── agents/                 # Implementación de agentes
+│   │   ├── base_agent.py       # Clase base común
+│   │   ├── coordinator.py      # Coordinador principal
+│   │   ├── diabetes_agent.py   # Agente de diabetes
+│   │   └── obesity_agent.py    # Agente de obesidad
+│   └── tools/                  # Herramientas especializadas
+│       ├── messaging.py        # WhatsApp Business API
+│       ├── image_processing.py # Procesamiento de imágenes
+│       └── generative_ai.py    # IA generativa fallback
+├── docs/                       # Documentación
+│   ├── analysis/              # Análisis de flujos exportados
+│   ├── conversational-agents-export/  # Archivos exportados
+│   └── implementation-summary.md      # Resumen ejecutivo
+├── test_agents.py             # Suite de pruebas completa
+├── pyproject.toml            # Configuración del proyecto
 └── README.md
 ```
 
-## Features by Flow
+## 🏥 Funcionalidades por Especialidad
 
-### Diabetes Management
-- 📊 Glucose monitoring and trend analysis
-- 💊 Medication reminders and information
-- 🍎 Diabetic nutrition guidance
-- ⚠️ Hypoglycemia/hyperglycemia alerts
-- 📚 Diabetes education and support
+### 🩺 Gestión de Diabetes (`DiabetesAgent`)
 
-### Obesity Management  
-- 📏 BMI calculation and tracking
-- 🥗 Personalized nutrition plans
-- 🏃‍♀️ Exercise recommendations
-- 📈 Weight loss progress monitoring
-- 🧠 Behavioral change support
+- **📊 Monitoreo de Glucosa**
+  - Registro de glucosa en ayunas y postprandial
+  - Validación médica de rangos seguros (30-600 mg/dL)
+  - Análisis de tendencias y retroalimentación personalizada
+  - Recomendaciones basadas en historial del paciente
 
-## Deployment
+- **💊 Medicamentos GLP-1**
+  - Tutoriales para Ozempic, Saxenda, Wegovy
+  - Instrucciones de aplicación paso a paso
+  - Videos y guías descargables
 
-### Local Development
-```bash
-poetry run adk run .
+- **📈 Reportes y Análisis**
+  - Reportes semanales/mensuales de glucosa
+  - Estadísticas de control glucémico
+  - Exportación en PDF y Excel
+
+- **👩‍⚕️ Citas Médicas**
+  - Agendamiento con endocrinólogos
+  - Recordatorios de citas
+  - Reagendamiento automático
+
+### ⚖️ Gestión de Obesidad (`ObesityAgent`)
+
+- **💪 Programas de Ejercicio**
+  - Categorías: Cardio, Fuerza, Flexibilidad, HIIT, Bajo Impacto
+  - Niveles: Principiante, Intermedio, Avanzado
+  - Planes personalizados con duración e intensidad
+  - Seguimiento de progreso y motivación
+
+- **🥗 Línea Directa Nutricional**
+  - Consultas en tiempo real con especialistas
+  - Tipos: Plan alimentario, Control de porciones, Dietas especiales
+  - Verificación de disponibilidad de especialistas
+  - Alternativas con IA cuando no hay especialistas
+
+- **� Seguimiento Corporal**
+  - Registro de peso con validación por foto de báscula
+  - Medidas corporales (cintura, cadera, cuello)
+  - Análisis de tendencias de peso
+  - Celebración de logros
+
+- **🏃‍♀️ Medicina Deportiva**
+  - Citas con especialistas en medicina deportiva
+  - Evaluaciones de condición física
+  - Planes de actividad personalizados
+
+## 🔄 Flujos de Conversación Implementados
+
+### Enrutamiento Principal (`checkPlanStatus`)
+```
+Usuario → Coordinador → Verificación de Plan
+├── PRO/PLUS/BASIC + ACTIVO → Agente Especializado
+├── CLUB + ACTIVO/SUSPENDIDO → Flujo Club
+├── CLUB + CANCELADO → Reactivación Club
+├── Cualquier + CANCELADO → Reactivación Plan
+└── DESCONOCIDO → Flujo Problemas Usuario
 ```
 
-### Vertex AI Agent Engine
+### Menús Principales (SESSION_LIST)
+- **Diabetes**: Citas, Mediciones, Reportes, Medicamentos, Suministros
+- **Obesidad**: Citas, Peso, Medidas, Ejercicio, Nutrición, Progreso
+
+### Manejo de Errores
+- **No Match**: Enrutamiento a MASTER_AGENT (IA generativa)
+- **No Input**: Timeout automático con resumen de sesión
+- **Valores Críticos**: Alertas médicas y redirección a urgencias
+
+## 🧪 Testing y Validación
+
+### Ejecutar Suite de Pruebas
 ```bash
-poetry run python deployment/deploy.py
+poetry run python test_agents.py
 ```
 
-### Docker/Cloud Run
+**Incluye testing de**:
+- ✅ Enrutamiento del coordinador por plan
+- ✅ Flujos completos de diabetes (registro glucosa)
+- ✅ Flujos completos de obesidad (ejercicio, nutrición)
+- ✅ Manejo de errores y fallbacks
+- ✅ Herramientas de mensajería WhatsApp
+- ✅ Validaciones médicas críticas
+
+### Casos de Prueba Específicos
+```python
+# Usuario PRO con diabetes activo
+await test_diabetes_glucose_flow()
+
+# Usuario PLUS con obesidad - programa ejercicio
+await test_obesity_workout_signup()
+
+# Usuario CLUB cancelado - reactivación
+await test_club_plan_reactivation()
+
+# Valores críticos - alertas médicas
+await test_critical_glucose_values()
+```
+
+## 🚀 Despliegue
+
+### 🖥️ Desarrollo Local
 ```bash
+# Ejecutar agentes en modo simulación
+poetry run python test_agents.py
+
+# Ejecutar con configuración específica
+LOG_LEVEL=DEBUG poetry run python test_agents.py
+```
+
+### ☁️ Vertex AI Agent Engine
+```bash
+# Preparar para despliegue (cuando ADK esté disponible)
+# El código está estructurado para migración directa
+
+# Configurar credenciales
+gcloud auth application-default login
+
+# Desplegar agentes
+# poetry run adk deploy --project tu-proyecto --region us-central1
+```
+
+### 🐳 Docker/Cloud Run
+```bash
+# Construir imagen
 docker build -t dr-clivi .
-gcloud run deploy dr-clivi --image dr-clivi
+
+# Desplegar en Cloud Run
+gcloud run deploy dr-clivi \
+  --image dr-clivi \
+  --platform managed \
+  --region us-central1 \
+  --allow-unauthenticated
 ```
 
-## Development
+## 📊 Migración desde Conversational Agents
 
-### Running Tests
-```bash
-poetry run pytest
-```
+Este proyecto representa una migración completa desde Google Cloud Conversational Agents (ex-Dialogflow CX) a ADK:
 
-### Code Formatting
-```bash
-poetry run black dr_clivi/
-```
+### 🔄 Proceso de Migración Realizado
 
-### Evaluation
-```bash
-poetry run python eval/run_evaluation.py
-```
+1. **✅ Exportación de Flujos**: Análisis de archivos ZIP exportados
+2. **✅ Mapeo de Intents**: Conversión de intents a herramientas ADK  
+3. **✅ Análisis de Entities**: Migración a validaciones Python
+4. **✅ Conversión de Webhooks**: Integración con n8n y APIs
+5. **✅ Recreación de Flows**: Lógica de flujos en agentes especializados
 
-## Migration from Dialogflow CX
+### 📈 Beneficios de la Migración
 
-This project represents a migration from Dialogflow CX to ADK for enhanced:
-- **Flexibility**: Custom agent logic vs. rigid flow structures
-- **Intelligence**: Gemini 2.5 native integration
-- **Scalability**: Modular architecture and version control
-- **Integration**: Native Google Cloud and A2A support
+| Aspecto | Conversational Agents | ADK Multi-Agente |
+|---------|----------------------|------------------|
+| **Flexibilidad** | Flujos rígidos visuales | Código Python flexible |
+| **Inteligencia** | LLM limitado | Gemini 2.5 nativo |
+| **Escalabilidad** | Monolítico | Arquitectura modular |
+| **Versionado** | UI manual | Git + CI/CD |
+| **Testing** | Manual en consola | Suite automatizada |
+| **Mantenimiento** | UI dispersa | Código centralizado |
 
-See [MIGRATION.md](MIGRATION.md) for detailed migration strategy.
+### 🗂️ Documentación de Análisis
 
-## Security & Privacy
+Ver carpeta `docs/analysis/` para:
+- `agent-config-analysis.md`: Configuración de agentes
+- `intents-entities-tools-analysis.md`: Mapeo de intents y entities
+- `flows-analysis.md`: Análisis detallado de flujos
+- `executive-summary.md`: Resumen ejecutivo
 
-- 🔐 Environment-based secret management
-- 🛡️ HIPAA-compliant data handling considerations
-- 🔒 Secure API authentication
-- 📋 Audit logging and monitoring
-- 🚫 No PII in code or logs
+## 🔐 Seguridad y Privacidad
 
-## Contributing
+- 🔐 **Gestión de Secretos**: Variables de entorno para credenciales
+- 🛡️ **Datos Médicos**: Consideraciones de privacidad sanitaria
+- 🔒 **Autenticación API**: Tokens seguros para todas las integraciones
+- 📋 **Auditoría**: Logging completo de actividad sin PII
+- 🚫 **Sin PII en Código**: Datos sensibles solo en variables de entorno
+- ⚠️ **Validaciones Médicas**: Rangos seguros para mediciones críticas
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## 📈 Analytics y Monitoreo
 
-## License
+### Eventos de Actividad Rastreados
+- `PLAN_STATUS_CHECK_STARTED`: Inicio de verificación de plan
+- `GLUCOSE_MEASUREMENT_RECORDED`: Registro de glucosa
+- `WORKOUT_SIGNUP_COMPLETED`: Inscripción a ejercicio
+- `NUTRITION_SPECIALIST_CONNECTED`: Conexión con nutricionista
+- `SESSION_ENDED`: Fin de sesión con resumen
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+### Métricas Disponibles
+- Distribución de usuarios por plan
+- Flujos más utilizados por agente
+- Tiempo promedio de sesión
+- Tasas de finalización de flujos
+- Intervenciones médicas críticas
 
-## Support
+## 🤝 Contribución
 
-For questions or issues:
-- 📧 Email: dev@clivi.com
+1. Fork el repositorio
+2. Crear rama de feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Commit los cambios (`git commit -m 'Agregar nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Abrir Pull Request
+
+### 📝 Guías de Desarrollo
+- Usar español para comentarios y mensajes de usuario
+- Seguir patrones de validación médica existentes
+- Mantener compatibilidad con estructura ADK
+- Incluir tests para nuevas funcionalidades
+- Documentar cambios en flujos médicos
+
+## 📄 Licencia
+
+Este proyecto está licenciado bajo la Licencia Apache 2.0 - ver el archivo [LICENSE](LICENSE) para detalles.
+
+## 🆘 Soporte
+
+Para preguntas o problemas:
+- 📧 Email: dev@clivi.com.mx
 - 🐛 Issues: [GitHub Issues](https://github.com/GibrannClivi/dr-clivi/issues)
-- 📖 Documentation: [ADK Docs](https://google.github.io/adk-docs/)
+- 📖 Documentación ADK: [ADK Docs](https://google.github.io/adk-docs/)
+- 📊 Análisis del Proyecto: [Implementation Summary](docs/implementation-summary.md)
+
+## 🚨 Descargo de Responsabilidad Médica
+
+**IMPORTANTE**: Dr. Clivi es un asistente de IA para fines educativos y de apoyo. **NO reemplaza el consejo médico profesional, diagnóstico o tratamiento**. Siempre consulta con profesionales de la salud calificados para decisiones médicas. En caso de emergencia médica, contacta inmediatamente a servicios de urgencias.
+
+### ⚠️ Limitaciones del Sistema
+- No proporciona diagnósticos médicos
+- Las recomendaciones son solo orientativas
+- Requiere supervisión médica profesional
+- No sustituye consultas médicas regulares
 
 ---
 
-**Disclaimer**: Dr. Clivi is an AI assistant for educational and support purposes. It does not replace professional medical advice, diagnosis, or treatment. Always consult qualified healthcare providers for medical decisions.
+**Estado del Proyecto**: ✅ **IMPLEMENTACIÓN COMPLETA**  
+**Versión**: 1.0.0  
+**Última Actualización**: 30 de junio de 2025  
+**Commit**: `30dcfe8`
+
