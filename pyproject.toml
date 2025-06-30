@@ -18,10 +18,13 @@ google-adk = "^1.0.0"
 a2a-sdk = "^0.2.4"
 # Core dependencies
 pydantic = "^2.10.6"
+pydantic-settings = "^2.0.0"
 python-dotenv = "^1.0.1"
 rich = "^13.9.4"
-# WhatsApp/Messaging
-twilio = "^9.3.6"
+# WhatsApp/Messaging & Webhook server
+fastapi = "^0.104.1"
+uvicorn = "^0.24.0"
+httpx = "^0.25.2"
 requests = "^2.32.3"
 # Data handling
 pandas = "^2.2.3"

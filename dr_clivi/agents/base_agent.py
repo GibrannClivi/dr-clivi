@@ -240,8 +240,8 @@ class BaseCliviAgent(ABC):
             }
         
         patient = context.patient
-        plan = patient.plan
-        plan_status = patient.plan_status
+        plan = patient.get("plan") if isinstance(patient, dict) else patient.plan
+        plan_status = patient.get("plan_status") if isinstance(patient, dict) else patient.plan_status
         
         self.logger.info(f"User {user_id} has plan: {plan}, status: {plan_status}")
         
@@ -376,7 +376,7 @@ class BaseCliviAgent(ABC):
                 "max_length": 500
             }
         
-        # Process complaint (integrate with Clivi API)
+        # Process complaint (TODO: integrate with Clivi platform via n8n webhook)
         complaint_id = await self._submit_complaint(user_id, complaint_text)
         
         return {
@@ -498,8 +498,8 @@ class BaseCliviAgent(ABC):
         return f"session_{user_id}_{hash(user_id) % 10000:04d}"
     
     async def _submit_complaint(self, user_id: str, complaint_text: str) -> str:
-        """Submit complaint to Clivi system"""
-        # Integrate with Clivi API
+        """Submit complaint to Clivi platform via n8n webhook"""
+        # TODO: Implement actual webhook call to Clivi complaint system
         return f"COMP-{user_id[-4:]}-{hash(complaint_text) % 10000:04d}"
     
     def _calculate_session_duration(self, user_id: str) -> int:
@@ -523,6 +523,19 @@ class BaseCliviAgent(ABC):
         context = self.get_session_context(user_id)
         return context.actions_completed
     
+    def _get_patient_attr(self, patient, attr, default=None):
+        """Helper method to safely get patient attributes from dict or object"""
+        if isinstance(patient, dict):
+            return patient.get(attr, default)
+        return getattr(patient, attr, default)
+
+    def _set_patient_attr(self, patient, attr, value):
+        """Helper method to safely set patient attributes for dict or object"""
+        if isinstance(patient, dict):
+            patient[attr] = value
+        else:
+            setattr(patient, attr, value)
+
     async def handle_no_match_fallback(self, user_id: str, user_input: str) -> Dict[str, Any]:
         """
         Enhanced no-match default event handling.

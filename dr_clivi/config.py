@@ -5,7 +5,7 @@ Based on analysis of exported Conversational Agents flows.
 
 import os
 from typing import Optional, List
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 
 
 class BaseAgentSettings(BaseSettings):
@@ -123,31 +123,53 @@ class GoogleCloudSettings(BaseSettings):
         env_prefix = "GOOGLE_CLOUD_"
 
 
-class TwilioSettings(BaseSettings):
-    """Twilio/WhatsApp configuration"""
-    account_sid: Optional[str] = None
-    auth_token: Optional[str] = None
-    whatsapp_number: Optional[str] = None
+class WhatsAppSettings(BaseSettings):
+    """WhatsApp Business API configuration"""
+    business_access_token: Optional[str] = None
+    business_phone_id: Optional[str] = None
+    verify_token: Optional[str] = None
+    app_secret: Optional[str] = None
+    webhook_url: Optional[str] = None
 
     class Config:
-        env_prefix = "TWILIO_"
+        env_prefix = "WHATSAPP_"
 
 
 class A2ASettings(BaseSettings):
-    """A2A Protocol configuration for agent communication"""
-    registry_url: Optional[str] = None
-    agent_id: Optional[str] = None
-    secret_key: Optional[str] = None
+    """
+    A2A Protocol configuration for agent communication
+    
+    Nota: A2A es un protocolo de comunicación entre agentes, NO requiere API keys.
+    Solo necesita configuración de endpoints y puertos para comunicación.
+    """
+    server_port: int = 8080
+    agent_registry_url: Optional[str] = None  # URL de registro de agentes (opcional)
+    agent_id: str = "dr-clivi-coordinator"     # ID único de este agente
 
     class Config:
         env_prefix = "A2A_"
 
 
-class CliviSettings(BaseSettings):
-    """Clivi API configuration"""
-    api_base_url: Optional[str] = None
-    api_key: Optional[str] = None
+class CliviIntegrationSettings(BaseSettings):
+    """
+    Clivi Platform Integration Settings
+    
+    Nota: Clivi no tiene una API unificada formal. La integración se realiza a través de:
+    - n8n webhooks para diferentes funcionalidades
+    - Base de datos directa (cuando sea necesario)
+    - Servicios específicos por funcionalidad
+    """
+    # n8n webhook base para integraciones
     n8n_webhook_base: str = "https://n8n.clivi.com.mx/webhook"
+    
+    # URLs específicas para diferentes funcionalidades
+    patient_data_source: Optional[str] = None  # Fuente de datos de pacientes
+    measurement_storage: Optional[str] = None  # Almacenamiento de mediciones
+    appointment_system: Optional[str] = None   # Sistema de citas
+    
+    # Autenticación (si aplica)
+    api_key: Optional[str] = None
+    auth_token: Optional[str] = None
 
     class Config:
         env_prefix = "CLIVI_"
@@ -219,9 +241,9 @@ class Config:
         self.obesity_agent = ObesityAgentSettings()
         self.coordinator_agent = CoordinatorAgentSettings()
         self.google_cloud = GoogleCloudSettings()
-        self.twilio = TwilioSettings()
+        self.whatsapp = WhatsAppSettings()
         self.a2a = A2ASettings()
-        self.clivi = CliviSettings()
+        self.clivi = CliviIntegrationSettings()
         self.integrations = IntegrationSettings()
         self.flows = FlowSettings()
         self.log_level = os.getenv("LOG_LEVEL", "INFO")

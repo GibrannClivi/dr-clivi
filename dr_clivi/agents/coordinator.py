@@ -1,6 +1,6 @@
 """
-Dr. Clivi Coordinator Agent - Routes users to appropriate specialized agents.
-Based on plan status and routing logic from exported Conversational Agents flows.
+Dr. Clivi Intelligent Coordinator - Routes complex queries using Gemini 2.5 Flash.
+Handles cases that escape deterministic flows and need AI interpretation.
 """
 
 import logging
@@ -10,94 +10,410 @@ from .base_agent import BaseCliviAgent, SessionContext, PatientContext, tool
 from .diabetes_agent import DiabetesAgent
 from .obesity_agent import ObesityAgent
 from ..config import Config
+from ..flows.deterministic_handler import (
+    DeterministicFlowHandler, 
+    UserContext, 
+    PlanType, 
+    PlanStatus
+)
+
+logger = logging.getLogger(__name__)
 
 
-class DrCliviCoordinator(BaseCliviAgent):
+class IntelligentCoordinator(BaseCliviAgent):
     """
-    Coordinator agent that routes users to appropriate specialized agents.
+    Intelligent coordinator that uses Gemini 2.5 Flash to route complex queries.
     
-    Implements complex routing logic identified from checkPlanStatus flow:
-    - Plan-based routing (PRO/PLUS/CLUB/BASIC)
-    - Status-based routing (ACTIVE/SUSPENDED/CANCELED)
-    - A2A communication with specialized agents
-    - Fallback handling and unknown user management
+    Architecture:
+    1. First checks if input should follow deterministic flows
+    2. If not, uses AI to analyze intent and route to appropriate specialist
+    3. Maintains context and handles escalations
+    4. Falls back to MASTER_AGENT for unresolvable cases
     """
     
     def __init__(self, config: Config):
         super().__init__(config)
         
-        # Initialize specialized agents
+        # Deterministic flow handler for structured interactions
+        self.flow_handler = DeterministicFlowHandler()
+        
+        # Specialized agents for complex cases
         self.diabetes_agent = DiabetesAgent(config)
         self.obesity_agent = ObesityAgent(config)
         
         # Routing statistics
         self._routing_stats = {
-            "diabetes_routes": 0,
-            "obesity_routes": 0,
-            "unknown_users": 0,
-            "club_routes": 0
+            "deterministic_routes": 0,
+            "ai_routes": 0,
+            "diabetes_escalations": 0,
+            "obesity_escalations": 0,
+            "master_agent_fallbacks": 0
         }
     
     def get_agent_name(self) -> str:
-        return self.config.coordinator_agent.name
+        return "dr-clivi-intelligent-coordinator"
     
     def get_system_instructions(self) -> str:
         return f"""
-        Eres el coordinador principal de Dr. Clivi, responsable de dirigir a los usuarios 
-        al especialista correcto según su plan y necesidades.
+        Eres el Coordinador Inteligente de Dr. Clivi, especialista en ruteo de consultas médicas complejas.
 
-        Tu función es:
-        - Identificar el tipo de plan del usuario (PRO/PLUS/CLUB/BASIC)
-        - Verificar el estado del plan (ACTIVE/SUSPENDED/CANCELED)
-        - Enrutar a agentes especializados (Diabetes/Obesidad)
-        - Manejar usuarios desconocidos o sin plan
-        - Proporcionar soporte general cuando sea necesario
+        Tu función principal:
+        1. Analizar consultas médicas que escapan de los flujos determinísticos
+        2. Identificar la especialidad médica apropiada (diabetes, obesidad, general)
+        3. Rutear inteligentemente al agente especializado correcto
+        4. Manejar emergencias médicas con prioridad máxima
+
+        Especialidades disponibles:
+        - **Diabetes**: Glucosa, insulina, medicamentos diabéticos, hipoglucemia, hiperglucemia
+        - **Obesidad**: Peso, dieta, medicamentos GLP-1 (Ozempic, Saxenda), ejercicio
+        - **General**: Citas, facturas, quejas, soporte técnico
+
+        Casos de emergencia (ALTA PRIORIDAD):
+        - Hipoglucemia severa (<70 mg/dL)
+        - Hiperglucemia extrema (>300 mg/dL)
+        - Síntomas de cetoacidosis
+        - Reacciones adversas a medicamentos
+        - Dolor de pecho, dificultad respiratoria
 
         Configuración:
+        - Modelo: Gemini 2.5 Flash (para análisis rápido y preciso)
         - Idioma: {self.config.base_agent.default_language}
         - Zona horaria: {self.config.base_agent.timezone}
-        - Modelo coordinador: {self.config.coordinator_agent.model}
 
-        Mantén un tono profesional, empático y eficiente. Tu objetivo es conectar 
-        rápidamente al usuario con el especialista adecuado.
+        Responde SIEMPRE en español, sé empático y directo.
         """
     
     def get_tools(self) -> List[str]:
         """Get coordinator-specific tools"""
         base_tools = super().get_tools()
         coordinator_tools = [
-            "route_to_specialist",
-            "identify_user_needs",
-            "handle_unknown_user",
-            "manage_plan_status",
-            "coordinate_agents",
-            "collect_user_context"
+            "analyze_medical_query",
+            "route_to_specialist", 
+            "handle_emergency",
+            "escalate_to_master_agent",
+            "check_deterministic_flow"
         ]
         return base_tools + coordinator_tools
     
     @tool
-    async def main_menu_flow(self, user_id: str) -> Dict[str, Any]:
+    async def process_user_input(self, user_id: str, user_input: str, 
+                               phone_number: str = None) -> Dict[str, Any]:
         """
-        Coordinator main menu - routes to appropriate specialist menu.
+        Main entry point - decides between deterministic flows vs AI routing.
         """
-        context = self.get_session_context(user_id)
+        # Get or create user context
+        user_context = await self._get_user_context(user_id, phone_number)
         
-        # If user context is not established, collect it first
-        if not context.patient or context.user_context == "UNKNOWN":
-            return await self.handle_unknown_user(user_id)
+        # First check: Is this a deterministic flow interaction?
+        if self.flow_handler.is_deterministic_input(user_input):
+            self._routing_stats["deterministic_routes"] += 1
+            return await self._handle_deterministic_flow(user_context, user_input)
         
-        # Route to appropriate specialist based on plan and preferences
-        routing_result = await self.route_to_specialist(user_id)
-        return routing_result
+        # Second check: Does this need intelligent routing?
+        self._routing_stats["ai_routes"] += 1
+        return await self._handle_intelligent_routing(user_context, user_input)
+    
+    async def _handle_deterministic_flow(self, user_context: UserContext, 
+                                       user_input: str) -> Dict[str, Any]:
+        """Handle structured menu interactions without AI"""
+        try:
+            result = self.flow_handler.route_deterministic_input(user_context, user_input)
+            
+            if result.get("action") == "show_main_menu":
+                return {
+                    "response_type": "whatsapp_menu",
+                    "menu_data": result["menu_data"],
+                    "flow": result["flow"],
+                    "page": result["page"],
+                    "routing_type": "deterministic"
+                }
+            
+            elif result.get("action") == "navigate_to_page":
+                return await self._handle_page_navigation(user_context, result)
+            
+            elif result.get("action") == "trigger_intelligent_routing":
+                # Deterministic handler couldn't resolve - escalate to AI
+                return await self._handle_intelligent_routing(user_context, user_input)
+            
+            else:
+                return result
+                
+        except Exception as e:
+            logger.error(f"Error in deterministic flow handling: {e}")
+            return await self._escalate_to_master_agent(user_context, user_input, str(e))
+    
+    @tool 
+    async def analyze_medical_query(self, user_input: str, user_context: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Use Gemini 2.5 Flash to analyze medical query and determine routing.
+        """
+        analysis_prompt = f"""
+        Analiza esta consulta médica y determina la especialidad y urgencia:
+
+        Consulta del paciente: "{user_input}"
+        
+        Plan del paciente: {user_context.get('plan', 'UNKNOWN')}
+        Historial: {user_context.get('medical_history', 'No disponible')}
+
+        Responde en formato JSON:
+        {{
+            "specialty": "diabetes|obesity|general|emergency",
+            "urgency": "low|medium|high|critical",
+            "confidence": 0.0-1.0,
+            "reasoning": "explicación breve",
+            "suggested_action": "acción recomendada",
+            "keywords_detected": ["palabra1", "palabra2"]
+        }}
+        """
+        
+        try:
+            # This would call Gemini 2.5 Flash via the generative AI tool
+            response = await self.generative_ai_tool.generate_response(
+                prompt=analysis_prompt,
+                model="gemini-2.5-flash",
+                response_format="json"
+            )
+            
+            return response
+            
+        except Exception as e:
+            logger.error(f"Error in medical query analysis: {e}")
+            return {
+                "specialty": "general",
+                "urgency": "medium", 
+                "confidence": 0.5,
+                "reasoning": f"Error en análisis: {e}",
+                "suggested_action": "escalate_to_master_agent"
+            }
     
     @tool
-    async def route_to_specialist(self, user_id: str, force_agent: str = None) -> Dict[str, Any]:
+    async def route_to_specialist(self, analysis: Dict[str, Any], user_context: UserContext, 
+                                user_input: str) -> Dict[str, Any]:
         """
-        Route user to appropriate specialist agent.
+        Route to appropriate specialist based on AI analysis.
+        """
+        specialty = analysis.get("specialty", "general")
+        urgency = analysis.get("urgency", "medium")
         
-        Implements the complex routing logic from checkPlanStatus flow analysis.
+        # Handle emergencies first
+        if urgency == "critical" or specialty == "emergency":
+            return await self.handle_emergency(user_context, user_input, analysis)
+        
+        # Route to specialized agents
+        if specialty == "diabetes":
+            self._routing_stats["diabetes_escalations"] += 1
+            return await self._route_to_diabetes_agent(user_context, user_input, analysis)
+            
+        elif specialty == "obesity":
+            self._routing_stats["obesity_escalations"] += 1  
+            return await self._route_to_obesity_agent(user_context, user_input, analysis)
+            
+        elif specialty == "general":
+            return await self._handle_general_query(user_context, user_input, analysis)
+            
+        else:
+            # Fallback to master agent
+            return await self._escalate_to_master_agent(user_context, user_input, 
+                                                      f"Unknown specialty: {specialty}")
+    
+    async def _handle_intelligent_routing(self, user_context: UserContext, 
+                                        user_input: str) -> Dict[str, Any]:
         """
-        context = self.get_session_context(user_id)
+        Handle complex queries using AI analysis and routing.
+        """
+        try:
+            # Analyze the medical query
+            analysis = await self.analyze_medical_query(
+                user_input, 
+                user_context.__dict__
+            )
+            
+            # Route based on analysis
+            return await self.route_to_specialist(analysis, user_context, user_input)
+            
+        except Exception as e:
+            logger.error(f"Error in intelligent routing: {e}")
+            return await self._escalate_to_master_agent(user_context, user_input, str(e))
+    
+    async def _route_to_diabetes_agent(self, user_context: UserContext, user_input: str,
+                                     analysis: Dict[str, Any]) -> Dict[str, Any]:
+        """Route to diabetes specialist agent"""
+        try:
+            # Create session context for diabetes agent
+            session_context = SessionContext(
+                user_id=user_context.user_id,
+                conversation_id=f"diabetes_{user_context.user_id}",
+                patient=PatientContext(
+                    user_id=user_context.user_id,
+                    name=user_context.patient_name,
+                    plan=user_context.plan.value,
+                    plan_status=user_context.plan_status.value
+                )
+            )
+            
+            # Hand off to diabetes agent
+            diabetes_response = await self.diabetes_agent.process_diabetes_query(
+                session_context, user_input
+            )
+            
+            return {
+                "response_type": "specialist_response",
+                "specialist": "diabetes",
+                "analysis": analysis,
+                "response": diabetes_response,
+                "routing_type": "intelligent"
+            }
+            
+        except Exception as e:
+            logger.error(f"Error routing to diabetes agent: {e}")
+            return await self._escalate_to_master_agent(user_context, user_input, str(e))
+    
+    async def _route_to_obesity_agent(self, user_context: UserContext, user_input: str,
+                                    analysis: Dict[str, Any]) -> Dict[str, Any]:
+        """Route to obesity specialist agent"""
+        try:
+            # Create session context for obesity agent  
+            session_context = SessionContext(
+                user_id=user_context.user_id,
+                conversation_id=f"obesity_{user_context.user_id}",
+                patient=PatientContext(
+                    user_id=user_context.user_id,
+                    name=user_context.patient_name,
+                    plan=user_context.plan.value,
+                    plan_status=user_context.plan_status.value
+                )
+            )
+            
+            # Hand off to obesity agent
+            obesity_response = await self.obesity_agent.process_obesity_query(
+                session_context, user_input
+            )
+            
+            return {
+                "response_type": "specialist_response", 
+                "specialist": "obesity",
+                "analysis": analysis,
+                "response": obesity_response,
+                "routing_type": "intelligent"
+            }
+            
+        except Exception as e:
+            logger.error(f"Error routing to obesity agent: {e}")
+            return await self._escalate_to_master_agent(user_context, user_input, str(e))
+    
+    @tool
+    async def handle_emergency(self, user_context: UserContext, user_input: str,
+                             analysis: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Handle medical emergencies with highest priority.
+        """
+        emergency_response = {
+            "response_type": "emergency",
+            "urgency": "critical",
+            "analysis": analysis,
+            "immediate_actions": []
+        }
+        
+        # Detect specific emergency types
+        emergency_keywords = {
+            "hypoglycemia": ["hipoglucemia", "azúcar bajo", "mareo", "sudor frío", "temblor"],
+            "hyperglycemia": ["hiperglucemia", "azúcar alto", "sed excesiva", "orinar mucho"],
+            "cardiac": ["dolor pecho", "dificultad respirar", "palpitaciones"],
+            "medication_reaction": ["reacción", "alergia", "medicamento", "efecto adverso"]
+        }
+        
+        detected_emergency = None
+        for emergency_type, keywords in emergency_keywords.items():
+            if any(keyword in user_input.lower() for keyword in keywords):
+                detected_emergency = emergency_type
+                break
+        
+        if detected_emergency == "hypoglycemia":
+            emergency_response["immediate_actions"] = [
+                "🚨 HIPOGLUCEMIA DETECTADA",
+                "1. Consume inmediatamente 15g de azúcar (3 sobres o 1 refresco)",
+                "2. Espera 15 minutos y mide tu glucosa",
+                "3. Si sigue baja, repite el paso 1",
+                "4. Si no mejoras, llama al 911 INMEDIATAMENTE"
+            ]
+        elif detected_emergency == "hyperglycemia":
+            emergency_response["immediate_actions"] = [
+                "⚠️ HIPERGLUCEMIA DETECTADA", 
+                "1. Mide tu glucosa inmediatamente",
+                "2. Si >300 mg/dL, busca atención médica URGENTE",
+                "3. Bebe agua, NO bebidas azucaradas",
+                "4. Si tienes cetosis, llama al 911"
+            ]
+        elif detected_emergency in ["cardiac", "medication_reaction"]:
+            emergency_response["immediate_actions"] = [
+                "🚨 EMERGENCIA MÉDICA DETECTADA",
+                "1. LLAMA AL 911 INMEDIATAMENTE",
+                "2. No tomes más medicamentos",
+                "3. Si es posible, contacta a tu médico",
+                "4. Ve al hospital más cercano"
+            ]
+        else:
+            emergency_response["immediate_actions"] = [
+                "⚠️ Situación de urgencia detectada",
+                "1. Si sientes que es una emergencia, llama al 911",
+                "2. Contacta a tu médico inmediatamente", 
+                "3. Ve al hospital si los síntomas empeoran",
+                "4. Mantén la calma y busca ayuda"
+            ]
+        
+        # Log emergency for follow-up
+        logger.critical(f"Emergency detected for user {user_context.user_id}: {detected_emergency}")
+        
+        return emergency_response
+    
+    async def _get_user_context(self, user_id: str, phone_number: str = None) -> UserContext:
+        """Get or create user context with plan information"""
+        # In a real implementation, this would query the user database
+        # For now, we'll create a mock context
+        return UserContext(
+            user_id=user_id,
+            patient_name="Paciente",  # Would be fetched from DB
+            plan=PlanType.PRO,        # Would be fetched from DB  
+            plan_status=PlanStatus.ACTIVE,  # Would be fetched from DB
+            phone_number=phone_number or f"+52{user_id}",
+            session_data={}
+        )
+    
+    async def _escalate_to_master_agent(self, user_context: UserContext, user_input: str,
+                                      error_reason: str) -> Dict[str, Any]:
+        """Escalate to MASTER_AGENT playbook (fallback from original flows)"""
+        self._routing_stats["master_agent_fallbacks"] += 1
+        
+        return {
+            "response_type": "master_agent_escalation",
+            "reason": error_reason,
+            "user_input": user_input,
+            "fallback_message": "Disculpa, necesito transferirte con un especialista humano. En un momento te contactaremos.",
+            "routing_type": "fallback"
+        }
+    
+    async def _handle_general_query(self, user_context: UserContext, user_input: str,
+                                  analysis: Dict[str, Any]) -> Dict[str, Any]:
+        """Handle general queries that don't need specialized agents"""
+        return {
+            "response_type": "general_response",
+            "analysis": analysis,
+            "response": "Entiendo tu consulta. ¿Te gustaría que te muestre el menú principal para ayudarte mejor?",
+            "suggested_action": "show_main_menu",
+            "routing_type": "general"
+        }
+    
+    async def _handle_page_navigation(self, user_context: UserContext, 
+                                    result: Dict[str, Any]) -> Dict[str, Any]:
+        """Handle navigation to specific pages from menu selections"""
+        # This would implement the specific page logic from the original flows
+        return {
+            "response_type": "page_navigation",
+            "target_page": result.get("target_page"),
+            "target_flow": result.get("target_flow"),  
+            "selected_option": result.get("selected_option"),
+            "routing_type": "deterministic"
+        }
         patient = context.patient
         
         if not patient:

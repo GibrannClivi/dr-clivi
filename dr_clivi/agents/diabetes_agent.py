@@ -418,8 +418,8 @@ class DiabetesAgent(BaseCliviAgent):
     # Helper methods
     async def _process_glucose_measurement(self, user_id: str, measurement_type: str, 
                                          value: float, meal_time: str = None) -> Dict[str, Any]:
-        """Process glucose measurement submission"""
-        # TODO: Integrate with Clivi API
+        """Process glucose measurement submission via Clivi platform"""
+        # TODO: Integrate with Clivi measurement storage system via n8n webhook
         measurement_id = f"GLUC-{user_id[-4:]}-{hash(str(value)) % 10000:04d}"
         self.logger.info(f"Processing glucose measurement: {value} mg/dL ({measurement_type})")
         return {"measurement_id": measurement_id, "status": "success"}

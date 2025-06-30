@@ -42,8 +42,8 @@ Sistema Dr. Clivi
 │
 └── 🔧 Capa de Integración
     ├── WhatsApp Business API
-    ├── n8n Webhooks
-    ├── Clivi API
+    ├── n8n Webhooks (Plataforma Clivi)
+    ├── Sistemas Clivi específicos
     └── Vertex AI
 ```
 
@@ -95,10 +95,12 @@ WHATSAPP_BUSINESS_API_URL=https://graph.facebook.com/v17.0
 WHATSAPP_BUSINESS_TOKEN=tu-token
 WHATSAPP_PHONE_ID=tu-phone-id
 
-# Clivi API
-CLIVI_API_BASE_URL=https://api.clivi.com.mx
-CLIVI_API_KEY=tu-api-key
+# Integración con Plataforma Clivi
+# Nota: Clivi no tiene una API unificada. Se integra vía n8n webhooks y servicios específicos
 CLIVI_N8N_WEBHOOK_BASE=https://n8n.clivi.com.mx/webhook
+CLIVI_PATIENT_DATA_SOURCE=url-fuente-datos-pacientes
+CLIVI_MEASUREMENT_STORAGE=url-almacenamiento-mediciones
+CLIVI_APPOINTMENT_SYSTEM=url-sistema-citas
 
 # A2A Protocol
 A2A_REGISTRY_URL=https://registry.a2a.ai
@@ -350,8 +352,6 @@ Este proyecto está licenciado bajo la Licencia Apache 2.0 - ver el archivo [LIC
 
 ## 🆘 Soporte
 
-Para preguntas o problemas:
-- 📧 Email: dev@clivi.com.mx
 - 🐛 Issues: [GitHub Issues](https://github.com/GibrannClivi/dr-clivi/issues)
 - 📖 Documentación ADK: [ADK Docs](https://google.github.io/adk-docs/)
 - 📊 Análisis del Proyecto: [Implementation Summary](docs/implementation-summary.md)
@@ -372,4 +372,44 @@ Para preguntas o problemas:
 **Versión**: 1.0.0  
 **Última Actualización**: 30 de junio de 2025  
 **Commit**: `30dcfe8`
+
+## 🔗 Integración con Plataforma Clivi
+
+### ⚠️ Nota Importante sobre "Clivi API"
+
+**Clivi no tiene una API unificada formal**. En el código actual, las referencias a "Clivi API" son **placeholders/simulaciones** que indican dónde iría la integración real con los sistemas de Clivi.
+
+### 🛠️ Integración Real
+
+La integración con la plataforma Clivi se realiza a través de:
+
+1. **n8n Webhooks** (`https://n8n.clivi.com.mx/webhook/`)
+   - Endpoint principal para la mayoría de integraciones
+   - Procesamiento de imágenes de básculas
+   - Envío de mediciones y datos
+   - Gestión de actividades y eventos
+
+2. **Sistemas Específicos**
+   - **Datos de Pacientes**: Base de datos o sistema CRM de Clivi
+   - **Mediciones**: Sistema de almacenamiento de mediciones corporales
+   - **Citas**: Sistema de gestión de citas médicas
+   - **Mensajería**: WhatsApp Business API directa
+
+3. **Webhooks Identificados en el Análisis**
+   ```
+   https://n8n.clivi.com.mx/webhook/imgfile-measurement-recognition
+   https://n8n.clivi.com.mx/webhook/appointment
+   https://n8n.clivi.com.mx/webhook/measurement  
+   https://n8n.clivi.com.mx/webhook/complaint
+   https://n8n.clivi.com.mx/webhook/activity
+   ```
+
+### 🔄 TODOs de Integración
+
+En el código encontrarás comentarios como:
+```python
+# TODO: Integrate with Clivi platform via n8n webhook
+```
+
+Estos indican dónde se debe implementar la integración real con los sistemas de Clivi cuando estén disponibles.
 
