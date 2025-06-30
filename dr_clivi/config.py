@@ -51,20 +51,43 @@ class CliviSettings(BaseSettings):
     """Clivi API configuration"""
     api_base_url: Optional[str] = None
     api_key: Optional[str] = None
+    n8n_webhook_base: str = "https://n8n.clivi.com.mx/webhook"
 
     class Config:
         env_prefix = "CLIVI_"
+
+
+class IntegrationSettings(BaseSettings):
+    """External integration settings based on exported agent analysis"""
+    
+    # Image processing webhook (from photoScalePhoto)
+    image_recognition_endpoint: str = "https://n8n.clivi.com.mx/webhook/imgfile-measurement-recognition"
+    image_processing_timeout: int = 5
+    
+    # Template messaging (WhatsApp Business API)
+    whatsapp_business_api_url: Optional[str] = None
+    
+    # Generative AI fallback
+    openai_api_key: Optional[str] = None
+    use_vertex_ai_primary: bool = True
+    
+    class Config:
+        env_prefix = "INTEGRATION_"
 
 
 class Config:
     """Main configuration class"""
     
     def __init__(self):
-        self.agent_settings = AgentSettings()
+        self.base_agent = BaseAgentSettings()
+        self.diabetes_agent = DiabetesAgentSettings()
+        self.obesity_agent = ObesityAgentSettings()
+        self.coordinator_agent = CoordinatorAgentSettings()
         self.google_cloud = GoogleCloudSettings()
         self.twilio = TwilioSettings()
         self.a2a = A2ASettings()
         self.clivi = CliviSettings()
+        self.integrations = IntegrationSettings()
         self.log_level = os.getenv("LOG_LEVEL", "INFO")
         
         # Load environment variables
@@ -85,6 +108,6 @@ class Config:
         
         # Override model if specified
         if os.getenv("DEFAULT_MODEL"):
-            self.agent_settings.model = os.getenv("DEFAULT_MODEL")
+            self.base_agent.model = os.getenv("DEFAULT_MODEL")
         if os.getenv("COORDINATOR_MODEL"):
-            self.agent_settings.coordinator_model = os.getenv("COORDINATOR_MODEL")
+            self.coordinator_agent.model = os.getenv("COORDINATOR_MODEL")
