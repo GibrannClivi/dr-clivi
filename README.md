@@ -40,7 +40,7 @@ Dr. Clivi System
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/dr-clivi.git
+   git clone https://github.com/GibrannClivi/dr-clivi.git
    cd dr-clivi
    ```
 
@@ -184,7 +184,7 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 For questions or issues:
 - 📧 Email: dev@clivi.com
-- 🐛 Issues: [GitHub Issues](https://github.com/YOUR_USERNAME/dr-clivi/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/GibrannClivi/dr-clivi/issues)
 - 📖 Documentation: [ADK Docs](https://google.github.io/adk-docs/)
 
 ---
