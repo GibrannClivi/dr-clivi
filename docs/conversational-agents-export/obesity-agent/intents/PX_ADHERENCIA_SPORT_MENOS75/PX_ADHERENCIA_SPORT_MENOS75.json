@@ -1,0 +1,10 @@
+{
+  "name": "c6f26d8e-2952-49c6-b9b4-7d3982bbfe4d",
+  "displayName": "PX_ADHERENCIA_SPORT_MENOS75",
+  "parameters": [ {
+    "id": "PX_ADHERENCIA_SPORT_MENOS75",
+    "entityType": "@PX_ADHERENCIA_SPORT_MENOS75"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

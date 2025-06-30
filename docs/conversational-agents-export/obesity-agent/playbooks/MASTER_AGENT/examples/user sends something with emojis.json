@@ -1,0 +1,52 @@
+{
+  "name": "ec5fa874-eefa-46c4-8394-32b571d509cf",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Soy Dr. Clivi, solo para estar seguro. Por favor, utiliza el siguiente menú. Gracias"
+    }
+  }, {
+    "toolUse": {
+      "tool": "SEND_MESSAGE",
+      "action": "SEND_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "SEND_MESSAGE",
+          "templateName": "master_general_question_ai",
+          "type": "TEMPLATE"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"user sends something with emojis\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and invoked tool called SEND_MESSAGE, then called flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user sends something with emojis",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 271,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

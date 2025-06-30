@@ -1,0 +1,10 @@
+{
+  "name": "f67b1c57-72a2-440b-96ea-3ebdadc8d0b1",
+  "displayName": "PX_ADHERENCIA_SPORT_MAS75",
+  "parameters": [ {
+    "id": "PX_ADHERENCIA_SPORT_MAS75",
+    "entityType": "@PX_ADHERENCIA_SPORT_MAS75"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

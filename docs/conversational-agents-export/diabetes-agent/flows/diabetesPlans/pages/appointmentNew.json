@@ -1,0 +1,156 @@
+{
+  "name": "1d74a9b8-9d6f-4ce8-9582-8437e2655edf",
+  "displayName": "appointmentNew",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Selecciona",
+            "bodyText": "¿Qué cita quieres agendar?",
+            "sections": [ {
+              "rows": [ {
+                "description": "",
+                "id": "PSYCHOLOGIST",
+                "title": "Psicológica"
+              }, {
+                "description": "",
+                "id": "NUTRITION",
+                "title": "Nutrición"
+              }, {
+                "description": "",
+                "id": "DIABETES_ENDO",
+                "title": "Alta especialidad"
+              } ],
+              "title": "Tipos de citas"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "PSYCHOLOGIST",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "LONG",
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "b574c88d-1002-4f89-953d-28aaac88cfc4"
+  }, {
+    "intent": "NUTRITION",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "LONG",
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "768d4882-097e-43db-93f3-8b51e2f009e8"
+  }, {
+    "intent": "DIABETES_ENDO",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "",
+                "staffType": "DIABETES"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "795fd895-09a7-4992-92ba-307e86a37587"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "b1b3bb6c-ee9f-47c4-8b38-193c2622fb93",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

@@ -1,0 +1,175 @@
+{
+  "name": "39ce1647-ee93-4ca1-b2d5-c1078eb0d68b",
+  "displayName": "ratingsObesityAppt",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "GOOD_OBESITY",
+              "text": "Muy satisfecho"
+            }, {
+              "id": "REGULAR_OBESITY",
+              "text": "Neutral"
+            }, {
+              "id": "BAD_OBESITY",
+              "text": "Nada satisfecho"
+            } ],
+            "textBody": "Califica tu cita de especialidad, presiona abajo",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "GOOD_OBESITY",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hola! 👋 Para CLIVI es muy importante conocer tu buena opinión y compartirla con todos los Mexicanos para poder ayudarlos a mejorar su calidad de vida 💜. Por esta razón queremos pedir tu apoyo para que nos compartas algunos comentarios acerca de tu experiencia con el Tratamiento Integral en CLIVI. Da un toque a la liga 👇 https://g.page/r/CX0ThqXe8bRlEAE/review" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 5,
+                "staffType": "OBESITY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "cc198678-4cde-485a-a9a8-5cc39876405d"
+  }, {
+    "intent": "REGULAR_OBESITY",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias, ¿tienes alguna sugerencia para nosotros? Queremos escucharte. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 3,
+                "staffType": "OBESITY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "ratingObesityApptReason",
+    "name": "f97755fc-6b2a-4333-8941-523ee46baa3e"
+  }, {
+    "intent": "BAD_OBESITY",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sentimos mucho tu mala experiencia ¿Tienes alguna sugerencia para nosotros? Queremos escucharte. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 1,
+                "staffType": "OBESITY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "highSpecializationQuestionTag",
+    "name": "95613ad2-ec67-4a34-9913-c1520b585a16"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "46b2db34-3cbf-429f-bc1b-fbd565de93d6"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

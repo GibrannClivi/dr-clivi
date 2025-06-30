@@ -1,0 +1,24 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Gráfica",
+      "parameterId": "MEASUREMENTS_REPORT_MAIN_MENU_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Reporte",
+      "parameterId": "MEASUREMENTS_REPORT_MAIN_MENU_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "MEASUREMENTS_REPORT",
+      "parameterId": "MEASUREMENTS_REPORT_MAIN_MENU_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

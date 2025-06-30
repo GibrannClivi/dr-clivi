@@ -1,0 +1,54 @@
+{
+  "name": "73fe9ee6-be12-4a0a-9d36-3559c712a5d2",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Lamentamos tu experiencia. Estamos escalando tu caso con alta prioridad. Un agente de soporte te contactará."
+    }
+  }, {
+    "toolUse": {
+      "tool": "QUESTION_SET_LAST_MESSAGE",
+      "action": "QUESTION_SET_LAST_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "CALL_FUNCTION",
+          "category": "PAGOS",
+          "functionName": "QUESTION_SET_LAST_MESSAGE",
+          "isKnownQuestion": true,
+          "sendToHelpdesk": true
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"user expresses a desire to cancel their subscription or discontinue treatment—whether due to lack of results, slow progress, unmet expectations, dissatisfaction with the service, or an unspecified reason\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and invoked tool called QUESTION_SET_LAST_MESSAGE, then invoked flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user expresses a desire to cancel their subscription or discontinue the service",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 326,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

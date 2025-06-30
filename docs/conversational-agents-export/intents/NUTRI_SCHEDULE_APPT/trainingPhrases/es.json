@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Agendar_Nutrición",
+      "parameterId": "NUTRI_SCHEDULE_APPT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Agendar Nutrición",
+      "parameterId": "NUTRI_SCHEDULE_APPT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Cuello medición",
+      "parameterId": "NECK_REMINDER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "NECK_LOG",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

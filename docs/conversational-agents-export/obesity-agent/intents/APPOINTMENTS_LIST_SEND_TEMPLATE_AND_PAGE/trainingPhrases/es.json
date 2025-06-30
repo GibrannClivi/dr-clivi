@@ -1,0 +1,53 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Ver/agendar citas",
+      "parameterId": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "ver/agendar citas",
+      "parameterId": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "APPOINTMENTS_LIST_SEND",
+      "parameterId": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ver citas",
+      "parameterId": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ver siguientes citas",
+      "parameterId": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ver plan de tus consultas",
+      "parameterId": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ver próximas citas",
+      "parameterId": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

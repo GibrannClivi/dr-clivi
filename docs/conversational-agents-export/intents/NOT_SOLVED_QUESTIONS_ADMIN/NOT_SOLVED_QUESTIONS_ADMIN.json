@@ -1,0 +1,10 @@
+{
+  "name": "3382cd6e-173d-46c5-8df5-1348b7dcbb15",
+  "displayName": "NOT_SOLVED_QUESTIONS_ADMIN",
+  "parameters": [ {
+    "id": "NOT_SOLVED_QUESTIONS_ADMIN",
+    "entityType": "@NOT_SOLVED_QUESTIONS_ADMIN"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

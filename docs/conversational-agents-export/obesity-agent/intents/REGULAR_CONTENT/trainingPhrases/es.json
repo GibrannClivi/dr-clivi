@@ -1,0 +1,16 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "REGULAR",
+      "auto": true
+    }, {
+      "text": "_",
+      "auto": true
+    }, {
+      "text": "CONTENT",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

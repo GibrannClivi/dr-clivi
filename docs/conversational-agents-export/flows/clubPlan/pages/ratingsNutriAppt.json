@@ -1,0 +1,175 @@
+{
+  "name": "1e2fea31-bdd0-4807-8989-3186358444d6",
+  "displayName": "ratingsNutriAppt",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "GOOD_NUTRI",
+              "text": "Muy satisfecho"
+            }, {
+              "id": "REGULAR_NUTRI",
+              "text": "Neutral"
+            }, {
+              "id": "BAD_NUTRI",
+              "text": "Nada satisfecho"
+            } ],
+            "textBody": "Califica tu cita de nutrición, presiona abajo",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "GOOD_NUTRI",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias por tu calificación!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 5,
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "76fe653c-534c-4634-95dd-6c7587eb7a85"
+  }, {
+    "intent": "REGULAR_NUTRI",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por calificar, vamos a revisar tu caso. Nos regalas más detalles, por favor. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 3,
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "nutritionQuestionTag",
+    "name": "cdd13e30-37a7-4dc3-b2dd-92d846171f64"
+  }, {
+    "intent": "BAD_NUTRI",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sentimos mucho tu mala experiencia. Estamos escalando el caso. Nos regalas más detalles, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 1,
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "nutritionQuestionTag",
+    "name": "cad04d6a-9d6e-4aee-8510-20b42dbca4e8"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "0ef0e11e-b1cd-4c43-ae53-78cd9f5df796"
+  } ],
+  "transitionRouteGroups": [ "CLUB_CATCHER" ]
+}

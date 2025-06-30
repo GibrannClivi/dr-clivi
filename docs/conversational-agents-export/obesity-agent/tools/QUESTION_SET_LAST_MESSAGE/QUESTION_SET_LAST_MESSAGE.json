@@ -1,0 +1,42 @@
+{
+  "name": "05528642-6b92-4146-9289-877e0e33c4a0",
+  "displayName": "QUESTION_SET_LAST_MESSAGE",
+  "description": "Sets the last user message as a question.",
+  "toolType": "CUSTOMIZED_TOOL",
+  "functionSpec": {
+    "inputSchema": {
+      "properties": {
+        "actionType": {
+          "enum": [ "CALL_FUNCTION" ],
+          "type": "string"
+        },
+        "category": {
+          "description": "set the last message as a question category.",
+          "type": "string"
+        },
+        "functionName": {
+          "enum": [ "QUESTION_SET_LAST_MESSAGE" ],
+          "type": "string"
+        },
+        "isKnownQuestion": {
+          "description": "set the last message as a question.",
+          "type": "boolean"
+        },
+        "sendToHelpdesk": {
+          "description": "set the last message as a question.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "success": {
+          "description": "If success = true, then the user message was set as question.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

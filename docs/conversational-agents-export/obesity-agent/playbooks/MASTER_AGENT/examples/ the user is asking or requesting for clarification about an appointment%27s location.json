@@ -1,0 +1,52 @@
+{
+  "name": "89ccc91e-8753-4e7a-8228-541b081b3b9b",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Tu cita es en línea. Te enviaremos la liga 30 minutos antes."
+    }
+  }, {
+    "toolUse": {
+      "tool": "SEND_MESSAGE",
+      "action": "SEND_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "SEND_MESSAGE",
+          "templateName": "px_appt_list",
+          "type": "TEMPLATE"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "the userRequest input parameter:  \"user is asking or requesting for clarification about an appointment's location such as (online, in-person, hospital or any other way referring to a location)\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agents response in Spanish and invoked tool called SEND_MESSAGE, then invoked END_SESSION",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": " the user is asking or requesting for clarification about an appointment's location",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 293,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

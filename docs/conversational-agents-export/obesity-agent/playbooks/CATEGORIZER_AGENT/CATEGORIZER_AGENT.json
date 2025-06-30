@@ -1,0 +1,117 @@
+{
+  "name": "841a861c-0f82-45ef-9f3c-7ca1c0977ee9",
+  "displayName": "CATEGORIZER_AGENT",
+  "goal": "Accurately identify the user's requests using the input parameter `userRequest` and categorize it according to the provided instructions.  Always end the session after responding to the user in Spanish.",
+  "inputParameterDefinitions": [ {
+    "name": "userRequest",
+    "description": "This is the user's request.",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "userRequest",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "outputParameterDefinitions": [ {
+    "name": "userRequest",
+    "description": "This is the user's request.",
+    "typeSchema": {
+      "inlineSchema": {
+        "type": "STRING"
+      }
+    },
+    "parameterType": {
+      "name": "userRequest",
+      "openapiJsonSchema": {
+        "type": "string"
+      }
+    }
+  } ],
+  "tokenCount": 720,
+  "referencedFlows": [ "END_SESSION" ],
+  "referencedTools": [ "QUESTION_SET_LAST_MESSAGE", "SEND_MESSAGE" ],
+  "instruction": {
+    "steps": [ {
+      "text": "Always respond in Spanish."
+    }, {
+      "text": "Use `userRequest` to determine user's request and route it properly to the following instructions:",
+      "steps": [ {
+        "text": "If the user request is related to appointments:",
+        "steps": [ {
+          "text": "Respond in Spanish with \"Estoy escalando tu caso con un agente de soporte. Dame unos momentos. Por favor.\"."
+        }, {
+          "text": "Invoke ${TOOL:QUESTION_SET_LAST_MESSAGE}.",
+          "steps": [ {
+            "text": "Set the category property to \"CITAS\"."
+          }, {
+            "text": "Set the sendToHelpdesk property to true."
+          }, {
+            "text": "Set the isKnownQuestion property to true."
+          }, {
+            "text": "Set the actionType property to \"CALL_FUNCTION\"."
+          }, {
+            "text": "Set the functionName property to \"QUESTION_SET_LAST_MESSAGE\"."
+          } ]
+        }, {
+          "text": "Invoke ${FLOW:END_SESSION}."
+        } ]
+      }, {
+        "text": "If the user request is related to invoicing or labs:",
+        "steps": [ {
+          "text": "Respond in Spanish with \"Estoy escalando tu caso con un agente de soporte. Dame unos momentos. Por favor.\"."
+        }, {
+          "text": "Invoke ${TOOL:QUESTION_SET_LAST_MESSAGE}.",
+          "steps": [ {
+            "text": "Set the category property to \"LABS/FACTURAS\"."
+          }, {
+            "text": "Set the sendToHelpdesk property to true."
+          }, {
+            "text": "Set the isKnownQuestion property to true."
+          }, {
+            "text": "Set the actionType property to \"CALL_FUNCTION\"."
+          }, {
+            "text": "Set the functionName property to \"QUESTION_SET_LAST_MESSAGE\"."
+          } ]
+        }, {
+          "text": "Invoke ${FLOW:END_SESSION}."
+        } ]
+      }, {
+        "text": "If the user request is related to meds or supplies status:",
+        "steps": [ {
+          "text": "Respond in Spanish with \"Estoy escalando tu caso con un agente de soporte. Dame unos momentos. Por favor.\"."
+        }, {
+          "text": "Invoke ${TOOL:QUESTION_SET_LAST_MESSAGE}.",
+          "steps": [ {
+            "text": "Set the category property to \"SUMINISTRO\"."
+          }, {
+            "text": "Set the sendToHelpdesk property to true."
+          }, {
+            "text": "Set the isKnownQuestion property to true."
+          }, {
+            "text": "Set the actionType property to \"CALL_FUNCTION\"."
+          }, {
+            "text": "Set the functionName property to \"QUESTION_SET_LAST_MESSAGE\"."
+          } ]
+        }, {
+          "text": "Invoke ${FLOW:END_SESSION}."
+        }, {
+          "text": "If the user requests do not match any predefined above instructions:",
+          "steps": [ {
+            "text": "Respond in Spanish with \"Hola, lamentablemente no entendí tu petición, por favor escribe la palabra Pregunta\""
+          } ]
+        }, {
+          "text": "Invoke ${FLOW:END_SESSION}."
+        } ]
+      } ]
+    } ]
+  },
+  "playbookType": "TASK",
+  "codeBlock": {
+  
+  }
+}

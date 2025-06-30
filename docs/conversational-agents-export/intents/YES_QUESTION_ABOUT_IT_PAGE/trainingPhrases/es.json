@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "YES",
+      "parameterId": "YES_QUESTION_ABOUT_IT_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

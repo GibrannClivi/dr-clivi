@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Reagendar psicología cita",
+      "parameterId": "PSYCHO_RESCHEDULE_APPT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Reagendar psicología",
+      "parameterId": "PSYCHO_RESCHEDULE_APPT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Reagendar nutrición",
+      "parameterId": "NUTRI_RESCHEDULE_APPT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "0921584c-c078-4d52-8c8a-6765ef20bbc3",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Hola, Me parece que quieres acceder a tus archivos. Déjame asistirte."
+    }
+  }, {
+    "toolUse": {
+      "tool": "SEND_MESSAGE",
+      "action": "SEND_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "SEND_MESSAGE",
+          "templateName": "last_ai_file_available",
+          "type": "TEMPLATE"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"user expresses intent related to viewing or receiving their lab orders, lab results, medical prescriptions, nutritional plans or meal plans\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and invoked tool called SEND_MESSAGE and called flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user expresses intent related to viewing or receiving their lab orders, lab results, or medical prescriptions",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 283,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

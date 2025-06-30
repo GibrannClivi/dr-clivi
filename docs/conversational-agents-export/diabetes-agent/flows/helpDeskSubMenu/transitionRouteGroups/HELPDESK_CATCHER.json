@@ -1,0 +1,1614 @@
+{
+  "name": "d8eb9e19-fb87-420c-98d7-6961b6b2eda1",
+  "displayName": "HELPDESK_CATCHER",
+  "transitionRoutes": [ {
+    "intent": "END_SESSION_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "6cb6ca0f-1f3b-4db0-9132-30e69f37740f"
+  }, {
+    "intent": "ACTIVE_CONVERSATION_STARTED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "1969b580-3895-44ef-85bc-0475b76ded7e"
+  }, {
+    "intent": "ADHERENCE_ENDO_BAD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "c0a03de9-0291-46cb-84ed-42cb309067a3"
+  }, {
+    "intent": "ADHERENCE_ENDO_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "dbbc9b08-45c0-4f26-81c5-1d729bb1a962"
+  }, {
+    "intent": "ADHERENCE_ENDO_REGULAR",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "32f052d5-0174-4add-b9cb-71bedbbea2f3"
+  }, {
+    "intent": "ADHERENCE_ENDO_TEMPLATE_REMINDER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "be524973-5581-4b90-a119-4ce95d1b7c84"
+  }, {
+    "intent": "ADHERENCE_NUTRI_BAD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f202932d-d59a-424e-be37-813b64aa141b"
+  }, {
+    "intent": "ADHERENCE_NUTRI_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "b2046160-dccf-4f1e-b666-3d35b5d72b7b"
+  }, {
+    "intent": "ADHERENCE_NUTRI_REGULAR",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "d9637e8f-1dac-4ef7-9e95-2424a534fa90"
+  }, {
+    "intent": "ADHERENCE_PSYC_BAD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "adb9d7a9-955e-4ff7-82e7-fe50af35ae18"
+  }, {
+    "intent": "ADHERENCE_PSYC_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "e812bd5a-7641-4e57-9929-918d93195c94"
+  }, {
+    "intent": "ADHERENCE_PSYC_REGULAR",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "d417e198-4173-463f-924b-a15b35183899"
+  }, {
+    "intent": "ALL_GOOD_NO_ACTION_NEEDED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "ff7c66af-9a07-499b-9d7c-94d684a92000"
+  }, {
+    "intent": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "44e39056-8063-4345-8ab2-3e36a419e99b"
+  }, {
+    "intent": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "592867e2-1969-4d3a-8df9-f9c09e7e3dfb"
+  }, {
+    "intent": "APPT_CANCEL_REQUEST_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "01fdd6e4-4033-4f2a-983d-2bc5ed04395e"
+  }, {
+    "intent": "APPT_SUPPORT_ALERT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "bb900435-c437-4497-a584-edd323c1bd87"
+  }, {
+    "intent": "CALL_SUPPORT_PAGE_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "0ab1cf49-cbd2-4573-aaa7-36736ce4b836"
+  }, {
+    "intent": "CONFIRM_APPTS_TEMPLATE_REMINDER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "083d47da-b2e2-4f0c-8267-c35cc8e9ac7e"
+  }, {
+    "intent": "CONFIRM_MED_REMINDER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "8b069ee3-8665-46ab-9891-3bc0b20f7670"
+  }, {
+    "intent": "NECK_REMINDER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f7962dd0-fae4-452b-b7a0-1696c49723b3"
+  }, {
+    "intent": "APPOINTMENTS_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "2e6188a5-d8a9-442a-b5d4-d2e560ae7b66"
+  }, {
+    "intent": "LOG_BODY_MEASUREMENTS_TEMPLATE_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "e927c628-119f-4cce-aa82-dbc34cee62e5"
+  }, {
+    "intent": "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "a6cd3897-35b1-4401-b2a4-0664106940d6"
+  }, {
+    "intent": "QUESTION_TEMPLATE_MAIN_MENU_PAGE_REMINDER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "c95a19e5-edaf-427b-ab9c-f79cc3309bd5"
+  }, {
+    "intent": "MEASUREMENTS_REPORT_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "611cb70c-1fe5-4dfc-9371-ccbe57a1a208"
+  }, {
+    "intent": "INVOICE_LABS_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "b86a3ee7-d8fd-453a-8830-1789080a2daa"
+  }, {
+    "intent": "NO_NEEDED_QUESTION_PATIENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "e1206316-02ff-4aff-9d3f-6f82014e9f64"
+  }, {
+    "intent": "MEDS_SUPPLIES_STATUS_MAIN_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f194a309-f7fb-44f6-893d-7f19b2972568"
+  }, {
+    "intent": "LOG_GLUCOSE_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "aa8694eb-e9b4-4c0f-9db3-976b97d34739"
+  }, {
+    "intent": "WEIGHT_LOG_PAGE_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "fa9fac4e-ebb8-46cf-9fe2-acf09991c762"
+  }, {
+    "intent": "WAIST_CIRCUMFERENCE_LOG_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "bf9acdac-bd85-494f-abfa-32432e3a38f1"
+  }, {
+    "intent": "INVOICE_PAGE_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f93934da-0793-478f-a672-c4369081c5ae"
+  }, {
+    "intent": "UPLOAD_LABS",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "7097c998-81f0-45ad-b6a5-9be4ed87ed72"
+  }, {
+    "intent": "YES_I_DO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f48cd3c8-78a7-4121-91e1-36847006cef7"
+  }, {
+    "intent": "I_DONT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "9e319a5c-0659-49d7-b64c-42ab54c13573"
+  }, {
+    "intent": "FASTING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "c8a949a2-261d-4af4-a462-80c6e6db713d"
+  }, {
+    "intent": "POST_MEAL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "clubPlan",
+    "name": "f9a6f705-763a-494f-9bcd-e55cf2bd4411"
+  }, {
+    "intent": "PSYCHOLOGIST_SURVEY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "2850c1d3-719d-4ca7-baa9-b59cb1500072"
+  }, {
+    "intent": "NUTRITION_SURVEY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "7d025d41-bb3e-4d1d-8b31-1a46a7a60e15"
+  }, {
+    "intent": "DIABETES_SURVEY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "21ba62b7-259d-4b03-a0ec-361822b7a012"
+  }, {
+    "intent": "NO_SHOW_GENERAL_MED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "5226bb1e-0011-4485-b9d7-d16cb813ae20"
+  }, {
+    "intent": "PSYCHOLOGY_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "434251b8-7cf1-4cfb-94f6-fb172697b596"
+  }, {
+    "intent": "DIABETES_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "1765e7cf-d273-4323-8e36-885323a71d96"
+  }, {
+    "intent": "NUTRITION_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "a88c8aa0-5330-4b2d-92a5-19101c0a7c32"
+  }, {
+    "intent": "RESCHECHULE_APPTS_MENU",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "e36ac73e-77af-4282-920f-188bd9157900"
+  }, {
+    "intent": "NO_SHOW_WEBINAR",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f514c5ac-7ae2-4ae3-b353-907d0e3284d9"
+  }, {
+    "intent": "SHOW_WEBINAR",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "fcde5588-83f5-431b-8632-38657fb49338"
+  }, {
+    "intent": "GOOD_PSYCHO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "103d62e1-d61f-402b-a5ed-be25db7e8d36"
+  }, {
+    "intent": "REGULAR_PSYCHO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f224ba33-1679-44ab-a7c5-0d7ef1013a5f"
+  }, {
+    "intent": "BAD_PSYCHO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "794eb25c-9c23-4f0f-9107-a78db7a2937b"
+  }, {
+    "intent": "PSYCHOLOGIST",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "fbfa0139-8ddc-455f-a6de-28c23e754170"
+  }, {
+    "intent": "NUTRITION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "80af3b60-53f6-4c18-b923-ac49ed87805a"
+  }, {
+    "intent": "DIABETES_ENDO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "bbc0f57c-b17a-4087-a33d-0af574227a8b"
+  }, {
+    "intent": "EXERCISE_APPT_RESCH",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "1c4c76e7-88b7-4901-b1e7-b79744f4d2b9"
+  }, {
+    "intent": "GLUCO_ID_TRACKING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "8caf9da3-c517-405d-a457-6b2aa6e6e25f"
+  }, {
+    "intent": "STRIPS_ID_TRACKING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "10011106-fc98-4980-93c6-af9a5bcf9b25"
+  }, {
+    "intent": "MEDS_ID_TRACKING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "5bdd9d5d-32ec-46ed-a267-fb59fced7bd9"
+  }, {
+    "intent": "FULL_REPORT_BUTTON_PAGE_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "a0ea1e26-73a4-4f89-9b99-424a689a39cb"
+  }, {
+    "intent": "GLUCOSE_REPORT_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "54488074-5e40-49a1-a218-53e38294fffc"
+  }, {
+    "intent": "GOOD_NUTRI",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "99d374b8-2ddb-43f6-8ffe-da3764ea796d"
+  }, {
+    "intent": "REGULAR_NUTRI",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "c4e77dd3-5b58-4e75-9764-84d5d3c51246"
+  }, {
+    "intent": "BAD_NUTRI",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "e6e1592f-e900-44d7-a063-d28a46c5aad2"
+  }, {
+    "intent": "HUAWEI",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "2c4ffd65-5a3c-4989-9d6c-d4cf75fe0223"
+  }, {
+    "intent": "ANDROID",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f778f343-ba7b-4ede-92e6-85f797502123"
+  }, {
+    "intent": "IPHONE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "79081aec-0d45-4f17-ac93-c92356297a5a"
+  }, {
+    "intent": "FILE_TYPE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "2f3c791b-67b7-4b7c-8d5e-eeece84348ee"
+  }, {
+    "intent": "PATIENT_NO_SHOW_TEMPLATE_BUTTON",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "5ba2faf6-1557-4c7f-98bc-87b888bce312"
+  }, {
+    "intent": "WHATSAPP_FLOW_FILLED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "a3f080d7-0f86-415c-b733-99316820a791"
+  }, {
+    "intent": "REFFERED_CONTACT_SHARED_BY_WHATSAPP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "ddf0e420-930d-41bf-b675-0be1c7f14be1"
+  }, {
+    "intent": "QUESTION_INVALID",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "2219343b-77be-4565-997a-49aa9c2ba48f"
+  }, {
+    "intent": "GOOD_DIABETES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "6dc42a0a-0eda-4607-9d00-50f0666a6bc7"
+  }, {
+    "intent": "REGULAR_DIABETES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "cec1343e-41e0-41bd-bfe2-ff4466f56956"
+  }, {
+    "intent": "BAD_DIABETES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "cc276ce3-b978-481e-8935-7c48a58a8030"
+  }, {
+    "intent": "TEMPLATE_REMINDER_WAIST",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "b7fc825b-e7b4-40ba-a092-43432bb179e4"
+  }, {
+    "intent": "DR_CLIVI",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f0947d3d-ed6c-4866-b2ac-5587830a3bb7"
+  }, {
+    "intent": "GLP_TUTORIAL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "451e5575-9e39-4bc2-bdd8-890163cffa4f"
+  }, {
+    "intent": "UPDATE_VIDEOCALL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "e219b1e2-1c15-48c6-b6ca-9f34d8c3ac28"
+  }, {
+    "intent": "ANOTHER_QUESTIONS_ADMIN",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "445a88b8-7a44-4d2f-8122-23968485bae9"
+  }, {
+    "intent": "NOT_SOLVED_QUESTIONS_ADMIN",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f6a701a6-7419-4c3e-9622-6a458450409b"
+  }, {
+    "intent": "SOLVED_QUESTIONS_ADMIN",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "2d8e8f08-ad8a-4713-a6a2-400f069db13a"
+  }, {
+    "intent": "TEMPLATE_SEND_QUEUDED_CONTENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "dd41f2d1-cc22-4d3b-8685-b00066492882"
+  }, {
+    "intent": "LABS_IMAGE_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "4d344190-6bb1-4502-b5d9-afb007c91cf7"
+  }, {
+    "intent": "FOOD_IMAGE_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "a379a1b9-f442-4feb-8787-347679b0e2e7"
+  }, {
+    "intent": "INVOICING_IMAGE_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "87eef4e7-927e-4ec0-923c-bc6f3f7609b2"
+  }, {
+    "intent": "PAYMENT_IMAGE_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "c0619030-e5c6-484d-abdf-7b99c42a33d0"
+  }, {
+    "intent": "AUDIO_DETECTED_RECEIVED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "5be2464d-eec4-457e-8244-57c2012cb259"
+  }, {
+    "intent": "HIGH_SPECIALIZATION_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "43d132cd-d5fe-42a0-b352-ccdbd8725701"
+  }, {
+    "intent": "HIGH_SPECIALIZATION_QUESTION_TAG_AUDIO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "962216a5-34bd-4888-9beb-b9a75e650784"
+  }, {
+    "intent": "NUTRITION_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "e8bbad32-f982-4ffc-8d7a-a0a46851530d"
+  }, {
+    "intent": "NUTRITION_QUESTION_TAG_AUDIO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "3705c86e-2418-45d2-9ff2-c7f23b8af22c"
+  }, {
+    "intent": "PSYCHO_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "6d758f32-8e1b-4016-8bf6-b05609fc48cf"
+  }, {
+    "intent": "PSYCHO_QUESTION_TAG_AUDIO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "a400e627-01dc-442d-b291-2031dff284ad"
+  }, {
+    "intent": "SUPPLIES_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "0c429a85-28c0-4d47-8e3e-c30ccf8ad264"
+  }, {
+    "intent": "PX_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "78c7ab20-109c-48a4-be10-05b70c2aa70a"
+  }, {
+    "intent": "SUPPLIES_QUESTION_TAG_AUDIO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "a3d8feb9-8be4-4976-a3cb-3b758cd35bf8"
+  }, {
+    "intent": "PX_QUESTION_TAG_AUDIO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "8f5ec73f-5388-4f68-8635-29f11259c9ec"
+  }, {
+    "intent": "LAST_PRESCRIPTION_BUTTON_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "09437c3b-59b0-440e-9921-4bc84969afbe"
+  }, {
+    "intent": "LAST_ORDER_BUTTON_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "5eeb1b4a-d488-4268-bba8-23e22a0d1410"
+  }, {
+    "intent": "LAST_NUTRITION_PLAN_BUTTON_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "4015fa4e-9091-4a08-ad90-4a0c8c21e06f"
+  }, {
+    "intent": "LAST_LABS_RESULTS_BUTTON_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "2918f326-045b-4693-8bbe-010ca7c9690a"
+  }, {
+    "intent": "GOOD_GENMED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "195a5f48-507f-4338-8f91-ae6c7dc0b948"
+  }, {
+    "intent": "REGULAR_GENMED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f448539e-3d42-45c4-ba92-0bbaebcf6e1e"
+  }, {
+    "intent": "BAD_GENMED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "d31ee16c-782b-4c91-a6a1-f855b1527d7c"
+  }, {
+    "intent": "FORGOT_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "305d769b-a542-4fbb-b3f1-e994d4c88912"
+  }, {
+    "intent": "UNEXPECTED_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "8c02855d-bf3d-4498-959b-c1468520be38"
+  }, {
+    "intent": "BUSSY_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "55fcdd68-bfea-45d6-b9d5-2043760c9b0f"
+  }, {
+    "intent": "NO_NEEDED_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "13cefd19-aec2-4f09-aaf9-b59bd43e071a"
+  }, {
+    "intent": "ISSUE_HOUR_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "192d03bc-ba73-4a11-b1de-ae9aa7a8c373"
+  }, {
+    "intent": "REMINDER_PX_SELFONBOARDING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "e9963cfa-1d29-4cda-9fcb-12e285180a46"
+  }, {
+    "intent": "NUTRI_SCHEDULE_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "040c8d21-fb9d-4f7d-bd18-e6266cb23135"
+  }, {
+    "intent": "PSYCHO_SCHEDULE_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "c7e5470b-9109-4f36-b33c-0a2cd7de4a0d"
+  }, {
+    "intent": "BASIC_LEVEL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "6a9adc36-58d6-4d6e-84b8-7e5cd7f2f556"
+  }, {
+    "intent": "SAXENDA",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "0fe0639e-35fe-4517-b496-3419fe1071cd"
+  }, {
+    "intent": "OZEMPIC",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "45be7c94-b940-4168-b9c1-c7eec41a904c"
+  }, {
+    "intent": "WEGOVY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "93973965-8ee2-411e-a9bf-8247a7a3e3db"
+  }, {
+    "intent": "OBESITY_QA",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "DIABETES",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "DIABETES"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "b387054c-249f-4641-b52f-d8fe8367b1f7"
+  }, {
+    "intent": "NUTRITION_QA",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "NUTRITION",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "615ef838-9f0a-425a-a8d9-6eb989dd6148"
+  }, {
+    "intent": "PSYCHO_QA",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "PSYCHOLOGY",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "d333a7b0-8a1d-4304-b91d-2c624316bd3c"
+  }, {
+    "intent": "MIDDLE_LEVEL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "3d5f5554-ab0a-40e2-9260-ec397978766a"
+  }, {
+    "intent": "OTHER_FILE_IMG_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "a2deded5-fb68-4646-b707-bca1a50380c5"
+  }, {
+    "intent": "CSAT_REGULAR",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "e2d29721-1195-4ea9-9ca8-503adab70405"
+  }, {
+    "intent": "CSAT_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "18c66ee6-b774-4872-bc74-ca2d8415e23f"
+  }, {
+    "intent": "CSAT_BAD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "a8ba0c61-3ffb-4c03-8728-699a144aaccc"
+  }, {
+    "intent": "LOW_IMPACT_ENROLL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "3dcb44e5-6a15-43d7-9075-99aa53401c94"
+  }, {
+    "intent": "emergencyCallsPsycho",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "3d12f0ca-afa9-48b6-8d85-96cc7dfffe67"
+  }, {
+    "intent": "RECEIVED_STICKER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "093296c6-72f3-4732-abee-e6a2d8662f61"
+  }, {
+    "intent": "RATE_APPOINTMENT_SURVEY_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "76ac6e3d-9741-409d-8a58-d0fe0b43024c"
+  }, {
+    "intent": "PX_ADAPTABLE_CHANGE_NUTRI_PLAN",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "b3522eb8-3fab-4e44-af28-432fa4689b5c"
+  }, {
+    "intent": "CANCELLED_EXERCISE_EVALUATION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "cbb4d332-5bd3-4767-b572-885a2d142b8d"
+  }, {
+    "intent": "PX_SUSCRIPTION_TEMPLATE_WORKOUTS",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "0ddffa75-bcfb-45c3-adcf-1b3b836df407"
+  }, {
+    "intent": "WORKOUT_FLOW_BEGINNING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "06123608-fea0-468a-a4f6-fc2f93048864"
+  }, {
+    "intent": "PAYMENTS_ISSUES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "04a0bbb3-bfae-4b6f-86f6-95feb52d51bf"
+  }, {
+    "intent": "OTHER_REQUESTS",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "d3f1dc68-300e-4361-b56a-73ac3364f0fa"
+  }, {
+    "intent": "NO_MEASURMENT_LOG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "edf0caaf-2d74-4611-9ba9-93ae137acaee"
+  }, {
+    "intent": "YES_MEASURMENT_LOG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "99c9310a-1902-41cd-8526-efa19ec1309e"
+  }, {
+    "intent": "patientFeelsBad",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "cd5c8ac8-2829-4b19-a207-6156605ca5f4"
+  }, {
+    "intent": "patientSendsSomethingElseWithNumbers",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "79412f69-54d1-48e3-b511-7f37a0e39cb9"
+  }, {
+    "intent": "patientLogsGlucoseLevelsFasting",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "82d8bba9-e567-4906-ab49-ced3214ce94e"
+  }, {
+    "intent": "patientLogsGlucoseLevelsPostMeal",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "1874ce1e-5a0b-4478-9ef7-77f5bd28735b"
+  }, {
+    "intent": "LOW_PROB",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "d05d776d-6d5c-4b4e-894b-24a22fb45857"
+  }, {
+    "intent": "MEDIUM_PROB",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "e0ea46ce-898e-498f-a434-cafd0c253290"
+  }, {
+    "intent": "HIGH_PROB",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "1a3294d0-1b18-485b-9ee0-035d9d2bdf96"
+  }, {
+    "intent": "IMAGE_POD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "13a0d716-a52a-411d-b580-251263ea876f"
+  }, {
+    "intent": "ID_TRACKING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "52000327-3155-46b4-a58a-e5102eabc548"
+  }, {
+    "intent": "LIVERPOOL_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "52af6b70-31fd-4b11-bc7b-9dcb1c15b825"
+  }, {
+    "intent": "GOOGLE_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "35763457-4fd1-4c30-ad24-0aabff6988e9"
+  }, {
+    "intent": "CASHI_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "2b696fc2-ca9a-4009-97c9-2c866a1d4c9f"
+  }, {
+    "intent": "UBER_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "178c7eff-d31a-4407-8163-3c266043bcfb"
+  }, {
+    "intent": "AMAZON_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "0df3ab2e-55dd-47ad-9361-2c6e64f97a6a"
+  }, {
+    "intent": "INVOICE_INFO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f97c199a-9004-4bdb-915a-14fdcb5ccef0"
+  }, {
+    "intent": "INVOICE_VIEW",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "ec0377ce-52a1-4000-98f0-5d8bc3914ffd"
+  }, {
+    "intent": "SERVICE_SURVEY_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "4766de1f-89f8-4b15-a597-3bd3f86c5233"
+  }, {
+    "intent": "SEND_DM_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "d451053e-88d7-49db-99b6-926a3ee8e4e9"
+  }, {
+    "intent": "REMINDER_LABS",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "215f49a0-52d8-427f-9af9-253dfde59c8b"
+  }, {
+    "intent": "AFIRME_APP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "6138ca7f-6c32-4497-8059-5623636b1696"
+  }, {
+    "intent": "SANTANDER_APP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "2b94bf8e-8d6d-45ae-97fa-58120d399eec"
+  }, {
+    "intent": "BANORTE_APP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "dbbed145-e6ad-4387-b428-2119cb0b537e"
+  }, {
+    "intent": "BBVA_APP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "8aa700e1-e49d-4533-a002-8fc450cb4925"
+  }, {
+    "intent": "BANORTE_LOCATION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "4b8f575d-2fd8-410d-b0ee-123028427175"
+  }, {
+    "intent": "TELECOMM_LOCATION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f667af2a-5ec0-45f4-b820-8d897bf16112"
+  }, {
+    "intent": "BBVA_LOCATION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "1b578d62-b90a-4a49-ac80-f69da8db722d"
+  }, {
+    "intent": "SANTANDER_LOCATION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "e0ba3326-3b78-44ef-bd71-f43f03d07498"
+  }, {
+    "intent": "APP_BANK",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f5da998c-f7d3-4ca6-885c-ade4113ea12e"
+  }, {
+    "intent": "BANK_LOCATION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "80eeed5d-cfed-456a-86ad-f8f4ce735077"
+  }, {
+    "intent": "WALMART_STORES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "1e0eb3c8-142e-4f54-9e49-2b21e6eca14a"
+  }, {
+    "intent": "BANK_TRANSFER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "a4483191-1c5c-4777-92d1-cb84665353e3"
+  }, {
+    "intent": "STORES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "5071c957-c4cb-4def-931b-6b36fac8646c"
+  }, {
+    "intent": "OFFLINE_PAYMENTS",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "85328f2e-9594-4801-bdd6-9193f46f0716"
+  }, {
+    "intent": "PX_ADAPTABLE_GOOD_RESULTS_NUTRI_PLAN",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "55777d7a-6696-4125-8ac3-70ab5d814f26"
+  }, {
+    "intent": "PX_ADAPTABLE_COMFORTABLE_NUTRI_PLAN",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "c1257482-4722-43dc-8136-f66f3f1d9dc4"
+  }, {
+    "intent": "PX_ADAPTABLE_NEEDS_PSYCH_HELP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "23f292c7-c97d-49fa-a30a-bf9c0179c9df"
+  }, {
+    "intent": "PX_ADAPTABLE_FEELS_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "993c55dc-c187-4bb5-b9a7-cfa12ffd1ef6"
+  }, {
+    "intent": "NO_LABS_SENT_REMINDER_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "5c81d780-f645-45e3-8f9b-504865672496"
+  }, {
+    "intent": "VALID_QUESTION_YES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "367c27bd-8502-4dfa-b828-c89c59f99910"
+  }, {
+    "intent": "RECIPE_MENTAL_TIP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "8a007616-ee37-4e23-af52-bc7dfbba5edd"
+  }, {
+    "intent": "RESCHEDULE_GENMED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "82f86ced-992d-4cad-970b-7f295fc820f2"
+  }, {
+    "intent": "PX_COMING_TO_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "d467beb4-7d8f-4995-8679-674c0a310733"
+  }, {
+    "intent": "SURVEY_GENMED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "157436a3-fa0f-4acb-9650-35b7eafbcc28"
+  }, {
+    "intent": "RETRY_CHARGE_PAYMENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "be5bf8b0-9a5c-4b4a-8c46-b0e0e4ca5b7b"
+  }, {
+    "intent": "NUTRI_PROCESS",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "7f96a5c9-ef51-4406-88cb-4ecf64e99842"
+  }, {
+    "intent": "PSYCHO_PROCESS",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "a3e9b1f2-0fd4-46fa-b7c6-f1e1f3662df6"
+  }, {
+    "intent": "UPDATE_PAYMENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "e25c1803-d5e4-445e-9c41-6a452973fb5d"
+  }, {
+    "intent": "REFERRALS_TEMPLATES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "2ee88446-6b33-4967-a6c0-d40277bd7dd7"
+  }, {
+    "intent": "DOWNLOAD_RECETARIO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "07045eea-7c02-4132-9d1a-8e55dbc77a2a"
+  }, {
+    "intent": "PSYCHO_RESCHEDULE_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "95332194-53d1-4491-87f7-14eb20abd1aa"
+  }, {
+    "intent": "NUTRI_RESCHEDULE_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "df1540a2-9997-41dd-bae2-719ca6b2e5aa"
+  }, {
+    "intent": "BUSSY_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "afa7e051-ea8f-4833-9a96-33ae61279039"
+  }, {
+    "intent": "keyWordMainMenu",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "0b502678-978d-463e-97fb-6c5f3581d079"
+  }, {
+    "intent": "WEB_APP_ONB",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ONBOARDING_SEND_LINK"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "2573f984-c369-41bd-b6a0-6b4057900658"
+  } ]
+}

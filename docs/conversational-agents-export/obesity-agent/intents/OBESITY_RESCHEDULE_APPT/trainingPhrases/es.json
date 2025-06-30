@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Reagendar alta especialidad",
+      "parameterId": "OBESITY_RESCHEDULE_APPT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Reagendar A. Especialidad",
+      "parameterId": "OBESITY_RESCHEDULE_APPT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

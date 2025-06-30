@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "APPT_CANCEL_REQUEST_TEMPLATE",
+    "synonyms": [ "APPT_CANCEL_REQUEST_TEMPLATE" ],
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,148 @@
+{
+  "name": "35b601ca-9afc-4a9e-a614-8addb6ab8566",
+  "displayName": "invoiceLabsMenu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Selecciona",
+            "bodyText": "¿Qué necesitas?",
+            "sections": [ {
+              "rows": [ {
+                "description": "Facturas",
+                "id": "INVOICE",
+                "title": "Facturación"
+              }, {
+                "description": "Obtener último archivo",
+                "id": "UPLOAD_LABS",
+                "title": "Labs/Recetas/Plan"
+              }, {
+                "description": "Llamar equipo Clivi",
+                "id": "CALL_SUPPORT",
+                "title": "Marcar a Clivi"
+              }, {
+                "description": "Soporte/servicio",
+                "id": "PX_QUESTION_TAG",
+                "title": "Requiero soporte"
+              } ],
+              "title": "Menú"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "INVOICE_PAGE_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "InvoiceCenter",
+    "name": "9e395bb2-9117-46b7-bd50-160efc31c0e6"
+  }, {
+    "intent": "UPLOAD_LABS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "lastFileAvailable",
+    "name": "077fd9a0-d03b-4e3d-8f7e-b88b680c0e0b"
+  }, {
+    "intent": "CALL_SUPPORT_PAGE_AND_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Presiona en el número de abajo para marcarnos, por favor" ]
+        },
+        "languageCode": "es"
+      }, {
+        "text": {
+          "text": [ "+525588409477" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "patient_call_clivi",
+                  "platform": "HUBSPOT",
+                  "value": "DATE_TODAY"
+                } ]
+              }
+            },
+            "type": "DATE_TODAY"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "be92d215-19e2-435e-8079-953f5ef0fcd9"
+  }, {
+    "intent": "PX_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "helpDeskSubMenu",
+    "name": "b84ab422-268b-4f1d-945b-d745014f0abf"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "9da2afa4-612f-40bf-844c-88598f2633a9"
+  } ],
+  "transitionRouteGroups": [ "CLUB_CATCHER" ]
+}

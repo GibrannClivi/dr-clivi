@@ -1,0 +1,118 @@
+{
+  "name": "42fafbde-c90d-483e-8cb4-af783ec1a3ad",
+  "displayName": "invoiceUpdatedInfo",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "I_DONT",
+              "text": "No"
+            }, {
+              "id": "YES_I_DO",
+              "text": "Sí"
+            } ],
+            "textBody": "Bienvenido a nuestro centro de facturación. ¿Ya contamos con tu información fiscal?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "YES_I_DO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "invoicingCenter",
+    "name": "1409a39f-7f10-488d-a29b-901a6d987776"
+  }, {
+    "intent": "I_DONT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Te estamos redirigiendo al portal de facturación. Para visualizar tu perfil de manera óptima, por favor ingresa desde una computadora.  🖥️ " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "invoice_info_view",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          }, {
+            "definition": {
+              "functionName": "INVOICE_PORTAL_LINK_SEND"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "f0b84925-a088-4b0d-853c-afafd01cc37b"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "0ac8888b-9ab0-436c-a2f4-cc12faad50fa"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

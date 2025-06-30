@@ -1,0 +1,73 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "quiero hablar con mi sicologa",
+      "parameterId": "emergencyCallPsycho"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tengo una crisis de ansiedad",
+      "parameterId": "emergencyCallPsycho"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "necesito comunicarme con mi psicóloga",
+      "parameterId": "emergencyCallPsycho"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Necesito hablar con mi terapeuta",
+      "parameterId": "emergencyCallPsycho"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "necesito hablar con mi terapeuta",
+      "parameterId": "emergencyCallPsycho"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tengo ansiedad",
+      "parameterId": "emergencyCallPsycho"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Quiero hablar con mi psicólogo",
+      "parameterId": "emergencyCallPsycho"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Quiero hablar con mi psicológa",
+      "parameterId": "emergencyCallPsycho"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tengo depresión",
+      "parameterId": "emergencyCallPsycho"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Quiero apoyo psicológico",
+      "parameterId": "emergencyCallPsycho"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

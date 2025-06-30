@@ -1,0 +1,62 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "keyWordMainMenu",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "3d520a36-d5f1-48e7-a34e-d8a98654f34a"
+  }, {
+    "intent": "END_SESSION_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "7a77b8ed-2ff4-4723-8d99-ebcab87554b2"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "7ae5d027-3ce4-4310-8481-7b6e73f949ee",
+    "targetPlaybook": "MASTER_AGENT"
+  }, {
+    "targetPage": "End Session",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "711bae81-5339-434e-939d-3a8ead05865a"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "transitionRouteGroups": [ "DEFAULT_CATCH" ],
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "41fa1e3e-c81f-4b80-ba16-558f828a2e6e",
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,5748 @@
+{
+  "name": "d53fe951-e15c-4706-9d7d-f21504c3bfe3",
+  "displayName": "DEFAULT_CATCH",
+  "transitionRoutes": [ {
+    "intent": "NOT_SOLVED_QUESTIONS_ADMIN",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "b366f3f0-15f9-4968-91af-188a2fb40b74"
+  }, {
+    "intent": "REMINDER_LABS",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "40526589-b393-4901-ac3b-f5b333d2d3c6"
+  }, {
+    "intent": "QUESTION_TEMPLATE_MAIN_MENU_PAGE_REMINDER",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "92597663-f738-4f78-9a93-6d96c84da699"
+  }, {
+    "intent": "APPOINTMENTS_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "690d026b-29af-49a0-b7c9-055b293afa38"
+  }, {
+    "intent": "CALL_SUPPORT_PAGE_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "6eeefac8-2ff9-4212-9128-49e849c00d8e"
+  }, {
+    "intent": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "ddbd0924-f581-42c8-825a-aa3fbc33b842"
+  }, {
+    "intent": "RESCHECHULE_APPTS_MENU",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "a50e6a99-2c36-401f-be38-2d8e43c954ba"
+  }, {
+    "intent": "LOG_GLUCOSE_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "b1ee7410-d76c-4d40-996a-c75fd19afa07"
+  }, {
+    "intent": "TEMPLATE_SEND_QUEUDED_CONTENT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "d41b90ff-61a0-4374-9a7d-45d3e177bdd1"
+  }, {
+    "intent": "SEND_DM_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUEUED_MESSAGES_SEND"
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "eba9f553-aa6b-4734-baae-16bd9492f80b"
+  }, {
+    "intent": "RATE_APPOINTMENT_SURVEY_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "c57abbe9-646e-4e81-8df2-72a7df1b8361"
+  }, {
+    "intent": "LOG_BODY_MEASUREMENTS_TEMPLATE_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "b58b94fd-2f6c-4cd5-af4b-9525f3f7148b"
+  }, {
+    "intent": "PATIENT_NO_SHOW_TEMPLATE_BUTTON",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0331c1d4-4a72-48f3-bbf1-f2f844fd24bc"
+  }, {
+    "intent": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "96cacb0d-7215-470f-b79c-634a83f0bb9f"
+  }, {
+    "intent": "SERVICE_SURVEY_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "834cb080-c4ad-484e-aa61-4454e267c745"
+  }, {
+    "intent": "END_SESSION_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "16ecbd73-daf2-41ab-8ecf-df1cd51ca99c"
+  }, {
+    "intent": "WEIGHT_LOG_PAGE_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "c76803fc-0478-4ad5-98a7-b5e522338737"
+  }, {
+    "intent": "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "3e25518d-ac7b-4694-a748-0107ad7b7b5a"
+  }, {
+    "intent": "LAST_PRESCRIPTION_BUTTON_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "33f42493-6017-4350-95f2-261595203346"
+  }, {
+    "intent": "LAST_ORDER_BUTTON_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "66d84fb8-7d56-4870-99ba-32938935361f"
+  }, {
+    "intent": "FULL_REPORT_BUTTON_PAGE_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "65f62ae5-9222-4ebf-9cb3-74f66157735d"
+  }, {
+    "intent": "GLUCOSE_REPORT_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "a32e57a5-e8b4-4ef7-97b0-83afd01ea398"
+  }, {
+    "intent": "MEASUREMENTS_REPORT_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "535b8da9-42de-42e8-bfbd-9541431afd1b"
+  }, {
+    "intent": "INVOICE_LABS_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "de30e6cd-df8d-4acf-96ca-5e05ac74ef14"
+  }, {
+    "intent": "NO_NEEDED_QUESTION_PATIENT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "a04a9705-d434-4738-a8a7-9a9ba5050eb1"
+  }, {
+    "intent": "MEDS_SUPPLIES_STATUS_MAIN_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "cadeaec6-0a5c-4259-b94c-3907dd78deda"
+  }, {
+    "intent": "WAIST_CIRCUMFERENCE_LOG_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0a5dda41-33ef-4912-aa80-80569b1e905a"
+  }, {
+    "intent": "ADHERENCE_ENDO_BAD",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0f93738b-327f-449f-b084-2c30e027ce5b"
+  }, {
+    "intent": "BAD_WEBINAR",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "3e9edb89-36b4-40b8-b91b-61fd1d374bed"
+  }, {
+    "intent": "GOOD_DIABETES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0ffa67f9-3b9d-4f44-b5fa-741701b4bb98"
+  }, {
+    "intent": "ANDROID",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "b518110c-9c33-474e-8cd1-d74a0243ce53"
+  }, {
+    "intent": "NUTRITION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "e6fb3121-dd8e-4df1-a866-95d3ad2a9a66"
+  }, {
+    "intent": "NUTRITION_NO_SHOW",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "52568e10-6caa-4b37-bd43-af9af397a886"
+  }, {
+    "intent": "AMAZON_CARD_REF_SENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "4be31465-6368-4e7a-8d7b-a01b81679f64"
+  }, {
+    "intent": "PX_QUESTION_TAG_AUDIO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "dd018d45-08a4-4a6e-aa3f-4f2b0a958ee3"
+  }, {
+    "intent": "REGULAR_NUTRI",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "74797d87-980a-4e28-82e6-53f30d2bdcec"
+  }, {
+    "intent": "PSYCHOLOGIST",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "79eeed4c-e201-420f-88f3-842a106f4341"
+  }, {
+    "intent": "HIGH_PROB",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "1d98795b-84e0-4be3-8619-5a70bdc66588"
+  }, {
+    "intent": "IPHONE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "969a1e1e-a02f-474a-8d1d-41f8007a58a2"
+  }, {
+    "intent": "HIGH_SPECIALIZATION_QUESTION_TAG_AUDIO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "052735a5-145d-4507-8bbf-8076c52b8d07"
+  }, {
+    "intent": "UPLOAD_LABS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "cd5f85e9-4903-4697-ae31-88a68d8db78b"
+  }, {
+    "intent": "PSYCHOLOGIST_SURVEY",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "9cc083ae-1ff8-4735-87db-e39b2fb3f3a8"
+  }, {
+    "intent": "NUTRITION_QUESTION_TAG_AUDIO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "2a1bb8bf-2c99-4b50-ab1a-b64385b8827c"
+  }, {
+    "intent": "BAD_GENMED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "44eb0493-221c-4047-b516-f7f086194133"
+  }, {
+    "intent": "SHOW_WEBINAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "683a36fa-1e16-4b4c-8210-f152c744388a"
+  }, {
+    "intent": "BAD_PSYCHO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "90a8bc7b-950f-484f-a1ba-de57e14e958b"
+  }, {
+    "intent": "INVOICING_IMAGE_INCOMING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "909e5ff9-b7d1-45cb-9fc2-95b1edf0a3c0"
+  }, {
+    "intent": "CASHI_CARD_REF_SENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0a7e37bf-3e4a-4bc5-8da3-a852cbaed7f8"
+  }, {
+    "intent": "NO_SHOW_WEBINAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "3b8cfafd-3e7a-4a28-9437-965d63e250d2"
+  }, {
+    "intent": "PSYCHO_QUESTION_TAG_AUDIO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "381db237-4801-4317-9d69-7b1d193d6744"
+  }, {
+    "intent": "LABS_IMAGE_INCOMING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "fa391216-dd28-4fbe-b040-85c8dd15a799"
+  }, {
+    "intent": "HUAWEI",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "d616f5e3-2f58-40e1-81b5-dbbc33577d6b"
+  }, {
+    "intent": "REGULAR_WEBINAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "a45d58c2-78b6-4786-8a04-bcbd75ba950c"
+  }, {
+    "intent": "PAYMENTS_ISSUES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "da7c8b60-11d3-43af-b79e-5b52a3311055"
+  }, {
+    "intent": "MEDIUM_PROB",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "96a7bf0f-3bd2-4197-a72b-5b7076b51704"
+  }, {
+    "intent": "LIVERPOOL_CARD_REF_SENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "2533d035-0a8d-4cd7-962c-e054fde63ab5"
+  }, {
+    "intent": "REGULAR_PSYCHO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "82dee901-8edd-4900-86c4-d9483525569c"
+  }, {
+    "intent": "OTHER_REQUESTS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "d0cd1b7b-405c-4dd5-9204-9352a63a1e5e"
+  }, {
+    "intent": "NO_SHOW_GENERAL_MED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "b2cbfc1d-4cec-450a-bf41-78004e32bad3"
+  }, {
+    "intent": "INVOICE_VIEW",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "aed40bcd-7cbf-4333-8f43-75c97627d746"
+  }, {
+    "intent": "SUPPLIES_QUESTION_TAG_AUDIO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "5455db26-78fa-4cf5-b7dd-029230329e90"
+  }, {
+    "intent": "ADHERENCE_NUTRI_GOOD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "5482ad74-4fe3-4074-bb0b-e2c1c79bb2d7"
+  }, {
+    "intent": "UBER_CARD_REF_SENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "bc826ba4-3b8d-4909-b936-84eb53593fe0"
+  }, {
+    "intent": "FOOD_IMAGE_INCOMING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "43d6eaaf-fc26-4e42-8852-c4a765fd724a"
+  }, {
+    "intent": "SPOTIFY_CARD_REF_SENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "f2583938-fb6e-4a49-bd28-5f8d4ef8c147"
+  }, {
+    "intent": "YES_I_DO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "cfc917ae-e0b1-444a-a811-884cdcd4ae37"
+  }, {
+    "intent": "LAST_LABS_RESULTS_BUTTON_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "4b1220c6-47df-4732-b552-6d1a24f2fc16"
+  }, {
+    "intent": "PAYMENT_IMAGE_INCOMING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "727b40be-ef0e-4bbc-8368-74edac138b51"
+  }, {
+    "intent": "DIABETES_ENDO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "4eacb259-7325-4b6f-9983-0ccb69f0d33f"
+  }, {
+    "intent": "REGULAR_DIABETES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "5aa6ac40-b2d3-40f4-916e-50411107a2f9"
+  }, {
+    "intent": "YES_MEASURMENT_LOG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "c90bba69-46d2-4197-b639-7b1207c2ea6e"
+  }, {
+    "intent": "FASTING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "87642095-f1f8-4689-aaf6-9b3b99fb8c2f"
+  }, {
+    "intent": "ADHERENCE_PSYC_REGULAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "24576ede-a198-4876-b2b2-c69d966abe47"
+  }, {
+    "intent": "LOW_PROB",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "6347630a-e2eb-4ab2-9d91-6bc0eeae8803"
+  }, {
+    "intent": "UNEXPECTED_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "9234ea09-e549-4a87-b00a-3ce8d1daf5dd"
+  }, {
+    "intent": "NO_NEEDED_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "3b4829b2-52c1-4b09-bfb2-5ef9a494757a"
+  }, {
+    "intent": "BUSSY_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0d49e5ce-37d5-4c57-b7b3-2571185a7856"
+  }, {
+    "intent": "LAST_NUTRITION_PLAN_BUTTON_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "96d9e710-681e-4b1c-8ee2-13330985cea1"
+  }, {
+    "intent": "FORGOT_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "c0400c30-f7a1-4071-acee-1ff4a2661d74"
+  }, {
+    "intent": "STRIPS_ID_TRACKING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "eacb7d2b-bf4d-4e33-a0a7-6b4890787f97"
+  }, {
+    "intent": "INVOICE_INFO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "3d2fddaa-15f6-40f1-9407-bf4f2f7daf4e"
+  }, {
+    "intent": "ADHERENCE_ENDO_REGULAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "effa9719-82aa-42a1-a6f2-8079dc725a78"
+  }, {
+    "intent": "PSYCHOLOGY_NO_SHOW",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "44208474-ff88-462e-a6cd-28a52b9b099c"
+  }, {
+    "intent": "GOOD_WEBINAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0c7d3efa-2e6f-493d-b0c5-4c192dd13fe1"
+  }, {
+    "intent": "MEDS_ID_TRACKING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "c51aa73c-50cf-4941-8a33-97e2daebf122"
+  }, {
+    "intent": "INVOICE_PAGE_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "216fead9-a9be-4234-952e-a8c22cfba594"
+  }, {
+    "intent": "GOOD_GENMED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "aafa868d-ad9b-45c2-8b57-7847b3ecc638"
+  }, {
+    "intent": "DIABETES_NO_SHOW",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "cea7736e-1825-4932-ab51-a837067f79f9"
+  }, {
+    "intent": "REGULAR_GENMED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "f2407d39-c302-4c2a-bd58-9b528c162f6f"
+  }, {
+    "intent": "ADHERENCE_NUTRI_BAD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "76298881-af29-416a-932f-9cff7e9302e4"
+  }, {
+    "intent": "ADHERENCE_NUTRI_REGULAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "c90841b9-2935-44a6-a848-392e8f5eb335"
+  }, {
+    "intent": "PX_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "b3fe74d7-175a-4ccb-8b7f-b9ae68d1a0ff"
+  }, {
+    "intent": "BAD_NUTRI",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "33dee6dd-ac6b-4f9a-83ed-cbb817541bbf"
+  }, {
+    "intent": "DIABETES_SURVEY",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "f8b9cfe4-d4da-4d9a-a7b7-48496b3e36bf"
+  }, {
+    "intent": "GLUCO_ID_TRACKING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "b4f23f98-5091-4d5a-a105-5abe63e096bf"
+  }, {
+    "intent": "PSYCHO_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "8843cef1-ebf1-4a85-b33e-c7c7e7a30b13"
+  }, {
+    "intent": "GOOD_NUTRI",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "11e9006c-7819-4c42-b5cc-55d58e99c4b5"
+  }, {
+    "intent": "POST_MEAL",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "fb7c41b7-f00d-45ff-a9f9-7aa7a1739836"
+  }, {
+    "intent": "IMAGE_POD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "da83ac2f-947d-40d5-bac7-1295f2fec097"
+  }, {
+    "intent": "EXERCISE_APPT_RESCH",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "23f806e4-de22-416e-b772-2604babf3e3c"
+  }, {
+    "intent": "GOOD_PSYCHO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "1ea90b3e-1f67-4183-a929-311898a09699"
+  }, {
+    "intent": "ADHERENCE_PSYC_GOOD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "8a35defd-2cb7-4eb9-8831-580776f19c73"
+  }, {
+    "intent": "I_DONT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "5062b08f-8578-4e29-a4f7-8178651b8528"
+  }, {
+    "intent": "ADHERENCE_PSYC_BAD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "2bdd3379-af62-4bac-a775-07d502f15da8"
+  }, {
+    "intent": "ID_TRACKING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "16a9f27d-4312-45fc-a9c1-11136f45b33a"
+  }, {
+    "intent": "GOOGLE_CARD_REF_SENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "fe7baccc-6136-4079-abc6-56afc017b26a"
+  }, {
+    "intent": "BAD_DIABETES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "7ab36905-5649-4b48-8041-bbc53e90c513"
+  }, {
+    "intent": "ADHERENCE_ENDO_GOOD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "bc9a0f95-5dcc-47e5-aacf-7c8dc4bf786b"
+  }, {
+    "intent": "ISSUE_HOUR_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "067643f2-86ce-4391-a47c-df56ba81954d"
+  }, {
+    "intent": "NUTRITION_SURVEY",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "f86bc2ef-8a6c-4157-9c6f-d34cd9f0cb7c"
+  }, {
+    "intent": "NO_CHANGE_WHATSAPP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "774466ce-2993-4df7-bf32-158f51751bba"
+  }, {
+    "intent": "CHANGE_WHATSAPP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "ee936daf-4114-4515-b44b-fb1bb364dcc9"
+  }, {
+    "intent": "CLIVI_LEAD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "6aadf504-a984-442d-8a92-53da21727d9f"
+  }, {
+    "intent": "CLIVI_PATIENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "29b4c709-fe63-465b-938f-4523ee26ecef"
+  }, {
+    "intent": "AFIRME_APP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "13ce4c7e-9e74-4389-961e-a5639ac6680f"
+  }, {
+    "intent": "SANTANDER_APP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "af06e742-c500-4a31-93d8-0f0433136ec2"
+  }, {
+    "intent": "BANORTE_APP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "cf49a98a-b43c-40d6-8167-b111a19646ab"
+  }, {
+    "intent": "BBVA_APP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "9abafe0d-eb3e-4374-a283-e43e95d924e5"
+  }, {
+    "intent": "BANORTE_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0d0c8f36-d2a8-4d11-82f9-ba05737b37bb"
+  }, {
+    "intent": "TELECOMM_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "26688e25-93c9-4350-bbd8-0767c42c023a"
+  }, {
+    "intent": "BBVA_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "fbfa0f75-13d1-4d14-b573-757b02399169"
+  }, {
+    "intent": "SANTANDER_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "cdc16b2a-d280-4f7b-8d78-706220c4c4e2"
+  }, {
+    "intent": "APP_BANK",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "cea98140-3a20-4079-981f-e3e2723469c7"
+  }, {
+    "intent": "BANK_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "bbfe08a4-9400-4fe9-8412-786e0ae2618d"
+  }, {
+    "intent": "WALMART_STORES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0e38294f-bcee-486b-81e4-f82a7f0d7253"
+  }, {
+    "intent": "BANK_TRANSFER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "84e4acd0-f07e-4732-b9fa-98188f620dae"
+  }, {
+    "intent": "STORES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "4380a40b-75f1-4fd6-a7e6-943cadff103e"
+  }, {
+    "intent": "OFFLINE_PAYMENTS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "657fd200-12f4-4f5f-9547-04802b420dca"
+  }, {
+    "intent": "CONFIRM_APPTS_TEMPLATE_REMINDER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "03500838-368f-4890-b94f-9d6b54c77399"
+  }, {
+    "intent": "FILE_TYPE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "120b1867-7021-4d21-bb98-1b9adb23216f"
+  }, {
+    "intent": "WHATSAPP_FLOW_FILLED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "5db791ce-2c3f-4349-902c-eb7b54eeb2e1"
+  }, {
+    "intent": "REFFERED_CONTACT_SHARED_BY_WHATSAPP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "3a9c3aec-efaa-4a74-9a79-7c2b2101c616"
+  }, {
+    "intent": "QUESTION_INVALID",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "92996cde-d6fb-476b-a2c3-7fad44c91b16"
+  }, {
+    "intent": "TEMPLATE_REMINDER_WAIST",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "3e893ec8-e299-4261-9fae-269b686025f3"
+  }, {
+    "intent": "DR_CLIVI",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "504ece0c-ff3c-4fd8-99ae-474d64b0395f"
+  }, {
+    "intent": "GLP_TUTORIAL",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "400a92f9-08ff-4795-8751-c05d58a3510e"
+  }, {
+    "intent": "UPDATE_VIDEOCALL",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "f0d97cbe-6222-4847-9bbd-2f8fc0760ca1"
+  }, {
+    "intent": "ANOTHER_QUESTIONS_ADMIN",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "378fb7b7-55db-40d3-ad10-37dc20302b05"
+  }, {
+    "intent": "SOLVED_QUESTIONS_ADMIN",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "e309f424-f986-4445-a7d2-03f28656b7bb"
+  }, {
+    "intent": "HIGH_SPECIALIZATION_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0fbe15e2-c3f9-438b-8f20-4b8fba6bb44b"
+  }, {
+    "intent": "NUTRITION_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "613d4f45-e37d-4d26-ae54-6e52433f1b50"
+  }, {
+    "intent": "SUPPLIES_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "1d834ec1-121f-4b27-aa5b-b8f49fae3bb9"
+  }, {
+    "intent": "CONFIRM_MED_REMINDER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "c141b177-69a9-4997-9727-fdc0515fc5be"
+  }, {
+    "intent": "NECK_REMINDER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0fd7639b-fe26-4b55-968f-370378f650df"
+  }, {
+    "intent": "ACTIVE_CONVERSATION_STARTED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "0415cf98-52f8-4568-913c-9c06df374e08"
+  }, {
+    "intent": "REMINDER_PX_SELFONBOARDING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "64fc2c31-d71d-4728-8f78-e846e1c1a400"
+  }, {
+    "intent": "NUTRI_SCHEDULE_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "2021553d-2e6e-49cd-bf5a-cbc467c044f3"
+  }, {
+    "intent": "PSYCHO_SCHEDULE_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "9a8dfd01-d886-44f0-bab7-bafd34e9c437"
+  }, {
+    "intent": "PSYCHO_RESCHEDULE_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "9b537000-d84a-4182-b22d-9d7cb5474251"
+  }, {
+    "intent": "NUTRI_RESCHEDULE_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "22c1284a-162f-40d0-b3cd-1349e20a9aa1"
+  }, {
+    "intent": "DOWNLOAD_RECETARIO",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "f5723c7f-e137-4cd9-a2da-99b8a98708df"
+  }, {
+    "intent": "ADHERENCE_ENDO_TEMPLATE_REMINDER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "ba5b9e11-efc7-4468-abb9-3f5d208821bd"
+  }, {
+    "intent": "REFERRALS_TEMPLATES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "77d3b32e-91b6-41cb-9fa4-2a973756bbdf"
+  }, {
+    "intent": "UPDATE_PAYMENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "92d46a63-df24-4cd5-b96c-340bda457f9d"
+  }, {
+    "intent": "PSYCHO_PROCESS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "a2a57659-b6af-4011-b906-1f423196e655"
+  }, {
+    "intent": "NUTRI_PROCESS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "71e458a3-c9e3-4096-afa0-adbce01ba228"
+  }, {
+    "intent": "RETRY_CHARGE_PAYMENT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "b11e17b9-257e-49e7-bb55-4f126d77d2ac"
+  }, {
+    "intent": "SURVEY_GENMED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "a3712f73-bbea-4aeb-9809-160c221e4fd8"
+  }, {
+    "intent": "PX_COMING_TO_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "7aec3716-0fae-476c-822f-e0eefa4d2b88"
+  }, {
+    "intent": "RESCHEDULE_GENMED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "032411af-8b29-4078-820f-aa6dfe42426a"
+  }, {
+    "intent": "RECIPE_MENTAL_TIP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "ea971518-6b2a-4fba-a534-00a262377a37"
+  }, {
+    "intent": "APPT_SUPPORT_ALERT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "6e960bd0-1c9f-475c-a96b-fa62fabc26d0"
+  }, {
+    "intent": "VALID_QUESTION_YES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "ea422b75-21c5-417f-ac64-c6b90bbc1ace"
+  }, {
+    "intent": "NO_LABS_SENT_REMINDER_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "2eff17df-8399-449e-ac2c-f85a33c6ab72"
+  }, {
+    "intent": "PX_ADAPTABLE_FEELS_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "c91dab91-65a3-43d4-b657-7bf0235ff0e6"
+  }, {
+    "intent": "PX_ADAPTABLE_NEEDS_PSYCH_HELP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "143e02ea-968d-4afd-bb72-fce9ff522154"
+  }, {
+    "intent": "PX_ADAPTABLE_COMFORTABLE_NUTRI_PLAN",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "ac3341ab-6680-4ee5-8e55-e13c83adfb59"
+  }, {
+    "intent": "PX_ADAPTABLE_GOOD_RESULTS_NUTRI_PLAN",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "1cfec154-4a09-43f7-a7f3-edc23d2e363d"
+  }, {
+    "intent": "PX_ADAPTABLE_CHANGE_NUTRI_PLAN",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "15e32cf8-5f4b-41da-bb79-d80c6f5fd14c"
+  }, {
+    "intent": "YES_REACTIVATION_CLUB",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "bc26124e-82fb-4c35-a9dd-d6bcb5fbec35"
+  }, {
+    "intent": "NO_REACTIVATION_CLUB",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "a4951f95-0c7a-40e7-b404-cb43ba3e340d"
+  }, {
+    "intent": "patientLogsGlucoseLevelsFasting",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "bba852b1-8121-4e26-98d8-620921862fe4"
+  }, {
+    "intent": "patientSendsSomethingElseWithNumbers",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "13e4f00b-2c66-41f2-a340-adb436827f5a"
+  }, {
+    "intent": "patientLogsGlucoseLevelsPostMeal",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "e22fdfb2-227b-419d-b526-ff9331b91c68"
+  }, {
+    "intent": "patientFeelsBad",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "086abe7a-e20b-45dd-8393-371dd2ecc00c"
+  }, {
+    "intent": "WORKOUT_FLOW_BEGINNING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "3bc5a7f7-b4b5-4e3e-90f3-121e1d6aed2b"
+  }, {
+    "intent": "PX_SUSCRIPTION_TEMPLATE_WORKOUTS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "ab8b622f-9e4f-4fb5-9f95-e51d16ec84b1"
+  }, {
+    "intent": "CANCELLED_EXERCISE_EVALUATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "8783ff64-b087-47ae-84e2-ca2bf3c9a7a0"
+  }, {
+    "intent": "APPT_CANCEL_REQUEST_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "990c25e0-671b-4fef-8517-557e1c5089c2"
+  }, {
+    "intent": "ALL_GOOD_NO_ACTION_NEEDED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "d6a3dbb1-5a58-41e1-a413-325ecfaed26e"
+  }, {
+    "intent": "RECEIVED_STICKER",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "b8ff0bc5-639a-4c5d-996f-51ac93b98c09"
+  }, {
+    "intent": "AI_AGENT_CALLING_MAIN_MENU",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "En el siguiente menú están las opciones para apoyarte. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "bb701f36-beea-4a3f-b3dd-92e14746d32b"
+  }, {
+    "intent": "RECEIVED_STICKER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "a5f1b12f-ffa9-4277-906d-eda32bca9a3d"
+  }, {
+    "intent": "AUDIO_DETECTED_RECEIVED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "15337c2f-357c-48ac-85c1-461064f90463"
+  }, {
+    "intent": "emergencyCallsPsycho",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0ce3bfbb-9e7e-421f-8f44-22cfde91b4fb"
+  }, {
+    "intent": "LOW_IMPACT_ENROLL",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "28d54aa3-3052-439f-95ca-65c807e5ebfc"
+  }, {
+    "intent": "CSAT_BAD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "b6006c03-9e3e-42e3-b5cd-c11bfa524515"
+  }, {
+    "intent": "CSAT_GOOD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "bb47869a-057e-4ab4-839f-450020ed34a7"
+  }, {
+    "intent": "CSAT_REGULAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "4d6e037b-dc07-4728-a039-f34085e01f4b"
+  }, {
+    "intent": "OTHER_FILE_IMG_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "786f8db6-0b9d-4f9e-9818-886da2012ef7"
+  }, {
+    "intent": "BASIC_LEVEL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "a42af23d-8d7f-40be-b2c3-3f7ac4272bb4"
+  }, {
+    "intent": "SAXENDA",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "ec6a4b9c-c31a-46eb-b260-67b0c113f9f2"
+  }, {
+    "intent": "OZEMPIC",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "c978f183-1df7-49a6-9fc2-2fbe7ae8ef13"
+  }, {
+    "intent": "WEGOVY",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "2bf682fe-0c57-4023-b9c4-e79b2e3c44f4"
+  }, {
+    "intent": "OBESITY_QA",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "3f6e90dc-7de7-4cfa-a98f-e15f60371c08"
+  }, {
+    "intent": "NUTRITION_QA",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "c4931b04-4ec1-4026-a4fa-25ee24ab0c31"
+  }, {
+    "intent": "NO_SUPPORT_NEEDED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "26d072f4-8f10-4553-ab07-85586e09c428"
+  }, {
+    "intent": "PSYCHO_QA",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "dbe9257d-55de-44b6-8a52-4cd854e85195"
+  }, {
+    "intent": "AUTO_REPLIES_WHATSAPPS_BUSINESS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "9eef8d74-b5c3-4ec6-bc68-1db0a99aace1"
+  }, {
+    "intent": "NO_SUPPORT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "5f0410ae-a7f1-45ed-9a51-4f052ccb953f"
+  }, {
+    "intent": "LINK_ISSUES",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "195c580e-2b31-4a63-a0ce-106344deeda4"
+  }, {
+    "intent": "REMINDER_ISSUE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "507da1f2-addc-48dd-8a8c-091540ed28a7"
+  }, {
+    "intent": "QUALITY_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "a14afce0-b2f4-4fcc-b5b8-c494e4d79993"
+  }, {
+    "intent": "PUNCTUALITY_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "dceb1001-c871-4853-b522-2d12392a86de"
+  }, {
+    "intent": "DURATION_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "095e7aee-ec8d-4db4-b5d4-618fb532e539"
+  }, {
+    "intent": "PHOTO_GLUCO_SCALE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "454ac040-3124-43da-8014-ec778dba6a12"
+  }, {
+    "intent": "YES_HELPDESK_SUPPORT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "11b0659e-cd9d-4c24-86c2-33cb8dc7b225"
+  }, {
+    "intent": "NO_HELPDESK_SUPPORT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "897292bc-1e24-4064-9001-d2f2c1cbc80b"
+  }, {
+    "intent": "WEB_APP_ONB",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "f2deb779-4e2b-4c22-9670-8c23d881df43"
+  } ]
+}

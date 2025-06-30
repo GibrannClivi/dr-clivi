@@ -1,0 +1,10 @@
+{
+  "name": "24a00233-fe04-42cd-a3da-1365545d3fd6",
+  "displayName": "LEAD_INTERESTED",
+  "parameters": [ {
+    "id": "LEAD_INTERESTED",
+    "entityType": "@LEAD_INTERESTED"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

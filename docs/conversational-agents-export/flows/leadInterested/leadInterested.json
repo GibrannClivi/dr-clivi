@@ -1,0 +1,69 @@
+{
+  "name": "06e7dfc9-063b-437f-bcc7-4c958e11ec92",
+  "displayName": "leadInterested",
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "emailLead",
+    "name": "af7b1981-a1e2-469a-b53f-e5a9fdf846c5"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "doNotAskIfQuestion": true,
+                "staffType": "SALES"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "textBody": "Ya se está escalando tu duda y/o pregunta con un asesor",
+              "type": "SESSION_TEXT"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "75b51b09-2fcb-456d-8422-457cdb5bb7ee"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ups, no he entendido a que te refieres.", "¿Podrías repetirlo, por favor?", "¿Disculpa?", "¿Decías?", "¿Cómo?" ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "name": "ab058782-e5b9-4fc8-ac3e-3e9e98a683fe"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "a5d02a6b-9351-4db8-8002-95cfa0e015c7",
+    "languageCode": "es"
+  } ]
+}

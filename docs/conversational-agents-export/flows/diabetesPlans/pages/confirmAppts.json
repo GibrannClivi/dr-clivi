@@ -1,0 +1,49 @@
+{
+  "name": "61caaaa1-a8af-4e00-bcba-3b2fe5a1ee28",
+  "displayName": "confirmAppts",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_CONFIRM"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "20bf97f6-e9ee-420c-b801-c05abc4642e2"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "3456dfea-9ea6-4f55-aeb0-a49623f69f98",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

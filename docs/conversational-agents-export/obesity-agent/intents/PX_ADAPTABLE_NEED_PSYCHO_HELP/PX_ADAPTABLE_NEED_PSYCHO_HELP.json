@@ -1,0 +1,10 @@
+{
+  "name": "5894ccdc-29eb-49fe-9a27-01ec90dd8d2c",
+  "displayName": "PX_ADAPTABLE_NEED_PSYCHO_HELP",
+  "parameters": [ {
+    "id": "PX_ADAPTABLE_NEED_PSYCHO_HELP",
+    "entityType": "@PX_ADAPTABLE_NEED_PSYCHO_HELP"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Menos del 75%",
+      "parameterId": "PX_ADHERENCIA_SPORT_MENOS75"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

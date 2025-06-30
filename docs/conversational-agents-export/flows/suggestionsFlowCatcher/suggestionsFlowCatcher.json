@@ -1,0 +1,63 @@
+{
+  "name": "f464b5b2-5f9f-4fc0-baca-acb1d5ca5e1c",
+  "displayName": "suggestionsFlowCatcher",
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por tu sugerencia y/o comentario. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "SUGERENCIAS",
+                "helpdeskContextMessage": "Sugerencias de pacientes",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "455f7483-a449-402c-a71b-d943ace89b9d"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ups, no he entendido a que te refieres.", "¿Podrías repetirlo, por favor?", "¿Disculpa?", "¿Decías?", "¿Cómo?" ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "name": "615a25f2-38db-4a76-8a34-930914ebe713"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "transitionRouteGroups": [ "END_SESSION" ],
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "8749064f-f9fe-47cb-b3de-fb8fcc841bda",
+    "languageCode": "es"
+  } ]
+}

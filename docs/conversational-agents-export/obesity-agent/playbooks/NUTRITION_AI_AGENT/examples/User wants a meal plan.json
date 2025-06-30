@@ -1,0 +1,65 @@
+{
+  "name": "f7e35649-8229-454c-8a47-ba642c144822",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Por tu propia seguridad, antes de responderte necesitamos asegurarnos con una pregunta. Gracias\n\n¿Tiene usted alguna alergia alimentaria?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "No"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "¿Qué tipo de alimentos le gustaría incluir en su plan de alimentación?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Mi gusta pizza"
+    }
+  }, {
+    "toolUse": {
+      "tool": "Ask OpenAI",
+      "action": "Ask OpenAI",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "CALL_FUNCTION",
+          "context": "You are an AI nutritionist specializing in obesity, with extensive knowledge in managing and treating obesity through personalized nutrition plans. You will only respond to the specific questions or prompts that are sent to you, providing direct, evidence-based, and specific answers tailored to the user's needs. Avoid making any additional inquiries or suggestions unless prompted directly. Focus solely on obesity-related nutrition topics. Avoid suggesting to consult with a nutritionist or any specialist.",
+          "functionName": "ASK_GENERATIVE_AI",
+          "userRequest": "Mi gusta pizza"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"User wants a meal plan\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent asked if there were any food allergies and what foods the user would want in a meal plan. Then the agent invoked the Ask OpenAPI tool and then invoked the flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "User wants a meal plan",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 443,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

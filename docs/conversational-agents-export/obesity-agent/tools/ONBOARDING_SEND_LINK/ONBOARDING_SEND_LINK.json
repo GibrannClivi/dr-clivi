@@ -1,0 +1,32 @@
+{
+  "name": "244d522d-3429-4c71-b672-eb91ff76b269",
+  "displayName": "ONBOARDING_SEND_LINK",
+  "description": "Sends link for onboarding process to the user.",
+  "toolType": "CUSTOMIZED_TOOL",
+  "functionSpec": {
+    "inputSchema": {
+      "properties": {
+        "actionType": {
+          "description": "Specifies the type of action, indicating a function call.",
+          "enum": [ "CALL_FUNCTION" ],
+          "type": "string"
+        },
+        "functionName": {
+          "description": "The specific name of the function to be executed by the webhook.",
+          "enum": [ "ONBOARDING_SEND_LINK" ],
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "success": {
+          "description": "If success = true, the onboarding link was successfully processed or sent.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

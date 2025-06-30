@@ -1,0 +1,10 @@
+{
+  "name": "672f285c-3bcc-4869-a7f9-3018675d7158",
+  "displayName": "RATE_APPOINTMENT_SURVEY_TEMPLATE",
+  "parameters": [ {
+    "id": "RATE_APPOINTMENT_SURVEY_TEMPLATE",
+    "entityType": "@RATE_APPOINTMENT_SURVEY_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

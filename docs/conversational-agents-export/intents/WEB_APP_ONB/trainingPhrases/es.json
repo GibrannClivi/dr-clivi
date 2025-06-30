@@ -1,0 +1,24 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Finalizar validación",
+      "parameterId": "WEB_APP_ONB"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Validar datos",
+      "parameterId": "WEB_APP_ONB"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "WEB_APP_ONB",
+      "parameterId": "WEB_APP_ONB"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

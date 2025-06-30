@@ -1,0 +1,110 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "no me han enviado mi orden",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No me han mandado mi orden",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Necesito mi orden",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "pase para mis estudios",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "orden para mis estudios",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "pase de laboratorio",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "mi "
+    }, {
+      "text": "orden de laboratorios",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "orden de laboratorio",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "orden de los estudios",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "mi "
+    }, {
+      "text": "orden de estudios",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "reenvian la orden",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    }, {
+      "text": " de los estudios"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "orden de los estudios",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    }, {
+      "text": " de los laboratorios"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "orden de estudios",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "LAST_ORDER",
+      "parameterId": "LAST_ORDER_BUTTON_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

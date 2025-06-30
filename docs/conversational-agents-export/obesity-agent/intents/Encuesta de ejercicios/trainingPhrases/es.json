@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Encuesta de ejercicios",
+      "parameterId": "Encuesta_ejercicios"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

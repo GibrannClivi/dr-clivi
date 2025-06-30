@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "LAST_ORDER_BUTTON_PAGE",
+    "synonyms": [ "LAST_ORDER", "LAST_ORDER_BUTTON_PAGE", "No los he realizado" ],
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,61 @@
+{
+  "name": "dae4b78d-bcfc-4a92-a853-8b9c44e70a2a",
+  "displayName": "psychoQuestionTag",
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias, estamos escalando tu caso con el equipo de especialistas. Un momento, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "PSYCHOLOGY",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "f50a48f9-1f57-4b55-9001-1c667bf38aab"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ups, no he entendido a que te refieres.", "¿Podrías repetirlo, por favor?", "¿Disculpa?", "¿Decías?", "¿Cómo?" ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "name": "1c9d5cf0-7b47-47ad-8cfd-801ccf65e0b1"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "languageCode": "es"
+  } ]
+}

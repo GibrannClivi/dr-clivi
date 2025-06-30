@@ -1,0 +1,10 @@
+{
+  "name": "84c756ac-fc3e-483d-aa3a-a4ed516cf693",
+  "displayName": "NO_LABS_SENT_REMINDER_TEMPLATE",
+  "parameters": [ {
+    "id": "NO_LABS_SENT_REMINDER_TEMPLATE",
+    "entityType": "@NO_LABS_SENT_REMINDER_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

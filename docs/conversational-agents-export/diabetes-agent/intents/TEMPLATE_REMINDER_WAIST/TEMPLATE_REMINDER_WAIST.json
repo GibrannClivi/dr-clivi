@@ -1,0 +1,10 @@
+{
+  "name": "19a078a8-c5a8-475b-942d-c4948f3caa1d",
+  "displayName": "TEMPLATE_REMINDER_WAIST",
+  "parameters": [ {
+    "id": "TEMPLATE_REMINDER_WAIST",
+    "entityType": "@TEMPLATE_REMINDER_WAIST"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

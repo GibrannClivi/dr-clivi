@@ -1,0 +1,52 @@
+{
+  "name": "45bcaab0-10ac-48a0-bc13-6505ce2c024b",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Hola, Me parece que quieres actualizar tu aplicación para tomar tu video llamada. Déjame asistirte."
+    }
+  }, {
+    "toolUse": {
+      "tool": "SEND_MESSAGE",
+      "action": "SEND_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "SEND_MESSAGE",
+          "templateName": "update_videocall",
+          "type": "TEMPLATE"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"User is asking which video call platform or application is used for the virtual consultations\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and invoked tool SEND_MESSAGE and invoked flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user asks about video call platform",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 276,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

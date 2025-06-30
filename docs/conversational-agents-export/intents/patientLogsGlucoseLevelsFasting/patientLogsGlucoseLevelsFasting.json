@@ -1,0 +1,14 @@
+{
+  "name": "8a480d21-a226-40b6-833f-bd20f2886355",
+  "displayName": "patientLogsGlucoseLevelsFasting",
+  "parameters": [ {
+    "id": "GLUCOSE_VALUE",
+    "entityType": "@sys.number"
+  }, {
+    "id": "FASTING",
+    "entityType": "@FASTING"
+  } ],
+  "priority": 500000,
+  "description": "Patient logs by writing number and timing in this case fasting.",
+  "numTrainingPhrases": 27
+}

@@ -1,0 +1,10 @@
+{
+  "name": "b012383a-7425-4138-8ffe-8f6e0cbbe04b",
+  "displayName": "CALL_SUPPORT_PAGE_AND_TEMPLATE",
+  "parameters": [ {
+    "id": "CALL_SUPPORT",
+    "entityType": "@CALL_SUPPORT"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 6
+}

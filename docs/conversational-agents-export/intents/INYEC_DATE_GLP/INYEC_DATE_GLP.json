@@ -1,0 +1,10 @@
+{
+  "name": "2c4d1676-59e5-4b7b-a949-ff7a8e5c981f",
+  "displayName": "INYEC_DATE_GLP",
+  "parameters": [ {
+    "id": "INYEC_DATE_GLP",
+    "entityType": "@INYEC_DATE_GLP"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

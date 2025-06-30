@@ -1,0 +1,170 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "no me ha llegado mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "enviado mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me reenvía mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "necesito mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me pueden ",
+      "auto": true
+    }, {
+      "text": "mandar mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no ha llegado la receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Necesito la receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no",
+      "auto": true
+    }, {
+      "text": " mas me ",
+      "auto": true
+    }, {
+      "text": "mandan la receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE",
+      "auto": true
+    }, {
+      "text": "...",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Qué pasó con "
+    }, {
+      "text": "mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "y "
+    }, {
+      "text": "mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    }, {
+      "text": "???"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me "
+    }, {
+      "text": "urge mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    }, {
+      "text": " que me la manden estoy en la farmacia"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No he recibido mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no me han enviado mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "enviar receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "reenviar receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "cuando "
+    }, {
+      "text": "me enviaran mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No me han mandado mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    }, {
+      "text": " la doctora"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me pueden "
+    }, {
+      "text": "mandar mi receta",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "LAST_PRESCRIPTION",
+      "parameterId": "LAST_PRESCRIPTION_BUTTON_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

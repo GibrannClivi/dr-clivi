@@ -1,0 +1,91 @@
+{
+  "name": "5f36cc7a-4725-431d-8e5b-cd6ee7cc13ee",
+  "displayName": "newPhone",
+  "form": {
+    "parameters": [ {
+      "displayName": "lastPhoneNumber",
+      "required": true,
+      "entityType": "@sys.phone-number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Nos regalas tu número anterior, por favor. OJO: *No el número del que nos estás escribiendo* " ]
+      },
+      "languageCode": "es"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "lastPhoneNumber",
+      "value": null
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.lastPhoneNumber != NULL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nuestro sistema está trabajando para realizar el cambio. Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "WHATSAPP_CHANGE",
+              "params": {
+                "whatsappPreviousDirty": "$session.params.lastPhoneNumber"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "2f322759-bfdc-4ba6-bb64-5645b36883c1"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "921c153c-5b79-4abb-9c24-4f5c6808d8c0"
+  } ]
+}

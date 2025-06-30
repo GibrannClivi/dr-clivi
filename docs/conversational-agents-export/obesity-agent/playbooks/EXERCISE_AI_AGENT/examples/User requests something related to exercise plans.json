@@ -1,0 +1,65 @@
+{
+  "name": "a85f4a4a-628c-49df-9ecb-7b78b373aa1c",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Por tu propia seguridad, antes de responderte necesitamos asegurarnos con un par de preguntas. Gracias.\n\n¿Tiene alguna limitación física?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "No"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "¿Ha tenido algún problema cardiovascular en el pasado?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "No"
+    }
+  }, {
+    "toolUse": {
+      "tool": "Ask OpenAI",
+      "action": "Ask OpenAI",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "CALL_FUNCTION",
+          "context": "You are an AI exercise specialist focusing on obesity management, providing personalized exercise plans and advice tailored to the user's needs. You will only respond to the specific questions or prompts sent to you, offering direct and evidence-based guidance on obesity-related exercise. Avoid suggesting to consult with a nutritionist or any specialist.",
+          "functionName": "ASK_GENERATIVE_AI",
+          "userRequest": "Hazme un plan de ejercicios."
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "User requests something related to exercise plans",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent invoked the Ask OpenAI tool and invoked flow END_SESSION",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "User requests something related to exercise plans",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 387,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

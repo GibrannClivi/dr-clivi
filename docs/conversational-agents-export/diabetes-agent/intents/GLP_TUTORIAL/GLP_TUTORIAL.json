@@ -1,0 +1,10 @@
+{
+  "name": "78d20d0f-ca04-4954-85b0-db253896a19f",
+  "displayName": "GLP_TUTORIAL",
+  "parameters": [ {
+    "id": "GLP_TUTORIAL",
+    "entityType": "@GLP_TUTORIAL"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

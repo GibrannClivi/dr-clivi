@@ -1,0 +1,175 @@
+{
+  "name": "8b897a62-c7e5-4f67-b28c-b681eff0ad36",
+  "displayName": "rateGenMed",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "GOOD_GENMED",
+              "text": "Muy satisfecho"
+            }, {
+              "id": "REGULAR_GENMED",
+              "text": "Neutral"
+            }, {
+              "id": "BAD_GENMED",
+              "text": "Nada satisfecho"
+            } ],
+            "textBody": "Califica tu consulta de medicina, presiona abajo",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "GOOD_GENMED",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por tu respuesta!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 5,
+                "staffType": "GENERAL_MED"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "85235809-7217-4a95-bb2b-3df64a22d280"
+  }, {
+    "intent": "REGULAR_GENMED",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias. Revisaremos el caso. ¡Saludos!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 3,
+                "staffType": "GENERAL_MED"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "67e985dc-e86c-4adf-90f6-31a827a662c7"
+  }, {
+    "intent": "BAD_GENMED",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nos regalas más detalles para escalar tu caso. Por favor y una disculpa. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 1,
+                "staffType": "GENERAL_MED"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "highSpecializationQuestionTag",
+    "name": "5ec92bad-9652-42db-8663-d98ab1d724b3"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "520d3c24-eeca-40c1-a4ea-5f58c7c2c1b2"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

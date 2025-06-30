@@ -1,0 +1,61 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "END_SESSION_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "0ec9e527-ed66-4262-afe7-0b2c0703acef"
+  }, {
+    "intent": " keyWordMainMenu",
+    "condition": "true",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "checkPlanStatus",
+    "name": "b5b1a1f1-0ffb-4e51-aee5-a33b62c5a7d8"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "ca434897-e5ac-4030-ad46-b8bbe3b19253",
+    "targetPlaybook": "MASTER_AGENT"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "efa0e3f4-3068-4cbf-99b3-6c7497caa15e",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "transitionRouteGroups": [ "GLP" ],
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "languageCode": "es"
+  } ]
+}

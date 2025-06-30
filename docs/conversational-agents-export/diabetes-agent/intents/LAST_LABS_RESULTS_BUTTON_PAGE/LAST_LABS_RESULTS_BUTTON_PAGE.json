@@ -1,0 +1,10 @@
+{
+  "name": "7c2af4f2-8c97-417c-ae2d-712cefb19f1d",
+  "displayName": "LAST_LABS_RESULTS_BUTTON_PAGE",
+  "parameters": [ {
+    "id": "LAST_LABS_RESULTS_BUTTON_PAGE",
+    "entityType": "@LAST_LABS_RESULTS_BUTTON_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

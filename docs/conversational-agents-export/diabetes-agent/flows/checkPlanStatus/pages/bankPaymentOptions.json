@@ -1,0 +1,83 @@
+{
+  "name": "becf7ded-b99b-4aac-803a-e57b8e56c74e",
+  "displayName": "bankPaymentOptions",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "BANK_LOCATION",
+              "text": "Pago en sucursal"
+            }, {
+              "id": "APP_BANK",
+              "text": "Desde la aplicación"
+            } ],
+            "textBody": "¿Cómo preferirías hacer el pago?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "BANK_LOCATION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "bankLocationOptions",
+    "name": "4f8f03c2-55c9-41ca-a6b2-ce8bbd521fac"
+  }, {
+    "intent": "APP_BANK",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "banksAppsForms",
+    "name": "8262e1f1-0336-40a8-9d2b-1ebee12ab226"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "5347c243-33ec-45f1-b344-56628f96222d"
+  } ],
+  "transitionRouteGroups": [ "planStatusRouteGroup" ]
+}

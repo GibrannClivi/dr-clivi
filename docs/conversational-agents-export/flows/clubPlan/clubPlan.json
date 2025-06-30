@@ -1,0 +1,71 @@
+{
+  "name": "d1f67772-80c4-4a0a-9bb7-c9e5814dadb0",
+  "displayName": "clubPlan",
+  "transitionRoutes": [ {
+    "intent": "keyWordMainMenu",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "mainMenu",
+    "name": "74d7994b-d965-400f-91ab-c7bb082fa2d3"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": false
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "9dea21b1-c6b3-4c59-b675-90d4c070d488"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ups, no he entendido a que te refieres.", "¿Podrías repetirlo, por favor?", "¿Disculpa?", "¿Decías?", "¿Cómo?" ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "name": "3b7a4f40-935d-4d8e-8f86-c06606fdfe5c"
+  }, {
+    "event": "flow.failed",
+    "triggerFulfillment": {
+    
+    },
+    "name": "0d005456-f9df-4453-8ee5-aacad951101b",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "transitionRouteGroups": [ "CLUB_CATCHER" ],
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "a648ed85-0d0c-44f7-9ef1-62e932e12502",
+    "languageCode": "es"
+  } ]
+}

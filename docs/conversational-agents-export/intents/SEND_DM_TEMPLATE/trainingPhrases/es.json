@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Abrir sesión",
+      "parameterId": "SEND_DM_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Recibir mensaje",
+      "parameterId": "SEND_DM_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

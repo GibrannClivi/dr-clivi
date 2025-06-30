@@ -1,0 +1,48 @@
+{
+  "name": "099bc2e7-edab-466c-900f-1c158228af7f",
+  "displayName": "END_SESSION",
+  "transitionRoutes": [ {
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "4ebbbc3f-ac7c-4999-a2a1-8493700f9d72"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "3534894f-eb13-46d7-ae08-b428be264fe5"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ups, no he entendido a que te refieres.", "¿Podrías repetirlo, por favor?", "¿Disculpa?", "¿Decías?", "¿Cómo?" ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "name": "1dba6b5a-ac3e-4aad-a978-54fbf4d71d9a"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "6b3de966-ed45-4cc4-b56a-65bae82765b5",
+    "languageCode": "es"
+  } ]
+}

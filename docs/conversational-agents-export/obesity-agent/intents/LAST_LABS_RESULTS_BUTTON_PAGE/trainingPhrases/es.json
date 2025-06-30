@@ -1,0 +1,120 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "ver mis resultados de los estudios",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Acceso a estudios",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "copia de los estudios",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me podrían apoyar con "
+    }, {
+      "text": "una",
+      "auto": true
+    }, {
+      "text": " "
+    }, {
+      "text": "copia de los estudios realizados",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "los ",
+      "auto": true
+    }, {
+      "text": "resultados de laboratorio",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "resultados de laboratorio",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me pueden enviar mis "
+    }, {
+      "text": "resultados de mis estudios",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me pueden "
+    }, {
+      "text": "mandar mis resultados",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "ver los resultados de mis laboratorios",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No me han mandado mis estudios de laboratorio",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "resultados de los estudios",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "resultados de los laboratorios",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "LAST LABS",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Resultado de laboratorios",
+      "parameterId": "LAST_LABS_RESULTS_BUTTON_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

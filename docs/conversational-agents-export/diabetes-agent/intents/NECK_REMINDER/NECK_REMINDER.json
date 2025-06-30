@@ -1,0 +1,10 @@
+{
+  "name": "585e4532-1cb1-487a-bd7a-8c68af95fd56",
+  "displayName": "NECK_REMINDER",
+  "parameters": [ {
+    "id": "NECK_REMINDER",
+    "entityType": "@NECK_REMINDER"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

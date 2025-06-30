@@ -1,0 +1,10 @@
+{
+  "name": "47e0c6a6-2075-4992-8662-b631c9c61104",
+  "displayName": "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE",
+  "parameters": [ {
+    "id": "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE",
+    "entityType": "@SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 4
+}

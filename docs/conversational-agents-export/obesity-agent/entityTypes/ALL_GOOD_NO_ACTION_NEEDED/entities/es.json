@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "ALL_GOOD_NO_ACTION_NEEDED",
+    "synonyms": [ "ALL_GOOD_NO_ACTION_NEEDED", "Todo bien" ],
+    "languageCode": "es"
+  } ]
+}

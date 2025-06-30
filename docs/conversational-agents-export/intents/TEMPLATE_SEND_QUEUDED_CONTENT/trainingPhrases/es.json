@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Dato Clivi",
+      "parameterId": "TEMPLATE_SEND_QUEUDED_CONTENT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Descargar",
+      "parameterId": "TEMPLATE_SEND_QUEUDED_CONTENT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

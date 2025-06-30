@@ -1,0 +1,10 @@
+{
+  "name": "99a8006d-67d5-44c5-998b-26a6f685fd6d",
+  "displayName": "PX_ADAPTABLE_FEELING_GOOD",
+  "parameters": [ {
+    "id": "PX_ADAPTABLE_FEELING_GOOD",
+    "entityType": "@PX_ADAPTABLE_FEELING_GOOD"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

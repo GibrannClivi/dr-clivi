@@ -1,0 +1,13 @@
+{
+  "name": "3d26e901-c8da-4bd9-a80e-8839d2d72d2e",
+  "displayName": "END_SESSION",
+  "transitionRoutes": [ {
+    "intent": "END_SESSION_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "ba891d3f-49f2-49fb-b59e-dbbaec7cbd94"
+  } ]
+}

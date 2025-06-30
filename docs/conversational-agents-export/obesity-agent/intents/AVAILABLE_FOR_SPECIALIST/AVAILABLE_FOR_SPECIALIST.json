@@ -1,0 +1,10 @@
+{
+  "name": "f56965a5-71eb-494b-8843-ace5276beb3a",
+  "displayName": "AVAILABLE_FOR_SPECIALIST",
+  "parameters": [ {
+    "id": "AVAILABLE_FOR_SPECIALIST",
+    "entityType": "@AVAILABLE_FOR_SPECIALIST"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

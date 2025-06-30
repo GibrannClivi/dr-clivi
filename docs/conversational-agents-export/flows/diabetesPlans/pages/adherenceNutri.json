@@ -1,0 +1,184 @@
+{
+  "name": "8c2e162e-c04f-4180-a91f-ebe3811becd5",
+  "displayName": "adherenceNutri",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "ADHERENCE_NUTRI_BAD",
+              "text": "Nunca"
+            }, {
+              "id": "ADHERENCE_NUTRI_REGULAR",
+              "text": "Ocasionalmente"
+            }, {
+              "id": "ADHERENCE_NUTRI_GOOD",
+              "text": "Siempre"
+            } ],
+            "textBody": "¿Qué tanto sigues tu plan de alimentación?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "ADHERENCE_NUTRI_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Felicidades! Sigue así 💪" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_nutrition_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "10"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "33e1275d-1a10-4456-85b6-cce79a771303"
+  }, {
+    "intent": "ADHERENCE_NUTRI_REGULAR",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Vas por buen camino! ✅Nos regalas más info para ayudarte más. Por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_nutrition_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "5"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "nutritionQuestionTag",
+    "name": "875c7fdf-ea8c-4261-8143-0aa63009bd03"
+  }, {
+    "intent": "ADHERENCE_NUTRI_BAD",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Continúa esforzándote! Recuerda que en CLIVI estamos paso a paso contigo. Nos regalas más detalles, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_nutrition_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "1"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "nutritionQuestionTag",
+    "name": "7aed0fd1-0010-4b06-b57b-312686050898"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "b62aa84b-100f-42ea-a1d4-6c1bad867dc0"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

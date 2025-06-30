@@ -1,0 +1,60 @@
+{
+  "name": "a89620a9-722d-4e62-98fa-1cb4635a09cc",
+  "displayName": "diabetesPlans",
+  "transitionRoutes": [ {
+    "intent": "keyWordMainMenu",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "mainMenu",
+    "name": "52bea64d-7529-410f-915a-dbe7274ea7bf"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "80110163-2920-436c-8fd1-7e9a2d8191ea",
+    "targetPlaybook": "MASTER_AGENT"
+  }, {
+    "targetPage": "End Session",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "ac31d9b1-218c-41ec-bc95-9af6ebf3c6af"
+  }, {
+    "event": "flow.failed",
+    "triggerFulfillment": {
+    
+    },
+    "name": "c9178e4f-b955-4ed7-bb42-95c77bd72779",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ],
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "503b57ee-36ea-436f-8ac0-4553193d8a43",
+    "languageCode": "es"
+  } ]
+}

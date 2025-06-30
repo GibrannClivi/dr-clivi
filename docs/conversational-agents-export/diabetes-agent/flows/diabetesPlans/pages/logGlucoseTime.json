@@ -1,0 +1,91 @@
+{
+  "name": "3e546a85-d5ff-4b2b-9cd1-2de31db04610",
+  "displayName": "logGlucoseTime",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "FASTING",
+              "text": "Antes"
+            }, {
+              "id": "POST_MEAL",
+              "text": "Después"
+            } ],
+            "textBody": "¿Te mediste antes o después de los alimentos? 🥗",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "FASTING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.FASTING",
+        "value": "FASTING"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "glucoseValueLogFasting",
+    "name": "42944933-8269-425f-a0f0-ae071422dcde"
+  }, {
+    "intent": "POST_MEAL",
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.POST_MEAL",
+        "value": "POST_MEAL"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "glucoseValueLogPostMeal",
+    "name": "1109961f-d5e5-4754-8fde-900bd94a1421"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "61d15f60-75da-4f73-8aa1-bb5c82516eba",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "c90c93c8-f882-4755-9974-aac5130babda",
+  "displayName": "NUTRI_SCHEDULE_APPT",
+  "parameters": [ {
+    "id": "NUTRI_SCHEDULE_APPT",
+    "entityType": "@NUTRI_SCHEDULE_APPT"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

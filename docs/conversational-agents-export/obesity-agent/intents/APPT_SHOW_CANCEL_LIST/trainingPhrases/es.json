@@ -1,0 +1,147 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Cancelar cita",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me "
+    }, {
+      "text": "impide acudir",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "cancelar mi cita",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me impide presentarme",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me impide asistir",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no podré asistir aa mi cita",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No puedo asistir a mi cita",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no",
+      "auto": true
+    }, {
+      "text": " puedo estar en mi ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Quiero "
+    }, {
+      "text": "cancelar mi cita",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No podré tomar hoy la cita",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "cancelar mi cita",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    }, {
+      "text": " de hoy"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no voy a poder asistir a mi cita",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "cancela mi consulta",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "cancelar mi consulta",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no",
+      "auto": true
+    }, {
+      "text": " voy a poder entrar a la ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no voy a entrar a la cita",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Cancelar la cita",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Cancelar la consulta",
+      "parameterId": "APPOINTMENT_SEND_CANCEL_LIST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

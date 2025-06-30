@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "RETRY_CHARGE_PAYMENT",
+    "synonyms": [ "RETRY_CHARGE_PAYMENT" ],
+    "languageCode": "es"
+  } ]
+}

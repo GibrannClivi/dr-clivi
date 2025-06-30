@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Unirme intermedio",
+      "parameterId": "MIDDLE_LEVEL"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

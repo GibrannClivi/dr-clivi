@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "CSAT_BAD",
+    "synonyms": [ "CSAT_BAD", "Muy malo" ],
+    "languageCode": "es"
+  } ]
+}

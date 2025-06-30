@@ -1,0 +1,31 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Descargar receta",
+      "parameterId": "RECIPE_MENTAL_TIP"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "ver receta",
+      "parameterId": "RECIPE_MENTAL_TIP"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ver tip",
+      "parameterId": "RECIPE_MENTAL_TIP"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ver video",
+      "parameterId": "RECIPE_MENTAL_TIP"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "00f383c7-a60c-47c6-951c-5cdd988d2332",
+  "displayName": "patientLogsGlucoseLevelsPostMeal",
+  "parameters": [ {
+    "id": "GLUCOSE_VALUE",
+    "entityType": "@sys.number"
+  }, {
+    "id": "POST_MEAL",
+    "entityType": "@POST_MEAL"
+  }, {
+    "id": "location",
+    "entityType": "@sys.location"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 32
+}

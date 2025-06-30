@@ -1,0 +1,5542 @@
+{
+  "name": "40401ce7-fa22-41a5-8161-cd0256a106c0",
+  "displayName": "DIABETES_CATCHER",
+  "transitionRoutes": [ {
+    "intent": "APPOINTMENTS_MAIN_MENU_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "apptsMenu",
+    "name": "8f88c6af-1b21-4ffd-a673-bb728b56e4f2"
+  }, {
+    "intent": "LOG_BODY_MEASUREMENTS_TEMPLATE_MAIN_MENU_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "measurementsMenu",
+    "name": "69066c61-68be-4e4d-8f00-7ac74e52f37b"
+  }, {
+    "intent": "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Una disculpa, nos podrías dar más detalles, por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "presentComplaintTag",
+    "name": "05bf707d-5162-4ef2-9799-cedf93ad866d"
+  }, {
+    "intent": "QUESTION_TEMPLATE_MAIN_MENU_PAGE_REMINDER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "questionsTags",
+    "name": "f6a00641-621a-4c12-b0e7-2588d16daded"
+  }, {
+    "intent": "MEASUREMENTS_REPORT_MAIN_MENU_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "measurementsReports",
+    "name": "858a5dec-5297-4cd1-9cf0-aa09acf86483"
+  }, {
+    "intent": "INVOICE_LABS_MAIN_MENU_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "invoiceLabsMenu",
+    "name": "16cf5027-f98e-4a19-acd6-94dfdef31893"
+  }, {
+    "intent": "NO_NEEDED_QUESTION_PATIENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Cuando requieras apoyo solo escribe la palabra Clivi. Gracias" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_LAST_VALIDATOR",
+              "params": {
+                "isValid": false
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ec01041a-b314-483d-ae69-a253efe3443a"
+  }, {
+    "intent": "MEDS_SUPPLIES_STATUS_MAIN_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "medsSuppliesStatus",
+    "name": "f64b9507-65e7-4999-98fa-e0c835074fd1"
+  }, {
+    "intent": "LOG_GLUCOSE_TEMPLATE_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "logGlucoseTime",
+    "name": "b2b3bc93-68dc-4c29-9099-5e6de5ae5bd5"
+  }, {
+    "intent": "WEIGHT_LOG_PAGE_AND_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "logWeight",
+    "name": "801ddd73-b9b5-48f8-b3cc-f54b743c302c"
+  }, {
+    "intent": "WAIST_CIRCUMFERENCE_LOG_TEMPLATE_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "logWaist",
+    "name": "fdb99991-c333-4cd4-a7b2-c12753cabae3"
+  }, {
+    "intent": "INVOICE_PAGE_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "invoiceUpdatedInfo",
+    "name": "315f154d-81c6-4369-a181-3a9f6a80faf9"
+  }, {
+    "intent": "UPLOAD_LABS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "lastFileAvailable",
+    "name": "64e0e3de-cd42-495b-95c7-f06d8a1960f3"
+  }, {
+    "intent": "CALL_SUPPORT_PAGE_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Presiona en el número de abajo para marcarnos, por favor" ]
+        },
+        "languageCode": "es"
+      }, {
+        "text": {
+          "text": [ "+525588409477" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "patient_call_clivi",
+                  "platform": "HUBSPOT",
+                  "value": "DATE_TODAY"
+                } ]
+              }
+            },
+            "type": "DATE_TODAY"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e9b371ad-2c1f-4a84-985c-e40d858a5f8f"
+  }, {
+    "intent": "YES_I_DO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "invoicingCenter",
+    "name": "0eb581b5-f3cb-4e2b-ba4e-f8ff1d87ee35"
+  }, {
+    "intent": "I_DONT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Te estamos redirigiendo al portal de facturación. Para visualizar tu perfil de manera óptima, por favor ingresa desde una computadora.  🖥️ " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "invoice_info_view",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          }, {
+            "definition": {
+              "functionName": "INVOICE_PORTAL_LINK_SEND"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "64265b0d-3545-4ee8-bcf1-2241cd3992bc"
+  }, {
+    "intent": "FASTING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "glucoseValueLogFasting",
+    "name": "a5796826-d5aa-4c0f-9c43-add7880489cd"
+  }, {
+    "intent": "POST_MEAL",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "glucoseValueLogPostMeal",
+    "name": "05a2f0dd-c444-47b4-bb3a-f99040046d7d"
+  }, {
+    "intent": "PSYCHOLOGIST_SURVEY",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ratingsPsychoAppt",
+    "name": "5751a716-9e8e-460b-9f90-43ea9bbaf929"
+  }, {
+    "intent": "NUTRITION_SURVEY",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ratingsNutritionAppt",
+    "name": "d69a5f72-af08-4ebb-a065-7c15542a1962"
+  }, {
+    "intent": "DIABETES_SURVEY",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ratingsDiabetesAppt",
+    "name": "0d981797-9758-4bf1-8d5d-b13ea2653512"
+  }, {
+    "intent": "NO_SHOW_GENERAL_MED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.staffType",
+        "value": "GENERAL_MED"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "appointmentNoShowReason",
+    "name": "da31e3b3-5d22-4db9-8867-71d168d17653"
+  }, {
+    "intent": "PSYCHOLOGY_NO_SHOW",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.staffType",
+        "value": "PSYCHOLOGY"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "appointmentNoShowReason",
+    "name": "b401a179-262a-4da6-833f-a6c1e647e995"
+  }, {
+    "intent": "DIABETES_NO_SHOW",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.staffType",
+        "value": "DIABETES"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "appointmentNoShowReason",
+    "name": "4864f360-e054-4db8-b770-1453ffd8cc23"
+  }, {
+    "intent": "NUTRITION_NO_SHOW",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.staffType",
+        "value": "NUTRITION"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "appointmentNoShowReason",
+    "name": "becf7ce4-d855-49ca-80d7-2a5e0f51be16"
+  }, {
+    "intent": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_LIST_SEND"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "94c4efac-a664-4cbf-8188-8c73653e4abb"
+  }, {
+    "intent": "RESCHECHULE_APPTS_MENU",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_CANCEL_LIST",
+              "params": {
+                "isReschedule": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ca1b5908-632b-4a15-a4b6-f999d49d96df"
+  }, {
+    "intent": "NO_SHOW_WEBINAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ayúdanos a mejorar. Platícanos por qué no pudiste asistir para ofrecerte más opciones. Por favor." ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "suggestionsFlowCatcher",
+    "name": "e2c5b042-c89c-4793-b0af-38e3965a5675"
+  }, {
+    "intent": "SHOW_WEBINAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "last_webinar_attended___thursday",
+                  "platform": "HUBSPOT",
+                  "value": "DATE_TODAY"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "rateWebinarShowUp",
+    "name": "24b5b3f5-047a-4ba9-b5ea-6cda9246d7e0"
+  }, {
+    "intent": "GOOD_PSYCHO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hola! 👋 Para CLIVI es muy importante conocer tu buena opinión y compartirla con todos los Mexicanos para poder ayudarlos a mejorar su calidad de vida 💜. Por esta razón queremos pedir tu apoyo para que nos compartas algunos comentarios acerca de tu experiencia con el Tratamiento Integral en CLIVI. Da un toque a la liga 👇 https://g.page/r/CX0ThqXe8bRlEAE/review" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 5,
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "468715b5-2132-43d8-8f6e-16ff61a672a0"
+  }, {
+    "intent": "REGULAR_PSYCHO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por calificar, vamos a revisar tu caso. Nos regalas más detalles. Por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 3,
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "psychoQuestionTag",
+    "name": "c6ecedec-d7aa-42f9-9bcd-581c1fe016c8"
+  }, {
+    "intent": "BAD_PSYCHO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sentimos mucho tu mala experiencia. Estamos escalando el caso. Gracias por tu respuesta." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 1,
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ca1b83be-e40a-4cbd-be4e-40b63907fea5"
+  }, {
+    "intent": "PSYCHOLOGIST",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "LONG",
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "9094f91c-db5a-4d3f-8fae-81611deba240"
+  }, {
+    "intent": "NUTRITION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "LONG",
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "f3cb123b-5bf1-4999-b30d-7eb1c536ac1a"
+  }, {
+    "intent": "DIABETES_ENDO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "",
+                "staffType": "DIABETES"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "dea8a250-ce11-468d-9be8-769047d86824"
+  }, {
+    "intent": "EXERCISE_APPT_RESCH",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Un agente de soporte te apoyará para agendar tu cita. ¡Gracias por tu paciencia!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SUBMIT",
+              "params": {
+                "message": "Paciente requiere apoyo para reagendar su cita de valoración física"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "c37dd0b3-d3b3-4d2d-b229-cd6873a65881"
+  }, {
+    "intent": "GLUCO_ID_TRACKING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "SUPPLIES_SEND_TRACKING",
+              "params": {
+                "type": "GLUCOMETER"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "06a0115a-bea2-4e61-a90e-1dabe0f2a2ca"
+  }, {
+    "intent": "STRIPS_ID_TRACKING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "SUPPLIES_SEND_TRACKING",
+              "params": {
+                "type": "STRIPS"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e5c5ce5e-cdc0-4f79-b1b6-c9116cc81e08"
+  }, {
+    "intent": "MEDS_ID_TRACKING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "SUPPLIES_SEND_TRACKING",
+              "params": {
+                "type": "MEDICINE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "a7b2c12b-d51b-4b3c-a3cf-f65437c04dfd"
+  }, {
+    "intent": "FULL_REPORT_BUTTON_PAGE_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Este reporte demora un minuto en generarse. ¡Paciencia, gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "REPORT_CARD_SEND"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "3fb6fc6b-ec74-4254-bf87-ae844a0da178"
+  }, {
+    "intent": "GLUCOSE_REPORT_TEMPLATE_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Este reporte demora un minuto en generarse. ¡Paciencia, gracias! Recuerda: Las franjas moradas representan los rangos objetivo en los que debemos estar.\r\nSi tienes alguna pregunta ¡No dudes en escribirnos! " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "SCREENSHOT_SEND",
+              "params": {
+                "height": 800,
+                "urlNoParams": "https://admin.clivi.com.mx/#BotChartVR/",
+                "width": 500
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "8e88ff84-7847-4259-a49c-5efeb8af46bb"
+  }, {
+    "intent": "GOOD_NUTRI",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hola! 👋 Para CLIVI es muy importante conocer tu buena opinión y compartirla con todos los Mexicanos para poder ayudarlos a mejorar su calidad de vida 💜. Por esta razón queremos pedir tu apoyo para que nos compartas algunos comentarios acerca de tu experiencia con el Tratamiento Integral en CLIVI. Da un toque a la liga 👇 https://g.page/r/CX0ThqXe8bRlEAE/review" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 5,
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "7936ef1f-1182-49e8-9ade-10911f47dc7c"
+  }, {
+    "intent": "REGULAR_NUTRI",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por calificar, vamos a revisar tu caso. Nos regalas más detalles. Por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 3,
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "nutritionQuestionTag",
+    "name": "b994561b-57dc-41be-9f71-4dc1a70fa401"
+  }, {
+    "intent": "BAD_NUTRI",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Lamentamos tu experiencia. Vamos a escalar tu caso. Una disculpa." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 1,
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "presentComplaintTag",
+    "name": "645e22bb-86e4-4378-a702-94eb6c5307ea"
+  }, {
+    "intent": "HUAWEI",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "update_zoom_huawei",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "phone_operating_system",
+                  "platform": "HUBSPOT",
+                  "value": "Harmony"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "a898f4e8-850e-4b04-b9b8-8c68aa0293a0"
+  }, {
+    "intent": "ANDROID",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "update_gm_android",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "phone_operating_system",
+                  "platform": "HUBSPOT",
+                  "value": "Android"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "a512c103-9ee9-4942-945a-8aa222c02180"
+  }, {
+    "intent": "IPHONE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "update_gm_iphone",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "phone_operating_system",
+                  "platform": "HUBSPOT",
+                  "value": "iOS"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "4c0bad25-c5d2-47cd-a76b-b4acb90e06b2"
+  }, {
+    "intent": "ADHERENCE_ENDO_BAD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nos regalas más detalles, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_diabetes_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "1"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "highSpecializationQuestionTag",
+    "name": "69f9a395-3e54-4864-a73e-8ff50999666b"
+  }, {
+    "intent": "ADHERENCE_ENDO_REGULAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nos regalas más detalles, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_diabetes_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "5"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "highSpecializationQuestionTag",
+    "name": "6b14b083-50d4-4158-af85-c058f994abfa"
+  }, {
+    "intent": "ADHERENCE_ENDO_GOOD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Felicidades! Sigue así!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_diabetes_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "10"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "adf3deb2-459d-4ece-ba0c-6d6d5a3f6740"
+  }, {
+    "intent": "ADHERENCE_NUTRI_GOOD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Felicidades! Sigue así 💪" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_nutrition_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "10"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "28cf7958-3cd5-40a3-8007-2898f87f14c5"
+  }, {
+    "intent": "ADHERENCE_NUTRI_REGULAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Vas por buen camino! ✅Nos regalas más info para ayudarte más. Por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_nutrition_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "5"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "nutritionQuestionTag",
+    "name": "8edfa3fd-f2fe-422e-838f-bb88c180b50c"
+  }, {
+    "intent": "ADHERENCE_NUTRI_BAD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Continúa esforzándote! Recuerda que en CLIVI estamos paso a paso contigo. Nos regalas más detalles, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_nutrition_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "1"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "nutritionQuestionTag",
+    "name": "d72690da-2c47-42bb-b8dd-0c5423adcdbe"
+  }, {
+    "intent": "GOOD_WEBINAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por tu respuesta!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "cliviplus_score_webinar",
+                  "platform": "HUBSPOT",
+                  "value": "5"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "292c0c03-e6f8-4e09-ac62-eecd7f323d35"
+  }, {
+    "intent": "REGULAR_WEBINAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ayúdanos a mejorar, por favor nos regalas una sugerencia. Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "cliviplus_score_webinar",
+                  "platform": "HUBSPOT",
+                  "value": "3"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "suggestionsFlowCatcher",
+    "name": "8dfd0d09-8809-4bb0-ba5b-6c0fdd0af257"
+  }, {
+    "intent": "BAD_WEBINAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ayúdanos a mejorar, por favor con una sugerencia. Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "cliviplus_score_webinar",
+                  "platform": "HUBSPOT",
+                  "value": "1"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "suggestionsFlowCatcher",
+    "name": "537b6680-eec0-4284-8169-89b994ba039d"
+  }, {
+    "intent": "ADHERENCE_PSYC_BAD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalles en una pregunta, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_psych_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "1"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "psychoQuestionTag",
+    "name": "7ae36cab-a989-4acc-89ec-e2613a9b3f62"
+  }, {
+    "intent": "ADHERENCE_PSYC_REGULAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalles en una pregunta, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_psych_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "5"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "psychoQuestionTag",
+    "name": "07db8603-7478-401c-8121-b9af2f913b92"
+  }, {
+    "intent": "ADHERENCE_PSYC_GOOD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias por tu respuesta!😉" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_psych_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "10"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "9f4f3a3e-7bfe-4c9a-a5d2-8667190990f5"
+  }, {
+    "intent": "CONFIRM_APPTS_TEMPLATE_REMINDER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_CONFIRM"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "0f224462-64c8-4e50-b919-7f35a6d5442e"
+  }, {
+    "intent": "FILE_TYPE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "incomingFile",
+    "name": "89cbdb83-532b-46b2-8fd6-a3e2321282d7"
+  }, {
+    "intent": "END_SESSION_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "b81ede18-1b73-4774-8c60-1c509f0df62e"
+  }, {
+    "intent": "PATIENT_NO_SHOW_TEMPLATE_BUTTON",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "appointmentNoShow",
+    "name": "47025c4e-7328-49c1-91df-fd6fcfade27f"
+  }, {
+    "intent": "WHATSAPP_FLOW_FILLED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias por confirmar y vamos con todo!" ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "506fc334-8121-4d10-9ed3-d301fac04ee0"
+  }, {
+    "intent": "REFFERED_CONTACT_SHARED_BY_WHATSAPP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "giftCards",
+    "name": "4700b426-c618-4f67-9e5a-70e7fb2cb0c5"
+  }, {
+    "intent": "QUESTION_INVALID",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Siempre nos puedes contactar escribiendo la palabra Clivi. Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_LAST_VALIDATOR",
+              "params": {
+                "isValid": false
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "fd018f6d-b48b-48bf-8745-a0113f1ef602"
+  }, {
+    "intent": "GOOD_DIABETES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hola! 👋 Para CLIVI es muy importante conocer tu buena opinión y compartirla con todos los Mexicanos para poder ayudarlos a mejorar su calidad de vida 💜. Por esta razón queremos pedir tu apoyo para que nos compartas algunos comentarios acerca de tu experiencia con el Tratamiento Integral en CLIVI. Da un toque a la liga 👇 https://g.page/r/CX0ThqXe8bRlEAE/review" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 5,
+                "staffType": "DIABETES"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "a1708957-8612-4c32-a98a-344ac0cd822b"
+  }, {
+    "intent": "REGULAR_DIABETES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por calificar, vamos a revisar tu caso. Nos regalas más detalles. Por favor" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 3,
+                "staffType": "DIABETES"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "highSpecializationQuestionTag",
+    "name": "28336e4d-cd0a-4a8d-835e-20caf39733f8"
+  }, {
+    "intent": "BAD_DIABETES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sentimos mucho tu mala experiencia. Estamos escalando el caso. Gracias por tu respuesta." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 1,
+                "staffType": "DIABETES"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "presentComplaintTag",
+    "name": "42dde09f-b410-4b51-b16d-488e29e97f4f"
+  }, {
+    "intent": "TEMPLATE_REMINDER_WAIST",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "logWaist",
+    "name": "86105bd8-be03-4528-86a5-820790fd94d2"
+  }, {
+    "intent": "DR_CLIVI",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "Glosario Dr. Clivi_Zero.pdf",
+                    "pathCloudFile": "msg-attachments/Glosario Dr. Clivi_Zero.pdf",
+                    "type": "DOCUMENT",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FGlosario%20Dr.%20Clivi_Zero.pdf?alt=media\u0026token=8c903689-fa66-4d1c-9a97-0d7598443324"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "d954fd55-3e76-4a30-a0da-25cb2d022a47"
+  }, {
+    "intent": "GLP_TUTORIAL",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "tutorialMed",
+    "name": "31905540-3b20-4c6b-bbab-15ba8e4e3629"
+  }, {
+    "intent": "UPDATE_VIDEOCALL",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "techProfileMovil",
+    "name": "910053b3-33a0-498f-ba88-d4b83c806842"
+  }, {
+    "intent": "ANOTHER_QUESTIONS_ADMIN",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_LAST_VALIDATOR",
+              "params": {
+                "isValid": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "questionsTags",
+    "name": "1fab7895-d91b-4df4-8ad0-1426c143ace6"
+  }, {
+    "intent": "NOT_SOLVED_QUESTIONS_ADMIN",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_FEEDBACK",
+              "params": {
+                "confirmedResolved": false,
+                "staffType": "PATIENT_EXPERIENCE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "helpdeskContextMessage": "Ticket no resuelto",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "1324c633-ae9e-4c85-99a8-81b702bc8e01"
+  }, {
+    "intent": "SOLVED_QUESTIONS_ADMIN",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_FEEDBACK",
+              "params": {
+                "confirmedResolved": true,
+                "staffType": "PATIENT_EXPERIENCE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "templateName": "px_csat_pqr_question",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "b31f052b-9bf3-44dc-ae28-dedbeb4e8071"
+  }, {
+    "intent": "TEMPLATE_SEND_QUEUDED_CONTENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUEUED_CONTENT_SEND"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ce3ceb17-d063-4462-af6e-449a56d10bca"
+  }, {
+    "intent": "LABS_IMAGE_INCOMING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_ticket",
+                  "platform": "HUBSPOT",
+                  "value": "LABS_DELIVERED"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "LABS"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e75daa07-b49c-41e0-933d-98061b19bc6f"
+  }, {
+    "intent": "FOOD_IMAGE_INCOMING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "FOOD_IMAGE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "photo_food_file",
+                  "platform": "HUBSPOT",
+                  "value": "Yes"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "FOOD_IMAGE_SENT_BY_PATIENT"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "cf699e3b-2fd1-4c13-8daa-fdddc7300e78"
+  }, {
+    "intent": "INVOICING_IMAGE_INCOMING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Lo revisaremos a la brevedad. ¡Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_ticket",
+                  "platform": "HUBSPOT",
+                  "value": "CIF"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "OTHER"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ab4158f4-fa5b-4aa3-91e0-2e0007d62624"
+  }, {
+    "intent": "PAYMENT_IMAGE_INCOMING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias, estamos verificando la información en nuestro sistema. Regresaremos a la brevedad con Ud. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_ticket",
+                  "platform": "HUBSPOT",
+                  "value": "PAYMENT"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "PAYMENT"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "b6a3ef83-85fb-4e60-be21-335582ef2b2e"
+  }, {
+    "intent": "AUDIO_DETECTED_RECEIVED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias, ya recibimos tu audio. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "audioTags",
+    "name": "0a94e72f-b462-40e1-ab7f-ede72eba07d6"
+  }, {
+    "intent": "HIGH_SPECIALIZATION_QUESTION_TAG_AUDIO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Vamos a revisar tu audio. Un momento, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "helpdeskContextMessage": "",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": false,
+                "staffType": "DIABETES"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "c380737a-4fa3-422f-935b-ad5d412de242"
+  }, {
+    "intent": "NUTRITION_QUESTION_TAG_AUDIO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Vamos a revisar tu audio. Un momento, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "helpdeskContextMessage": "",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": false,
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "9b6f60d6-34d3-4934-98a3-f27dbb885b95"
+  }, {
+    "intent": "PSYCHO_QUESTION_TAG_AUDIO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Vamos a revisar tu audio. Un momento, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "helpdeskContextMessage": "",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": false,
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "c60846df-1fa8-4360-9633-dcacf77f16a6"
+  }, {
+    "intent": "PX_QUESTION_TAG_AUDIO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Vamos a revisar tu audio. Un momento, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "SUGERENCIAS",
+                "helpdeskContextMessage": "Audio de paciente revisar admin",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PATIENT_EXPERIENCE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "a94dd120-af2d-4d4d-a3ba-1346f921e841"
+  }, {
+    "intent": "SUPPLIES_QUESTION_TAG_AUDIO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Vamos a revisar tu audio. Un momento, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "SUMINISTROS",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PATIENT_EXPERIENCE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "21827b81-dbec-4925-a77f-20beb0ae18d8"
+  }, {
+    "intent": "PX_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "helpDeskSubMenu",
+    "name": "76cfb544-7615-440b-aa4d-c86f7a1e9ae7"
+  }, {
+    "intent": "LAST_PRESCRIPTION_BUTTON_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Un momento este proceso puede tardar unos 30 a 45 segundos. Gracias por tu paciencia." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_SEND_LAST_BY_TAG",
+              "params": {
+                "fileTag": "PRESCRIPTIONS"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "1bb1681c-d696-4432-a33d-05638fbda9b2"
+  }, {
+    "intent": "LAST_ORDER_BUTTON_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Un momento este proceso puede tardar unos 30 a 45 segundos. Gracias por tu paciencia." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_SEND_LAST_BY_TAG",
+              "params": {
+                "fileTag": "LABS_REQUEST_ORDER"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "71f8ae10-8940-4673-a528-fdd08f430076"
+  }, {
+    "intent": "LAST_NUTRITION_PLAN_BUTTON_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Un momento este proceso puede tardar unos 30 a 45 segundos. Gracias por tu paciencia." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_SEND_LAST_BY_TAG",
+              "params": {
+                "fileTag": "NUTRITION_PLAN"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "f397f43f-bd01-4ef2-916b-238a8a89739b"
+  }, {
+    "intent": "LAST_LABS_RESULTS_BUTTON_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Este proceso puede demorar hasta unos 45 segundos. Gracias por tu paciencia." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_SEND_LAST_BY_TAG",
+              "params": {
+                "fileTag": "LABS"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "d369d67f-3cf8-4f99-a3de-caa1a9e8a275"
+  }, {
+    "intent": "GOOD_GENMED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por tu respuesta!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 5,
+                "staffType": "GENERAL_MED"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "29d0cec4-1139-4be6-b9d1-8e7c237559eb"
+  }, {
+    "intent": "REGULAR_GENMED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias. Revisaremos el caso. Saludos!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 3,
+                "staffType": "GENERAL_MED"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "1c5a15bf-cf9b-4b7f-8fa4-2924f80bc435"
+  }, {
+    "intent": "BAD_GENMED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nos regalas más detalles para escalar tu caso. Por favor y una disculpa. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 1,
+                "staffType": "GENERAL_MED"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "highSpecializationQuestionTag",
+    "name": "1814a92e-9548-4fb4-ac0c-4287317ec48c"
+  }, {
+    "intent": "HIGH_SPECIALIZATION_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalle de tu pregunta y/o solicitud. Por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "highSpecializationQuestionTag",
+    "name": "88f232ec-a3c1-4fc3-9f81-eb568696f2f2"
+  }, {
+    "intent": "NUTRITION_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalle de tu pregunta y/o solicitud. Por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "nutritionQuestionTag",
+    "name": "b7b40d92-a9e0-4fe4-8311-901d1d384afd"
+  }, {
+    "intent": "PSYCHO_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalle de tu pregunta y/o solicitud. Por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "psychoQuestionTag",
+    "name": "77d79868-e8ae-4782-adc8-aa53a4aabcc4"
+  }, {
+    "intent": "SUPPLIES_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalle de tu pregunta y/o solicitud. Por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "suppliesQuestionTag",
+    "name": "f42f0271-bb58-4ce7-a66b-9ed050d7f922"
+  }, {
+    "intent": "FORGOT_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por ayudarnos con esta información mejoraremos para ti." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "noShowReasonFromPatient": "Olvidé la cita",
+                "staffType": "$session.params.staffType"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "5752ea96-5435-4d81-92df-3c9e888f17e9"
+  }, {
+    "intent": "UNEXPECTED_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por ayudarnos con esta información mejoraremos para ti." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "noShowReasonFromPatient": "Tuve un imprevisto",
+                "staffType": "$session.params.staffType"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "a500f80d-8bbd-4c37-a970-5e709ebfae87"
+  }, {
+    "intent": "BUSSY_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por ayudarnos con esta información mejoraremos para ti." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "noShowReasonFromPatient": "Hacía otra actividad",
+                "staffType": "$session.params.staffType"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "31ed00fe-9b8f-43e8-9777-3e8e8cf343c1"
+  }, {
+    "intent": "NO_NEEDED_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por ayudarnos con esta información mejoraremos para ti." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "noShowReasonFromPatient": "No necesitaba la cita",
+                "staffType": "$session.params.staffType"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "06e117e5-955a-4705-b972-bf721ba8320e"
+  }, {
+    "intent": "ISSUE_HOUR_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por ayudarnos con esta información mejoraremos para ti." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "noShowReasonFromPatient": "Por el horario",
+                "staffType": "$session.params.staffType"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "651ea567-df0e-4d85-a40d-362de2796798"
+  }, {
+    "intent": "CONFIRM_MED_REMINDER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Excelente! Gracias por tu constancia. Vamos con todo!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "glp_med_reminder_button",
+                  "platform": "HUBSPOT",
+                  "value": "PRESSED"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "3162f25b-1488-4a70-be27-fdcb8a1c09a8"
+  }, {
+    "intent": "NECK_REMINDER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "logNeck",
+    "name": "2b401431-1e13-46b8-bbeb-b72ccaa0f175"
+  }, {
+    "intent": "REMINDER_PX_SELFONBOARDING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "bodyText": "A continuación responde las siguientes preguntas para iniciar tu tratamiento.",
+              "flowParameters": {
+                "firstScreenId": "BASIC_INFO",
+                "flowButtonCtaText": "Validar datos de labs",
+                "flowId": "829507789135205"
+              },
+              "type": "SESSION_FLOW"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "b43ff7d5-a409-4c80-b850-06daf8ad917f"
+  }, {
+    "intent": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "appointmentNew",
+    "name": "451fd56f-ced9-4c73-8b80-b82975658091"
+  }, {
+    "intent": "NUTRI_SCHEDULE_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "LONG",
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "d0c85c9d-968c-49a1-af7c-5da2f6819375"
+  }, {
+    "intent": "PSYCHO_SCHEDULE_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "LONG",
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "b444391a-cf91-4c8d-8fff-afc57a71b953"
+  }, {
+    "intent": "NUTRI_RESCHEDULE_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "LONG",
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "70d55e93-8a48-4b2f-a2a8-21008290cf17"
+  }, {
+    "intent": "PSYCHO_RESCHEDULE_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "LONG",
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "c7ac8219-bad8-4021-93e8-9740df21d011"
+  }, {
+    "intent": "DOWNLOAD_RECETARIO",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "recetario_download",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "acbdfb9c-bdfe-4fe5-99f1-031fa7778a58"
+  }, {
+    "intent": "ADHERENCE_ENDO_TEMPLATE_REMINDER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "adherenceDiabetes",
+    "name": "c1601ce3-e0fd-4482-845a-fb20e68c1d2e"
+  }, {
+    "intent": "REFERRALS_TEMPLATES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Es muy fácil comparte su contacto por este número y listo nosotros nos encargamos del resto. Gana 1mil pesos en diferentes tarjetas de regalo por cada referido que se convierta en paciente de Clivi." ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "8d8e752d-ccb6-4361-b0da-0fc0b57cd987"
+  }, {
+    "intent": "UPDATE_PAYMENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PAYMENT_TASK",
+              "params": {
+                "action": "SEND_UPDATE_PAYMENT_LINK"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "92d3b3e9-dbf9-4196-b2a8-782d167c1a38"
+  }, {
+    "intent": "PSYCHO_PROCESS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "adherencePsycho",
+    "name": "f4d57827-e6bd-479f-a196-680f2aaf027d"
+  }, {
+    "intent": "NUTRI_PROCESS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "adherenceNutri",
+    "name": "482045e5-a8fb-4de0-8dab-4f70745230f5"
+  }, {
+    "intent": "RETRY_CHARGE_PAYMENT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PAYMENT_TASK",
+              "params": {
+                "action": "SEND_COLLECT_NOW_LINK"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "38399e06-7a28-41ff-9167-90f64dd9ca07"
+  }, {
+    "intent": "SURVEY_GENMED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "rateGenMed",
+    "name": "81fd848c-b036-472b-a0b6-9f168c6fb287"
+  }, {
+    "intent": "PX_COMING_TO_APPT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias! Recuerda que el límite para ingresar a la cita es de 10 minutos. 🤗. Para entrar a la cita es necesario presionar el botón que dice  \"Entrar a la cita\"" ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "0dd5aef1-dfac-432b-9b88-6b93927d2061"
+  }, {
+    "intent": "RESCHEDULE_GENMED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "LONG",
+                "staffType": "GENERAL_MED"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "f829640b-6e39-4e68-b9fd-a041d8d3ae8c"
+  }, {
+    "intent": "RECIPE_MENTAL_TIP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Tienes alguna duda, nos las puedes mandar. Por favor." ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "questionsTags",
+    "name": "66a495b7-4b1b-4bbe-a193-cc3fa99d0875"
+  }, {
+    "intent": "APPT_SUPPORT_ALERT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RESEND_MEETING_LINK"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "32c5800f-ea8c-46ec-8cae-191b39dd230c"
+  }, {
+    "intent": "VALID_QUESTION_YES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_LAST_VALIDATOR",
+              "params": {
+                "isValid": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "617deb3a-f45a-4720-88dc-e7abae4f0e3c"
+  }, {
+    "intent": "NO_LABS_SENT_REMINDER_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Te compartimos tu orden de laboratorios para que puedas realizarlos. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_SEND_LAST_BY_TAG",
+              "params": {
+                "fileTag": "LABS_REQUEST_ORDER"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "LAST_ORDER_CLICKED_BUTTON_LAST_FILE_DOWNLOAD"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "9636aaaf-1265-43d9-888f-e2ebf55e6d84"
+  }, {
+    "intent": "PX_ADAPTABLE_FEELS_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por confiar en Clivi, recuerda puedes enviarnos tus dudas a través de tu asistente virtual." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "bimestral_status_psych",
+                  "platform": "HUBSPOT",
+                  "value": "feeling_good"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ef0fb369-e5f7-47b8-b8b7-a52c3a64de4d"
+  }, {
+    "intent": "PX_ADAPTABLE_NEEDS_PSYCH_HELP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "En un momento uno de nuestros especialistas se pondrá en contacto contigo." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "bimestral_status_psych",
+                  "platform": "HUBSPOT",
+                  "value": "need_help"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "STAFF_TASK_CREATE",
+              "params": {
+                "assignedOperatorByStaffType": "OBESITY",
+                "category": "PSYCH_CALL_REQUESTED",
+                "description": "Paciente de modelo adaptable, requiere llamada psicológica"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "f3bcfaf5-aeac-4572-a0a8-7500ed2943e2"
+  }, {
+    "intent": "PX_ADAPTABLE_COMFORTABLE_NUTRI_PLAN",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por confiar en clivi, recuerda que puedes hacernos tus preguntas a través de este tu asiste virtual." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "bimestral_status_nutri",
+                  "platform": "HUBSPOT",
+                  "value": "confortable_adaptable_nutriplan"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ef04fd02-d5a4-49a2-99cd-c6f73c823c85"
+  }, {
+    "intent": "PX_ADAPTABLE_GOOD_RESULTS_NUTRI_PLAN",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por confiar en clivi, recuerda que puedes realizar tus preguntas con nuestro equipo de Especialistas." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "bimestral_status_nutri",
+                  "platform": "HUBSPOT",
+                  "value": "good_results_adaptable_nutriplan"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "82f063ee-8b15-4752-ae15-b1b54e621071"
+  }, {
+    "intent": "OFFLINE_PAYMENTS",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "payCashCreate",
+    "name": "d1a8471b-dd18-416a-afbc-7f8d2fc5ddbf"
+  }, {
+    "intent": "STORES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "STORES_WAC.png",
+                    "pathCloudFile": "msg-attachments/STORES_WAC.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FSTORES_WAC.png?alt=media\u0026token=4023fb90-9093-47f6-8431-977aee2d42e6"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "b49b8c08-56ec-4f4d-b47a-048276c98b92"
+  }, {
+    "intent": "BANK_TRANSFER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "bankPaymentOptions",
+    "name": "db4c230a-ffc9-44d4-a6b6-1f4d005f0c5a"
+  }, {
+    "intent": "WALMART_STORES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "WALMART_WAC.png",
+                    "pathCloudFile": "msg-attachments/WALMART_WAC.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FWALMART_WAC.png?alt=media\u0026token=8f174d40-2b9d-41c7-bb6f-018a0ea82818"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "70898004-ada2-42ab-ad84-4e08379154d4"
+  }, {
+    "intent": "BANK_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "bankLocationOptions",
+    "name": "1554256a-40b1-40c9-b7a8-4796be99fda8"
+  }, {
+    "intent": "APP_BANK",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "banksAppsForms",
+    "name": "7dcdb071-d51c-44bc-b1fb-e3e40bbafc0e"
+  }, {
+    "intent": "SANTANDER_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "SANTANDER_LOCATION_WAC.png",
+                    "pathCloudFile": "msg-attachments/SANTANDER_LOCATION_WAC.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FSANTANDER_LOCATION_WAC.png?alt=media\u0026token=07759de7-11e7-4160-98dd-d4fd5fab11a7"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "89914857-98a1-4355-b607-ab37e7316269"
+  }, {
+    "intent": "BBVA_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "BBVA_LOCATION.png",
+                    "pathCloudFile": "msg-attachments/BBVA_LOCATION.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FBBVA_LOCATION.png?alt=media\u0026token=6c9fdc1b-a332-45a4-9e08-c95c7763a4f1"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ab1a8d2a-2c4b-45b6-9785-1cbd09f0a1a8"
+  }, {
+    "intent": "TELECOMM_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "TELECOMM_BANORTE.png",
+                    "pathCloudFile": "msg-attachments/TELECOMM_BANORTE.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FTELECOMM_BANORTE.png?alt=media\u0026token=cd99b787-e42f-48dd-8700-04553728d4ee"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "2498116b-7941-4129-a736-7dafcb799213"
+  }, {
+    "intent": "BANORTE_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "TELECOMM_BANORTE.png",
+                    "pathCloudFile": "msg-attachments/TELECOMM_BANORTE.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FTELECOMM_BANORTE.png?alt=media\u0026token=cd99b787-e42f-48dd-8700-04553728d4ee"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "54cb6969-4ebe-4a94-874b-bda220ce0b05"
+  }, {
+    "intent": "BBVA_APP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "BBVA_BANORTE_APP.png",
+                    "pathCloudFile": "msg-attachments/BBVA_BANORTE_APP.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FBBVA_BANORTE_APP.png?alt=media\u0026token=b612ae79-3cc9-4deb-bdda-0984e21f2566"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "f7815970-c96b-4448-8e70-16b0cbc9b25b"
+  }, {
+    "intent": "BANORTE_APP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "BBVA_BANORTE_APP.png",
+                    "pathCloudFile": "msg-attachments/BBVA_BANORTE_APP.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FBBVA_BANORTE_APP.png?alt=media\u0026token=b612ae79-3cc9-4deb-bdda-0984e21f2566"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "14c72bcd-ddea-465e-9a88-4d545df611b9"
+  }, {
+    "intent": "SANTANDER_APP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "AFIRME_SANTANDER_APP.png",
+                    "pathCloudFile": "msg-attachments/AFIRME_SANTANDER_APP.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FAFIRME_SANTANDER_APP.png?alt=media\u0026token=be979fa1-9f88-4813-8b78-a370f2b272a7"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "a940e354-99a0-42e8-870a-2d53c513473c"
+  }, {
+    "intent": "AFIRME_APP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "AFIRME_SANTANDER_APP.png",
+                    "pathCloudFile": "msg-attachments/AFIRME_SANTANDER_APP.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FAFIRME_SANTANDER_APP.png?alt=media\u0026token=be979fa1-9f88-4813-8b78-a370f2b272a7"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ab8b6aff-ddb3-46b2-a897-3c303e0f50fd"
+  }, {
+    "intent": "REMINDER_LABS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Por favor, adjunta tus archivos y/o imágenes. Gracias" ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "4f3984bf-0f59-46c6-983f-f289127a33b5"
+  }, {
+    "intent": "SEND_DM_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUEUED_MESSAGES_SEND"
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "b52c645f-5ff5-436e-909e-37a787eedd88"
+  }, {
+    "intent": "SERVICE_SURVEY_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "surveyNPS",
+    "name": "be5bba47-5cf5-404d-a685-84b987b04e7e"
+  }, {
+    "intent": "INVOICE_VIEW",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Te estamos redirigiendo al portal de facturación. Para visualizar tu perfil de manera óptima, por favor ingresa desde una computadora. 🖥️" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "invoice_view_img",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          }, {
+            "definition": {
+              "functionName": "INVOICE_PORTAL_LINK_SEND"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "3fd93cc4-65f0-42c2-a597-a6296edf357f"
+  }, {
+    "intent": "INVOICE_INFO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Te estamos redirigiendo al portal de facturación. Para visualizar tu perfil de manera óptima, por favor ingresa desde una computadora. 🖥️" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "invoice_info_view",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          }, {
+            "definition": {
+              "functionName": "INVOICE_PORTAL_LINK_SEND"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "21e62721-c080-4c50-a7b3-2828bd705553"
+  }, {
+    "intent": "AMAZON_CARD_REF_SENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias! Nosotros nos encargamos en contactarlo a la brevedad. Te mantenemos al tanto del proceso. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "gift_card_referral",
+                  "platform": "HUBSPOT",
+                  "value": "Amazon"
+                }, {
+                  "name": "referral_name",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.name"
+                }, {
+                  "name": "referral_phone",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.whatsappId"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "8d7984ea-b3b1-4ab9-9999-935d0e7537fa"
+  }, {
+    "intent": "UBER_CARD_REF_SENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias! Nosotros nos encargamos en contactarlo a la brevedad. Te mantenemos al tanto del proceso. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "gift_card_referral",
+                  "platform": "HUBSPOT",
+                  "value": "Uber"
+                }, {
+                  "name": "referral_name",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.name"
+                }, {
+                  "name": "referral_phone",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.whatsappId"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "15f9f1e5-399b-4393-a60f-761c12b86a0c"
+  }, {
+    "intent": "CASHI_CARD_REF_SENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias! Nosotros nos encargamos en contactarlo a la brevedad. Te mantenemos al tanto del proceso. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "gift_card_referral",
+                  "platform": "HUBSPOT",
+                  "value": "Cashi (Walmart, Sams Club)"
+                }, {
+                  "name": "referral_name",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.name"
+                }, {
+                  "name": "referral_phone",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.whatsappId"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "77d7e37d-d5a1-4177-804f-2ebf42a84641"
+  }, {
+    "intent": "GOOGLE_CARD_REF_SENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias! Nosotros nos encargamos en contactarlo a la brevedad. Te mantenemos al tanto del proceso. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "gift_card_referral",
+                  "platform": "HUBSPOT",
+                  "value": "Google Play"
+                }, {
+                  "name": "referral_name",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.name"
+                }, {
+                  "name": "referral_phone",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.whatsappId"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "38cef7ae-7acb-4546-963c-d4762ec69225"
+  }, {
+    "intent": "LIVERPOOL_CARD_REF_SENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias! Nosotros nos encargamos en contactarlo a la brevedad. Te mantenemos al tanto del proceso. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "gift_card_referral",
+                  "platform": "HUBSPOT",
+                  "value": "Google Play"
+                }, {
+                  "name": "referral_name",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.name"
+                }, {
+                  "name": "referral_phone",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.whatsappId"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "6315edf7-90c9-4ac1-a12a-4a3880f8ab7b"
+  }, {
+    "intent": "ID_TRACKING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "medsSuppliesStatus",
+    "name": "c0c38e77-61ca-417c-82bc-95f0f282d3bb"
+  }, {
+    "intent": "IMAGE_POD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_SEND_LAST_BY_TAG",
+              "params": {
+                "fileTag": "POD"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "074a0a47-abd6-4ca4-b455-438f420c7bc4"
+  }, {
+    "intent": "HIGH_PROB",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por responder. Nos ayudas mucho solo quedan dos preguntitas más, por favor. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nps_recommendation",
+                  "platform": "HUBSPOT",
+                  "value": "10"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "surveyBot",
+    "name": "68c67a01-9675-4177-8b58-e57cd5747816"
+  }, {
+    "intent": "MEDIUM_PROB",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por responder. Nos ayudas mucho solo quedan dos preguntitas más, por favor. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nps_recommendation",
+                  "platform": "HUBSPOT",
+                  "value": "8"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "surveyBot",
+    "name": "495026ff-5238-4833-bab5-3b520e704cce"
+  }, {
+    "intent": "LOW_PROB",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por responder. Nos ayudas mucho solo quedan dos preguntitas más, por favor. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nps_recommendation",
+                  "platform": "HUBSPOT",
+                  "value": "6"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "surveyBot",
+    "name": "2c95b0ee-2891-4c2e-835c-824083f0cec9"
+  }, {
+    "intent": "patientLogsGlucoseLevelsFasting",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Para estar seguros, por favor. Confirma mediante el siguiente menú si es una medición de glucosa. Gracias." ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "measurementsMenu",
+    "name": "58c08582-12a5-4603-af22-a2d641a85dfd"
+  }, {
+    "intent": "patientLogsGlucoseLevelsPostMeal",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Para estar seguros, por favor. Confirma mediante el siguiente menú si es una medición de glucosa. Gracias." ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "measurementsMenu",
+    "name": "7b007efa-5b5d-49e6-a3d2-f53da4f9ee29"
+  }, {
+    "intent": "patientSendsSomethingElseWithNumbers",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": false
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "68b65156-f79b-4673-bb08-0b384413e25f"
+  }, {
+    "intent": "patientFeelsBad",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Estamos canalizando tu petición con un especialista, un momento, por favor.\r\n" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "glp_emergency_call",
+                  "platform": "HUBSPOT",
+                  "value": "TRUE"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "7ba5b42d-6c4d-4c85-a16d-625bdbb5cb8f"
+  }, {
+    "intent": "YES_MEASURMENT_LOG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Muy bien, hemos guardado la información. Recuerda que puedes enviarnos tus mediciones cuando lo desees. ¡Gracias!" ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "6b463307-c35f-4920-8db5-5f9562910e14"
+  }, {
+    "intent": "NO_MEASURMENT_LOG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok, puedes volver a enviarnos tus mediciones. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "measurementsMenu",
+    "name": "176138ad-e44f-40d8-99ab-cc057517cd18"
+  }, {
+    "intent": "OTHER_REQUESTS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "helpdeskContextMessage": "",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "1dc6cda5-31a3-4796-9995-1cc8a2dee1cd"
+  }, {
+    "intent": "PAYMENTS_ISSUES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "helpdeskContextMessage": "Problemas con Pagos/Cobros",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "62334582-8587-4a25-8154-d2c54df9f4f2"
+  }, {
+    "intent": "WORKOUT_FLOW_BEGINNING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "bodyText": "Por favor responde las siguientes preguntas, no te tomará más de 1 minuto",
+              "flowParameters": {
+                "firstScreenId": "SCREEN_ONE",
+                "flowButtonCtaText": "Personalizar",
+                "flowId": "477583804730748"
+              },
+              "type": "SESSION_FLOW"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e13128d8-d8ac-438c-95d1-7a9a27f7e9d2"
+  }, {
+    "intent": "PX_SUSCRIPTION_TEMPLATE_WORKOUTS",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Perfecto, te enviaremos recordatorios 30 minutos antes de tu sesión en vivo. ¡Gracias por tu compromiso!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "patient_suscribe_to_workouts",
+                  "platform": "HUBSPOT",
+                  "value": "YES"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "2287fa0a-1326-4898-972d-87168dc31c50"
+  }, {
+    "intent": "CANCELLED_EXERCISE_EVALUATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Primero, selecciona qué cita quieres cancelar y podrás agendar una nueva cita sin problemas. Gracias" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_CANCEL_LIST"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "26c17f24-5206-457f-b090-c35e384ea5f4"
+  }, {
+    "intent": "APPT_CANCEL_REQUEST_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Primero, selecciona qué cita quieres cancelar y podrás agendar una nueva cita sin problemas. Gracias" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_CANCEL_LIST"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "0a009511-ae58-4095-af5a-33b4eb61f3c8"
+  }, {
+    "intent": "ALL_GOOD_NO_ACTION_NEEDED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "👍" ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "da224240-4073-4c76-9a36-1bd0426b0117"
+  }, {
+    "intent": "PX_ADAPTABLE_CHANGE_NUTRI_PLAN",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Un especialista se pondrá en contacto contigo. Gracias." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "bimestral_status_nutri",
+                  "platform": "HUBSPOT",
+                  "value": "change_adaptable_nutritionplan"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "STAFF_TASK_CREATE",
+              "params": {
+                "assignedOperatorByStaffType": "OBESITY",
+                "category": "NUTRITIONAL_PLAN",
+                "description": "Paciente de modelo adaptable, desea cambiar plan de nutrición"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "744d1173-02ac-4c34-bcff-5c00fd59f9a9"
+  }, {
+    "intent": "WHATSAPP_FLOW_FILLED",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "73500693-16bb-45a8-bb7b-942305432380"
+  }, {
+    "intent": "RATE_APPOINTMENT_SURVEY_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "rateApptsMainOne",
+    "name": "f34382a5-7475-417c-b540-4e1faa9a57cb"
+  }, {
+    "intent": "RECEIVED_STICKER",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias guardaremos tu sticker en nuestros favoritos. Paso a paso contigo" ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "29c90fff-1018-478e-941e-770ef0917692"
+  }, {
+    "intent": "AI_AGENT_CALLING_MAIN_MENU",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "mainMenu",
+    "name": "a3ea440c-df9d-41f6-918a-7c43dedc3b04"
+  }, {
+    "intent": "RECEIVED_STICKER",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias guardaremos tu sticker en nuestros favoritos. Paso a paso contigo" ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "32661d8f-a50e-435f-aa88-14356b41ab65"
+  }, {
+    "intent": "emergencyCallsPsycho",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Estamos escalando tu caso con un especialista. Un momento, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "zero_emergency_call_requested",
+                  "platform": "HUBSPOT",
+                  "value": "TRUE"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "278bbbcc-7b28-460a-ba67-532de3777ef8"
+  }, {
+    "intent": "LOW_IMPACT_ENROLL",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Perfecto, te enviaremos recordatorios 30 minutos antes de tu sesión en vivo. ¡Gracias por tu compromiso!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "workout_category",
+                  "platform": "HUBSPOT",
+                  "value": "Bajo impacto"
+                }, {
+                  "name": "patient_suscribe_to_workouts",
+                  "platform": "HUBSPOT",
+                  "value": "YES"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "6fc3cb38-6b7a-4389-9bde-21c81039bb02"
+  }, {
+    "intent": "CSAT_BAD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Lamentamos la experiencia. Estamos escalando el caso nuevamente. Una disculpa. Gracias por tu paciencia. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "csat_pqr",
+                  "platform": "HUBSPOT",
+                  "value": 1
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "671a1253-1a4d-49d6-8b48-33bd3ab49b1f"
+  }, {
+    "intent": "CSAT_GOOD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por tu buena calificación." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "csat_pqr",
+                  "platform": "HUBSPOT",
+                  "value": 5
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "d4dc63d4-d10a-4eef-ab53-deb67160acd8"
+  }, {
+    "intent": "CSAT_REGULAR",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por calificarnos. Vamos a revisar tu caso para mejorar nuestro servicio para ti. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "csat_pqr",
+                  "platform": "HUBSPOT",
+                  "value": 3
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "f5ffa052-f59f-4b3f-bb65-c8b3c6f071db"
+  }, {
+    "intent": "OTHER_FILE_IMG_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "OTHER"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "9a71e132-04c1-4437-8ef9-252e928ed17b"
+  }, {
+    "intent": "BASIC_LEVEL",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Perfecto, ¡Gracias por tu compromiso!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "workout_category",
+                  "platform": "HUBSPOT",
+                  "value": "Bajo"
+                }, {
+                  "name": "patient_suscribe_to_workouts",
+                  "platform": "HUBSPOT",
+                  "value": "YES"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "9824dbf4-7019-42ac-8e9e-945225046c22"
+  }, {
+    "intent": "MIDDLE_LEVEL",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Perfecto, ¡Gracias por tu compromiso!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "workout_category",
+                  "platform": "HUBSPOT",
+                  "value": "Intermedio"
+                }, {
+                  "name": "patient_suscribe_to_workouts",
+                  "platform": "HUBSPOT",
+                  "value": "YES"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "9436fe0f-b2f9-4670-b68b-e5e0c88fc5c0"
+  }, {
+    "intent": "OZEMPIC",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Aplicación semanal de medicamento GLP." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "Onboarding Wegovy (1).mp4",
+                    "pathCloudFile": "gs://dtwo-ec5ea.appspot.com/msg-attachments/Onboarding Wegovy (1).mp4",
+                    "type": "VIDEO",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FOnboarding%20Wegovy%20(1).mp4?alt=media\u0026token=2db6a045-eaeb-4693-a67e-396f3e8cf5ed"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "bac1ee49-b027-4916-a035-ffd9976134ca"
+  }, {
+    "intent": "SAXENDA",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Aplicación diaria de medicamento GLP." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "Cómo Aplicar MedicamentosCliviZero.mp4",
+                    "pathCloudFile": "gs://dtwo-ec5ea.appspot.com/msg-attachments/Cómo Aplicar MedicamentosCliviZero.mp4",
+                    "type": "VIDEO",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FCo%CC%81mo%20Aplicar%20MedicamentosCliviZero.mp4?alt=media\u0026token=1a726fe7-6e58-40c0-b62e-d47b6102780c"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e6f40af4-a00c-45c9-b508-a7a465cc10bc"
+  }, {
+    "intent": "WEGOVY",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Aplicación semanal de medicamento GLP." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "Onboarding Wegovy (1).mp4",
+                    "pathCloudFile": "gs://dtwo-ec5ea.appspot.com/msg-attachments/Onboarding Wegovy (1).mp4",
+                    "type": "VIDEO",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FOnboarding%20Wegovy%20(1).mp4?alt=media\u0026token=2db6a045-eaeb-4693-a67e-396f3e8cf5ed"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "cbcd4be3-ed38-4b50-8907-ca082958e40f"
+  }, {
+    "intent": "PHOTO_GLUCO_SCALE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Funciona" ]
+        },
+        "languageCode": "es"
+      } ],
+      "webhook": "photoScalePhoto",
+      "tag": "PhotoAi"
+    },
+    "targetPage": "End Session",
+    "name": "91dfb81f-c5a5-40a2-a163-24d42ec86861"
+  }, {
+    "intent": "YES_HELPDESK_SUPPORT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "DUDAS GENERALES",
+                "helpdeskContextMessage": "Dudas generales",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PATIENT_EXPERIENCE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "9e3694cc-8e4e-4b88-87b8-dee1541ec290"
+  }, {
+    "intent": "NO_HELPDESK_SUPPORT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "mainMenu",
+    "name": "dde6043c-cb4a-4f65-b7e4-55f6743bc0dd"
+  }, {
+    "intent": "WEB_APP_ONB",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ONBOARDING_SEND_LINK"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "565abcbb-8a03-4b4c-80cb-4c1d4192a908"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "71bc64a1-c902-4019-913c-139675809f05",
+  "displayName": "MEASUREMENTS_REPORT_MAIN_MENU_PAGE",
+  "parameters": [ {
+    "id": "MEASUREMENTS_REPORT_MAIN_MENU_PAGE",
+    "entityType": "@MEASUREMENTS_REPORT_MAIN_MENU_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

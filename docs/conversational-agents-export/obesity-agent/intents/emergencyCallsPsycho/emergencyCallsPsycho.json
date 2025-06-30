@@ -1,0 +1,10 @@
+{
+  "name": "3fcabf1b-698c-4016-b850-7d29ada08406",
+  "displayName": "emergencyCallsPsycho",
+  "parameters": [ {
+    "id": "emergencyCallPsycho",
+    "entityType": "@emergencyCallPsycho"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 9
+}

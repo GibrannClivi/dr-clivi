@@ -1,0 +1,163 @@
+{
+  "name": "a4946de2-1daa-4c42-b835-fc10e84fffa4",
+  "displayName": "InvoiceCenter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "INVOICE_VIEW",
+              "text": "Ver mi factura"
+            }, {
+              "id": "INVOCING_INFO",
+              "text": "Actualizar mi info"
+            }, {
+              "id": "INVOICE_SUPPORT",
+              "text": "Apoyo de asesor"
+            } ],
+            "textBody": "¿Cómo te podemos ayudar?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "INVOICE_VIEW",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Te estamos redirigiendo al portal de facturación. Para visualizar tu perfil de manera óptima, por favor ingresa desde una computadora. 🖥️" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "invoice_view_img",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          }, {
+            "definition": {
+              "functionName": "INVOICE_PORTAL_LINK_SEND"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "98bbe7c7-f7a8-43e7-9931-45f97cfc120a"
+  }, {
+    "intent": "INVOICE_INFO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Te estamos redirigiendo al portal de facturación. Para visualizar tu perfil de manera óptima, por favor ingresa desde una computadora. 🖥️" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "invoice_info_view",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          }, {
+            "definition": {
+              "functionName": "INVOICE_PORTAL_LINK_SEND"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "eaa4b231-89e1-41d9-a658-33247ea2c27f"
+  }, {
+    "intent": "PX_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "helpDeskSubMenu",
+    "name": "0318d1b1-731e-43b1-ba67-09c43808ef37"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "7f29a28e-a476-42b3-b1dc-eb100f6a15d2"
+  } ]
+}

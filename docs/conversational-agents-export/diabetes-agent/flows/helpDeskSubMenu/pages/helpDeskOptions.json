@@ -1,0 +1,354 @@
+{
+  "name": "8ce70c72-c61b-48ad-9513-a3a890aa5203",
+  "displayName": "helpDeskOptions",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Elegir",
+            "bodyText": "Selecciona una opción para escalar tu petición.",
+            "sections": [ {
+              "rows": [ {
+                "description": "No requiero apoyo",
+                "id": "NO_SUPPORT_NEEDED",
+                "title": "No es necesario"
+              }, {
+                "description": "Consulta o dudas sobre citas.",
+                "id": "APPOINTMENTS",
+                "title": "Citas"
+              }, {
+                "description": "Facturas y resultados de estudios.",
+                "id": "INVOICE_LABS",
+                "title": "Facturas y estudios"
+              }, {
+                "description": "Estatus de envíos",
+                "id": "MEDS_GLP",
+                "title": "Estatus de envíos"
+              }, {
+                "description": "Consulta sobre pagos y cobros.",
+                "id": "PAYMENTS_ISSUES",
+                "title": "Pagos/Cobros"
+              }, {
+                "description": "Pregunta a mi Dr@",
+                "id": "OBESITY_QA",
+                "title": "Especialista"
+              }, {
+                "description": "Pregunta a nutrición",
+                "id": "NUTRITION_QA",
+                "title": "Nutrición"
+              }, {
+                "description": "Pregunta a psicología",
+                "id": "PSYCHO_QA",
+                "title": "Psicología"
+              }, {
+                "description": "Otra solicitud.",
+                "id": "OTHER_REQUESTS",
+                "title": "Otro"
+              } ],
+              "title": "Menú principal."
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "APPOINTMENTS_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "CITAS",
+                "helpdeskContextMessage": "Problemas con citas",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PATIENT_EXPERIENCE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "78b646af-e32d-4702-a430-574e217af13b"
+  }, {
+    "intent": "INVOICE_LABS_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "LABS/FACTURAS",
+                "helpdeskContextMessage": "Posibles problemas con facturas y/o Labs",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PATIENT_EXPERIENCE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "40663f85-5e73-4554-9c5a-059ddc9520f6"
+  }, {
+    "intent": "MEDS_SUPPLIES_STATUS_MAIN_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "SUMINISTRO",
+                "helpdeskContextMessage": "Problemas con supplies/meds",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PATIENT_EXPERIENCE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ede0f0db-46f1-4d35-b6a6-89e296bd4742"
+  }, {
+    "intent": "PAYMENTS_ISSUES",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "PAGOS",
+                "helpdeskContextMessage": "Problemas con Pagos/Cobros",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PATIENT_EXPERIENCE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "49fc70bd-f4fd-499c-9611-15a335c0ce85"
+  }, {
+    "intent": "OTHER_REQUESTS",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "DUDAS GENERALES",
+                "helpdeskContextMessage": "Dudas generales",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PATIENT_EXPERIENCE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "1b3acf3c-6351-4089-b2f4-de82aafeedf4"
+  }, {
+    "intent": "NO_SUPPORT_NEEDED",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Estamos para servirte. Recuerda escribir la palabra Clivi cuando nos quieras contactar. Gracias. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "4bbef721-e3b2-4d64-b308-c936da3061ed"
+  }, {
+    "intent": "OBESITY_QA",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "DIABETES",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "DIABETES"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "def9897e-91aa-4a01-b10d-e337d1328f93"
+  }, {
+    "intent": "NUTRITION_QA",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "NUTRITION",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "b5759e2d-e43a-4784-b150-1ecda3adb593"
+  }, {
+    "intent": "PSYCHO_QA",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "PSYCHOLOGY",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "61a3529c-719d-40c9-a274-6bfd7d3b5601"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "secondFilter",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "16d690dc-71a9-460c-96ae-fd8779046f6d"
+  } ],
+  "transitionRouteGroups": [ "HELPDESK_CATCHER" ]
+}

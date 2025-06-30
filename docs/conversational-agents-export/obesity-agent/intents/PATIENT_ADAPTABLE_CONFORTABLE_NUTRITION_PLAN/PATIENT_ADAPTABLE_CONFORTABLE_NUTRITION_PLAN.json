@@ -1,0 +1,10 @@
+{
+  "name": "39d28d4c-2912-4bb3-b510-4bed5246852d",
+  "displayName": "PATIENT_ADAPTABLE_CONFORTABLE_NUTRITION_PLAN",
+  "parameters": [ {
+    "id": "PATIENT_ADAPTABLE_CONFORTABLE_NUTRITION_PLAN",
+    "entityType": "@PX_ADAPTABLE_COMFORTABLE_NUTRI_PLAN"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

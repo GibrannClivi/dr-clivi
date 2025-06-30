@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "GLUCOSE_REPORT",
+      "parameterId": "GLUCOSE_REPORT_TEMPLATE_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

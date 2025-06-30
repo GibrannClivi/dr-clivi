@@ -1,0 +1,67 @@
+{
+  "name": "31554d55-8356-4390-8ac6-4236506cfe3e",
+  "displayName": "planStatusRouteGroup",
+  "transitionRoutes": [ {
+    "intent": "CHANGE_WHATSAPP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "newPhone",
+    "name": "c600520e-76bc-41af-9538-7e0611918c2d"
+  }, {
+    "intent": "NO_CHANGE_WHATSAPP",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Estamos escalando tu caso con un asesor. Un momento, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_ticket",
+                  "platform": "HUBSPOT",
+                  "value": "PLAN_ERROR"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "9d8c7022-537a-4ee6-a1b8-370866cd9dd8"
+  }, {
+    "intent": "CLIVI_PATIENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "askChangeWhatsapp",
+    "name": "dae521c7-f429-4926-8f18-49f663f5471a"
+  }, {
+    "intent": "CLIVI_LEAD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "leadInterested",
+    "name": "bcc53413-be53-4d9f-a360-3560e335f29d"
+  } ]
+}

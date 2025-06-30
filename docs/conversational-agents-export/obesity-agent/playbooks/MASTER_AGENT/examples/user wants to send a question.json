@@ -1,0 +1,52 @@
+{
+  "name": "9c23db45-8ef1-4706-ad3a-9096bddfaf30",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Hola, con gusto te puedo ayudar con el envío de una pregunta a nuestro equipo"
+    }
+  }, {
+    "toolUse": {
+      "tool": "SEND_MESSAGE",
+      "action": "SEND_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "SEND_MESSAGE",
+          "templateName": "master_general_question_ai",
+          "type": "TEMPLATE"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"User states has a question or request for clarification\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent invoked tool SEND_MESSAGE and invoked flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user wants to send a question",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 265,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

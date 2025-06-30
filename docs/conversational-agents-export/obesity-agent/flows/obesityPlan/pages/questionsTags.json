@@ -1,0 +1,138 @@
+{
+  "name": "3de0ad30-d798-4252-8012-052e591ef86d",
+  "displayName": "questionsTags",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "A quién va dirigida",
+            "bodyText": "Direcciona duda/solicitud",
+            "sections": [ {
+              "rows": [ {
+                "description": "Preguntar a mi Dr@",
+                "id": "HIGH_SPECIALIZATION_QUESTION_TAG",
+                "title": "Alta especialidad"
+              }, {
+                "description": "Preguntar a mi Nutriolog@",
+                "id": "NUTRITION_QUESTION_TAG",
+                "title": "Nutrición"
+              }, {
+                "description": "Preguntar a mi Psicólog@",
+                "id": "PSYCHO_QUESTION_TAG",
+                "title": "Psicología"
+              }, {
+                "description": "Asistencia no médica",
+                "id": "PX_QUESTION_TAG",
+                "title": "Requiero soporte"
+              } ],
+              "title": "Menú preguntas"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "HIGH_SPECIALIZATION_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalle de tu pregunta y/o solicitud. Por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "highSpecializationQuestionTag",
+    "name": "72ee71cb-1edf-41fd-a086-850120e46cb0"
+  }, {
+    "intent": "NUTRITION_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalle de tu pregunta y/o solicitud. Por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "nutritionQuestionTag",
+    "name": "9c316946-0e10-4a96-a3b8-03eca0f5f379"
+  }, {
+    "intent": "PSYCHO_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalle de tu pregunta y/o solicitud. Por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "psychoQuestionTag",
+    "name": "8baccc77-3c45-4b7b-a87a-9c916ade1eb2"
+  }, {
+    "intent": "PX_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "helpDeskSubMenu",
+    "name": "94ec15b0-d413-47b5-89da-74b159b1b776"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "e27ccda4-1a7e-4ec8-a16e-17d095707825",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

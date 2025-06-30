@@ -1,0 +1,97 @@
+{
+  "name": "1d6248e5-8a9c-4d42-8b18-1b01d61997ed",
+  "displayName": "logWeight",
+  "form": {
+    "parameters": [ {
+      "displayName": "WEIGHT_VALUE",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "¿Nos puedes proporcionar tu peso, por favor? (en kg) Solo en números." ]
+      },
+      "languageCode": "es"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "WEIGHT_VALUE",
+      "value": null
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.WEIGHT_VALUE \u003c= 999 OR $session.params.WEIGHT_VALUE \u003e= 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "HDP_LOG",
+              "params": {
+                "type": "WEIGHT",
+                "unit": "KILOGRAMS",
+                "value": "$session.params.WEIGHT_VALUE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "33e66c17-8488-407d-ba1e-6c94186c6a9b"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "1ab9ca66-8c1d-4458-bb69-7f56bc889371"
+  } ],
+  "transitionRouteGroups": [ "CLUB_CATCHER" ]
+}

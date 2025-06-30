@@ -1,0 +1,16 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "YES",
+      "auto": true
+    }, {
+      "text": "_I_",
+      "auto": true
+    }, {
+      "text": "DO",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

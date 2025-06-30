@@ -1,0 +1,10 @@
+{
+  "name": "2fa7e416-910a-4d2a-9f27-46b8d3b8ccd6",
+  "displayName": "DR_CLIVI",
+  "parameters": [ {
+    "id": "DR_CLIVI",
+    "entityType": "@DR_CLIVI"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

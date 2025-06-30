@@ -1,0 +1,31 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Agendar diabetes",
+      "parameterId": "DIABETES_ENDO"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Agendar Alta especialidad",
+      "parameterId": "DIABETES_ENDO"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Reagendar Endo Cita",
+      "parameterId": "DIABETES_ENDO"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "DIABETES_ENDO",
+      "parameterId": "DIABETES_ENDO"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

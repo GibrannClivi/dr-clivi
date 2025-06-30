@@ -1,0 +1,10 @@
+{
+  "name": "47640f59-916d-4fe4-ad56-b7f2539d399d",
+  "displayName": "LAST_PRESCRIPTION_BUTTON_PAGE",
+  "parameters": [ {
+    "id": "LAST_PRESCRIPTION_BUTTON_PAGE",
+    "entityType": "@LAST_PRESCRIPTION_BUTTON_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 19
+}

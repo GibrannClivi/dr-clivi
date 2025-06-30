@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Evaluar cita médica",
+      "parameterId": "SURVEY_GENMED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

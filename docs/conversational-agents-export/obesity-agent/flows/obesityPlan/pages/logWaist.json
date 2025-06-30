@@ -1,0 +1,83 @@
+{
+  "name": "c0674e82-efdd-48a9-87ba-4ce3d8c39512",
+  "displayName": "logWaist",
+  "form": {
+    "parameters": [ {
+      "displayName": "WAIST_VALUE",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "¿Cuál es tu medida de cintura? (en centímetros) Escríbela por favor a continuación solo en números y con dos decimales   👇 Ejemplo: 77.11" ]
+      },
+      "languageCode": "es"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "WAIST_VALUE",
+      "value": null
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.WAIST_VALUE \u003c= 1000000 OR $session.params.WAIST_VALUE \u003e= 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "HDP_LOG",
+              "params": {
+                "type": "WAIST_CIRCUMFERENCE",
+                "unit": "CENTIMETERS",
+                "value": "$session.params.WAIST_VALUE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "logHip",
+    "name": "7c3c8645-7f0e-4a8f-8122-36f9fcaa6e38"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "6fb5c990-eadd-4098-8564-26db9df8c8b2",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

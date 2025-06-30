@@ -1,0 +1,10 @@
+{
+  "name": "8ea345ff-49c0-408c-a4f7-977565f352f8",
+  "displayName": "DISAPPOINTED_PROD_FIT",
+  "parameters": [ {
+    "id": "DISAPPOINTED_PROD_FIT",
+    "entityType": "@DISAPPOINTED_PROD_FIT"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

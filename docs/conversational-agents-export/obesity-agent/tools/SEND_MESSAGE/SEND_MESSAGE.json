@@ -1,0 +1,35 @@
+{
+  "name": "8f4097af-d44b-4ad9-bf27-d84781117b64",
+  "displayName": "SEND_MESSAGE",
+  "description": "Sends template messages to user.",
+  "toolType": "CUSTOMIZED_TOOL",
+  "functionSpec": {
+    "inputSchema": {
+      "properties": {
+        "actionType": {
+          "enum": [ "SEND_MESSAGE" ],
+          "type": "string"
+        },
+        "templateName": {
+          "description": "The name of the templated message to send.",
+          "type": "string"
+        },
+        "type": {
+          "description": "The type of message to be sent.",
+          "enum": [ "TEMPLATE" ],
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "success": {
+          "description": "If success = true, then message was sent to user.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "f818d812-5762-465b-9993-9f6f629d1c94",
+  "displayName": "appointmentReschedule",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "RESCHECHULE_APPTS_MENU",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_CANCEL_LIST",
+              "params": {
+                "isReschedule": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "d0d901d8-54b1-4ed4-ad41-b95f0cdc1620"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "c9b4bd03-90ab-42ef-8731-fc9f530a5642",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "dc2f5705-f51f-40aa-a068-67ecbbe0f30e",
+  "displayName": "DR_CLIVI_FILES",
+  "parameters": [ {
+    "id": "DR_CLIVI_FILES",
+    "entityType": "@DR_CLIVI_FILES"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

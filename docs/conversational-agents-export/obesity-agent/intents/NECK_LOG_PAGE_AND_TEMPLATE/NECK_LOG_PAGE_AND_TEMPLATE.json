@@ -1,0 +1,10 @@
+{
+  "name": "c1b5441c-49d5-4298-aecf-c054bef99066",
+  "displayName": "NECK_LOG_PAGE_AND_TEMPLATE",
+  "parameters": [ {
+    "id": "NECK_REMINDER",
+    "entityType": "@NECK_REMINDER"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

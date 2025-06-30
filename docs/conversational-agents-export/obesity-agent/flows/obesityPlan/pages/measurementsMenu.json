@@ -1,0 +1,80 @@
+{
+  "name": "966c50e4-c0a9-4845-8c1a-1eeb36ef7559",
+  "displayName": "measurementsMenu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "WEIGHT_LOG",
+              "text": "Peso"
+            }, {
+              "id": "WAIST_CIRCUMFERENCE_LOG",
+              "text": "Cintura y Cadera"
+            }, {
+              "id": "Neck_reminder",
+              "text": "Cuello medición"
+            } ],
+            "textBody": "¿Qué nos vas a enviar?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": " WEIGHT_LOG_PAGE_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "logWeight",
+    "name": "a473e893-64d2-49a1-bc18-c47eb8787adc"
+  }, {
+    "intent": "WAIST_CIRCUMFERENCE_LOG_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "logWaist",
+    "name": "7046e85e-19e5-4318-9c19-24e5763fc9af"
+  }, {
+    "intent": "NECK_LOG_PAGE_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "logNeck",
+    "name": "268c3643-7763-455b-bdc8-1191b685588b"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "cc2f3e94-d097-48a0-bb52-a1c89bb93ca4",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

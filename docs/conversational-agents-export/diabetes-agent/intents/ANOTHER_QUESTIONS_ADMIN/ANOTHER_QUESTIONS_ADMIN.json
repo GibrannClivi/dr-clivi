@@ -1,0 +1,10 @@
+{
+  "name": "e5b57334-9537-4ca1-9923-c769a7562009",
+  "displayName": "ANOTHER_QUESTIONS_ADMIN",
+  "parameters": [ {
+    "id": "ANOTHER_QUESTIONS_ADMIN",
+    "entityType": "@ANOTHER_QUESTIONS_ADMIN"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

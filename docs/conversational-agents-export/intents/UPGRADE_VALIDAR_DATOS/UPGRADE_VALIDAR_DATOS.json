@@ -1,0 +1,10 @@
+{
+  "name": "32be5e8f-0287-4de9-a0b9-1e1bf627a029",
+  "displayName": "UPGRADE_VALIDAR_DATOS",
+  "parameters": [ {
+    "id": "UPGRADE_VALIDAR_DATOS",
+    "entityType": "@UPGRADE_VALIDAR_DATOS"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

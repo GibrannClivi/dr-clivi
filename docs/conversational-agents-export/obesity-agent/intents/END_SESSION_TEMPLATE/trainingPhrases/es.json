@@ -1,0 +1,42 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "end session",
+      "parameterId": "end_session_template",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "ends session",
+      "parameterId": "end_session_template"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Finalizar sesión",
+      "parameterId": "end_session_template",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Reiniciar sesión",
+      "parameterId": "end_session_template",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "END_SESSION",
+      "parameterId": "end_session_template",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

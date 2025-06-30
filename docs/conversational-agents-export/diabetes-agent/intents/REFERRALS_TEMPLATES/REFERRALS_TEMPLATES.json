@@ -1,0 +1,10 @@
+{
+  "name": "8f9685c2-ee88-4196-b892-932b87a96e25",
+  "displayName": "REFERRALS_TEMPLATES",
+  "parameters": [ {
+    "id": "REFERRALS_TEMPLATES",
+    "entityType": "@REFERRALS_TEMPLATES"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 7
+}

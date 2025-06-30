@@ -1,0 +1,187 @@
+{
+  "name": "4edc546d-760e-47d8-8bbc-30d2bdc1c638",
+  "displayName": "surveyNPS",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "HIGH_PROB",
+              "text": "Muy probable"
+            }, {
+              "id": "MEDIUM_PROB",
+              "text": "Probable"
+            }, {
+              "id": "LOW_PROB",
+              "text": "Poco probable"
+            } ],
+            "textBody": "¿Cuán probable es que recomiende a Clivi?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "HIGH_PROB",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por responder. Nos ayudas mucho solo quedan dos preguntitas más, por favor. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nps_recommendation",
+                  "platform": "HUBSPOT",
+                  "value": "10"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "surveyBot",
+    "name": "d71366ad-68ee-4658-bedb-a63f68a82635"
+  }, {
+    "intent": "MEDIUM_PROB",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por responder. Nos ayudas mucho solo quedan dos preguntitas más, por favor. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nps_recommendation",
+                  "platform": "HUBSPOT",
+                  "value": "8"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nps_recommendation",
+                  "platform": "HUBSPOT",
+                  "value": "6"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "surveyBot",
+    "name": "b56e1538-2fa3-40d2-a6c9-2ea18d101b9e"
+  }, {
+    "intent": "LOW_PROB",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por responder. Nos ayudas mucho solo quedan dos preguntitas más, por favor. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nps_recommendation",
+                  "platform": "HUBSPOT",
+                  "value": "6"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "surveyBot",
+    "name": "df38a42d-ddac-4271-8e9c-34de6e826140"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "d4017393-2c9a-4093-900a-8b28588f9a69",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

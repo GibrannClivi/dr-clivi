@@ -1,0 +1,134 @@
+{
+  "name": "815382fd-bc7b-49db-96e4-4063bd155216",
+  "displayName": "measurementsReports",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "FULL_REPORT",
+              "text": "Reporte general"
+            }, {
+              "id": "GLUCOSE_REPORT",
+              "text": "Reporte Glucosas"
+            } ],
+            "textBody": "¿Qué tipo de reporte quieres tener?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "FULL_REPORT_BUTTON_PAGE_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Este reporte demora un minuto en generarse. ¡Paciencia, gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "REPORT_CARD_SEND"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "46d1205e-e776-4342-9540-e4fe5b8636ef"
+  }, {
+    "intent": "GLUCOSE_REPORT_TEMPLATE_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Este reporte demora un minuto en generarse. ¡Paciencia, gracias! Recuerda: Las franjas moradas representan los rangos objetivo en los que debemos estar.\nSi tienes alguna pregunta ¡No dudes en escribirnos! " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "SCREENSHOT_SEND",
+              "params": {
+                "height": 800,
+                "urlNoParams": "https://admin.clivi.com.mx/#BotChartVR/",
+                "width": 500
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e9e1e3fc-643b-462d-8390-4ad1fc80d05e"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "4a59ef31-db3c-4c6a-9c3f-f62099130630"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

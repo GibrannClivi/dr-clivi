@@ -1,0 +1,10 @@
+{
+  "name": "7f481155-a728-4094-ab52-e6d9f7bda3ec",
+  "displayName": "PX_ADAPTABLE_GOOD_RESULTS_NUTRI_PLAN",
+  "parameters": [ {
+    "id": "PX_ADAPTABLE_GOOD_RESULTS_NUTRI_PLAN",
+    "entityType": "@PX_ADAPTABLE_GOOD_RESULTS_NUTRI_PLAN"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

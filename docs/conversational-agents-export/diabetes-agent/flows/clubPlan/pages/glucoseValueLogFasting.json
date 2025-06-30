@@ -1,0 +1,98 @@
+{
+  "name": "0bd10fa1-3e2b-4b18-a16f-c6704594ae3b",
+  "displayName": "glucoseValueLogFasting",
+  "form": {
+    "parameters": [ {
+      "displayName": "GLUCOSE_VALUE",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "¿Cuál es tu valor de glucosa? (mg/dL) solo en números, por favor " ]
+      },
+      "languageCode": "es"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "GLUCOSE_VALUE",
+      "value": null
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.GLUCOSE_VALUE \u003c= 1000 OR $session.params.GLUCOSE_VALUE \u003e= 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "HDP_LOG",
+              "params": {
+                "mealTiming": "FASTING",
+                "type": "BLOOD_GLUCOSE",
+                "unit": "MILLIGRAM_PER_DECILITER",
+                "value": "$session.params.GLUCOSE_VALUE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "daca46e9-ee4a-4cdd-bab7-04192fc5485d"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "308d695b-df10-4fd8-afd9-2a6c518691d9"
+  } ],
+  "transitionRouteGroups": [ "CLUB_CATCHER" ]
+}

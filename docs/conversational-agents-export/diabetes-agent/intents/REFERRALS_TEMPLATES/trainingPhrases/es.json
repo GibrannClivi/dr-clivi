@@ -1,0 +1,55 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "referido",
+      "parameterId": "REFERRALS_TEMPLATES",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "referir",
+      "parameterId": "REFERRALS_TEMPLATES",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Referido",
+      "parameterId": "REFERRALS_TEMPLATES"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Referir",
+      "parameterId": "REFERRALS_TEMPLATES",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Quiero referir",
+      "parameterId": "REFERRALS_TEMPLATES"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Referir a CLIVI",
+      "parameterId": "REFERRALS_TEMPLATES"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "quiero referir a alguien",
+      "parameterId": "REFERRALS_TEMPLATES"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

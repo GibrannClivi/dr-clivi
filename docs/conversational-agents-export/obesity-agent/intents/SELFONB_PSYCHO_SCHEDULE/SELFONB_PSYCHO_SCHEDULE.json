@@ -1,0 +1,10 @@
+{
+  "name": "79b87512-6f97-4686-8e5a-67cad3b61fa4",
+  "displayName": "SELFONB_PSYCHO_SCHEDULE",
+  "parameters": [ {
+    "id": "SELFONB_PSYCHO_SCHEDULE",
+    "entityType": "@SELFONB_PSYCHO_SCHEDULE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

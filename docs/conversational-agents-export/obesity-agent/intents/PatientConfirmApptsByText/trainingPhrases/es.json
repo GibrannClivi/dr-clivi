@@ -1,0 +1,90 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Me gustaría confirmar la ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    }, {
+      "text": " que tengo agendada",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ya confirmé la ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    }, {
+      "text": ", por favor ",
+      "auto": true
+    }, {
+      "text": "no",
+      "auto": true
+    }, {
+      "text": " la cancelen",
+      "auto": true
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Quiero confirmar la ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    }, {
+      "text": " que tengo",
+      "auto": true
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Por favor, confirmen mi ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    }, {
+      "text": " de nuevo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Quiero confirmar la ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    }, {
+      "text": " de ",
+      "auto": true
+    }, {
+      "text": "mañana",
+      "auto": true
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Por qué me la ",
+      "auto": true
+    }, {
+      "text": "cancelaron la consulta",
+      "auto": true
+    }, {
+      "text": " si ya puse confirmar",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

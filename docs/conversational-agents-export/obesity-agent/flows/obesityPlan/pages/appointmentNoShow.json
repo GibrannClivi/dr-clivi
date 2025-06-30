@@ -1,0 +1,152 @@
+{
+  "name": "ee869595-cea4-4273-a7be-0d6c716cabaf",
+  "displayName": "appointmentNoShow",
+  "form": {
+    "parameters": [ {
+      "displayName": "staffType",
+      "required": true,
+      "entityType": "@sys.any",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Da un toque",
+            "bodyText": "¿A qué cita no pudiste asistir?",
+            "sections": [ {
+              "rows": [ {
+                "description": "",
+                "id": "PSYCHOLOGY_NO_SHOW",
+                "title": "Psicología"
+              }, {
+                "description": "",
+                "id": "OBESITY_NO_SHOW",
+                "title": "Alta especialidad"
+              }, {
+                "description": "",
+                "id": "NUTRITION_NO_SHOW",
+                "title": "Nutrición"
+              }, {
+                "description": "",
+                "id": "SPORTS_MEDICINE_NO_SHOW",
+                "title": "Valoración deporte"
+              } ],
+              "title": "Opciones"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "PSYCHOLOGY_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.staffType",
+        "value": "PSYCHOLOGY"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "appointmentNoShowReason",
+    "name": "e698c7ea-a01e-4571-9ee1-7da00f4f5d79"
+  }, {
+    "intent": "OBESITY_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.staffType",
+        "value": "OBESITY"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "appointmentNoShowReason",
+    "name": "3c5eca72-65bc-4ff6-a9de-2018ae69cfdc"
+  }, {
+    "intent": "NUTRITION_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.staffType",
+        "value": "NUTRITION"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "appointmentNoShowReason",
+    "name": "ee51fa1f-c651-4fd5-96d8-25bceb0e26fd"
+  }, {
+    "intent": "SPORTS_MEDICINE_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.staffType",
+        "value": "SPORTS_MEDICINE"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "appointmentNoShowReason",
+    "name": "fb85ef10-6ad5-4eb3-9dd1-be6ade2c464f"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "593579c2-38f0-4525-94df-2863611bab59",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

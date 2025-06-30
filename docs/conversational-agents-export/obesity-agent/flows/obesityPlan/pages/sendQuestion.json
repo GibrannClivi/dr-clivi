@@ -1,0 +1,32 @@
+{
+  "name": "8f459042-0f80-48b8-99b3-e9b3ae2e5e3a",
+  "displayName": "sendQuestion",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Por favor, escribe tu pregunta más detallada o sugerencia $session.params.userContext.patient.nameDisplay, ¡Gracias!" ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "helpDeskSubMenu",
+    "name": "9984d9f4-ac86-4240-88e3-339bcbf7bb14"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

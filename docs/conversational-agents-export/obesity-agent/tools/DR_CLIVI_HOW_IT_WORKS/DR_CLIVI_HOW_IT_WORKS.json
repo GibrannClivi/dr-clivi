@@ -1,0 +1,46 @@
+{
+  "name": "9eb821c6-3f5a-4768-990b-cabaf3e5ae5e",
+  "displayName": "DR_CLIVI_HOW_IT_WORKS",
+  "description": "A knowledge base for the Dr. Clivi assistant, covering its primary functions. It contains instructions and answers questions about submitting patient measurements (weight, waist, etc.), managing medical appointments (booking, rescheduling), and general inquiries about the assistant's purpose and how it helps users manage their health.",
+  "dataStoreSpec": {
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/456314813706/locations/us/collections/default_collection/dataStores/drclivitutorial_1750251878106",
+      "documentProcessingMode": "DOCUMENTS",
+      "engineType": "CHAT_ENGINE",
+      "connectorConfig": {
+      
+      },
+      "createTime": {
+        "seconds": 1750251897,
+        "nanos": 450997000
+      },
+      "displayName": "drclivitutorial",
+      "dialogflowAddTime": {
+        "seconds": 1750251928,
+        "nanos": 54000000
+      }
+    } ],
+    "models": {
+      "summarizationModel": {
+      
+      },
+      "rewriterModel": {
+      
+      }
+    },
+    "fallbackPrompt": {
+    
+    },
+    "groundingSettings": {
+    
+    },
+    "payloadSettings": {
+    
+    },
+    "voiceModeSettings": {
+    
+    }
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

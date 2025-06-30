@@ -1,0 +1,6 @@
+{
+  "name": "51483429-76e6-4ff7-91fb-c4f0e6fda59f",
+  "displayName": "PatientConfirmApptsByText",
+  "priority": 500000,
+  "numTrainingPhrases": 6
+}

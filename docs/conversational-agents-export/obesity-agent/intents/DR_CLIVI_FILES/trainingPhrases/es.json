@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Labs/Recetas/Meds",
+      "parameterId": "DR_CLIVI_FILES"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

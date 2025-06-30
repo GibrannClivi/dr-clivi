@@ -1,0 +1,10 @@
+{
+  "name": "69adb1d0-b1a6-4880-9983-799cef6bcaf6",
+  "displayName": "CONFIRM_MED_REMINDER",
+  "parameters": [ {
+    "id": "CONFIRM_MED_REMINDER",
+    "entityType": "@CONFIRM_MED_REMINDER"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "ALL_GOOD_NO_ACTION_NEEDED",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

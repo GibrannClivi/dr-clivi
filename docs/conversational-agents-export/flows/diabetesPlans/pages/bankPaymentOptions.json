@@ -1,0 +1,83 @@
+{
+  "name": "d69e9b9f-b417-407d-a6ec-e963d020a32f",
+  "displayName": "bankPaymentOptions",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "BANK_LOCATION",
+              "text": "Pago en sucursal"
+            }, {
+              "id": "APP_BANK",
+              "text": "Desde la aplicación"
+            } ],
+            "textBody": "¿Cómo preferirías hacer el pago?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "BANK_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "bankLocationOptions",
+    "name": "fcbcac83-70cb-4669-b66b-a07225dd4fc9"
+  }, {
+    "intent": "APP_BANK",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "banksAppsForms",
+    "name": "2ef7952a-4d3b-4344-b562-aa54d79769b2"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "35723944-4f63-4755-aab5-a02cb881fd50"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

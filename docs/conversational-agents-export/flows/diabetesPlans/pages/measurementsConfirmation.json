@@ -1,0 +1,109 @@
+{
+  "name": "8ca6fd56-db71-4487-b20c-f49c063d0b79",
+  "displayName": "measurementsConfirmation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "YES_MEASURMENT_LOG",
+              "text": "Sí, de acuerdo"
+            }, {
+              "id": "NO_MEASURMENT_LOG",
+              "text": "No, quiero regresar"
+            } ],
+            "textBody": "¿Estas de acuerdo con las mediciones que acabas de registrar?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "YES_MEASURMENT_LOG",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Muy bien, hemos guardado la información. Recuerda que puedes enviarnos tus mediciones cuando lo desees. ¡Gracias!" ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "2afbd346-3da6-4ce4-a716-cf303ebcac2c"
+  }, {
+    "intent": "NO_MEASURMENT_LOG",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok, puedes volver a enviarnos tus mediciones. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "measurementsMenu",
+    "name": "cf1f9f9b-8e06-478e-8ad3-1e65eb67f8bc"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "ce7a5b36-fd73-4256-b1ea-69825fdcba04",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "cb2d086d-d13c-4c9b-a609-db43df5a40f4",
+  "displayName": "secondFilter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "YES_HELPDESK_SUPPORT",
+              "text": "Si soporte"
+            }, {
+              "id": "NO_HELPDESK_SUPPORT",
+              "text": "No, Menú principal"
+            } ],
+            "textBody": "¿Requieres soporte de un agente/especialista?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "YES_HELPDESK_SUPPORT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "DUDAS GENERALES",
+                "helpdeskContextMessage": "Dudas generales",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PATIENT_EXPERIENCE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "bb0ff686-96c7-46bd-92fd-c8807dae6c84"
+  }, {
+    "intent": "NO_HELPDESK_SUPPORT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "68df2f3f-3fa8-47c5-88a6-0414f08e023a"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "8f75fde2-a026-4009-8291-5eef1d5b1b32",
+    "targetPlaybook": "CATEGORIZER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "HELPDESK_CATCHER" ]
+}

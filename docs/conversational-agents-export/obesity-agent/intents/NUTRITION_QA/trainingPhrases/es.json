@@ -1,0 +1,16 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "NUTRITION",
+      "auto": true
+    }, {
+      "text": "_",
+      "auto": true
+    }, {
+      "text": "QA",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

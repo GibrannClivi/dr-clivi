@@ -1,0 +1,10 @@
+{
+  "name": "7e47a878-c185-4289-81be-90ecfc263037",
+  "displayName": "DIABETES_ENDO",
+  "parameters": [ {
+    "id": "DIABETES_ENDO",
+    "entityType": "@DIABETES_ENDO"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 4
+}

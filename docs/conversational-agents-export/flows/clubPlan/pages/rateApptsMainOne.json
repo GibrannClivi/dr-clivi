@@ -1,0 +1,94 @@
+{
+  "name": "dd477719-7431-4fb4-8bc2-c7b757c9f35b",
+  "displayName": "rateApptsMainOne",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "PSYCHOLOGIST_SURVEY",
+              "text": "Psicológica"
+            }, {
+              "id": "NUTRITION_SURVEY",
+              "text": "Nutricional"
+            }, {
+              "id": "DIABETES_SURVEY",
+              "text": "Alta especialidad"
+            } ],
+            "textBody": "¿Qué cita quieres calificar?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "PSYCHOLOGIST_SURVEY",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ratingsDiabetesAppts",
+    "name": "0bd23847-4db4-4231-92bc-f264ef5bbd22"
+  }, {
+    "intent": "NUTRITION_SURVEY",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ratingsNutriAppt",
+    "name": "f01959df-bec8-4e7e-8e64-a62328873769"
+  }, {
+    "intent": "DIABETES_SURVEY",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ratingPsychoAppt",
+    "name": "e566c911-a198-481a-bcaa-e27ade869131"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": false
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "8ca882f1-d15d-4d88-b15c-6a84d6322471"
+  } ],
+  "transitionRouteGroups": [ "CLUB_CATCHER" ]
+}

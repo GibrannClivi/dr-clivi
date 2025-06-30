@@ -1,0 +1,10 @@
+{
+  "name": "b0223824-4282-47d3-b124-dd52956e7ef5",
+  "displayName": "AI_AGENT_CALLING_MAIN_MENU",
+  "parameters": [ {
+    "id": "AI_AGENT_CALLING_MAIN_MENU",
+    "entityType": "@AI_AGENT_CALLING_MAIN_MENU"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

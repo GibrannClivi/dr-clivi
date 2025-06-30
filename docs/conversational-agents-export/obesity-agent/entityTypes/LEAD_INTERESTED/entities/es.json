@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "LEAD_INTERESTED",
+    "synonyms": [ "LEAD_INTERESTED", "Me interesa" ],
+    "languageCode": "es"
+  } ]
+}

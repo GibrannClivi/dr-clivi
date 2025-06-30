@@ -1,0 +1,10 @@
+{
+  "name": "85a50143-e4cc-4d73-b928-1d6b53d01a85",
+  "displayName": "END_SESSION_TEMPLATE",
+  "parameters": [ {
+    "id": "END_SESSION_TEMPLATE",
+    "entityType": "@END_SESSION_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

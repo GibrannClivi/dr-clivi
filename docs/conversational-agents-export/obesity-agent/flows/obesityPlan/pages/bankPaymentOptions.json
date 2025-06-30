@@ -1,0 +1,83 @@
+{
+  "name": "f8b78f14-62fa-4fe4-b164-0b58f05d421e",
+  "displayName": "bankPaymentOptions",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "BANK_LOCATION",
+              "text": "Pago en sucursal"
+            }, {
+              "id": "APP_BANK",
+              "text": "Desde la aplicación"
+            } ],
+            "textBody": "¿Cómo preferirías hacer el pago?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "BANK_LOCATION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "bankLocationOptions",
+    "name": "854054c2-4131-4a28-b22c-e2d5a698303e"
+  }, {
+    "intent": "APP_BANK",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "banksAppsForms",
+    "name": "94f73ee4-c8fe-435d-a14a-df3ab136d6de"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "17fb97eb-0294-4636-a0a0-26b33e2783d7"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

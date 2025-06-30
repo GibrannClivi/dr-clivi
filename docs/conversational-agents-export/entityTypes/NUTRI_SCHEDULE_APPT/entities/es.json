@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "NUTRI_SCHEDULE_APPT",
+    "synonyms": [ "Agendar Nutrición", "NUTRI_SCHEDULE_APPT", "Agendar_Nutrición" ],
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "baddfc71-7f37-489d-9384-8b6c5ae4bcb5",
+  "displayName": "patientSendsSomethingElseWithNumbers",
+  "parameters": [ {
+    "id": "NOT_SOLVED_QUESTIONS_ADMIN",
+    "entityType": "@NOT_SOLVED_QUESTIONS_ADMIN"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 6
+}

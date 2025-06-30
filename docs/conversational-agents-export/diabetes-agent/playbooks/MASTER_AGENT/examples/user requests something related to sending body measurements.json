@@ -1,0 +1,52 @@
+{
+  "name": "56a81573-fd27-4b0d-8c69-1cd104d1f33e",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Hola, creo que quieres enviarnos tu medición. Déjame asistirte."
+    }
+  }, {
+    "toolUse": {
+      "tool": "SEND_MESSAGE",
+      "action": "SEND_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "SEND_MESSAGE",
+          "templateName": "px_sends_numbers_ai_no_context",
+          "type": "TEMPLATE"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter:\"user requests something related to sending body measurements such as weight, hip, neck, waist, glucose or sugar levels.",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and invoked tool called SEND_MESSAGE, then called flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user requests something related to sending body measurements",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 285,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

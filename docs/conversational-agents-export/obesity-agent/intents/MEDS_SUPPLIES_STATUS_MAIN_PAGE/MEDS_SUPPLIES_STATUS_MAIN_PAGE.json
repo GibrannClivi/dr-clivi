@@ -1,0 +1,10 @@
+{
+  "name": "d2b6b660-3f1e-430c-81a7-03b51724655b",
+  "displayName": "MEDS_SUPPLIES_STATUS_MAIN_PAGE",
+  "parameters": [ {
+    "id": "MEDS_SUPPLIES_STATUS_MAIN_PAGE",
+    "entityType": "@MEDS_SUPPLIES_STATUS_MAIN_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

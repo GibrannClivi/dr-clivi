@@ -1,0 +1,13 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "NO_SHOW_GENERAL_",
+      "auto": true
+    }, {
+      "text": "MED",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

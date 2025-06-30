@@ -1,0 +1,10 @@
+{
+  "name": "6d607cc5-aef9-4cff-a42c-9f8bd307be45",
+  "displayName": "PSYCHO_PROCESS",
+  "parameters": [ {
+    "id": "PSYCHO_PROCESS",
+    "entityType": "@PSYCHO_PROCESS"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

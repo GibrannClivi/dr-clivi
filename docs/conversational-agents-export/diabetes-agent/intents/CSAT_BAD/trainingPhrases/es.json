@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Muy malo",
+      "parameterId": "CSAT_BAD"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "CSAT_BAD",
+      "parameterId": "CSAT_BAD"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

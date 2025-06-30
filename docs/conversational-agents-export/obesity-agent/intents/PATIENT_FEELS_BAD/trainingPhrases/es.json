@@ -1,0 +1,523 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "problemas digestivos",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "molestias en el estómago",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me duele la panza",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Mi estómago anda",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "molestias gastrointestinales"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "duele el estomago",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no",
+      "auto": true
+    }, {
+      "text": " me siento bien del estomago",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me cayó mal el medicamento",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "fuerte dolor de estomago",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "duele el abdomen",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tengo nauseas y quiero vomitar",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Estoy presentando diarrea",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "estreñimiento",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "muchos gases",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "inflamado",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "inflamada",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "inchado",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "ganas de vomitar",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Estoy mal de",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Dolor fuerte",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Acidez estomacal",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Siento ardor en el",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ardor en",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "siento débil",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me siento mal",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "diarrea",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Muchas náuseas",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "vomitando",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "un dolor fuerte de espalda",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tengo mucho dolor",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Traigo la cara inchada",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tengo hinchazon de cara y boca",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Hinchazón de lengua",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tengo palpitaciones estoy muy preocupada",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No puedo comer me duele",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no puedo tragar",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No puedo pasar alimentos",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No puedo comer estoy muy inflamado",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No puedo comer estoy muy inflamada",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "desmayar",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "gastritis",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "reflujo",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me arde el estómago",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Eructos fuertes",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me siento demasiado cansado",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me siento demasiado cansada",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Estoy agotado",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "estoy agotado",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Estoy agotada",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "estoy agotada",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Muchas flatulencias",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No me saben",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Mi pulso está",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Mi pulso",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "irritación",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me pica",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "tengo sarpullido",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "urticaria",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "efectos secundarios del medicamento",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "sabor en la boca",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "para respirar",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Estreñimiento",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Eructos",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Reflujo",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Náusea",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Distensión abdominal",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Acidez",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Gastritis",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Vómito",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Dolor abdominal",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Diarrea",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "efectos secundarios al medicamento",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Efectos secundarios",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Necesito un especialista",
+      "parameterId": "ALL_GOOD_NO_ACTION_NEEDED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

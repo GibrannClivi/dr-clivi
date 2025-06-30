@@ -1,0 +1,45 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "LOG_GLUCOSE",
+      "parameterId": "REMINDER_LOG_GLUCOSE_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Adelante - glucosa",
+      "parameterId": "REMINDER_LOG_GLUCOSE_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Glucosa",
+      "parameterId": "REMINDER_LOG_GLUCOSE_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Adelante glucosa",
+      "parameterId": "REMINDER_LOG_GLUCOSE_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Enviar glucosa",
+      "parameterId": "REMINDER_LOG_GLUCOSE_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "CLIVI - Glucosa",
+      "parameterId": "REMINDER_LOG_GLUCOSE_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

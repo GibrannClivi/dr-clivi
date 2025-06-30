@@ -1,0 +1,10 @@
+{
+  "name": "38fa58c4-0064-4a51-a6b4-350fd955d9f8",
+  "displayName": "LAST_NUTRITION_PLAN_BUTTON_PAGE",
+  "parameters": [ {
+    "id": "LAST_NUTRITION_PLAN_BUTTON_PAGE",
+    "entityType": "@LAST_NUTRITION_PLAN_BUTTON_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 8
+}

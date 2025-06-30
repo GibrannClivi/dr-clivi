@@ -1,0 +1,68 @@
+{
+  "name": "40010b0b-590c-41f2-9b17-a02a88471f9c",
+  "displayName": "checkPlanStatus",
+  "transitionRoutes": [ {
+    "condition": "$session.params.userContext.patient.plan = \"PRO\" AND ($session.params.userContext.patient.planStatus = \"ACTIVE\" OR $session.params.userContext.patient.planStatus = \"SUSPENDED\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "9db71f70-2c17-413d-8bb6-521dfb0783b1"
+  }, {
+    "condition": "$session.params.userContext.patient.plan = \"PLUS\" AND ($session.params.userContext.patient.planStatus = \"ACTIVE\" OR $session.params.userContext.patient.planStatus = \"SUSPENDED\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "1bd78255-786a-453c-9dda-dbb0b607d671"
+  }, {
+    "condition": "$session.params.userContext.patient.plan = \"FREEMIUM\" AND $session.params.userContext.patient.planStatus = \"ACTIVE_TRIAL\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "26a5c4ec-c9d0-416b-97bf-8b9e5571b3ef"
+  }, {
+    "condition": "$session.params.userContext = \"UNKNOWN\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "userProblems",
+    "name": "1c18a5f3-ed88-49aa-94c2-f1917ef93251"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "05db12a7-6771-45ae-a1e6-122f6c9d9cc2",
+    "targetPlaybook": "MASTER_AGENT"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ups, no he entendido a que te refieres.", "¿Podrías repetirlo, por favor?", "¿Disculpa?", "¿Decías?", "¿Cómo?" ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "name": "6517f5b3-4900-4b5c-9f50-58a640784b41"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "languageCode": "es"
+  } ]
+}

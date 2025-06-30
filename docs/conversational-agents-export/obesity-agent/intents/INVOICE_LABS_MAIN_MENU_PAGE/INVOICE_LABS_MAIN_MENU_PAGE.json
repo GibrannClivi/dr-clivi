@@ -1,0 +1,10 @@
+{
+  "name": "ed996d6f-496d-483e-9292-3d1c8a21e100",
+  "displayName": "INVOICE_LABS_MAIN_MENU_PAGE",
+  "parameters": [ {
+    "id": "INVOICE_LABS_MAIN_MENU_PAGE",
+    "entityType": "@INVOICE_LABS_MAIN_MENU_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

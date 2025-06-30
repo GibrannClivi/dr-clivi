@@ -1,0 +1,163 @@
+{
+  "name": "5e207494-7569-46dc-8fc5-bfdc230c88a5",
+  "displayName": "adherenceDiabetes",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "ADHERENCE_ENDO_BAD",
+              "text": "Nunca"
+            }, {
+              "id": "ADHERENCE_ENDO_REGULAR",
+              "text": "Ocasionalmente"
+            }, {
+              "id": "ADHERENCE_ENDO_GOOD",
+              "text": "Siempre"
+            } ],
+            "textBody": "¿Qué tanto sigues las indicaciones de tu Doctor@",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "ADHERENCE_ENDO_BAD",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nos regalas más detalles, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_diabetes_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "1"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "highSpecializationQuestionTag",
+    "name": "7a40ef81-28f0-4ed7-8d72-650679c3fec3"
+  }, {
+    "intent": "ADHERENCE_ENDO_REGULAR",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nos regalas más detalles, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_diabetes_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "5"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "highSpecializationQuestionTag",
+    "name": "5b766e20-e7f1-41a6-884c-9f3425c2b7f4"
+  }, {
+    "intent": "ADHERENCE_ENDO_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Felicidades! Sigue así!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_diabetes_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "10"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "9a3f7a6d-f38e-4e11-a8be-7dab4df22f07"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "helpDeskSubMenu",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "01cd41b3-5903-487f-aa1d-d478a16565c4"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

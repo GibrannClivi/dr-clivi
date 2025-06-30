@@ -1,0 +1,63 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "no "
+    }, {
+      "text": "me ha llegado mi plan alimenticio",
+      "parameterId": "LAST_NUTRITION_PLAN_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "enviar mi plan de alimentacion",
+      "parameterId": "LAST_NUTRITION_PLAN_BUTTON_PAGE"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no me han enviado mi plan alimenticio",
+      "parameterId": "LAST_NUTRITION_PLAN_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "mandado mi plan de alimentación",
+      "parameterId": "LAST_NUTRITION_PLAN_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "mandar plan de nutrición",
+      "parameterId": "LAST_NUTRITION_PLAN_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me pueden "
+    }, {
+      "text": "enviar el plan nutricional",
+      "parameterId": "LAST_NUTRITION_PLAN_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "reenviar plan de nutrición",
+      "parameterId": "LAST_NUTRITION_PLAN_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "NUTRITION_PLAN",
+      "parameterId": "LAST_NUTRITION_PLAN_BUTTON_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,350 @@
+{
+  "name": "d888e12d-fa6a-4868-8092-073276472e28",
+  "displayName": "giftCards",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Da un toque",
+            "bodyText": "Selecciona canjear tus 1000 pesos por referido que compre Clivi",
+            "sections": [ {
+              "rows": [ {
+                "description": "",
+                "id": "AMAZON_CARD_REF_SENT",
+                "title": "Amazon"
+              }, {
+                "description": "",
+                "id": "UBER_CARD_REF_SENT",
+                "title": "Uber"
+              }, {
+                "description": "",
+                "id": "CASHI_CARD_REF_SENT",
+                "title": "Cashi(Walmart/Sams)"
+              }, {
+                "description": "",
+                "id": "GOOGLE_CARD_REF_SENT",
+                "title": "Goolge play"
+              }, {
+                "description": "",
+                "id": "LIVERPOOL_CARD_REF_SENT",
+                "title": "Liverpool"
+              }, {
+                "description": "",
+                "id": "SPOTIFY_CARD_REF_SENT",
+                "title": "Spotify"
+              } ]
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "AMAZON_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias! Nosotros nos encargamos en contactarlo a la brevedad. Te mantenemos al tanto del proceso. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "gift_card_referral",
+                  "platform": "HUBSPOT",
+                  "value": "Amazon"
+                }, {
+                  "name": "referral_name",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.name"
+                }, {
+                  "name": "referral_phone",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.whatsappId"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e59b5143-ecba-40a3-9ee5-6ecded91b87a"
+  }, {
+    "intent": "UBER_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias! Nosotros nos encargamos en contactarlo a la brevedad. Te mantenemos al tanto del proceso. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "gift_card_referral",
+                  "platform": "HUBSPOT",
+                  "value": "Uber"
+                }, {
+                  "name": "referral_name",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.name"
+                }, {
+                  "name": "referral_phone",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.whatsappId"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "c700c878-325d-4e1f-be57-677028b70d19"
+  }, {
+    "intent": "CASHI_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias! Nosotros nos encargamos en contactarlo a la brevedad. Te mantenemos al tanto del proceso. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "gift_card_referral",
+                  "platform": "HUBSPOT",
+                  "value": "Cashi (Walmart, Sams Club)"
+                }, {
+                  "name": "referral_name",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.name"
+                }, {
+                  "name": "referral_phone",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.whatsappId"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "5dfdd3d6-f927-47bc-ac2f-05fe03c20fd8"
+  }, {
+    "intent": "GOOGLE_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias! Nosotros nos encargamos en contactarlo a la brevedad. Te mantenemos al tanto del proceso. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "gift_card_referral",
+                  "platform": "HUBSPOT",
+                  "value": "Google Play"
+                }, {
+                  "name": "referral_name",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.name"
+                }, {
+                  "name": "referral_phone",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.whatsappId"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "f23750a4-45ea-466f-89ff-da8b48cf2a9d"
+  }, {
+    "intent": "LIVERPOOL_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias, nosotros nos encargamos en contactarlo a la brevedad. Te mantenemos al tanto del proceso. Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "gift_card_referral",
+                  "platform": "HUBSPOT",
+                  "value": "Liverpool"
+                }, {
+                  "name": "referral_name",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.name"
+                }, {
+                  "name": "referral_phone",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.whatsappId"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "c526de1b-248a-48b2-80a6-187c3950e198"
+  }, {
+    "intent": "SPOTIFY_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias, nosotros nos encargamos en contactarlo a la brevedad. Te mantenemos al tanto del proceso. Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "gift_card_referral",
+                  "platform": "HUBSPOT",
+                  "value": "Spotify"
+                }, {
+                  "name": "referral_name",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.name"
+                }, {
+                  "name": "referral_phone",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.contactSent.whatsappId"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "6a4c301c-b1c5-4ba4-81ec-de84002f3208"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "cc18ec3c-1bf2-47b1-9c6a-0d402111ed03",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

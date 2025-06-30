@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "RECEIVED_STICKER",
+      "parameterId": "RECEIVED_STICKER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

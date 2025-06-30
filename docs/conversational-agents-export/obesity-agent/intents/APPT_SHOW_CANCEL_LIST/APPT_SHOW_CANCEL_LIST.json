@@ -1,0 +1,10 @@
+{
+  "name": "d1782004-3a43-4a56-89c8-62fe96942d15",
+  "displayName": "APPT_SHOW_CANCEL_LIST",
+  "parameters": [ {
+    "id": "APPOINTMENT_SEND_CANCEL_LIST",
+    "entityType": "@APPOINTMENT_SEND_CANCEL_LIST"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 18
+}

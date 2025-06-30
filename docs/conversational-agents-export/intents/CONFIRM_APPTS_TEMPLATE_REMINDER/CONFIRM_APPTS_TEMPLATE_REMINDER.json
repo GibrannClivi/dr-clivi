@@ -1,0 +1,10 @@
+{
+  "name": "b73f5773-be05-4782-ab7c-acce605dd4ba",
+  "displayName": "CONFIRM_APPTS_TEMPLATE_REMINDER",
+  "parameters": [ {
+    "id": "CONFIRM_APPTS_TEMPLATE_REMINDER",
+    "entityType": "@CONFIRM_APPTS_TEMPLATE_REMINDER"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 8
+}

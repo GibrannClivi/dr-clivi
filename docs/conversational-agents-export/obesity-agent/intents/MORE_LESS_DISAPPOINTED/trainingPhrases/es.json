@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Algo decepcionado",
+      "parameterId": "MORE_LESS_DISAPPOINTED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "e6470863-9644-4284-b980-aaeb36d54a24",
+  "displayName": "CSAT_BAD",
+  "parameters": [ {
+    "id": "CSAT_BAD",
+    "entityType": "@CSAT_BAD"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

@@ -1,0 +1,10 @@
+{
+  "name": "6737841c-7f1c-494d-95d5-931eefb01d5d",
+  "displayName": "REMINDER_PX_SELFONBOARDING",
+  "parameters": [ {
+    "id": "REMINDER_PX_SELFONBOARDING",
+    "entityType": "@REMINDER_PX_SELFONBOARDING"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

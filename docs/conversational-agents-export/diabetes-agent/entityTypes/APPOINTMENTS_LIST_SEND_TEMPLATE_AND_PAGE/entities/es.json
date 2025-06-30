@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE",
+    "synonyms": [ "APPOINTMENT_LIST_SEND", "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE", "Ver citas", "Ver plan de tus consultas", "Ver siguientes citas", "Ver próximas citas" ],
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "8d6ada07-3ae5-4a9a-b6fc-0fe349decb7d",
+  "displayName": "Ask OpenAI",
+  "description": "Sends user's request to openai and sends answer to user.",
+  "toolType": "CUSTOMIZED_TOOL",
+  "functionSpec": {
+    "inputSchema": {
+      "properties": {
+        "actionType": {
+          "enum": [ "CALL_FUNCTION" ],
+          "type": "string"
+        },
+        "context": {
+          "type": "string"
+        },
+        "functionName": {
+          "enum": [ "ASK_GENERATIVE_AI" ],
+          "type": "string"
+        },
+        "userRequest": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "success": {
+          "description": "If success = true, the answer was sent to the user.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

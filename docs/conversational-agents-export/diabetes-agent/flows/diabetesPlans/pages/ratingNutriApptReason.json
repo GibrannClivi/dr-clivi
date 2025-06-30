@@ -1,0 +1,320 @@
+{
+  "name": "30ca3628-b3e3-494b-8ff7-cc81262b1f73",
+  "displayName": "ratingNutriApptReason",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Seleccionar opción",
+            "bodyText": "Hola $session.params.userContext.patient.nameDisplay, queremos saber más sobre tu calificación, ¿Qué inconveniente presentaste?.",
+            "sections": [ {
+              "rows": [ {
+                "description": "Duración de tu cita.",
+                "id": "DURATION_APPT",
+                "title": "Duración."
+              }, {
+                "description": "Puntualidad de tu especialista.",
+                "id": "PUNCTUALITY_APPT",
+                "title": "Puntualidad"
+              }, {
+                "description": "No me sentí escuchado",
+                "id": "QUALITY_APPT",
+                "title": "Calidad de tu cita"
+              }, {
+                "description": "No recibí la liga de mi cita.",
+                "id": "REMINDER_ISSUE",
+                "title": "Falló el recordatorio"
+              }, {
+                "description": "La liga de mi cita no funcionó.",
+                "id": "LINK_ISSUES",
+                "title": "Problema con la liga."
+              }, {
+                "description": "No recibí apoyo para entrar a mi cita.",
+                "id": "NO_SUPPORT",
+                "title": "No tuve asistencia"
+              } ],
+              "title": "Menú:"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "NO_SUPPORT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "No recibí asistencia",
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nutri_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "No recibí asistencia"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "d12ad5e9-d606-42a6-ba9f-c0cabeeeaf2e"
+  }, {
+    "intent": "LINK_ISSUES",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "No servía el enlace",
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nutri_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "No servía el enlace"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "146bbfbe-f86d-4a2a-b269-6e1643f8349a"
+  }, {
+    "intent": "REMINDER_ISSUE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "No llegó el recordatorio",
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nutri_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "No llegó el recordatorio"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "b833eeb7-76f1-4927-bc27-dd4d217e1e94"
+  }, {
+    "intent": "QUALITY_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "Atención del especialista",
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nutri_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "Atención del especialista"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "3ea0ab5a-caa9-4d63-bd2c-1136dbe931e0"
+  }, {
+    "intent": "PUNCTUALITY_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "Puntualidad del especialista",
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nutri_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "Puntualidad del especialista"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "2d79a3a5-4e5f-4fe3-a429-63a6d4869135"
+  }, {
+    "intent": "DURATION_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "Duración de la cita",
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "nutri_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "Duración de la cita"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "69ac61e5-80ee-4448-93a4-39c7ded2d3fc"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "746e5a1d-04ad-4092-ad13-365c9bcec0ba",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

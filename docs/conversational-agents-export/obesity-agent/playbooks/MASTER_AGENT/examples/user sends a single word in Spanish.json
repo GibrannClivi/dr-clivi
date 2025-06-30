@@ -1,0 +1,41 @@
+{
+  "name": "2883eafe-03c2-40fe-bd61-cd2a0a482866",
+  "actions": [ {
+    "flowInvocation": {
+      "flow": "helpDeskSubMenu",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"user sends a single word in Spanish such as \"Nutrition\", \"nutrition\", \"Nutritional\", \"Ahora\" or similar\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent invoked flow HelpDeskSubMenu, then invoked flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user sends a single word in Spanish",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 213,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

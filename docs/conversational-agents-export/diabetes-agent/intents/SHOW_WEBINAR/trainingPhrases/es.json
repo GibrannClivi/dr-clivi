@@ -1,0 +1,16 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "SHOW",
+      "auto": true
+    }, {
+      "text": "_",
+      "auto": true
+    }, {
+      "text": "WEBINAR",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

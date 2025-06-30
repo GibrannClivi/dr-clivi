@@ -1,0 +1,10 @@
+{
+  "name": "62198992-b30c-4810-86d3-4caa5075c0dc",
+  "displayName": "MIDDLE_LEVEL",
+  "parameters": [ {
+    "id": "MIDDLE_LEVEL",
+    "entityType": "@MIDDLE_LEVEL"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

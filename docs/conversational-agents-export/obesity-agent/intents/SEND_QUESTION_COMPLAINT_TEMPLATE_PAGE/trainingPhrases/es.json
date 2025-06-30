@@ -1,0 +1,35 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "SEND_QUESTION_COMPLAINT",
+      "parameterId": "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Presentar queja",
+      "parameterId": "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Queja",
+      "parameterId": "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "PATIENT_COMPLAINT",
+      "parameterId": "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

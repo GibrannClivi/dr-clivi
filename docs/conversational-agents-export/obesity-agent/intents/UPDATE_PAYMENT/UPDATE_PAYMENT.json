@@ -1,0 +1,10 @@
+{
+  "name": "7a132d7b-9ac2-4029-aa6a-6378da16a0a7",
+  "displayName": "UPDATE_PAYMENT",
+  "parameters": [ {
+    "id": "UPDATE_PAYMENT",
+    "entityType": "@UPDATE_PAYMENT"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

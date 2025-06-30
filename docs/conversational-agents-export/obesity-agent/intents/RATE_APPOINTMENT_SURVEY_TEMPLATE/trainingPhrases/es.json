@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Calificar cita",
+      "parameterId": "RATE_APPOINTMENT_SURVEY_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

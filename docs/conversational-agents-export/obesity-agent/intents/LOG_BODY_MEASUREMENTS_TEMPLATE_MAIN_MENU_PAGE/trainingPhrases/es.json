@@ -1,0 +1,38 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Medidas",
+      "parameterId": "REMINDER_LOG_BODY_MEASUREMENTS_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "medidas",
+      "parameterId": "REMINDER_LOG_BODY_MEASUREMENTS_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "CLIVI - Medidas",
+      "parameterId": "REMINDER_LOG_BODY_MEASUREMENTS_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "MEASUREMENTS",
+      "parameterId": "REMINDER_LOG_BODY_MEASUREMENTS_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Mediciones",
+      "parameterId": "REMINDER_LOG_BODY_MEASUREMENTS_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

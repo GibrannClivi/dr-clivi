@@ -1,0 +1,10 @@
+{
+  "name": "6de335d0-2577-4fad-80d0-045a16b1fc12",
+  "displayName": "QUESTION_TEMPLATE_MAIN_MENU_PAGE_REMINDER",
+  "parameters": [ {
+    "id": "REMINDER_QUESTION_TEMPLATE",
+    "entityType": "@REMINDER_QUESTION_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 16
+}

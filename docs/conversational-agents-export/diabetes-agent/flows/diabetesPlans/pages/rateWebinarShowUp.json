@@ -1,0 +1,184 @@
+{
+  "name": "757d9b25-28b4-4b9a-a2d1-7eb0198d20a5",
+  "displayName": "rateWebinarShowUp",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "GOOD_WEBINAR",
+              "text": "🙂🙂🙂"
+            }, {
+              "id": "REGULAR_WEBINAR",
+              "text": "😐😐😐"
+            }, {
+              "id": "BAD_WEBINAR",
+              "text": "🙁🙁🙁"
+            } ],
+            "textBody": "¿Qué calificación le pondrías al taller?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "GOOD_WEBINAR",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por tu respuesta!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "cliviplus_score_webinar",
+                  "platform": "HUBSPOT",
+                  "value": "5"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "5c1a3475-45be-4592-8ef6-22bbc6b20446"
+  }, {
+    "intent": "REGULAR_WEBINAR",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ayúdanos a mejorar, por favor nos regalas una sugerencia. Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "cliviplus_score_webinar",
+                  "platform": "HUBSPOT",
+                  "value": "3"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "suggestionsFlowCatcher",
+    "name": "3e480bfe-cc2c-4464-ae63-dcbb9c459737"
+  }, {
+    "intent": "BAD_WEBINAR",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ayúdanos a mejorar, por favor con una sugerencia. Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "cliviplus_score_webinar",
+                  "platform": "HUBSPOT",
+                  "value": "1"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "suggestionsFlowCatcher",
+    "name": "5e2ece7e-464b-4371-a3de-29c9862d77ba"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "ad7a8969-ce51-48e2-979e-576c9b3210e2"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "a7f0a5a1-48c5-45d4-b075-d8e58d0d65ed",
+  "displayName": "secondFilter",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "YES_HELPDESK_SUPPORT",
+              "text": "Si soporte"
+            }, {
+              "id": "NO_HELPDESK_SUPPORT",
+              "text": "No, Menú principal"
+            } ],
+            "textBody": "¿Requieres soporte de un agente/especialista?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "YES_HELPDESK_SUPPORT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "category": "DUDAS GENERALES",
+                "helpdeskContextMessage": "Dudas generales",
+                "isKnownQuestion": true,
+                "sendToHelpdesk": true,
+                "staffType": "PATIENT_EXPERIENCE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "2b9aa602-34d1-4d6d-9698-b9f168c249f1"
+  }, {
+    "intent": "NO_HELPDESK_SUPPORT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "f1c14907-15a5-44af-adaa-1dffb10a665a"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "905b8d5d-2711-48e1-a3d0-dc78151ef498",
+    "targetPlaybook": "CATEGORIZER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "HELPDESK_CATCHER" ]
+}

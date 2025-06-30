@@ -1,0 +1,200 @@
+{
+  "name": "b9d2244a-d0eb-475d-91fc-b53cb145646f",
+  "displayName": "mainMenu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Seleccionar opción",
+            "bodyText": "Hola $session.params.userContext.patient.nameDisplay, por favor utiliza el menú de opciones.",
+            "sections": [ {
+              "rows": [ {
+                "description": "Agenda/Re-agendamiento",
+                "id": "APPOINTMENTS",
+                "title": "Citas"
+              }, {
+                "description": "Enviar mediciones",
+                "id": "MEASUREMENTS",
+                "title": "Mediciones"
+              }, {
+                "description": "Reporte de mediciones",
+                "id": "MEASUREMENTS_REPORT",
+                "title": "Reporte mediciones"
+              }, {
+                "description": "Facturación, estudios y órdenes",
+                "id": "INVOICE_LABS",
+                "title": "Facturas y estudios"
+              }, {
+                "description": "Meds/Glucómetro/Tiras",
+                "id": "MEDS_GLP",
+                "title": "Estatus de envíos"
+              }, {
+                "description": "Enviar pregunta o solicitud a agente/especialista",
+                "id": "QUESTION_TYPE",
+                "title": "Enviar pregunta"
+              }, {
+                "description": "No requiero apoyo",
+                "id": "NO_NEEDED_QUESTION_PATIENT",
+                "title": "No es necesario"
+              }, {
+                "description": "Enviar queja sobre el servicio",
+                "id": "PATIENT_COMPLAINT",
+                "title": "Presentar queja"
+              } ],
+              "title": "Menú:"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "APPOINTMENTS_MAIN_MENU_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "apptsMenu",
+    "name": "3326d237-ceec-42be-9f8b-45ebb29b5cea"
+  }, {
+    "intent": "LOG_BODY_MEASUREMENTS_TEMPLATE_MAIN_MENU_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "measurementsMenu",
+    "name": "05c9129b-ced4-4626-8d96-fac7a9e80a68"
+  }, {
+    "intent": "QUESTION_TEMPLATE_MAIN_MENU_PAGE_REMINDER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "questionTags",
+    "name": "0759fc02-a6db-43c2-b85d-1b205d21add4"
+  }, {
+    "intent": "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Una disculpa, nos podrías dar más detalles, por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "presentComplaintTag",
+    "name": "8632e246-01ef-4f25-a140-0e3d9bbc89db"
+  }, {
+    "intent": "MEASUREMENTS_REPORT_MAIN_MENU_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "measurementsReports",
+    "name": "5128fe50-95b7-46e5-9d5e-33d193e3d984"
+  }, {
+    "intent": "INVOICE_LABS_MAIN_MENU_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "invoiceLabsMenu",
+    "name": "4f6f209f-b252-48fb-bde1-11381f200e10"
+  }, {
+    "intent": "NO_NEEDED_QUESTION_PATIENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Cuando requieras apoyo solo escribe la palabra Clivi. Gracias" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_LAST_VALIDATOR",
+              "params": {
+                "isValid": false
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "92528655-2f2e-4a39-819a-088dd705df6d"
+  }, {
+    "intent": "MEDS_SUPPLIES_STATUS_MAIN_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "helpDeskSubMenu",
+    "name": "04089cb0-a621-46dc-a353-c013e2ccded7"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "2d37511f-35f2-465f-ad29-115e7342b657"
+  } ],
+  "transitionRouteGroups": [ "CLUB_CATCHER" ]
+}

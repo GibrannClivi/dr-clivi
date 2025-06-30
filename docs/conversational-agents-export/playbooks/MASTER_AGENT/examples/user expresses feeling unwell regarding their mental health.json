@@ -1,0 +1,48 @@
+{
+  "name": "f53e9a37-8f97-4abc-afe5-5effe6d8579a",
+  "actions": [ {
+    "toolUse": {
+      "tool": "SEND_MESSAGE",
+      "action": "SEND_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "SEND_MESSAGE",
+          "templateName": "psycho_emergency_call_ai_requested",
+          "type": "TEMPLATE"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"user expresses feeling unwell regarding their mental health\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent invoked tool called SEND_MESSAGE, then invoked flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user expresses feeling unwell regarding their mental health",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 240,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

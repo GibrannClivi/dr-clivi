@@ -1,0 +1,10 @@
+{
+  "name": "632028f6-6d29-4367-9600-473c35f93162",
+  "displayName": "Encuesta de ejercicios",
+  "parameters": [ {
+    "id": "Encuesta_ejercicios",
+    "entityType": "@Encuesta_ejercicios"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

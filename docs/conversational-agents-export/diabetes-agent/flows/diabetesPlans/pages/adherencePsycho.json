@@ -1,0 +1,184 @@
+{
+  "name": "ad287cb9-4c04-4c23-9ed1-1f7fffc54130",
+  "displayName": "adherencePsycho",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "ADHERENCE_PSYC_BAD",
+              "text": "No"
+            }, {
+              "id": "ADHERENCE_PSYC_REGULAR",
+              "text": "Estoy en proceso"
+            }, {
+              "id": "ADHERENCE_PSYC_GOOD",
+              "text": "Si"
+            } ],
+            "textBody": "¿Mis consultas psicológicas me ayudan para adaptarme a vivir con diabetes?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "ADHERENCE_PSYC_BAD",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalles en una pregunta, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_psych_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "1"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "psychoQuestionTag",
+    "name": "0c289609-bf5f-4fea-ae08-b69308223387"
+  }, {
+    "intent": "ADHERENCE_PSYC_REGULAR",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalles en una pregunta, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_psych_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "5"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "psychoQuestionTag",
+    "name": "e146bb4b-ac63-48e6-ab51-8aac05191a4f"
+  }, {
+    "intent": "ADHERENCE_PSYC_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Gracias por tu respuesta!😉" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "adherence_to_psych_treatment__patient_",
+                  "platform": "HUBSPOT",
+                  "value": "10"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "7775d9cf-8c60-4b25-90ae-812a1c9c8b97"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "42bb21b6-45d2-4ac9-9ae8-b2c5d71d77bc"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

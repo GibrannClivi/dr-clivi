@@ -1,0 +1,263 @@
+{
+  "name": "ae833be4-8edf-4881-8b51-dea78aec05ca",
+  "displayName": "incomingFile",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Selecciona",
+            "bodyText": "¿Qué archivo nos envías?",
+            "sections": [ {
+              "rows": [ {
+                "description": "Resultados",
+                "id": "LABS_IMAGE_INCOMING",
+                "title": "Laboratorios"
+              }, {
+                "description": "Foto platillo",
+                "id": "FOOD_IMAGE_INCOMING",
+                "title": "Foto comida"
+              }, {
+                "description": "Comprobante de pago",
+                "id": "PAYMENT_IMAGE_INCOMING",
+                "title": "Comprobante pago"
+              }, {
+                "description": "Facturación",
+                "id": "INVOICING_IMAGE_INCOMING",
+                "title": "Constancia fiscal"
+              } ],
+              "title": "Tipos de imágenes"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "LABS_IMAGE_INCOMING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_ticket",
+                  "platform": "HUBSPOT",
+                  "value": "LABS_DELIVERED"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "LABS"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "dd01087f-d4b2-4c90-b20a-d509eaa2aa01"
+  }, {
+    "intent": "FOOD_IMAGE_INCOMING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "FOOD_IMAGE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "photo_food_file",
+                  "platform": "HUBSPOT",
+                  "value": "Yes"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "FOOD_IMAGE_SENT_BY_PATIENT"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "c759d6bf-86b6-4f01-9c5b-9cc849f2e348"
+  }, {
+    "intent": "PAYMENT_IMAGE_INCOMING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias, estamos verificando la información en nuestro sistema. Regresaremos a la brevedad con Ud. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_ticket",
+                  "platform": "HUBSPOT",
+                  "value": "PAYMENT"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "PAYMENT"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "69bf6da8-1674-4635-b631-e9d5ddd0e64e"
+  }, {
+    "intent": "INVOICING_IMAGE_INCOMING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Lo revisaremos a la brevedad. ¡Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_ticket",
+                  "platform": "HUBSPOT",
+                  "value": "CIF"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "OTHER"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "90a2c3d0-5fce-4571-ad9f-ad9a6d34bf66"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "363ac409-ad32-45c7-b522-3bcba4489284"
+  } ],
+  "transitionRouteGroups": [ "CLUB_CATCHER" ]
+}

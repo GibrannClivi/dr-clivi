@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "MEASUREMENTS_REPORT",
+      "parameterId": "MEASUREMENTS_REPORT_MAIN_MENU_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

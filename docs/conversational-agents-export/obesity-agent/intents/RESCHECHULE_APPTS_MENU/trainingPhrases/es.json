@@ -1,0 +1,53 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "APPOINTMENT_RESCHEDULER",
+      "parameterId": "RESCHECHULE_APPTS_MENU"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Reagendar",
+      "parameterId": "RESCHECHULE_APPTS_MENU"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "reagendar consulta",
+      "parameterId": "RESCHECHULE_APPTS_MENU"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "reagendar cita",
+      "parameterId": "RESCHECHULE_APPTS_MENU"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Re-agendar cita",
+      "parameterId": "RESCHECHULE_APPTS_MENU"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Re-agendar citas",
+      "parameterId": "RESCHECHULE_APPTS_MENU"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "RESCHECHULE_APPTS_MENU",
+      "parameterId": "RESCHECHULE_APPTS_MENU",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

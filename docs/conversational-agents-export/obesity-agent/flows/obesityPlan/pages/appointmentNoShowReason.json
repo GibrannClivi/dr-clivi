@@ -1,0 +1,246 @@
+{
+  "name": "f4e1ab56-4b03-4b13-a432-f440494333fa",
+  "displayName": "appointmentNoShowReason",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Da un toque",
+            "bodyText": "Ayúdanos a mejorar para ti💜",
+            "sections": [ {
+              "rows": [ {
+                "description": "",
+                "id": "FORGOT_APPT",
+                "title": "Olvidé la cita"
+              }, {
+                "description": "",
+                "id": "UNEXPECTED_APPT",
+                "title": "Tuve un imprevisto"
+              }, {
+                "description": "",
+                "id": "BUSSY_APPT",
+                "title": "Hacía otra actividad"
+              }, {
+                "description": "",
+                "id": "NO_NEEDED_APPT",
+                "title": "No necesitaba la cita"
+              }, {
+                "description": "",
+                "id": "ISSUE_HOUR_APPT",
+                "title": "Por el horario"
+              } ],
+              "title": "Opciones"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "FORGOT_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por ayudarnos con esta información, mejoraremos para ti." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "noShowReasonFromPatient": "Olvidé la cita",
+                "staffType": "$session.params.staffType"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "c2f6e102-fc45-411a-992f-81d75266ffbe"
+  }, {
+    "intent": "UNEXPECTED_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por ayudarnos con esta información, mejoraremos para ti." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "noShowReasonFromPatient": "Tuve un imprevisto",
+                "staffType": "$session.params.staffType"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "1d1d69be-5c3b-4eed-b0cc-2be1c9549fca"
+  }, {
+    "intent": "BUSSY_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por ayudarnos con esta información, mejoraremos para ti." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "noShowReasonFromPatient": "Hacía otra actividad",
+                "staffType": "$session.params.staffType"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "1114314f-9609-4900-afb4-3df9098960c5"
+  }, {
+    "intent": "NO_NEEDED_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por ayudarnos con esta información, mejoraremos para ti." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "noShowReasonFromPatient": "No necesitaba la cita",
+                "staffType": "$session.params.staffType"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "7834bc69-4d4f-4b73-a33d-7866698bfc10"
+  }, {
+    "intent": "ISSUE_HOUR_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias por ayudarnos con esta información, mejoraremos para ti." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "noShowReasonFromPatient": "Por el horario",
+                "staffType": "$session.params.staffType"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e3a8bcf3-b49e-44ce-b1c6-d484d47378d2"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "8b15728a-cd26-4c9d-986e-4b3282e8a5c8",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

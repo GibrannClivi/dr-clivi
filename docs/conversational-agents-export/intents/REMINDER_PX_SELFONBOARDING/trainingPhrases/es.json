@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Iniciar ahora",
+      "parameterId": "REMINDER_PX_SELFONBOARDING"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

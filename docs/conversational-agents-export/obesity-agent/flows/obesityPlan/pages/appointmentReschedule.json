@@ -1,0 +1,53 @@
+{
+  "name": "6da2803f-4e3f-468f-b266-03eb8263efc5",
+  "displayName": "appointmentReschedule",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "RESCHECHULE_APPTS_MENU",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_CANCEL_LIST",
+              "params": {
+                "isReschedule": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e4927a5b-f733-43bc-9c38-27320288d14c"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "818b4cfe-9712-4516-a407-90f719d05c5e",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

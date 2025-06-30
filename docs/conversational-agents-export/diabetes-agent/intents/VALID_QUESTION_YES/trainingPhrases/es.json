@@ -1,0 +1,13 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "VALID_QUESTION_",
+      "auto": true
+    }, {
+      "text": "YES",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

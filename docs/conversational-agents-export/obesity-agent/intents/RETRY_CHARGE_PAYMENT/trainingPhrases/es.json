@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Reintentar cobro",
+      "parameterId": "RETRY_CHARGE_PAYMENT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

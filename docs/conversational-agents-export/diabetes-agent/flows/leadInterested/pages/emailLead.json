@@ -1,0 +1,110 @@
+{
+  "name": "fa1d6839-a011-4402-8094-28bf2e64bfc7",
+  "displayName": "emailLead",
+  "form": {
+    "parameters": [ {
+      "displayName": "emailDiabetes",
+      "required": true,
+      "entityType": "@sys.email",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Hola, muchas gracias por tu interés. Nos proporcionas tu correo electrónico para ponernos en contacto. " ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = ¨FINAL¨",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias, un agente se pondrá en contacto contigo. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "emailAddress",
+                  "platform": "ADMIN",
+                  "value": "$session.params.mailDiabetes"
+                }, {
+                  "name": "email",
+                  "platform": "HUBSPOT",
+                  "value": "$session.params.mailDiabetes"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "62366ce2-fb70-40b5-9e5e-01c2667109dd"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "doNotAskIfQuestion": true,
+                "staffType": "SALES"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "textBody": "Ya se está escalando tu duda y/o pregunta con un asesor",
+              "type": "SESSION_TEXT"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "9f17ec6a-7b2c-411a-ab4f-be31dac414c5"
+  } ]
+}

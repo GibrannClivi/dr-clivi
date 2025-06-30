@@ -1,0 +1,10 @@
+{
+  "name": "1f977e97-719a-4aed-8e18-a2a75187bb8d",
+  "displayName": "LOG_BODY_MEASUREMENTS_TEMPLATE_MAIN_MENU_PAGE",
+  "parameters": [ {
+    "id": "REMINDER_LOG_BODY_MEASUREMENTS_TEMPLATE",
+    "entityType": "@REMINDER_LOG_BODY_MEASUREMENTS_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}

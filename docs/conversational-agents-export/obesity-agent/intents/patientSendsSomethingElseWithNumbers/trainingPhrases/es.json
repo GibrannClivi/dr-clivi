@@ -1,0 +1,57 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "https://"
+    }, {
+      "text": "acrobat.adobe.com",
+      "parameterId": "NOT_SOLVED_QUESTIONS_ADMIN"
+    }, {
+      "text": "/id/urn:aaid:sc:VA6C2:27a50b08-a20e-4613-a0ad-6d7d80499dda"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "11:10",
+      "parameterId": "NOT_SOLVED_QUESTIONS_ADMIN"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "11´",
+      "parameterId": "NOT_SOLVED_QUESTIONS_ADMIN"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "https://www."
+    }, {
+      "text": "facebook.com",
+      "parameterId": "NOT_SOLVED_QUESTIONS_ADMIN"
+    }, {
+      "text": "/share/r/zA43LEKqUqMhjjJa/?mibextid=D5vuiz"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Revisión y análisis de datos \r Monday, March 11 · 1:00 - 1:45pm\r Time zone: America/Mexico_City\r Google Meet joining info\r Video call link: https://"
+    }, {
+      "text": "meet.google.com",
+      "parameterId": "NOT_SOLVED_QUESTIONS_ADMIN"
+    }, {
+      "text": "/axo-epzd-cud\r Or dial: ‪(MX) +52 55 8421 0898‬ PIN: ‪800 379 529 4911‬#\r More phone numbers"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "zoom",
+      "parameterId": "NOT_SOLVED_QUESTIONS_ADMIN"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,205 @@
+{
+  "name": "d5a218f2-b34b-4139-8d98-d44d69faa800",
+  "displayName": "techProfileMovil",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "ANDROID",
+              "text": "Android"
+            }, {
+              "id": "IPHONE",
+              "text": "Iphone"
+            }, {
+              "id": "HUAWEI",
+              "text": "HUAWEI"
+            } ],
+            "textBody": "¿Qué tipo de teléfono tienes?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "HUAWEI",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "update_zoom_huawei",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "phone_operating_system",
+                  "platform": "HUBSPOT",
+                  "value": "Harmony"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "11e13a95-63fb-4cc5-b210-a962e782a159"
+  }, {
+    "intent": "ANDROID",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "update_gm_android",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "phone_operating_system",
+                  "platform": "HUBSPOT",
+                  "value": "Android"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "2e0aa11b-e1a6-4f1f-a471-8af246c33d4d"
+  }, {
+    "intent": "IPHONE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "parameters": {
+                "buttons": [ {
+                  "name": "",
+                  "value": ""
+                } ]
+              },
+              "templateName": "update_gm_iphone",
+              "type": "TEMPLATE"
+            },
+            "type": "SEND_MESSAGE"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "phone_operating_system",
+                  "platform": "HUBSPOT",
+                  "value": "iOS"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ce3d4f0d-fba9-44c9-a694-0713fa678ffc"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "8608fd16-e3c8-4751-b635-11708ac0f1c4"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

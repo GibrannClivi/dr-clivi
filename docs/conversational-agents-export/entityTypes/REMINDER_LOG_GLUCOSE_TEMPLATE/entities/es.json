@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "REMINDER_LOG_GLUCOSE_TEMPLATE",
+    "synonyms": [ "CLIVI - Glucosa", "REMINDER_LOG_GLUCOSE_TEMPLATE", "Enviar glucosa", "Adelante glucosa", "Adelante - glucosa" ],
+    "languageCode": "es"
+  } ]
+}

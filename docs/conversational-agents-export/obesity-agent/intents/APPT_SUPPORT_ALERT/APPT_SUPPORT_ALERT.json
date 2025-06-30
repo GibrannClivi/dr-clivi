@@ -1,0 +1,10 @@
+{
+  "name": "79ef1b56-a97e-4d22-942d-c0ea2282a3e8",
+  "displayName": "APPT_SUPPORT_ALERT",
+  "parameters": [ {
+    "id": "APPT_SUPPORT_ALERT",
+    "entityType": "@APPT_SUPPORT_ALERT"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

@@ -1,0 +1,10 @@
+{
+  "name": "bccd7441-0c5e-4530-947c-7901c620142d",
+  "displayName": "PSYCHO_SCHEDULE_APPT",
+  "parameters": [ {
+    "id": "PSYCHO_SCHEDULE_APPT",
+    "entityType": "@PSYCHO_SCHEDULE_APPT"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

@@ -1,0 +1,20 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "NO_I_DONT",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "I_",
+      "auto": true
+    }, {
+      "text": "DONT",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

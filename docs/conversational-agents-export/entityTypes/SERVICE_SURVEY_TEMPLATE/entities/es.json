@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "SERVICE_SURVEY_TEMPLATE",
+    "synonyms": [ "Encuesta servicio", "SERVICE_SURVEY_TEMPLATE", "Encuesta de servicio" ],
+    "languageCode": "es"
+  } ]
+}

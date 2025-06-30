@@ -1,0 +1,51 @@
+{
+  "name": "141c09b3-8077-47fc-91bd-e10ee43efeb0",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Creo que quieres ayuda con la confirmación de tu cita. Déjame asistirte."
+    }
+  }, {
+    "toolUse": {
+      "tool": "APPOINTMENT_CONFIRM",
+      "action": "APPOINTMENT_CONFIRM",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "CALL_FUNCTION",
+          "functionName": "APPOINTMENT_CONFIRM"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"User explicitly wants to confirm their appointment or indirectly expresses intent to confirm attendance without requesting to schedule, reschedule, cancel, or check upcoming appointments\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and used tool called APPOINTMENT_CONFIRM, then invoked flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user requests something related to confirmation appointments",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 279,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

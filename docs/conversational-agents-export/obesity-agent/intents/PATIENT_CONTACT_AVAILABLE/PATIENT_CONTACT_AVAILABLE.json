@@ -1,0 +1,10 @@
+{
+  "name": "551d803e-4767-4c59-ba46-16d6b4a512e5",
+  "displayName": "PATIENT_CONTACT_AVAILABLE",
+  "parameters": [ {
+    "id": "PATIENT_CONTACT_AVAILABLE",
+    "entityType": "@PATIENT_CONTACT_AVAILABLE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

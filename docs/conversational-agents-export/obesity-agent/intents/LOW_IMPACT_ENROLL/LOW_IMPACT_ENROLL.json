@@ -1,0 +1,10 @@
+{
+  "name": "30a4d124-668d-4690-b134-a251c0d546f8",
+  "displayName": "LOW_IMPACT_ENROLL",
+  "parameters": [ {
+    "id": "LOW_IMPACT_ENROLL",
+    "entityType": "@LOW_IMPACT_ENROLL"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

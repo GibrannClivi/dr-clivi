@@ -1,0 +1,81 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "necesito facturar",
+      "parameterId": "INVOICING_REQUEST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "quiero consultas mis facturas pasadas",
+      "parameterId": "INVOICING_REQUEST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me mandan mi factura de este mes",
+      "parameterId": "INVOICING_REQUEST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no me han enviado mi factura",
+      "parameterId": "INVOICING_REQUEST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "donde consulto mis facturas",
+      "parameterId": "INVOICING_REQUEST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Facturación",
+      "parameterId": "INVOICING_REQUEST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "facturacion",
+      "parameterId": "INVOICING_REQUEST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Quiero facturar",
+      "parameterId": "INVOICING_REQUEST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "quiero mi factura",
+      "parameterId": "INVOICING_REQUEST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Centro de facturación",
+      "parameterId": "INVOICING_REQUEST",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "INVOICING_REQUEST",
+      "parameterId": "INVOICING_REQUEST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

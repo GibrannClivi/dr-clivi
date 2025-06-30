@@ -1,0 +1,10 @@
+{
+  "name": "ca4206cc-c0c3-477e-91ab-d855b550257f",
+  "displayName": "MEDS_SUPPLIES_STATUS_MAIN_PAGE",
+  "parameters": [ {
+    "id": "MEDS_SUPPLIES_STATUS_MAIN_PAGE",
+    "entityType": "@MEDS_SUPPLIES_STATUS_MAIN_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

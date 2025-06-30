@@ -1,0 +1,24 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Glosario Dr.Clivi",
+      "parameterId": "DR_CLIVI"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Glosario",
+      "parameterId": "DR_CLIVI"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Glosario Asistente",
+      "parameterId": "DR_CLIVI"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

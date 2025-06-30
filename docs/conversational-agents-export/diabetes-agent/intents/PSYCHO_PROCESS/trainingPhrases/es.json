@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Proceso psicología",
+      "parameterId": "PSYCHO_PROCESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

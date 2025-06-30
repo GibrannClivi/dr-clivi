@@ -1,0 +1,56 @@
+{
+  "name": "3fd4559e-c744-4bc6-b57a-fdbdf3915cd6",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Hola, me parece que necesitas una consulta. Es correcto?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Si "
+    }
+  }, {
+    "toolUse": {
+      "tool": "SEND_MESSAGE",
+      "action": "SEND_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "SEND_MESSAGE",
+          "templateName": "booking_catcher_ai_menu",
+          "type": "TEMPLATE"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"User is requiring something related to booking appointments\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent asked in Spanish User agreed and invoked tool called SEND_MESSAGE, then invoked flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user wants something related to booking appointments",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 281,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Agendar Nutrición",
+      "parameterId": "SELFONB_NUTRI_SCHEDULE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

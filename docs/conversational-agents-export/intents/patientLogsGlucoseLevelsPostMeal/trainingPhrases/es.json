@@ -1,0 +1,423 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "luego de la cena",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " me medí y salió en "
+    }, {
+      "text": "140",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "mi nivel de glucosa "
+    }, {
+      "text": "después",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " del almuerzo fue de "
+    }, {
+      "text": "150",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "después de comer",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " me salió en "
+    }, {
+      "text": "200",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "salí en "
+    }, {
+      "text": "120",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "despues",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " de comer"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "90",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "posterior",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " a los alimentos"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "130",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "despues de",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " comer"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "100",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "despues de los",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " alimentos"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "150",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "después",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " de comer"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "130",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "al terminar",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " de cenar"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "120",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "después",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " de los alimentos"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "180",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "después de",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " comer"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "178",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "despues",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " de cenar"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "188",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "al terminar de",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " cena"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "posterior",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " a comer "
+    }, {
+      "text": "188",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Posterior",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " "
+    }, {
+      "text": "199",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me salio "
+    }, {
+      "text": "250",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "al dormir",
+      "parameterId": "POST_MEAL"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "300",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "al acostarme",
+      "parameterId": "POST_MEAL"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Terminar",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " mis alimentos me medí y salió en "
+    }, {
+      "text": "99",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Despues de comer",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " me sale en "
+    }, {
+      "text": "133",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Después de cenar",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " me medí y tengo "
+    }, {
+      "text": "240",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Cené",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " y me tengo "
+    }, {
+      "text": "200",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "comí",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " y tengo "
+    }, {
+      "text": "190",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "desayuné",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " me medi "
+    }, {
+      "text": "188",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "desayunado",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " me salio en "
+    }, {
+      "text": "300",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Cenado",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " con "
+    }, {
+      "text": "290",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Almorzado",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " tengo "
+    }, {
+      "text": "188",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "ya "
+    }, {
+      "text": "comido",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " medicion con "
+    }, {
+      "text": "199",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "luego de la",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " comida me sale "
+    }, {
+      "text": "179",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "114",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " de glucosa "
+    }, {
+      "text": "tras",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " la cena"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Luego",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " de comer "
+    }, {
+      "text": "250",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " en sangre"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Luego de",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " desayunar me salió "
+    }, {
+      "text": "280",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " de azucar"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "luego de la",
+      "parameterId": "POST_MEAL"
+    }, {
+      "text": " comida me medí y sale en "
+    }, {
+      "text": "388",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " de azúcar"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  } ]
+}

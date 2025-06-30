@@ -1,0 +1,10 @@
+{
+  "name": "227531a6-6b73-40a6-9a88-459c46a4c56d",
+  "displayName": "QUESTION_INVALID",
+  "parameters": [ {
+    "id": "QUESTION_INVALID",
+    "entityType": "@QUESTION_INVALID"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

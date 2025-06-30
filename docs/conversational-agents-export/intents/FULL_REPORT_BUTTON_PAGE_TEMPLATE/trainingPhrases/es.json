@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "FULL_REPORT",
+      "parameterId": "FULL_REPORT_BUTTON_PAGE_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "a1a62762-4202-4ea2-a7a6-aeafa71a10b5",
+  "displayName": "AUTO_REPLIES_WHATSAPPS_BUSINESS",
+  "parameters": [ {
+    "id": "AUTO_REPLIES_WHATSAPPS_BUSINESS",
+    "entityType": "@AUTO_REPLIES_WHATSAPPS_BUSINESS"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 27
+}

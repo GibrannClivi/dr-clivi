@@ -1,0 +1,14 @@
+{
+  "name": "7438e6a1-10fe-47de-80ea-6cd43fb44c96",
+  "displayName": "photoScalePhoto",
+  "genericWebService": {
+    "uri": "https://n8n.clivi.com.mx/webhook/imgfile-measurement-recognition",
+    "webhookType": "FLEXIBLE",
+    "httpMethod": "POST",
+    "requestBody": "{\n\t\"mime_type\": \"image/jpeg\",\n\t\"image-file\" : \"$session.params.image.sha256\"\n}\n",
+    "serviceAgentAuth": "NONE"
+  },
+  "timeout": {
+    "seconds": 5
+  }
+}

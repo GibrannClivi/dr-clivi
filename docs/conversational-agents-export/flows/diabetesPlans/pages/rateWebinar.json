@@ -1,0 +1,107 @@
+{
+  "name": "f01dab48-d9d0-4c43-9b28-a06e562c59fa",
+  "displayName": "rateWebinar",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "SHOW_WEBINAR",
+              "text": "Si ingresé al taller"
+            }, {
+              "id": "NO_SHOW_WEBINAR",
+              "text": "No pude asistir"
+            } ],
+            "textBody": "Ayúdanos a mejorar los talleres",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "NO_SHOW_WEBINAR",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ayúdanos a mejorar. Platícanos por qué no pudiste asistir para ofrecerte más opciones. Por favor." ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "suggestionsFlowCatcher",
+    "name": "1fdeed26-31dd-4c37-a323-0a7d58acfebd"
+  }, {
+    "intent": "SHOW_WEBINAR",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "last_webinar_attended___thursday",
+                  "platform": "HUBSPOT",
+                  "value": "DATE_TODAY"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "rateWebinarShowUp",
+    "name": "75eb9b3d-e1bf-49c6-818c-ba24ed6634aa"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "99ee4164-a9e1-48b8-92e1-2171e3627779",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

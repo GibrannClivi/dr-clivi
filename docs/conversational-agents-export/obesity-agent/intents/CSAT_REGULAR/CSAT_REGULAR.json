@@ -1,0 +1,10 @@
+{
+  "name": "f2711404-e7e0-42ed-b2a4-01b0f4714903",
+  "displayName": "CSAT_REGULAR",
+  "parameters": [ {
+    "id": "CSAT_REGULAR",
+    "entityType": "@CSAT_REGULAR"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

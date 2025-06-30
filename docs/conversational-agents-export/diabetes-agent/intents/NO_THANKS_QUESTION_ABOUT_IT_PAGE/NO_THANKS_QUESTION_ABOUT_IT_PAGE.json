@@ -1,0 +1,10 @@
+{
+  "name": "e51b132e-b9f8-49ca-b958-ac33be086a22",
+  "displayName": "NO_THANKS_QUESTION_ABOUT_IT_PAGE",
+  "parameters": [ {
+    "id": "NO_THANKS_QUESTION_ABOUT_IT_PAGE",
+    "entityType": "@NO_THANKS_QUESTION_ABOUT_IT_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

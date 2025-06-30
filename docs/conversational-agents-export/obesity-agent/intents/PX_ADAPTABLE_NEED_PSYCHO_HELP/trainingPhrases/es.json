@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Quiero ayuda psicológica",
+      "parameterId": "PX_ADAPTABLE_NEED_PSYCHO_HELP"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

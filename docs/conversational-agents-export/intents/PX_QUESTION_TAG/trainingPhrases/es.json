@@ -1,0 +1,38 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Necesito asistencia",
+      "parameterId": "PX_QUESTION_TAG"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "INVOICE_SUPPORT",
+      "parameterId": "PX_QUESTION_TAG"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Apoyo de asesor",
+      "parameterId": "PX_QUESTION_TAG"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Requiero soporte",
+      "parameterId": "PX_QUESTION_TAG"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "PX_QUESTION_TAG",
+      "parameterId": "PX_QUESTION_TAG"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

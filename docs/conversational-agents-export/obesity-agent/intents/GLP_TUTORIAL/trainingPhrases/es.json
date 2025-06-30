@@ -1,0 +1,24 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Video tutorial",
+      "parameterId": "GLP_TUTORIAL"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Video aplicación",
+      "parameterId": "GLP_TUTORIAL"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tutorial",
+      "parameterId": "GLP_TUTORIAL"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

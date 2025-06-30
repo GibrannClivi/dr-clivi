@@ -1,0 +1,509 @@
+{
+  "name": "8eebe94c-46fe-4c2e-b0f9-a8b182c9115b",
+  "displayName": "planStatusRouteGroup",
+  "transitionRoutes": [ {
+    "intent": "END_SESSION_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "c05b8eb6-0bee-4e07-b6e6-a79abbc248f0"
+  }, {
+    "intent": "STORES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "STORES_WAC.png",
+                    "pathCloudFile": "msg-attachments/STORES_WAC.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FSTORES_WAC.png?alt=media\u0026token=4023fb90-9093-47f6-8431-977aee2d42e6"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "d33a1be4-0022-496e-8e72-995a91ad86e9"
+  }, {
+    "intent": "BANK_TRANSFER",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "bankPaymentOptions",
+    "name": "29667f3f-7af4-4537-ae7a-e922215cb2bb"
+  }, {
+    "intent": "WALMART_STORES",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "WALMART_WAC.png",
+                    "pathCloudFile": "msg-attachments/WALMART_WAC.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FWALMART_WAC.png?alt=media\u0026token=8f174d40-2b9d-41c7-bb6f-018a0ea82818"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "9c8b9cae-d231-42e0-9eba-9bae896efc84"
+  }, {
+    "intent": "BANK_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "bankLocationOptions",
+    "name": "6672e135-3e32-43f7-be70-3418acede8bd"
+  }, {
+    "intent": "APP_BANK",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "banksAppsForms",
+    "name": "9fe92b1b-fad9-43be-a424-50f76765212c"
+  }, {
+    "intent": "SANTANDER_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "SANTANDER_LOCATION_WAC.png",
+                    "pathCloudFile": "msg-attachments/SANTANDER_LOCATION_WAC.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FSANTANDER_LOCATION_WAC.png?alt=media\u0026token=07759de7-11e7-4160-98dd-d4fd5fab11a7"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "c5254cc1-1a35-49cd-ab93-ccc4b0bd636e"
+  }, {
+    "intent": "BBVA_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "BBVA_LOCATION.png",
+                    "pathCloudFile": "msg-attachments/BBVA_LOCATION.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FBBVA_LOCATION.png?alt=media\u0026token=6c9fdc1b-a332-45a4-9e08-c95c7763a4f1"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "4ec18fdb-fd80-4ce8-ac49-394e41d23031"
+  }, {
+    "intent": "TELECOMM_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "TELECOMM_BANORTE.png",
+                    "pathCloudFile": "msg-attachments/TELECOMM_BANORTE.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FTELECOMM_BANORTE.png?alt=media\u0026token=cd99b787-e42f-48dd-8700-04553728d4ee"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "a1d6b3f0-7306-4353-93e0-0d887d0a5c24"
+  }, {
+    "intent": "BANORTE_LOCATION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "TELECOMM_BANORTE.png",
+                    "pathCloudFile": "msg-attachments/TELECOMM_BANORTE.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FTELECOMM_BANORTE.png?alt=media\u0026token=cd99b787-e42f-48dd-8700-04553728d4ee"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "7d332d7f-0326-4e16-9875-d5aa01f49be7"
+  }, {
+    "intent": "BBVA_APP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "BBVA_BANORTE_APP.png",
+                    "pathCloudFile": "msg-attachments/BBVA_BANORTE_APP.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FBBVA_BANORTE_APP.png?alt=media\u0026token=b612ae79-3cc9-4deb-bdda-0984e21f2566"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "c2d2c1a1-d4ff-46f2-845d-795cfe920dca"
+  }, {
+    "intent": "BANORTE_APP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "BBVA_BANORTE_APP.png",
+                    "pathCloudFile": "msg-attachments/BBVA_BANORTE_APP.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FBBVA_BANORTE_APP.png?alt=media\u0026token=b612ae79-3cc9-4deb-bdda-0984e21f2566"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "f93fcb8a-dfd8-4cd3-a06c-cd4a442cceeb"
+  }, {
+    "intent": "SANTANDER_APP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "AFIRME_SANTANDER_APP.png",
+                    "pathCloudFile": "msg-attachments/AFIRME_SANTANDER_APP.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FAFIRME_SANTANDER_APP.png?alt=media\u0026token=be979fa1-9f88-4813-8b78-a370f2b272a7"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ff121e9f-f1fa-4ed0-bd78-2cbb1c9ff02c"
+  }, {
+    "intent": "AFIRME_APP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "AFIRME_SANTANDER_APP.png",
+                    "pathCloudFile": "msg-attachments/AFIRME_SANTANDER_APP.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FAFIRME_SANTANDER_APP.png?alt=media\u0026token=be979fa1-9f88-4813-8b78-a370f2b272a7"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "052f988a-7cc6-4652-91cc-0dc0d02c2b00"
+  }, {
+    "intent": "CLIVI_PATIENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "askChangeWhatsapp",
+    "name": "eb5fce4b-e7c9-48ce-84e8-5cc4ac5622bb"
+  }, {
+    "intent": "CLIVI_LEAD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "leadInterested",
+    "name": "e5dda9cb-fe85-4d33-9e55-9d15646fc355"
+  }, {
+    "intent": "CHANGE_WHATSAPP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "newPhone",
+    "name": "6b7acf1b-15b6-4b7b-9d6b-39e3b8153b11"
+  }, {
+    "intent": "NO_CHANGE_WHATSAPP",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Estamos escalando tu caso con un asesor. Un momento, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_ticket",
+                  "platform": "HUBSPOT",
+                  "value": "PLAN_ERROR"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "47c10fc9-7dac-4a2c-9d5c-c9260ab23e5a"
+  } ]
+}

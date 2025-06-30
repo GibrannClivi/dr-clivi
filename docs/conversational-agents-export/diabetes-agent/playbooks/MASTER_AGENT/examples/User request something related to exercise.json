@@ -1,0 +1,38 @@
+{
+  "name": "2f02f0d9-ec06-46ee-aa71-f31f57669e31",
+  "actions": [ {
+    "playbookInvocation": {
+      "playbook": "EXERCISE_AI_AGENT",
+      "playbookInput": {
+        "precedingConversationSummary": "The userRequest input parameter: \"User expresses the need to do exercise without needed medical appointment or live workouts\"",
+        "actionParameters": {
+          "userRequest": "User expresses the need to do exercise without needed medical appointment or live workouts"
+        }
+      },
+      "playbookOutput": {
+        "executionSummary": "Agent invokes EXERCISE_AI_AGENT",
+        "actionParameters": {
+        
+        }
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"User expresses the need to do exercise without needed medical appointment or live workouts\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent invokes playbook EXERCISE_AI_AGENT",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "User request something related to exercise",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 214,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

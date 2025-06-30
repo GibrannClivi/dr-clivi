@@ -1,0 +1,10 @@
+{
+  "name": "3301f518-db38-4ab2-91bf-d8024eb25f1f",
+  "displayName": "SOLVED_QUESTIONS_ADMIN",
+  "parameters": [ {
+    "id": "SOLVED_QUESTIONS_ADMIN",
+    "entityType": "@SOLVED_QUESTIONS_ADMIN"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

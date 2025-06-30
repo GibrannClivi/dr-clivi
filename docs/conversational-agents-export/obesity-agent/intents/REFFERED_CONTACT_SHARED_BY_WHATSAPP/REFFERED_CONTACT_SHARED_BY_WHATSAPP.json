@@ -1,0 +1,16 @@
+{
+  "name": "b0fa38a8-08ff-476a-9293-eb874b25e666",
+  "displayName": "REFFERED_CONTACT_SHARED_BY_WHATSAPP",
+  "parameters": [ {
+    "id": "Referred",
+    "entityType": "@Referred"
+  }, {
+    "id": "Referral_phone",
+    "entityType": "@Referral_phone"
+  }, {
+    "id": "Referral_name",
+    "entityType": "@Referral_name"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 4
+}

@@ -1,0 +1,10 @@
+{
+  "name": "c676ca1d-e0f6-46db-8e00-db6883ec7888",
+  "displayName": "PATIENT_CONTACT_LATER",
+  "parameters": [ {
+    "id": "PATIENT_CONTACT_LATER",
+    "entityType": "@PATIENT_CONTACT_LATER"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

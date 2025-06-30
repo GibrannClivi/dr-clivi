@@ -1,0 +1,10 @@
+{
+  "name": "bdccc846-6465-476d-b153-4d8579995346",
+  "displayName": "DOWNLOAD_RECETARIO",
+  "parameters": [ {
+    "id": "DOWNLOAD_RECETARIO",
+    "entityType": "@DOWNLOAD_RECETARIO"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

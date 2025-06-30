@@ -1,0 +1,10 @@
+{
+  "name": "09085cb1-4223-43ee-af8b-b0ba4d7c6d1f",
+  "displayName": "PX_ADAPTABLE_CHANGE_NUTRI_PLAN",
+  "parameters": [ {
+    "id": "PX_ADAPTABLE_CHANGE_NUTRI_PLAN",
+    "entityType": "@PX_ADAPTABLE_CHANGE_NUTRI_PLAN"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

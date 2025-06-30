@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Me he sentido bien",
+      "parameterId": "PX_ADAPTABLE_FEELS_GOOD"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,16 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "No",
+      "auto": true
+    }, {
+      "text": " pasaría ",
+      "auto": true
+    }, {
+      "text": "nada",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

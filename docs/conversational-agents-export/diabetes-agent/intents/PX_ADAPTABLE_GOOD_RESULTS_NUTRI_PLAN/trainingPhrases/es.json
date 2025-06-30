@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Me ha ayudado mucho",
+      "parameterId": "PX_ADAPTABLE_GOOD_RESULTS_NUTRI_PLAN"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

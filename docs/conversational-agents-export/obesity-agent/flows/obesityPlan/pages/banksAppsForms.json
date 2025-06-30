@@ -1,0 +1,245 @@
+{
+  "name": "41c8014d-6179-4081-b31b-cd53485463e2",
+  "displayName": "banksAppsForms",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Da un toque",
+            "bodyText": "Opciones",
+            "sections": [ {
+              "rows": [ {
+                "description": "Aplicación",
+                "id": "BBVA_APP",
+                "title": "BBVA APP"
+              }, {
+                "description": "Aplicación",
+                "id": "SANTANDER_APP",
+                "title": "SANTANDER APP"
+              }, {
+                "description": "Aplicación",
+                "id": "AFIRME_APP",
+                "title": "AFIRME APP"
+              }, {
+                "description": "Aplicación",
+                "id": "BANORTE_APP",
+                "title": "BANORTE APP"
+              } ],
+              "title": "Selecciona la aplicación"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": " BBVA_APP",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "BBVA_BANORTE_APP.png",
+                    "pathCloudFile": "msg-attachments/BBVA_BANORTE_APP.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FBBVA_BANORTE_APP.png?alt=media\u0026token=b612ae79-3cc9-4deb-bdda-0984e21f2566"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "dff5cafc-6f76-488e-8c72-25e8ff1ccca0"
+  }, {
+    "intent": " BANORTE_APP",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "BBVA_BANORTE_APP.png",
+                    "pathCloudFile": "msg-attachments/BBVA_BANORTE_APP.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FBBVA_BANORTE_APP.png?alt=media\u0026token=b612ae79-3cc9-4deb-bdda-0984e21f2566"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ef542946-63f7-4e1c-ae11-94c2eee9cabc"
+  }, {
+    "intent": "SANTANDER_APP",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "AFIRME_SANTANDER_APP.png",
+                    "pathCloudFile": "msg-attachments/AFIRME_SANTANDER_APP.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FAFIRME_SANTANDER_APP.png?alt=media\u0026token=be979fa1-9f88-4813-8b78-a370f2b272a7"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ac089b9e-7df1-48b0-b05e-27752143855c"
+  }, {
+    "intent": " AFIRME_APP",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "AFIRME_SANTANDER_APP.png",
+                    "pathCloudFile": "msg-attachments/AFIRME_SANTANDER_APP.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FAFIRME_SANTANDER_APP.png?alt=media\u0026token=be979fa1-9f88-4813-8b78-a370f2b272a7"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "f204473c-0b66-4a93-a800-e02caa6923bf"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "f1f28609-8709-4e2d-aba8-6af63702b052"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

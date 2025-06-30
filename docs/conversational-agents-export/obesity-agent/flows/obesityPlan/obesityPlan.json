@@ -1,0 +1,56 @@
+{
+  "name": "754b1cb2-022d-480b-9a6b-1a58744ce904",
+  "displayName": "obesityPlan",
+  "transitionRoutes": [ {
+    "intent": " keyWordMainMenu",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "mainMenu",
+    "name": "ea424e73-cfe8-4945-a9d1-f659988a43d9"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "a410910e-9f41-4878-8d8c-3a0f278e9534",
+    "targetPlaybook": "MASTER_AGENT"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ups, no he entendido a que te refieres.", "¿Podrías repetirlo, por favor?", "¿Disculpa?", "¿Decías?", "¿Cómo?" ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "name": "1a446e4f-9a6a-47f9-8878-f282116fb4bd"
+  }, {
+    "event": "flow.failed",
+    "triggerFulfillment": {
+    
+    },
+    "name": "4ed922c2-0c5c-4d20-b743-4608eb3057d5",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "transitionRouteGroups": [ "GLP_CATCHER" ],
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "languageCode": "es"
+  } ]
+}

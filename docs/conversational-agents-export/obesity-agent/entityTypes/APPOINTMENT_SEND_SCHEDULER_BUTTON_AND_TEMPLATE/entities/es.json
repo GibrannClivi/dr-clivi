@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE",
+    "synonyms": [ "Agendar", "Agendar cita", "Agendar consulta", "Agendar nueva cita", "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE", "CLIVI - Agendar cita" ],
+    "languageCode": "es"
+  } ]
+}

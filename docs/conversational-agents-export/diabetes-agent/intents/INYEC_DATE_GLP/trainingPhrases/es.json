@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Fecha primera aplicación",
+      "parameterId": "INYEC_DATE_GLP"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

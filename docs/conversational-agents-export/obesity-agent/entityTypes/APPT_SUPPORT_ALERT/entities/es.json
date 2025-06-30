@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "APPT_SUPPORT_ALERT",
+    "synonyms": [ "APPT_SUPPORT_ALERT", "Requiero apoyo" ],
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "d95fb499-7966-4fb5-94af-17c3ec181570",
+  "displayName": "WEB_APP_ONB",
+  "parameters": [ {
+    "id": "WEB_APP_ONB",
+    "entityType": "@WEB_APP_ONB"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

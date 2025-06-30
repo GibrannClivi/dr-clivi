@@ -1,0 +1,61 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Referred:",
+      "parameterId": "Referred"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Referred:",
+      "parameterId": "Referred"
+    }, {
+      "text": " "
+    }, {
+      "text": "Brian Ibarra:",
+      "parameterId": "Referral_name"
+    }, {
+      "text": " "
+    }, {
+      "text": "+52 55 1177 0570",
+      "parameterId": "Referral_phone"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Referred:",
+      "parameterId": "Referred"
+    }, {
+      "text": " "
+    }, {
+      "text": "Bruno:",
+      "parameterId": "Referral_name"
+    }, {
+      "text": " "
+    }, {
+      "text": "+52 55 3656 6916",
+      "parameterId": "Referral_phone"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Referred:",
+      "parameterId": "Referred"
+    }, {
+      "text": " "
+    }, {
+      "text": "Ricardo Martinez:",
+      "parameterId": "Referral_name"
+    }, {
+      "text": " "
+    }, {
+      "text": "+52 55 5555 3333",
+      "parameterId": "Referral_phone"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

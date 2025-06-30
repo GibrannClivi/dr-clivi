@@ -1,0 +1,38 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Peso",
+      "parameterId": "WEIGHT_LOG_PAGE_AND_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Enviar peso",
+      "parameterId": "WEIGHT_LOG_PAGE_AND_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "CLIVI - Peso",
+      "parameterId": "WEIGHT_LOG_PAGE_AND_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Adelante - peso",
+      "parameterId": "WEIGHT_LOG_PAGE_AND_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "WEIGHT_LOG",
+      "parameterId": "WEIGHT_LOG_PAGE_AND_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

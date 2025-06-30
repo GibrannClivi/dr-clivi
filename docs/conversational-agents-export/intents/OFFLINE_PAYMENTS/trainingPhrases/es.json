@@ -1,0 +1,38 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Codigo de pago",
+      "parameterId": "OFFLINE_PAYMENTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Pago en efectivo",
+      "parameterId": "OFFLINE_PAYMENTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Código de Pago",
+      "parameterId": "OFFLINE_PAYMENTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Referencia",
+      "parameterId": "OFFLINE_PAYMENTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Seguir con efectivo",
+      "parameterId": "OFFLINE_PAYMENTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

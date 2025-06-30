@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "No los he realizado",
+      "parameterId": "NO_LABS_SENT_REMINDER_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "NO_LABS_SENT_REMINDER_TEMPLATE",
+      "parameterId": "NO_LABS_SENT_REMINDER_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

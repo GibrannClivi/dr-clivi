@@ -1,0 +1,105 @@
+{
+  "name": "22735eee-b957-49cb-8a4e-e9223e9ac2ca",
+  "displayName": "logGlucoseTime",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "FASTING",
+              "text": "Antes"
+            }, {
+              "id": "POST_MEAL",
+              "text": "Después"
+            } ],
+            "textBody": "¿Te mediste antes o después de los alimentos? 🥗",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "FASTING",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.FASTING",
+        "value": "FASTING"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "glucoseValueLogFasting",
+    "name": "56810ca4-b7a2-499f-b861-37d1d0a86081"
+  }, {
+    "intent": "POST_MEAL",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.POST_MEAL",
+        "value": "POST_MEAL"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "glucoseValueLogPostMeal",
+    "name": "bfa97732-8eb7-4e1d-8227-baa1380d83bc"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "5f21ebd1-3b26-4aad-9d7d-9325d554f038"
+  } ],
+  "transitionRouteGroups": [ "CLUB_CATCHER" ]
+}

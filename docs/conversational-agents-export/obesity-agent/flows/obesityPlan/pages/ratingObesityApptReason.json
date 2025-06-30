@@ -1,0 +1,320 @@
+{
+  "name": "2f761ac1-337d-4c2c-a263-82a6070277e7",
+  "displayName": "ratingObesityApptReason",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Seleccionar opción",
+            "bodyText": "Hola $session.params.userContext.patient.nameDisplay, queremos saber más sobre tu calificación, ¿Qué inconveniente presentaste?.",
+            "sections": [ {
+              "rows": [ {
+                "description": "Duración de tu cita.",
+                "id": "DURATION_APPT",
+                "title": "Duración."
+              }, {
+                "description": "Puntualidad de tu especialista.",
+                "id": "PUNCTUALITY_APPT",
+                "title": "Puntualidad"
+              }, {
+                "description": "No me sentí escuchado",
+                "id": "QUALITY_APPT",
+                "title": "Calidad de tu cita"
+              }, {
+                "description": "No recibí la liga de mi cita.",
+                "id": "REMINDER_ISSUE",
+                "title": "Falló el recordatorio"
+              }, {
+                "description": "La liga de mi cita no funcionó.",
+                "id": "LINK_ISSUES",
+                "title": "Problema con la liga."
+              }, {
+                "description": "No recibí apoyo para entrar a mi cita.",
+                "id": "NO_SUPPORT",
+                "title": "No tuve asistencia"
+              } ],
+              "title": "Menú:"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "NO_SUPPORT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "No recibí asistencia",
+                "staffType": "OBESITY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "obesity_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "No recibí asistencia"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "cf9f4906-5f7e-4c32-af43-127345c81e23"
+  }, {
+    "intent": "LINK_ISSUES",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "No servía el enlace",
+                "staffType": "OBESITY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "obesity_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "No servía el enlace"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "fbfba78f-9f8e-48dc-b25c-0f1b8c1a1605"
+  }, {
+    "intent": "REMINDER_ISSUE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "No llegó el recordatorio",
+                "staffType": "OBESITY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "obesity_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "No llegó el recordatorio"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "58835409-6441-438c-88c6-a506db238f53"
+  }, {
+    "intent": "QUALITY_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "Atención del especialista",
+                "staffType": "OBESITY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "obesity_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "Atención del especialista"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "a59c82af-d0a5-4eeb-9394-228a23e6d48c"
+  }, {
+    "intent": "PUNCTUALITY_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "Atención del especialista",
+                "staffType": "OBESITY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "obesity_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "Atención del especialista"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "a1e92ea2-eb38-45fc-af7d-0b7b1e3c4385"
+  }, {
+    "intent": "DURATION_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "Duración de la cita",
+                "staffType": "OBESITY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "obesity_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "Duración de la cita"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "70bc82f1-8fe9-4b3e-8707-da256245e786"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "8021b9fd-6be1-46fc-88a1-1ba2d2ed6515",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

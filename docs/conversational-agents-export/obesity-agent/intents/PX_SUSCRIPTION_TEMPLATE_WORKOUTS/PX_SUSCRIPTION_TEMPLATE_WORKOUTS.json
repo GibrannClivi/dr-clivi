@@ -1,0 +1,10 @@
+{
+  "name": "648eb6b4-2b5c-4acb-9d85-e7f8ac4bd23a",
+  "displayName": "PX_SUSCRIPTION_TEMPLATE_WORKOUTS",
+  "parameters": [ {
+    "id": "PX_SUSCRIPTION_TEMPLATE_WORKOUTS",
+    "entityType": "@PX_SUSCRIPTION_TEMPLATE_WORKOUTS"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

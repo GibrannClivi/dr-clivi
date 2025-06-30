@@ -1,0 +1,35 @@
+{
+  "name": "cb698c01-e9ab-4c2f-9f0e-d26e96ced372",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Ok, si requieres apoyo solo escribe la palabra Clivi. Gracias!."
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"user sends that everything is 'all good' by saying it's fine, confirming it looks good, giving a thumbs up if observed, remarking 'Sounds good,' or simply indicating that everything is okay.\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and invoked END_SESSION Flow.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "the user confirms is all good",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 190,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Estoy cómodo con mi plan",
+      "parameterId": "PX_ADAPTABLE_COMFORTABLE_NUTRI_PLAN"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

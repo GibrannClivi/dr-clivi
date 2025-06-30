@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "AI_AGENT_CALLING_MAIN_MENU",
+    "synonyms": [ "AI_AGENT_CALLING_MAIN_MENU", "No, ir al menú principal" ],
+    "languageCode": "es"
+  } ]
+}

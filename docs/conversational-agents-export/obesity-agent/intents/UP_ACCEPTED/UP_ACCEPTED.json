@@ -1,0 +1,10 @@
+{
+  "name": "be7fc716-e4ec-459f-bc76-33332b29879f",
+  "displayName": "UP_ACCEPTED",
+  "parameters": [ {
+    "id": "UP_ACCEPTED",
+    "entityType": "@UP_ACCEPTED"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

@@ -1,0 +1,83 @@
+{
+  "name": "e6b9caf5-ba18-4e2a-ae37-c426c774ac7c",
+  "displayName": "logWaist",
+  "form": {
+    "parameters": [ {
+      "displayName": "WAIST_VALUE",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "¿Cuál es tu medida de cintura? (en centímetros) Escríbela por favor a continuación solo en números y con dos decimales   👇 Ejemplo: 88.95" ]
+      },
+      "languageCode": "es"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "WAIST_VALUE",
+      "value": null
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.WAIST_VALUE \u003c= 1000000 OR $session.params.WAIST_VALUE \u003e= 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "HDP_LOG",
+              "params": {
+                "type": "WAIST_CIRCUMFERENCE",
+                "unit": "CENTIMETERS",
+                "value": "$session.params.WAIST_VALUE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "logHip",
+    "name": "471aa56e-11fe-4db9-88c5-312cf7ad8971"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "3fc19dfe-b17e-4af1-8a26-143dcd4eac96",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "5bc131df-b9c6-4c59-9a7c-cc3ffbef6ea4",
+  "displayName": "UP_SUPPORT_REQUESTED",
+  "parameters": [ {
+    "id": "UP_SUPPORT_REQUESTED",
+    "entityType": "@UP_SUPPORT_REQUESTED"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

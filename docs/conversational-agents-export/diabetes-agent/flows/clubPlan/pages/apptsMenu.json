@@ -1,0 +1,170 @@
+{
+  "name": "cf6c6783-d6f9-4e5b-84e3-bcc02ebd9574",
+  "displayName": "apptsMenu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Selecciona",
+            "bodyText": "¿Qué cita quieres agendar?",
+            "sections": [ {
+              "rows": [ {
+                "description": "",
+                "id": "PSYCHOLOGIST",
+                "title": "Psicológica"
+              }, {
+                "description": "",
+                "id": "NUTRITION",
+                "title": "Nutrición"
+              }, {
+                "description": "",
+                "id": "DIABETES_ENDO",
+                "title": "Alta especialidad"
+              } ],
+              "title": "Tipos de citas"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "PSYCHOLOGIST",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "LONG",
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "0ad3ce41-4529-4c4a-9d19-dcab3cd605e9"
+  }, {
+    "intent": "NUTRITION",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "LONG",
+                "staffType": "NUTRITION"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "bd9b9eca-54b3-460b-bcc7-d9d154bb071b"
+  }, {
+    "intent": "DIABETES_ENDO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_SEND_SCHEDULER",
+              "params": {
+                "eventCommunicationType": "VIDEO",
+                "eventLength": "LONG",
+                "staffType": "DIABETES"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "87f7586d-07e7-4271-8b5b-b2dc7b586094"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "71b33393-2f59-4fe9-9669-75417b869aa2"
+  } ],
+  "transitionRouteGroups": [ "CLUB_CATCHER" ]
+}

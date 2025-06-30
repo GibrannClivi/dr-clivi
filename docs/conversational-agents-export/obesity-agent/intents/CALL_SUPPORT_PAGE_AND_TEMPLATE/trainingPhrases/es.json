@@ -1,0 +1,45 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "CALL_SUPPORT",
+      "parameterId": "CALL_SUPPORT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Llamar",
+      "parameterId": "CALL_SUPPORT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Soporte",
+      "parameterId": "CALL_SUPPORT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Centro de atención",
+      "parameterId": "CALL_SUPPORT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ayuda",
+      "parameterId": "CALL_SUPPORT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "CLICK_CALL_SUPPORT",
+      "parameterId": "CALL_SUPPORT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

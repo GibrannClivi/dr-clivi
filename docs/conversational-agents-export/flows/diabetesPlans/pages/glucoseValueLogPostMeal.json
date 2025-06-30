@@ -1,0 +1,77 @@
+{
+  "name": "8758d16f-be1b-470c-9ec5-c6cd8bac516c",
+  "displayName": "glucoseValueLogPostMeal",
+  "form": {
+    "parameters": [ {
+      "displayName": "GLUCOSE_VALUE",
+      "required": true,
+      "entityType": "@sys.number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "¿Cuál es tu valor de glucosa? (mg/dL) solo en números, por favor " ]
+      },
+      "languageCode": "es"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "GLUCOSE_VALUE",
+      "value": null
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.GLUCOSE_VALUE \u003c= 1000 OR $session.params.GLUCOSE_VALUE \u003e= 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "HDP_LOG",
+              "params": {
+                "mealTiming": "POST_MEAL",
+                "type": "BLOOD_GLUCOSE",
+                "unit": "MILLIGRAM_PER_DECILITER",
+                "value": "$session.params.GLUCOSE_VALUE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "d7422f8a-bb96-4df8-8bcc-fff210b99af1"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "41e94153-f887-45b3-8edd-d6d5c02adf18",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

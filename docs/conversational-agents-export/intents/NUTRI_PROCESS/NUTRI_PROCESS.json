@@ -1,0 +1,10 @@
+{
+  "name": "30257fe8-d87c-4a98-b3c2-d20b6cfc0418",
+  "displayName": "NUTRI_PROCESS",
+  "parameters": [ {
+    "id": "NUTRI_PROCESS",
+    "entityType": "@NUTRI_PROCESS"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

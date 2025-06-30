@@ -1,0 +1,187 @@
+{
+  "name": "8d4ed8f9-8ed1-4694-8776-9fb5854fa139",
+  "displayName": "tutorialMed",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "OZEMPIC",
+              "text": "Ozempic"
+            }, {
+              "id": "SAXENDA",
+              "text": "Saxenda"
+            }, {
+              "id": "WEGOVY",
+              "text": "Wegovy"
+            } ],
+            "textBody": "Selecciona tu medicamento.",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "WEGOVY",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Aplicación semanal de medicamento GLP." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "Onboarding Wegovy (1).mp4",
+                    "pathCloudFile": "gs://dtwo-ec5ea.appspot.com/msg-attachments/Onboarding Wegovy (1).mp4",
+                    "type": "VIDEO",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FOnboarding%20Wegovy%20(1).mp4?alt=media\u0026token=2db6a045-eaeb-4693-a67e-396f3e8cf5ed"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "30bd980a-909b-4fba-a61c-53582846cffe"
+  }, {
+    "intent": "SAXENDA",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Aplicación diaria de medicamento GLP." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "Cómo Aplicar MedicamentosCliviZero.mp4",
+                    "pathCloudFile": "gs://dtwo-ec5ea.appspot.com/msg-attachments/Cómo Aplicar MedicamentosCliviZero.mp4",
+                    "type": "VIDEO",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FCo%CC%81mo%20Aplicar%20MedicamentosCliviZero.mp4?alt=media\u0026token=1a726fe7-6e58-40c0-b62e-d47b6102780c"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "5478aa89-27f7-4691-9a2b-8668ba042496"
+  }, {
+    "intent": "OZEMPIC",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Aplicación semanal de medicamento GLP." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "Onboarding Wegovy (1).mp4",
+                    "pathCloudFile": "gs://dtwo-ec5ea.appspot.com/msg-attachments/Onboarding Wegovy (1).mp4",
+                    "type": "VIDEO",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FOnboarding%20Wegovy%20(1).mp4?alt=media\u0026token=2db6a045-eaeb-4693-a67e-396f3e8cf5ed"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "51771b6b-5569-4268-9dee-da943c4c0f3c"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "helpDeskSubMenu",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "3d066ac1-d1b5-44fa-b84b-6c15bcc04bb7"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

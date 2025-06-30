@@ -1,0 +1,54 @@
+{
+  "name": "4dbdcf2e-7d71-49be-abca-c7c54e5cb1fd",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Lo lamento, no entendí tu petición voy a escalar tu caso con un especialista. Gracias por tu paciencia."
+    }
+  }, {
+    "toolUse": {
+      "tool": "QUESTION_SET_LAST_MESSAGE",
+      "action": "QUESTION_SET_LAST_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "CALL_FUNCTION",
+          "category": "DIABETES",
+          "functionName": "QUESTION_SET_LAST_MESSAGE",
+          "isKnownQuestion": true,
+          "sendToHelpdesk": true
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"User is asking specific medical questions\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent invoked tool QUESTION_SET_LAST_MESSAGE and flow END_SESSION. ",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user asks specific medical questions",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 295,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

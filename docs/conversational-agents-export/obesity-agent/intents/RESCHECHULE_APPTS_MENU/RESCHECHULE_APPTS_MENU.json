@@ -1,0 +1,10 @@
+{
+  "name": "c15138bc-5d30-4ea7-a164-98ee77934ee1",
+  "displayName": "RESCHECHULE_APPTS_MENU",
+  "parameters": [ {
+    "id": "RESCHECHULE_APPTS_MENU",
+    "entityType": "@RESCHECHULE_APPTS_MENU"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 7
+}

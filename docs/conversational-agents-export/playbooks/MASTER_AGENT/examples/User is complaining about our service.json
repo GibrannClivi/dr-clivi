@@ -1,0 +1,54 @@
+{
+  "name": "0a8a5057-0a42-4071-8f55-78fb1ce90472",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Lamento mucho tu mala experiencia. Estoy escalando tu caso con un agente de soporte. Dame unos momentos. Por favor."
+    }
+  }, {
+    "toolUse": {
+      "tool": "QUESTION_SET_LAST_MESSAGE",
+      "action": "QUESTION_SET_LAST_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "CALL_FUNCTION",
+          "category": "QUEJAS",
+          "functionName": "QUESTION_SET_LAST_MESSAGE",
+          "isKnownQuestion": true,
+          "sendToHelpdesk": true
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"user is expressing significant dissatisfaction with our service, citing critical issues: functional deficiencies such as failing core features, performance degradation, and crashes; frustrating customer support with long waits, unhelpful agents, and unresolved problems. This user also complains about unclear billing, a difficult interface, restrictive policies, and persistent unreliability exemplified by frequent outages and slow performance, all diminishing their overall experience and the perceived value of the service.\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and invoked tool called QUESTION_SET_LAST_MESSAGE, then invoked flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "User is complaining about our service",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 374,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

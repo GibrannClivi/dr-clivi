@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Más tarde",
+      "parameterId": "PATIENT_CONTACT_LATER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

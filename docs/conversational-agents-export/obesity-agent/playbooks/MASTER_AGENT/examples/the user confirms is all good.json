@@ -1,0 +1,31 @@
+{
+  "name": "4e4a35e7-8099-485c-b6a2-42d28e3cd960",
+  "actions": [ {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"user sends that everything is 'all good' by saying it's fine, confirming it looks good, giving a thumbs up if observed, remarking 'Sounds good,' or simply indicating that everything is okay.\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent do not respond anything and invoked END_SESSION flow.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "the user confirms is all good",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 167,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "undetected"
+}

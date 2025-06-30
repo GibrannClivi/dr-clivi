@@ -1,0 +1,38 @@
+{
+  "name": "c9d53faa-73bd-4da6-9450-39c793da7fe3",
+  "actions": [ {
+    "playbookInvocation": {
+      "playbook": "NUTRITION_AI_AGENT",
+      "playbookInput": {
+        "precedingConversationSummary": "The userRequest input parameter: \"user explicitly requests a personalized meal plan or expresses a clear intention to receive structured dietary guidance\"",
+        "actionParameters": {
+          "userRequest": "user explicitly requests a personalized meal plan or expresses a clear intention to receive structured dietary guidance"
+        }
+      },
+      "playbookOutput": {
+        "executionSummary": "Agent invoked tool and ended session.",
+        "actionParameters": {
+        
+        }
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"user explicitly requests a personalized meal plan or expresses a clear intention to receive structured dietary guidance\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent invoked playbook NUTRITION_AI_AGENT",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user explicitly requests a personalized meal plan",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 228,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "undetected"
+}

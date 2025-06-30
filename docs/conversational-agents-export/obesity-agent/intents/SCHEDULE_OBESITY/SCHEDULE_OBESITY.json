@@ -1,0 +1,10 @@
+{
+  "name": "b770f185-4df8-497b-8356-8f6da510450f",
+  "displayName": "SCHEDULE_OBESITY",
+  "parameters": [ {
+    "id": "SCHEDULE_OBESITY",
+    "entityType": "@SCHEDULE_OBESITY"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

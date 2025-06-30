@@ -1,0 +1,32 @@
+{
+  "name": "9ffe7bd7-4344-4a6b-ac18-3d8d80501380",
+  "displayName": "sendQuestion",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Por favor, escribe tu pregunta más detallada o sugerencia $session.params.userContext.patient.nameDisplay, ¡Gracias!" ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "helpDeskSubMenu",
+    "name": "0d88d00e-914e-4f94-a6bf-7c6870d26544"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

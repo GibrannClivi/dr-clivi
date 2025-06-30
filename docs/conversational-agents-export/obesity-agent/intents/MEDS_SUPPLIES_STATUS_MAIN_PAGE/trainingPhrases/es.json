@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Estatus de envíos",
+      "parameterId": "MEDS_SUPPLIES_STATUS_MAIN_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "MEDS_GLP",
+      "parameterId": "MEDS_SUPPLIES_STATUS_MAIN_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

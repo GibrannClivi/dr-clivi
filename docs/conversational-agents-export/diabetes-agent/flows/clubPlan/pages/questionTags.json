@@ -1,0 +1,177 @@
+{
+  "name": "2b1b04d7-9ecb-434f-b6e0-7f3b959a0130",
+  "displayName": "questionTags",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "A quién va dirigida",
+            "bodyText": "Direcciona duda/solicitud",
+            "sections": [ {
+              "rows": [ {
+                "description": "Pregunta a Alta especialidad",
+                "id": "HIGH_SPECIALIZATION_QUESTION_TAG",
+                "title": "Alta especialidad"
+              }, {
+                "description": "Pregunta a Nutrición",
+                "id": "NUTRITION_QUESTION_TAG",
+                "title": "Nutrición"
+              }, {
+                "description": "Pregunta a Psicología",
+                "id": "PSYCHO_QUESTION_TAG",
+                "title": "Psicología"
+              }, {
+                "description": "Soporte/servicio",
+                "id": "PX_QUESTION_TAG",
+                "title": "Requiero soporte"
+              }, {
+                "description": "Equipo de logística",
+                "id": "SUPPLIES_QUESTION_TAG",
+                "title": "Estatus envíos"
+              } ],
+              "title": "Menú preguntas"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "HIGH_SPECIALIZATION_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalle de tu pregunta y/o solicitud. Por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "highSpecializationQuestionTag",
+    "name": "b54864fc-40e3-49a7-992d-50ff161eb70e"
+  }, {
+    "intent": "NUTRITION_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalle de tu pregunta y/o solicitud. Por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "nutritionQuestionTag",
+    "name": "89d4ad62-8109-4a63-a5a2-8ae4a49c0a5e"
+  }, {
+    "intent": "PSYCHO_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalle de tu pregunta y/o solicitud. Por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "psychoQuestionTag",
+    "name": "4f4cfa11-3964-485b-afdd-cf7e8a6756af"
+  }, {
+    "intent": "PX_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "helpDeskSubMenu",
+    "name": "2c26b16d-1bd0-4a9e-aaf5-eca8f094e477"
+  }, {
+    "intent": "SUPPLIES_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Envíanos más detalle de tu pregunta y/o solicitud. Por favor. " ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "suppliesQuestionTag",
+    "name": "968a9793-2e02-4580-b0fb-3be44ca36c92"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "591078e8-7963-4801-909c-57386d324d85"
+  } ],
+  "transitionRouteGroups": [ "CLUB_CATCHER" ]
+}

@@ -1,0 +1,160 @@
+{
+  "name": "96bfc816-0176-44c9-a7fc-91cae45e72e5",
+  "displayName": "offlinePayments",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "STORES",
+              "text": "Tiendas físicas"
+            }, {
+              "id": "BANK_TRANSFER",
+              "text": "Transacción bancaria"
+            }, {
+              "id": "WALMART_STORES",
+              "text": "Tiendas de Walmart"
+            } ],
+            "textBody": "Elige la mejor opción para ti",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "STORES",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "STORES_WAC.png",
+                    "pathCloudFile": "msg-attachments/STORES_WAC.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FSTORES_WAC.png?alt=media\u0026token=4023fb90-9093-47f6-8431-977aee2d42e6"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "76df0d44-6bd3-4760-9bfb-095f8715edf4"
+  }, {
+    "intent": "BANK_TRANSFER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "bankPaymentOptions",
+    "name": "0f43e85c-b45f-4a51-97d4-4c572b84cef0"
+  }, {
+    "intent": "WALMART_STORES",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "file": {
+                "fileCloudMetadata": {
+                  "fileProperties": {
+                    "bucketName": "dtwo-ec5ea.appspot.com",
+                    "name": "WALMART_WAC.png",
+                    "pathCloudFile": "msg-attachments/WALMART_WAC.png",
+                    "type": "IMAGE",
+                    "urlAuthenticated": "https://firebasestorage.googleapis.com/v0/b/dtwo-ec5ea.appspot.com/o/msg-attachments%2FWALMART_WAC.png?alt=media\u0026token=8f174d40-2b9d-41c7-bb6f-018a0ea82818"
+                  },
+                  "typeData": {
+                    "type": "ALL"
+                  }
+                },
+                "skipStoringFileMetadata": true
+              },
+              "type": "SESSION_FILE"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "aaaa06f1-303f-440a-a926-00b6aa0a49c5"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "4e9c7a60-23f2-4373-8e65-f4980c962727"
+  } ],
+  "transitionRouteGroups": [ "planStatusRouteGroup" ]
+}

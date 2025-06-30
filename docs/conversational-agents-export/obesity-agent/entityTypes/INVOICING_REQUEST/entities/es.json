@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "INVOICING_REQUEST",
+    "synonyms": [ "Centro de facturación", "INVOICING_REQUEST" ],
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,638 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Si presento síntomas",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Necesito un especialista",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Efectos secundarios",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tengo efectos secundarios al medicamento",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Diarrea",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Dolor abdominal",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Vómito",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Gastritis",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Acidez",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Distensión abdominal",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Náusea",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Reflujo",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Eructos",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "problemas para respirar",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "sabor en la boca",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "efectos secundarios",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "urticaria",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "sarpullido",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me pica",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Mi pulso",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "irritación",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Mi pulso está muy rápido",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No me saben las comidas",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "flatulencias",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "agotada",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "agotado",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me siento demasiado cansado",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me arde el estómago",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "reflujo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "gastritis",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No",
+      "auto": true
+    }, {
+      "text": " puedo ",
+      "auto": true
+    }, {
+      "text": "comer",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No puedo pasar alimentos"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no puedo tragar",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No puedo comer me duele",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "palpitaciones",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Hinchazón de lengua",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "hinchazon de cara y boca",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "cara inchada",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tengo mucho dolor",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "dolor fuerte de espalda",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "vomitando demasiado",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "estreñimiento",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Muchas náuseas",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "mucha diarrea",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "cuerpo cortado",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me siento débil",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ardor en el pecho",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "ardor en el estomago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Acidez estomacal",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Dolor fuerte",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Estoy mal de la panza",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Siento ganas de vomitar",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "inchado",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Estoy inflamada",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Estoy inflamado",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "inflamada",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "inflamado",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "muchos gases",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "diarrea",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "nauseas",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "duele el abdomen",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tengo fuerte dolor de estomago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me cayó mal el medicamento",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "no me siento bien del estomago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "duele el estomago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "molestias gastrointestinales",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "estómago anda revuelto",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "duele la panza",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "molestias en el estómago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "problemas digestivos",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "mi estómago está revuelto",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "dolor agudo en el estómago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "ardor en el estómago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "fuerte dolor en el pecho",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "náuseas y vómitos",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me duele mucho el estómago y estoy muy inflamado",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "mal del estómago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "problemas estomacales",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "dolor intenso",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Mi estómago está muy sensible",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "incómodo en el estómago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me duele el estómago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me siento débil",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "dolor agudo en el abdomen",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "dolor persistente en el estómago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "hinchado y con gases",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "dolor punzante",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "dolor de estómago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "dolor constante en el estómago",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "estómago está muy irritable",
+      "parameterId": "SIDE_EFFECTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

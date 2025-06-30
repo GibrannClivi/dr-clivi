@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Actualizar videollamada",
+      "parameterId": "UPDATE_VIDEOCALL"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

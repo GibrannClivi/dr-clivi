@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "CSAT_GOOD",
+    "synonyms": [ "CSAT_GOOD", "Muy bueno" ],
+    "languageCode": "es"
+  } ]
+}

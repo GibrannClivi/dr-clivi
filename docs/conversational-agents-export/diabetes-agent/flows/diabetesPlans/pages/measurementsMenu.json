@@ -1,0 +1,98 @@
+{
+  "name": "3c11be32-3665-4a27-b28d-a2d07617f87d",
+  "displayName": "measurementsMenu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Seleccionar",
+            "bodyText": "Selecciona una opción.",
+            "sections": [ {
+              "rows": [ {
+                "description": "Envío de glucosa",
+                "id": "LOG_GLUCOSE",
+                "title": "Glucosa"
+              }, {
+                "description": "Enviar peso",
+                "id": "WEIGHT_LOG",
+                "title": "Peso"
+              }, {
+                "description": "Enviar mediciones",
+                "id": "WAIST_CIRCUMFERENCE_LOG",
+                "title": "Cintura y Cadera"
+              }, {
+                "description": "Necesito apoyo",
+                "id": "PX_QUESTION_TAG",
+                "title": "Requiero soporte"
+              } ],
+              "title": "Menú mediciones"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "LOG_GLUCOSE_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "logGlucoseTime",
+    "name": "5d9d3aac-8fb6-4f06-bb44-a6e0672b2c7c"
+  }, {
+    "intent": "WEIGHT_LOG_PAGE_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "logWeight",
+    "name": "a17854d4-ba07-4ec3-aae4-0e22f88087e5"
+  }, {
+    "intent": "WAIST_CIRCUMFERENCE_LOG_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "logWaist",
+    "name": "2e27adad-ced5-4db3-95c7-4473f613513f"
+  }, {
+    "intent": "PX_QUESTION_TAG",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "helpDeskSubMenu",
+    "name": "cffe7094-6bd8-4ac9-b0d9-5fea81357142"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "096ddba3-4934-4ea1-8c29-d60c707d89fe",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

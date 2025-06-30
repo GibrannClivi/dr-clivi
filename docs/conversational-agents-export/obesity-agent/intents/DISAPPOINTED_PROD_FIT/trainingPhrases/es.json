@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Muy decepcionado",
+      "parameterId": "DISAPPOINTED_PROD_FIT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "e2b3ea22-9e22-4e61-a5a3-78778a8891e3",
+  "tags": [ "#appointments" ],
+  "displayName": "Appointment Menu",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "APPOINTMENTS"
+        },
+        "languageCode": "es"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "APPOINTMENTS_MAIN_MENU_PAGE"
+      },
+      "currentPage": {
+        "name": "apptsMenu",
+        "flow": "obesityPlan"
+      },
+      "currentFlow": {
+        "name": "obesityPlan"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1744209997,
+    "nanos": 698701000
+  },
+  "testConfig": {
+    "trackingParameters": [ "appointments_main_menu_page" ],
+    "flow": "obesityPlan",
+    "page": "Start Page"
+  },
+  "languageCode": "es"
+}

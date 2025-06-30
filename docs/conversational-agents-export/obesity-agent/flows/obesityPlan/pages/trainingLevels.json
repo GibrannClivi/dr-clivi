@@ -1,0 +1,47 @@
+{
+  "name": "41c948f8-e0eb-40b2-8d67-27f7cbdf5d82",
+  "displayName": "trainingLevels",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "LOW_IMPACT_LEVEL",
+              "text": "Bajo impacto"
+            }, {
+              "id": "BASIC_LEVEL",
+              "text": "Básico"
+            }, {
+              "id": "INTERMEDIATE_LEVEL",
+              "text": "Intermedio"
+            } ],
+            "textBody": "¿En qué nivel estás?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "LOW_IMPACT_LEVEL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "name": "09363e81-02dc-43f2-b952-1cf5d449d918"
+  } ]
+}

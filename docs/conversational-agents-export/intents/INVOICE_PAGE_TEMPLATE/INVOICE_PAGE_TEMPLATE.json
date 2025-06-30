@@ -1,0 +1,10 @@
+{
+  "name": "b45fd92c-4c5d-4037-9fcf-82daee69cb4d",
+  "displayName": "INVOICE_PAGE_TEMPLATE",
+  "parameters": [ {
+    "id": "INVOICE_PAGE_TEMPLATE",
+    "entityType": "@INVOICE_PAGE_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

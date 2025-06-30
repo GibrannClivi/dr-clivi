@@ -1,0 +1,10 @@
+{
+  "name": "9f3c2b3a-2703-4580-818e-66bbd6cacc78",
+  "displayName": "SEND_DM_TEMPLATE",
+  "parameters": [ {
+    "id": "SEND_DM_TEMPLATE",
+    "entityType": "@SEND_DM_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

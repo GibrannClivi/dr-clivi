@@ -1,0 +1,257 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Lo sentimos, pero no podemos responder a su mensaje",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": ". Por favor, deje su nombre y dirección de correo electrónico, y "
+    }, {
+      "text": "nos pondremos en contacto",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS",
+      "auto": true
+    }, {
+      "text": " con usted en 24 horas."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "¡Hola! Queríamos hacerte saber que hemos recibido tu mensaje",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": " y que "
+    }, {
+      "text": "nos pondremos en contacto",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS",
+      "auto": true
+    }, {
+      "text": " contigo antes de cerrar a las"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Hola, gracias por ponerse en contacto con nosotros",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": ". "
+    }, {
+      "text": "Nuestro equipo se pondrá en contacto con usted",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": " en un plazo de 24 horas. Si necesita ayuda de inmediato, no dude en ponerse en contacto con nosotros a través de nuestro chat en vivo en el sitio web"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "En este momento no podemos atenderte",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": ", pero te responderemos lo antes posible"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Nuestro equipo se comunicará",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": " contigo pronto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Gracias por comunicarte",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS",
+      "auto": true
+    }, {
+      "text": " con ",
+      "auto": true
+    }, {
+      "text": "Flexo Grúas"
+    }, {
+      "text": ". ",
+      "auto": true
+    }, {
+      "text": "¿Cómo podemos ayudarte?",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Estamos fuera de horario",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": ", pero pronto te responderemos"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Gracias por comunicarte",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS",
+      "auto": true
+    }, {
+      "text": " con nosotros",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "En unos momentos te responderemos",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Hola 👋 gracias por tu mensaje",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Gracias por haberte comunicado",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": " con nosotros"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Gracias por escribirnos",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS",
+      "auto": true
+    }, {
+      "text": ", ¿en qué podemos ayudarte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tu solicitud ha sido registrada",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Hola, gracias por comunicarte con el",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": " equipo de atención"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Gracias por tu interés",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": " en nuestros "
+    }, {
+      "text": "servicios",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Nuestro horario de atención",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": " es de lunes a viernes"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Nuestro horario de atención",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Gracias por comunicarte",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": " con"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Gracias por escribirnos",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Uno de nuestros asesores",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    }, {
+      "text": " te atenderá"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "¿Cómo podemos ayudarte?",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "En breve te atenderemos",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Nuestro horario es",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Nos pondremos en contacto",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Gracias por contactarnos",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Gracias por tu mensaje",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Gracias por comunicarte",
+      "parameterId": "AUTO_REPLIES_WHATSAPPS_BUSINESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

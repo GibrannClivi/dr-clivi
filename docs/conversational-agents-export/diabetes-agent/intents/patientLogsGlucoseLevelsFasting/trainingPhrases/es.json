@@ -1,0 +1,353 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "110",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " en "
+    }, {
+      "text": "ayunas",
+      "parameterId": "FASTING"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Mi glucosa "
+    }, {
+      "text": "en ayunas",
+      "parameterId": "FASTING"
+    }, {
+      "text": " es de "
+    }, {
+      "text": "105",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tengo "
+    }, {
+      "text": "100",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "en ayunas",
+      "parameterId": "FASTING"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Mi glucosa "
+    }, {
+      "text": "antes",
+      "parameterId": "FASTING"
+    }, {
+      "text": " de la cena es de "
+    }, {
+      "text": "120",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Mi glucosa "
+    }, {
+      "text": "antes del",
+      "parameterId": "FASTING"
+    }, {
+      "text": " almuerzo es de "
+    }, {
+      "text": "120",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Mi glucosa en "
+    }, {
+      "text": "ayunas",
+      "parameterId": "FASTING"
+    }, {
+      "text": " es de "
+    }, {
+      "text": "95",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "80",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " en vio chequeo de glucosa "
+    }, {
+      "text": "antes de",
+      "parameterId": "FASTING"
+    }, {
+      "text": " desayunar"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Tengo "
+    }, {
+      "text": "83",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " de glucosa  "
+    }, {
+      "text": "antes de desayunar",
+      "parameterId": "FASTING"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "80",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " en "
+    }, {
+      "text": "ayunas",
+      "parameterId": "FASTING"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "90",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " en "
+    }, {
+      "text": "ayuna",
+      "parameterId": "FASTING"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ciento catorce",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "al despertarme",
+      "parameterId": "FASTING"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "amaneci",
+      "parameterId": "FASTING"
+    }, {
+      "text": " en "
+    }, {
+      "text": "80",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Amanecí",
+      "parameterId": "FASTING"
+    }, {
+      "text": " en "
+    }, {
+      "text": "70",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "noventa",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "en ayunas",
+      "parameterId": "FASTING"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "amaneci",
+      "parameterId": "FASTING"
+    }, {
+      "text": " en "
+    }, {
+      "text": "90",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " de glucosa"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "mi azucar "
+    }, {
+      "text": "amaneció",
+      "parameterId": "FASTING"
+    }, {
+      "text": " en "
+    }, {
+      "text": "120",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "mi medición es de "
+    }, {
+      "text": "240",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "en ayunas",
+      "parameterId": "FASTING"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "me salió en "
+    }, {
+      "text": "170",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "al despertar",
+      "parameterId": "FASTING"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "170",
+      "parameterId": "GLUCOSE_VALUE"
+    }, {
+      "text": " "
+    }, {
+      "text": "antes de los",
+      "parameterId": "FASTING"
+    }, {
+      "text": " alimentos"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Al despertarme",
+      "parameterId": "FASTING"
+    }, {
+      "text": " "
+    }, {
+      "text": "114",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "En ayunas",
+      "parameterId": "FASTING"
+    }, {
+      "text": " tengo "
+    }, {
+      "text": "120",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "en ayuno",
+      "parameterId": "FASTING"
+    }, {
+      "text": " me salió "
+    }, {
+      "text": "199",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ayunado",
+      "parameterId": "FASTING"
+    }, {
+      "text": " con "
+    }, {
+      "text": "176",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "ayuno",
+      "parameterId": "FASTING"
+    }, {
+      "text": " "
+    }, {
+      "text": "230",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "En Ayunas",
+      "parameterId": "FASTING"
+    }, {
+      "text": " tengo "
+    }, {
+      "text": "144",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "En la mañana "
+    }, {
+      "text": "en ayunas",
+      "parameterId": "FASTING"
+    }, {
+      "text": " traigo "
+    }, {
+      "text": "350",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "en la mañana",
+      "parameterId": "FASTING"
+    }, {
+      "text": " tengo "
+    }, {
+      "text": "277",
+      "parameterId": "GLUCOSE_VALUE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

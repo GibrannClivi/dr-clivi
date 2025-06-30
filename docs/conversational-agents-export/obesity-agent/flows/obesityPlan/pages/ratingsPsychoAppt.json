@@ -1,0 +1,175 @@
+{
+  "name": "8615c0e1-5849-4950-86c8-a77c03cb23f9",
+  "displayName": "ratingsPsychoAppt",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "GOOD_PSYCHO",
+              "text": "Muy satisfecho"
+            }, {
+              "id": "REGULAR_PSYCHO",
+              "text": "Neutral"
+            }, {
+              "id": "BAD_PSYCHO",
+              "text": "Nada satisfecho"
+            } ],
+            "textBody": "Califica tu consulta de Psicología, presiona abajo",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "GOOD_PSYCHO",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hola! 👋 Para CLIVI es muy importante conocer tu buena opinión y compartirla con todos los Mexicanos para poder ayudarlos a mejorar su calidad de vida 💜. Por esta razón queremos pedir tu apoyo para que nos compartas algunos comentarios acerca de tu experiencia con el Tratamiento Integral en CLIVI. Da un toque a la liga 👇 https://g.page/r/CX0ThqXe8bRlEAE/review" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 5,
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "b60e3afe-c112-47b9-896d-ae1aa7b5ad35"
+  }, {
+    "intent": "REGULAR_PSYCHO",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias, ¿tienes alguna sugerencia para nosotros? Queremos escucharte. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 3,
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "ratingPsicoAppReason",
+    "name": "743e7485-6807-4a9a-ac35-ea124da045f9"
+  }, {
+    "intent": "BAD_PSYCHO",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sentimos mucho tu mala experiencia ¿Tienes alguna sugerencia para nosotros? Queremos escucharte. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "rating": 1,
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "ratingPsicoAppReason",
+    "name": "dcf37ba0-abd4-4afd-8cc5-fed8987a6bc1"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "c08852cd-0907-4dc3-b84e-de302b629fdc"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

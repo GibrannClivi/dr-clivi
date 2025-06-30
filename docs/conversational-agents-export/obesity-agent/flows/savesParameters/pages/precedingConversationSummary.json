@@ -1,0 +1,22 @@
+{
+  "name": "bd69d5f1-8a69-4f4d-b54b-75cfd5c4d759",
+  "displayName": "precedingConversationSummary",
+  "form": {
+    "parameters": [ {
+      "displayName": "precedingConversationSummary",
+      "entityType": "@sys.any",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.precedingConversationSummary != \"null\"",
+    "triggerFulfillment": {
+    
+    },
+    "name": "d54a7d73-5221-4123-be85-5d7c1904566a"
+  } ]
+}

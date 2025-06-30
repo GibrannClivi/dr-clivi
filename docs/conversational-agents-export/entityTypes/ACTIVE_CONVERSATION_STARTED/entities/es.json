@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "ACTIVE_CONVERSATION_STARTED",
+    "synonyms": [ "ACTIVE_CONVERSATION_STARTED", "Comenzar", "Iniciar conversación", "Iniciar sesión" ],
+    "languageCode": "es"
+  } ]
+}

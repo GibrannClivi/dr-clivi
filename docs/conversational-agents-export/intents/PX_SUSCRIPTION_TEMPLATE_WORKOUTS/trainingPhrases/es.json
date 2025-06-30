@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Inscribirme a entrenar",
+      "parameterId": "PX_SUSCRIPTION_TEMPLATE_WORKOUTS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,1393 @@
+{
+  "name": "8a49267b-d3fc-447a-aa89-d8baa3671482",
+  "displayName": "HELPDESK_CATCHER",
+  "transitionRoutes": [ {
+    "intent": "END_SESSION_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "abd183d1-d75c-492a-8927-a0d22bfbce84"
+  }, {
+    "intent": " WEIGHT_LOG_PAGE_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "bb6200da-38ed-4c2a-8a41-c680fc8c4e87"
+  }, {
+    "intent": "APPOINTMENTS_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "5ef2814c-f4da-427e-a772-73071a2cef67"
+  }, {
+    "intent": "LOG_BODY_MEASUREMENTS_TEMPLATE_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "896c1a5c-a4c6-470b-9eb7-d4dbdcb2fd20"
+  }, {
+    "intent": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "28e1df60-cf88-42fb-8933-dd91ed8fd250"
+  }, {
+    "intent": "QUESTION_TEMPLATE_MAIN_MENU_PAGE_REMINDER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "ddc63ece-48a3-4598-a4ba-6b4a06eac7f1"
+  }, {
+    "intent": "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "83a93f72-4ae6-4a5c-8a02-769071145176"
+  }, {
+    "intent": "MEASUREMENTS_REPORT_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "94e02c2e-6cf5-4bc9-9c9b-1b17a9852943"
+  }, {
+    "intent": " keyWordMainMenu",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "45293115-1d0b-4215-b8e4-69899f96a73e"
+  }, {
+    "intent": "INVOICE_LABS_MAIN_MENU_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "eacb4af5-33b2-4ff5-882c-c4c6214ff1df"
+  }, {
+    "intent": "NO_NEEDED_QUESTION_PATIENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "6dbc9b75-2206-4d44-a8ba-483187d9e4c3"
+  }, {
+    "intent": "MEDS_SUPPLIES_STATUS_MAIN_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "58a42254-37e2-4b97-ae2b-d0d8f2dc8c0a"
+  }, {
+    "intent": "WAIST_CIRCUMFERENCE_LOG_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "96ea9485-83dd-4785-8afa-94889c45de5e"
+  }, {
+    "intent": "NECK_LOG_PAGE_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "46f60fc2-3315-4c8b-b02a-fe588ad58edc"
+  }, {
+    "intent": "HIGH_SPECIALIZATION_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "97a130d3-7580-4cf6-ae4f-437e1e3ee462"
+  }, {
+    "intent": "NUTRITION_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "e394029e-983f-49d6-baf0-683ee514bd3d"
+  }, {
+    "intent": "PSYCHO_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "a5b7d059-bbeb-4c3d-bad8-175f8627d345"
+  }, {
+    "intent": "PX_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "8001a185-f5ce-4b73-ab7c-bff0bb7a8408"
+  }, {
+    "intent": "FULL_REPORT_BUTTON_PAGE_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "2b5161fd-8bdd-43d2-866f-9d1e10701d06"
+  }, {
+    "intent": "INVOICE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "7b698e30-d7cc-4906-9e1a-cad24ba832a1"
+  }, {
+    "intent": "UPLOAD_LABS",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "0ba11e76-5423-4c6b-b399-51f68d5538ea"
+  }, {
+    "intent": "CALL_SUPPORT_PAGE_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "7a950282-cc4f-4700-8a18-53549f83c742"
+  }, {
+    "intent": "ID_TRACKING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "c54d8aaa-538b-4d0e-a036-6896af5746e6"
+  }, {
+    "intent": "IMAGE_POD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "708c93dd-e3cc-42b7-9d1f-14094ff3b5be"
+  }, {
+    "intent": "YES_MEASURMENT_LOG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "43b9c0a3-905c-4de1-b77c-d9d1274d21f2"
+  }, {
+    "intent": "NO_MEASURMENT_LOG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "f9f5d03b-38c7-4315-b0a5-41e101c09c73"
+  }, {
+    "intent": "YES_I_DO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "1cfdd4d6-ccd4-406e-8767-cd73672aac53"
+  }, {
+    "intent": "I_DONT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "1b6e4dca-48f5-40cd-82f1-4ed0c899fb99"
+  }, {
+    "intent": "INVOICE_VIEW",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "056d2c81-8e5c-4889-baf5-780ebe03a5c3"
+  }, {
+    "intent": "INVOICE_INFO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "38898dc8-98b1-430b-87f7-70ea1367153c"
+  }, {
+    "intent": "LAST_PRESCRIPTION_BUTTON_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "378e2f93-f123-44fb-8e2b-62a008a14dfb"
+  }, {
+    "intent": "LAST_ORDER_BUTTON_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "3107b1b2-bfac-45ca-9b58-803e5ac9b05a"
+  }, {
+    "intent": "LAST_NUTRITION_PLAN_BUTTON_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "61df741f-02d3-40a3-bcd2-98ec720dc607"
+  }, {
+    "intent": "LAST_LABS_RESULTS_BUTTON_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "7d743896-9c0d-4cf9-839c-2be746424c91"
+  }, {
+    "intent": "PSYCHOLOGIST",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "be4e9588-8b9e-4108-ad17-44aa6577005d"
+  }, {
+    "intent": "NUTRITION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "b71d197f-588f-4716-8297-b3142da1ec3b"
+  }, {
+    "intent": "OBESITY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "8fce934c-fb49-45fa-9925-e8ea80810e3f"
+  }, {
+    "intent": "PSYCHOLOGY_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "4bc3fe05-bcc8-4d14-a5bb-df5cbccb7cf7"
+  }, {
+    "intent": "OBESITY_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "356c7910-da37-48f4-b5d5-aaac3ae5ae7d"
+  }, {
+    "intent": "NUTRITION_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "1e98a8a7-9713-4d77-b17d-a569377cb0ff"
+  }, {
+    "intent": "SPORTS_MEDICINE_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "98cbd835-3255-4c25-b753-5fe36cf40194"
+  }, {
+    "intent": "FORGOT_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "45a2fc04-0a02-4181-868c-195187fde76f"
+  }, {
+    "intent": "UNEXPECTED_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "43e53acc-b32b-4c90-8bd3-728398153d57"
+  }, {
+    "intent": "BUSSY_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "25245b17-f5ca-4979-9a87-b349f7cf88b2"
+  }, {
+    "intent": "NO_NEEDED_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "029cf0fa-51c9-40bf-8a2e-594049df58fb"
+  }, {
+    "intent": "ISSUE_HOUR_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "c24d60f6-a3b4-48c2-bdbf-e38bd628af8d"
+  }, {
+    "intent": "RESCHECHULE_APPTS_MENU",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "7ed995d8-d1c0-4a68-b630-7042fb5eaf1a"
+  }, {
+    "intent": "APPT_SHOW_CANCEL_LIST",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "6f2d5cbb-35e9-4cbd-bb56-e9cc108e2295"
+  }, {
+    "intent": "HIGH_SPECIALIZATION_QUESTION_TAG_AUDIO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "02bba0da-51b9-445b-883e-dc814460041e"
+  }, {
+    "intent": "NUTRITION_QUESTION_TAG_AUDIO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "f8eb3049-9511-48b0-9077-6c24b26eff74"
+  }, {
+    "intent": "PSYCHO_QUESTION_TAG",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "c970dc50-2189-4a86-a315-07a309930972"
+  }, {
+    "intent": "PX_QUESTION_TAG_AUDIO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "e5f4a15f-b56d-48bf-8396-83da92d89675"
+  }, {
+    "intent": "SUPPLIES_QUESTION_TAG_AUDIO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "c7fd781e-3445-4113-acc8-a8a60e568f90"
+  }, {
+    "intent": "AMAZON_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "2ea12616-06d3-4c80-a222-ddfad72bdf2c"
+  }, {
+    "intent": "UBER_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "3e174d1e-f6ee-4ab8-8694-07e919a08cab"
+  }, {
+    "intent": "CASHI_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "a3281db0-aef7-4055-b8fa-fb088123e6ff"
+  }, {
+    "intent": "GOOGLE_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "e9d0f6c1-3fba-4b79-be11-fc651fb617e5"
+  }, {
+    "intent": "LIVERPOOL_CARD_REF_SENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "ec6b7260-3780-417b-b8ce-06eb20263b09"
+  }, {
+    "intent": "LABS_IMAGE_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "aefce14f-5a1e-4e77-b03f-0f0f9c979db8"
+  }, {
+    "intent": "FOOD_IMAGE_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "fc85ed46-a41b-4ca6-a4fe-e4003ca0e94f"
+  }, {
+    "intent": "PAYMENT_IMAGE_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "8adeb293-fac4-4c39-b589-c0b54dd9b00e"
+  }, {
+    "intent": "INVOICING_IMAGE_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "b1b46c8a-d85a-4324-b6e9-9d99a64e2c6d"
+  }, {
+    "intent": "MED_GLP_ISSUE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "708f0152-18c6-43a7-82eb-117c5093e4ac"
+  }, {
+    "intent": "NUTRITION_SURVEY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "a3f67e30-e3e7-4a2e-a29e-c0bd986822ed"
+  }, {
+    "intent": "OBESITY_SURVEY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "f9e7af69-f0af-4ebc-b310-82bde4024213"
+  }, {
+    "intent": "PSYCHOLOGIST_SURVEY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "db711c76-d14c-4202-8eb3-b6464c353d20"
+  }, {
+    "intent": "GOOD_NUTRI",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "757383fa-17ab-4dc5-a200-118cca1c56f5"
+  }, {
+    "intent": "GOOD_PSYCHO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "3ec09ff2-e085-4216-9213-6d403a4a710b"
+  }, {
+    "intent": "GOOD_OBESITY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "b17dfd2d-594d-4923-94ff-c2c4ff718bf1"
+  }, {
+    "intent": "REGULAR_NUTRI",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "c270dec6-1b2b-4b5b-950f-8504721367de"
+  }, {
+    "intent": "REGULAR_OBESITY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "341e7144-0379-4f3f-b76d-93c5846bd0e4"
+  }, {
+    "intent": "REGULAR_PSYCHO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "acb30454-735c-4e39-a65e-b45841e7869c"
+  }, {
+    "intent": "BAD_NUTRI",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "35099c90-ef31-4bc3-9d0a-229ed0b7cb34"
+  }, {
+    "intent": "BAD_PSYCHO",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "37f50532-2825-4bfb-88ca-4c65f924d684"
+  }, {
+    "intent": "BAD_OBESITY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "58ef8f5c-dd2a-439b-9626-49c7a2e9759d"
+  }, {
+    "intent": "HIGH_PROB",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "e39c57e7-380e-4648-9a9d-a840bb158490"
+  }, {
+    "intent": "MEDIUM_PROB",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "f8141b46-53d8-48e6-915f-c501825d9f6d"
+  }, {
+    "intent": "LOW_PROB",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "9450eefb-b0b3-4130-b8f0-07b361a92ec2"
+  }, {
+    "intent": "HUAWEI",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "1d42cf1f-6ecb-4aa1-9f52-6dd5718cfed4"
+  }, {
+    "intent": "ANDROID",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "8717ef4f-4818-4dcf-ac35-102a598ee543"
+  }, {
+    "intent": "IPHONE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "85f421de-88f8-488a-bb3b-b6640c270138"
+  }, {
+    "intent": "INVOICING_REQUEST",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "495d7265-c745-4f65-a2b0-d4cfbfb2accf"
+  }, {
+    "intent": "SEND_DM_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "7a75eb82-454a-4b5b-a3f8-355e22dff627"
+  }, {
+    "intent": " TEMPLATE_SEND_QUEUDED_CONTENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "93c97023-c86e-40dc-a68f-f10280ca8052"
+  }, {
+    "intent": "SOLVED_QUESTIONS_ADMIN",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "902ec3d6-4fdb-4098-9370-d577680724d8"
+  }, {
+    "intent": "patientSendsSomethingElseWithNumbers",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "fa66a796-95e5-4935-8fd7-95d94f6a4049"
+  }, {
+    "intent": "PatientFeelsBad",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "4eea1f58-8b05-4e4f-aad7-ae1ca9a8c068"
+  }, {
+    "intent": "ANOTHER_QUESTIONS_ADMIN",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "4a3d9a5d-14a4-4ad0-8552-c2c174db4b66"
+  }, {
+    "intent": "END_SESSION_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "c0075bf3-7667-4104-8403-516e4b9e4fd9"
+  }, {
+    "intent": "APPT_SUPPORT_ALERT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "d818d6ee-fbb9-46bc-b668-a774c4a5ffa3"
+  }, {
+    "intent": "PSYCHO_RESCHEDULE_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "355cbef8-f066-4e4b-87db-76c83222d3fe"
+  }, {
+    "intent": "NUTRI_RESCHEDULE_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "73dcb067-f20c-4bdd-bbe7-67da96bdb6db"
+  }, {
+    "intent": "OBESITY_RESCHEDULE_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "0ac6bad8-06b0-47df-87ae-61ad3ff94c11"
+  }, {
+    "intent": "ACTIVE_CONVERSATION_STARTED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "28bcc1b6-77b5-4bbc-b68c-945a5f855407"
+  }, {
+    "intent": "FILE_TYPE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "b4b4ac34-abf9-451c-92c1-f9448d4517e5"
+  }, {
+    "intent": "AUDIO_DETECTED_RECEIVED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "abb8063c-f695-47a3-b7c5-37481401acd0"
+  }, {
+    "intent": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "f2d9ae78-2952-4f46-8b8c-d1a7986cee5a"
+  }, {
+    "intent": "CONFIRM_MED_REMINDER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "12442579-2594-498a-affe-5a07a133ac3e"
+  }, {
+    "intent": "UPDATE_VIDEOCALL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "36229ef5-16de-4580-b35f-88a1e56d975d"
+  }, {
+    "intent": "WHATSAPP_FLOW_FILLED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "75781477-3ec1-467b-9900-9c9b2b9cb865"
+  }, {
+    "intent": "RECEIVED_STICKER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "cc1d6b65-1d55-4645-a439-bc9033ecd898"
+  }, {
+    "intent": "DR_CLIVI",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "8ef07850-395b-4d29-a460-0e96e10d9d62"
+  }, {
+    "intent": "DISAPPOINTED_PROD_FIT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "e5a3cdf3-11c8-4eb3-a416-a7ee4852b0af"
+  }, {
+    "intent": "MORE_LESS_DISAPPOINTED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "0cbcfd4a-4f86-4fd8-9786-3573042cbccb"
+  }, {
+    "intent": "NOTHING_PROD_FIT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "ad064eb3-1a33-4cc2-89a8-7a811f0d7340"
+  }, {
+    "intent": "SCHEDULE_OBESITY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "2ee56e28-ae5b-43c9-82d7-842fea436efc"
+  }, {
+    "intent": "SELFONB_NUTRI_SCHEDULE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "0fd1e731-89a3-4983-9772-4ae3736c3184"
+  }, {
+    "intent": "SELFONB_PSYCHO_SCHEDULE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "3a4c3bca-f124-438e-8a76-1d383dbf2053"
+  }, {
+    "intent": "DR_CLIVI_FILES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "a83e35ea-13cb-45f6-a0ef-cc6bd3acf935"
+  }, {
+    "intent": "LOW_IMPACT_ENROLL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "749080d3-7322-4d7f-99dc-a3ecb025a688"
+  }, {
+    "intent": "VALID_QUESTION_YES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "bf32e505-1262-43a2-a7df-1de9c46a070c"
+  }, {
+    "intent": "ALL_GOOD_NO_ACTION_NEEDED",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "41b3ebde-3792-4330-b510-6fb4701ad9fc"
+  }, {
+    "intent": "UPDATE_PAYMENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "df9cd83f-1250-444e-9e12-5a47d7efb109"
+  }, {
+    "intent": "RETRY_CHARGE_PAYMENT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "0568d9d5-9af2-4c16-89af-76a2576a9072"
+  }, {
+    "intent": "OFFLINE_PAYMENTS",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "51d5070e-6053-4ea6-8d54-a15630bade3f"
+  }, {
+    "intent": "PAYMENTS_ISSUES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "f80a8279-3551-4a59-aa75-72cc9c64f287"
+  }, {
+    "intent": "REFERRALS_TEMPLATES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "55014beb-b641-4da6-8241-c22fbcdeec7f"
+  }, {
+    "intent": "PX_ADAPTABLE_FEELING_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "4b7915ab-b4aa-4812-a528-62eed21bc8dd"
+  }, {
+    "intent": "PX_ADAPTABLE_NEED_PSYCHO_HELP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "d1491d9d-fbe3-4bb8-8bf8-e93392b8397b"
+  }, {
+    "intent": "PATIENT_ADAPTABLE_CONFORTABLE_NUTRITION_PLAN",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "cf892f1b-f4eb-431b-9f57-bce9f26b8f5b"
+  }, {
+    "intent": "PX_ADAPTABLE_GOOD_RESULTS_NUTRI_PLAN",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "22b597a7-40a2-4de3-a109-489ae53455ac"
+  }, {
+    "intent": "PX_ADAPTABLE_CHANGE_NUTRI_PLAN",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "cd566f5f-27f4-4cd8-ab36-1f021d0f7b0e"
+  }, {
+    "intent": "STORES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "d03eaf6b-b6dc-44e5-88a3-c587d63e4a42"
+  }, {
+    "intent": "BANK_TRANSFER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "baf042bc-ba88-419a-a4fa-70b8b07d521f"
+  }, {
+    "intent": "BANK_LOCATION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "205ad399-015f-468b-be0d-bb246c875d4e"
+  }, {
+    "intent": "APP_BANK",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "31e7ff34-39d8-476d-87ed-ef83a73c5453"
+  }, {
+    "intent": "WALMART_STORES",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "14853be7-0c94-4607-a131-093c3e125a8b"
+  }, {
+    "intent": " BBVA_APP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "d349836d-8c92-4798-9d4a-c668b9dd94c0"
+  }, {
+    "intent": " BANORTE_APP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "daf6838a-9617-44e4-8ce9-744930312a2e"
+  }, {
+    "intent": "SANTANDER_APP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "6cc9f8cf-1c19-4c4e-aaf0-51c0c612d0d4"
+  }, {
+    "intent": " AFIRME_APP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "d725e71a-566d-4596-83a6-ffda684765d8"
+  }, {
+    "intent": "SANTANDER_LOCATION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "5f81fb01-86ca-4d20-a7e9-925c5cb52b1c"
+  }, {
+    "intent": "BBVA_LOCATION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "a5cd4615-7431-43d7-abf5-a54450a63644"
+  }, {
+    "intent": "TELECOMM_LOCATION",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "f3ae7677-4067-43d3-b4a7-0a0b2e72459c"
+  }, {
+    "intent": "GLP_TUTORIAL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "d41026d5-114d-448f-9117-99d14861338f"
+  }, {
+    "intent": "ADHERENCE_PSYC_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "39378bcb-3bc3-45e3-9909-76330bab197f"
+  }, {
+    "intent": "ADHERENCE_PSYC_REGULAR",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "521f7194-688f-4ec2-805d-a0fe760e77ba"
+  }, {
+    "intent": "ADHERENCE_PSYC_BAD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "b96e4a97-35c1-4227-80d0-4d9198dd1050"
+  }, {
+    "intent": "ADHERENCE_NUTRI_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "d43b14ce-f10c-48f1-95f5-dacebcef05a1"
+  }, {
+    "intent": "ADHERENCE_NUTRI_REGULAR",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "823b17ad-9876-459a-bd57-031a2c5bda4a"
+  }, {
+    "intent": "ADHERENCE_NUTRI_BAD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "abcf206b-e92e-415a-a12b-b4d7520b106b"
+  }, {
+    "intent": "AI_AGENT_CALLING_MAIN_MENU",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "bd2c2e74-42a4-45a3-ba52-e8f027efbcf1"
+  }, {
+    "intent": "QUESTION_INVALID",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "7f7d52e2-9f65-4a8b-af79-de3d64963950"
+  }, {
+    "intent": "RATE_APPOINTMENT_SURVEY_TEMPLATE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "53cac598-0b85-40e3-854a-1a58553390a7"
+  }, {
+    "intent": "CONFIRM_APPTS_TEMPLATE_REMINDER",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "a525af65-9520-40c5-85f3-e79cfc274f3d"
+  }, {
+    "intent": "emergencyCallsPsycho",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "58a03756-6223-4211-93fa-a0694876a177"
+  }, {
+    "intent": "PX_COMING_TO_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "e2a1057b-761f-4ba3-9e04-9c2026ef4d0e"
+  }, {
+    "intent": "PX_SUSCRIPTION_TEMPLATE_WORKOUTS",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "42eb0a38-23ae-45e5-9f4a-1847361305a9"
+  }, {
+    "intent": "CSAT_GOOD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "b3736f9e-537a-4ad5-b54a-5bbb50b8c919"
+  }, {
+    "intent": "CSAT_REGULAR",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "37052701-dc65-4ed4-8e99-3007e3a568a3"
+  }, {
+    "intent": "CSAT_BAD",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "ce186fcd-76dd-4b98-a7a6-d68de4c9f879"
+  }, {
+    "intent": "OTHER_FILE_IMG_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "825b504f-6f19-429d-9e1c-d183beae1b99"
+  }, {
+    "intent": "BASIC_LEVEL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "62d0af5d-c54a-403b-9d89-8411ef6fe645"
+  }, {
+    "intent": "MIDDLE_LEVEL",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "babc94c7-678a-471f-8696-7cee1cf2927a"
+  }, {
+    "intent": "PX_ADHERENCIA_SPORT_MAS75",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "a8badaaf-414c-4781-ae8b-19f9df1b3469"
+  }, {
+    "intent": "PX_ADHERENCIA_SPORT_MENOS75",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "1859173b-5c6c-4100-a46d-1e412a63741b"
+  }, {
+    "intent": "WEGOVY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "7ea31f43-85f2-4efa-9e6b-680017c2fe5a"
+  }, {
+    "intent": "SAXENDA",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "4f80fc95-8d65-4637-a4f8-cae67c1785ea"
+  }, {
+    "intent": "OZEMPIC",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "fb4c4767-05da-4466-a0b5-93df31e5b4ca"
+  }, {
+    "intent": "REFFERED_CONTACT_SHARED_BY_WHATSAPP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "obesityPlan",
+    "name": "52470c75-c808-4292-86a9-3d739fdaa926"
+  }, {
+    "intent": "UP_ACCEPTED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "¡Muy bien! El cambio de tu plan se hará de forma automática, si tienes alguna duda, por favor escribe la palabra Clivi. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "acepta_cambio_de_plan",
+                  "platform": "HUBSPOT",
+                  "value": "yes"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "e1bebf36-b63d-42ae-bed5-50b0def67230"
+  }, {
+    "intent": "UP_NO",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "De acuerdo, no se realizarán cambios. Informaremos a tu especialista para que haga ajustes a tu tratamiento. Gracias." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "acepta_cambio_de_plan",
+                  "platform": "HUBSPOT",
+                  "value": "no"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "80ad52ba-b973-4dcd-a0e5-426812cdbed2"
+  }, {
+    "intent": "UP_SUPPORT_REQUESTED",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Un agente se pondrá en contacto contigo para resolver tus dudas. Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "acepta_cambio_de_plan",
+                  "platform": "HUBSPOT",
+                  "value": "support_requested"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "bf2990e7-024b-4932-8c90-4f799f3de79f"
+  }, {
+    "intent": "WEB_APP_ONB",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ONBOARDING_SEND_LINK"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "e3785dcf-8c8b-49a1-ac80-ed906e5ce886"
+  } ]
+}

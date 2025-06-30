@@ -1,0 +1,10 @@
+{
+  "name": "4d837d84-861c-4849-87e4-4551d8d69b47",
+  "displayName": "ALL_GOOD_NO_ACTION_NEEDED",
+  "parameters": [ {
+    "id": "ALL_GOOD_NO_ACTION_NEEDED",
+    "entityType": "@ALL_GOOD_NO_ACTION_NEEDED"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

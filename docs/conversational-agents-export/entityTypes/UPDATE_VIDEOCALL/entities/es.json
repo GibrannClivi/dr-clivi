@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "UPDATE_VIDEOCALL",
+    "synonyms": [ "Actualizar videollamada", "UPDATE_VIDEOCALL" ],
+    "languageCode": "es"
+  } ]
+}

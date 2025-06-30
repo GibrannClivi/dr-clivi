@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "SEND_DM_TEMPLATE",
+    "synonyms": [ "Abrir sesión", "Recibir mensaje", "SEND_DM_TEMPLATE" ],
+    "languageCode": "es"
+  } ]
+}

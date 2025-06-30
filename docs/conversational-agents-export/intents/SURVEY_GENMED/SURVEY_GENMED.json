@@ -1,0 +1,10 @@
+{
+  "name": "a3e72c47-b23c-47c0-b0a9-0ab3e10ac63b",
+  "displayName": "SURVEY_GENMED",
+  "parameters": [ {
+    "id": "SURVEY_GENMED",
+    "entityType": "@SURVEY_GENMED"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

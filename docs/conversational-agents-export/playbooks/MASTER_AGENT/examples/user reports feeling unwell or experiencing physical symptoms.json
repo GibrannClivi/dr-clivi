@@ -1,0 +1,47 @@
+{
+  "name": "7822ee5d-6bf9-4931-9f0e-7d998fa98400",
+  "actions": [ {
+    "toolUse": {
+      "tool": "SEND_MESSAGE",
+      "action": "Sends template message",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "SEND_MESSAGE",
+          "templateName": "call_specialists_ai",
+          "type": "TEMPLATE"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "user reports feeling unwell or experiencing physical symptoms",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent uses tool to send template message to the user and ends session.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user reports feeling unwell or experiencing physical symptoms",
+  "tokenCount": 227,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "undetected"
+}

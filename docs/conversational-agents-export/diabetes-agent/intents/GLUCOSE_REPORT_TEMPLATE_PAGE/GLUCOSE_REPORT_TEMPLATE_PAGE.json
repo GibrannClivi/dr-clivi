@@ -1,0 +1,10 @@
+{
+  "name": "2667abb0-b89a-4b29-9ede-f90951623bf3",
+  "displayName": "GLUCOSE_REPORT_TEMPLATE_PAGE",
+  "parameters": [ {
+    "id": "GLUCOSE_REPORT_TEMPLATE_PAGE",
+    "entityType": "@GLUCOSE_REPORT_TEMPLATE_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

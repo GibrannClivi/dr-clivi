@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Descargar recetario",
+      "parameterId": "DOWNLOAD_RECETARIO"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

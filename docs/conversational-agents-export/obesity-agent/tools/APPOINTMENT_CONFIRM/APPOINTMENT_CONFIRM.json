@@ -1,0 +1,30 @@
+{
+  "name": "183454b1-1f89-4d8c-97b6-395c7d85b6d8",
+  "displayName": "APPOINTMENT_CONFIRM",
+  "description": "Confirms appointment to the user.",
+  "toolType": "CUSTOMIZED_TOOL",
+  "functionSpec": {
+    "inputSchema": {
+      "properties": {
+        "actionType": {
+          "enum": [ "CALL_FUNCTION" ],
+          "type": "string"
+        },
+        "functionName": {
+          "enum": [ "APPOINTMENT_CONFIRM" ],
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "success": {
+          "description": "If success = true, then appointment is confirmed to user.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

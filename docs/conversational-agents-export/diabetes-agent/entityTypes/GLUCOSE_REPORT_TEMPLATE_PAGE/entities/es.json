@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "GLUCOSE_REPORT_TEMPLATE_PAGE",
+    "synonyms": [ "GLUCOSE_REPORT", "GLUCOSE_REPORT_TEMPLATE_PAGE" ],
+    "languageCode": "es"
+  } ]
+}

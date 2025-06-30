@@ -1,0 +1,24 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Medicina General",
+      "parameterId": "RESCHEDULE_GENMED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Reagendar medicina cita",
+      "parameterId": "RESCHEDULE_GENMED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Agendar medicina",
+      "parameterId": "RESCHEDULE_GENMED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

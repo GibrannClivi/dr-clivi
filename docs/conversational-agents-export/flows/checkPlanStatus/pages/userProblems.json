@@ -1,0 +1,83 @@
+{
+  "name": "c34e9a05-8357-4bd4-8381-8156184287e2",
+  "displayName": "userProblems",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "CLIVI_PATIENT",
+              "text": "Si, ya soy"
+            }, {
+              "id": "CLIVI_LEAD",
+              "text": "No, quiero info"
+            } ],
+            "textBody": "No tenemos registrado este número, ya eres paciente?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "CLIVI_PATIENT",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "askChangeWhatsapp",
+    "name": "caee821f-b01f-40e6-a044-b62eb753b72b"
+  }, {
+    "intent": "CLIVI_LEAD",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "leadInterested",
+    "name": "1343e1eb-871e-42bf-9cc3-a9b9eeaea527"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "daecf2df-859b-4970-8637-e82337d05f8b"
+  } ],
+  "transitionRouteGroups": [ "planStatusRouteGroup" ]
+}

@@ -1,0 +1,112 @@
+{
+  "name": "cfb27e6f-cdc1-4fa7-a0c5-91f90f930b29",
+  "displayName": "askChangeWhatsapp",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "CHANGE_WHATSAPP",
+              "text": "Si, lo cambié"
+            }, {
+              "id": "NO_CHANGE_WHATSAPP",
+              "text": "No lo he cambiado"
+            } ],
+            "textBody": "¿Cambiaste de número celular?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "CHANGE_WHATSAPP",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "newPhone",
+    "name": "ac0d6274-c72c-48b0-a17a-17a79714305f"
+  }, {
+    "intent": "NO_CHANGE_WHATSAPP",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Estamos escalando tu caso con un asesor. Un momento, por favor." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_ticket",
+                  "platform": "HUBSPOT",
+                  "value": "PLAN_ERROR"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e91083ed-ee1a-4290-8411-ea8c656d1012"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "367ecc96-1ac8-40c3-9741-b1c0ff8cc60d"
+  } ],
+  "transitionRouteGroups": [ "planStatusRouteGroup" ]
+}

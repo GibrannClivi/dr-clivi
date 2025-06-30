@@ -1,0 +1,327 @@
+{
+  "name": "5ec7e8f2-b46f-4a13-b617-664d77f523f4",
+  "displayName": "incomingFile",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Selecciona",
+            "bodyText": "¿Qué archivo nos envías?",
+            "sections": [ {
+              "rows": [ {
+                "description": "Resultados",
+                "id": "LABS_IMAGE_INCOMING",
+                "title": "Laboratorios"
+              }, {
+                "description": "Foto platillo",
+                "id": "FOOD_IMAGE_INCOMING",
+                "title": "Foto comida"
+              }, {
+                "description": "Comprobante de pago",
+                "id": "PAYMENT_IMAGE_INCOMING",
+                "title": "Comprobante pago"
+              }, {
+                "description": "Facturación",
+                "id": "INVOICING_IMAGE_INCOMING",
+                "title": "Constancia fiscal"
+              }, {
+                "description": "Foto medicamento",
+                "id": "MED_GLP_ISSUE",
+                "title": "Medicamento"
+              }, {
+                "description": "Otro doc o imagen",
+                "id": "OTHER_FILE_IMG_INCOMING",
+                "title": "Otro"
+              } ],
+              "title": "Tipos de imágenes"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "LABS_IMAGE_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Lo revisaremos a la brevedad. ¡Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_ticket",
+                  "platform": "HUBSPOT",
+                  "value": "LABS_DELIVERED"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "LABS"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "51bd4217-fd46-447f-a68c-c1037dc38f3c"
+  }, {
+    "intent": "FOOD_IMAGE_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "FOOD_IMAGE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "photo_food_file",
+                  "platform": "HUBSPOT",
+                  "value": "Yes"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "FOOD_IMAGE_SENT_BY_PATIENT"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "168f9dc5-58f6-4636-b0dd-7848fabf87aa"
+  }, {
+    "intent": "PAYMENT_IMAGE_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gracias, estamos verificando la información en nuestro sistema. Regresaremos a la brevedad con Ud. " ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_ticket",
+                  "platform": "HUBSPOT",
+                  "value": "PAYMENT"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "PAYMENT"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "2e1a96a9-c414-423e-b07d-fd27240448af"
+  }, {
+    "intent": "INVOICING_IMAGE_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Lo revisaremos a la brevedad. ¡Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_ticket",
+                  "platform": "HUBSPOT",
+                  "value": "CIF"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "OTHER"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "404e656d-c8dc-4b18-9948-679d69c82085"
+  }, {
+    "intent": "MED_GLP_ISSUE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "OTHER"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "sendQuestion",
+    "name": "d087e342-e9f8-4f43-abb0-18ab02424bb6"
+  }, {
+    "intent": "OTHER_FILE_IMG_INCOMING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_TAG",
+              "params": {
+                "fileTag": "OTHER"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "sendQuestion",
+    "name": "eae66957-a47e-47ec-ac67-df1c4d7184fa"
+  }, {
+    "intent": "PHOTO_SCALE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Funciona" ]
+        },
+        "languageCode": "es"
+      } ],
+      "webhook": "photoScalePhoto",
+      "tag": "ScalePhoto"
+    },
+    "targetPage": "End Session",
+    "name": "824ea247-2197-4a08-8974-0fba5a8626cc"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "2eca0d28-0d2b-4519-9f1d-296e1f1b9254",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

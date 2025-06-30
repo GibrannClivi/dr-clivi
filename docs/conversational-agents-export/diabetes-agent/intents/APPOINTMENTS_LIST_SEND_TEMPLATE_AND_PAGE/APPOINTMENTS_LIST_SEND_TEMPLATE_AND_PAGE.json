@@ -1,0 +1,10 @@
+{
+  "name": "db37cfe8-f3c5-4079-a9df-fe3525fc580d",
+  "displayName": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE",
+  "parameters": [ {
+    "id": "APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE",
+    "entityType": "@APPOINTMENTS_LIST_SEND_TEMPLATE_AND_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 6
+}

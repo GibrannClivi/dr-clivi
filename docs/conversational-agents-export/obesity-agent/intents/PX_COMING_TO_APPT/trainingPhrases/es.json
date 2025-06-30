@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "En camino",
+      "parameterId": "PX_COMING_TO_APPT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,13 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Unirme",
+      "auto": true
+    }, {
+      "text": " básico",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,216 @@
+{
+  "name": "8035d467-8199-4f5a-ab54-c49663202e6f",
+  "displayName": "lastFileAvailable",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Da un toque",
+            "bodyText": "¿Cuál quisieras descargar?",
+            "sections": [ {
+              "rows": [ {
+                "description": "Última receta",
+                "id": "LAST_PRESCRIPTION",
+                "title": "Reenviar receta"
+              }, {
+                "description": "Última orden de laboratorios",
+                "id": "LAST_ORDER",
+                "title": "Reenviar orden labs"
+              }, {
+                "description": "Resultados de estudios",
+                "id": "LAST_LABS",
+                "title": "Reenviar estudios"
+              }, {
+                "description": "Último plan nutricional",
+                "id": "NUTRITION_PLAN",
+                "title": "Reenviar plan nutrición"
+              } ],
+              "title": "Selecciona una opción"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "LAST_PRESCRIPTION_BUTTON_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Un momento este proceso puede tardar unos 30 a 45 segundos. Gracias por tu paciencia." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_SEND_LAST_BY_TAG",
+              "params": {
+                "fileTag": "PRESCRIPTIONS"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "cd3122e9-11ea-4387-84e1-8f2996db1d1b"
+  }, {
+    "intent": "LAST_ORDER_BUTTON_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Un momento este proceso puede tardar unos 30 a 45 segundos. Gracias por tu paciencia." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_SEND_LAST_BY_TAG",
+              "params": {
+                "fileTag": "LABS_REQUEST_ORDER"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "958ae726-a692-464f-960a-886622669cca"
+  }, {
+    "intent": "LAST_NUTRITION_PLAN_BUTTON_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Un momento este proceso puede tardar unos 30 a 45 segundos. Gracias por tu paciencia." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_SEND_LAST_BY_TAG",
+              "params": {
+                "fileTag": "NUTRITION_PLAN"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ee06349c-7696-4705-81b1-c96560ab3064"
+  }, {
+    "intent": "LAST_LABS_RESULTS_BUTTON_PAGE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Este proceso puede demorar hasta unos 45 segundos. Gracias por tu paciencia." ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "FILE_SEND_LAST_BY_TAG",
+              "params": {
+                "fileTag": "LABS"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "57773b12-6a81-4b45-85eb-0c567efbe275"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "4343a72f-4117-4c46-b724-29c7b3783941"
+  } ]
+}

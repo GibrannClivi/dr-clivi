@@ -1,0 +1,10 @@
+{
+  "name": "376ad294-b495-4c3a-9f8e-daefa9d3e343",
+  "displayName": "PATIENT_FEELS_BAD",
+  "parameters": [ {
+    "id": "ALL_GOOD_NO_ACTION_NEEDED",
+    "entityType": "@ALL_GOOD_NO_ACTION_NEEDED"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 74
+}

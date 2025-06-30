@@ -1,0 +1,10 @@
+{
+  "name": "12a2f1a3-809c-4260-8be1-597fed77273e",
+  "displayName": "ADHERENCE_ENDO_TEMPLATE_REMINDER",
+  "parameters": [ {
+    "id": "ADHERENCE_ENDO_TEMPLATE_REMINDER",
+    "entityType": "@ADHERENCE_ENDO_TEMPLATE_REMINDER"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

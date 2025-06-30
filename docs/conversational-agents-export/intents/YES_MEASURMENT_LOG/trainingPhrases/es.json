@@ -1,0 +1,22 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "YES",
+      "auto": true
+    }, {
+      "text": "_",
+      "auto": true
+    }, {
+      "text": "MEASURMENT",
+      "auto": true
+    }, {
+      "text": "_",
+      "auto": true
+    }, {
+      "text": "LOG",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

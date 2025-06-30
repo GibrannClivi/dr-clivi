@@ -1,0 +1,10 @@
+{
+  "name": "396a1229-5b40-44b2-8886-03fcee2bea38",
+  "displayName": "SELFONB_NUTRI_SCHEDULE",
+  "parameters": [ {
+    "id": "SELFONB_NUTRI_SCHEDULE",
+    "entityType": "@SELFONB_NUTRI_SCHEDULE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

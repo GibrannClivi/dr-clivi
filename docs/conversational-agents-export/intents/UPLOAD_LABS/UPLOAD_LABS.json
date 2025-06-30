@@ -1,0 +1,10 @@
+{
+  "name": "2be7040a-cefa-4f89-900d-83b311e9ca7a",
+  "displayName": "UPLOAD_LABS",
+  "parameters": [ {
+    "id": "UPLOAD_LABS",
+    "entityType": "@UPLOAD_LABS"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

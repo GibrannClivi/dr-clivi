@@ -1,0 +1,10 @@
+{
+  "name": "668aa940-1972-4a46-8dc9-85288911f0f8",
+  "displayName": "LOG_GLUCOSE_TEMPLATE_PAGE",
+  "parameters": [ {
+    "id": "REMINDER_LOG_GLUCOSE_TEMPLATE",
+    "entityType": "@REMINDER_LOG_GLUCOSE_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 6
+}

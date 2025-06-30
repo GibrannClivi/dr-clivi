@@ -1,0 +1,53 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "APPOINTMENT_SEND_SCHEDULER",
+      "parameterId": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Agendar nueva cita",
+      "parameterId": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "CLIVI - Agendar cita",
+      "parameterId": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Agendar consulta",
+      "parameterId": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Agendar",
+      "parameterId": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Agendar cita",
+      "parameterId": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "APPOINTMENT_SCHEDULER",
+      "parameterId": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

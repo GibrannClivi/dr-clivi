@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Tutorial",
+      "parameterId": "GLP_TUTORIAL"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

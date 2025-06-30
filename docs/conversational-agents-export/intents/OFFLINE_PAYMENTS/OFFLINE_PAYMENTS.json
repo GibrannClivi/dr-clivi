@@ -1,0 +1,10 @@
+{
+  "name": "070eb188-6395-492f-a458-ce684754a2c3",
+  "displayName": "OFFLINE_PAYMENTS",
+  "parameters": [ {
+    "id": "OFFLINE_PAYMENTS",
+    "entityType": "@OFFLINE_PAYMENTS"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}

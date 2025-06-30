@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Me interesa",
+      "parameterId": "LEAD_INTERESTED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

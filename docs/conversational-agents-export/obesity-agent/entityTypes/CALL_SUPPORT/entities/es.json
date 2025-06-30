@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "CALL_SUPPORT",
+    "synonyms": [ "Ayuda", "CALL_SUPPORT", "Centro de atención", "Llamar", "Pagos", "Soporte" ],
+    "languageCode": "es"
+  } ]
+}

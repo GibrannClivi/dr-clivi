@@ -1,0 +1,10 @@
+{
+  "name": "8f22e2d9-ff6b-41c6-a116-a40dceaaf50a",
+  "displayName": "WORKOUT_FLOW_BEGINNING",
+  "parameters": [ {
+    "id": "WORKOUT_FLOW_BEGINNING",
+    "entityType": "@WORKOUT_FLOW_BEGINNING"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

@@ -1,0 +1,57 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "FORM_SUBMITTED:SCREEN_ID:SCHEDULE_LABS_ERROR",
+      "parameterId": "WHATSAPP_FLOW_FILLED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "FORM_SUBMITTED:SCREEN_ID:MEDICATION_ADHERENCE",
+      "parameterId": "WHATSAPP_FLOW_FILLED",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "FORM_REPLY:flow",
+      "parameterId": "WHATSAPP_FLOW_FILLED",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "nfm_reply",
+      "parameterId": "WHATSAPP_FLOW_FILLED",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "FORM_SUBMITTED:SCREEN_ID",
+      "parameterId": "WHATSAPP_FLOW_FILLED",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "FORM_SUBMITTED:SCREEN_ID:ADDRESS_THREE",
+      "parameterId": "WHATSAPP_FLOW_FILLED",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "FORM_SUBMITTED",
+      "parameterId": "WHATSAPP_FLOW_FILLED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

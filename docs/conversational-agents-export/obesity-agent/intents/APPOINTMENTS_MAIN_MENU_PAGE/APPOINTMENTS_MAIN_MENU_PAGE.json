@@ -1,0 +1,10 @@
+{
+  "name": "1889485f-6a6f-4688-bb9f-e3a984c30cfb",
+  "displayName": "APPOINTMENTS_MAIN_MENU_PAGE",
+  "parameters": [ {
+    "id": "APPOINTMENTS_MAIN_MENU_PAGE",
+    "entityType": "@APPOINTMENTS_MAIN_MENU_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

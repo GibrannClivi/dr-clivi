@@ -1,0 +1,10 @@
+{
+  "name": "58b5026b-7a4b-4ba1-a093-6f7154ce1634",
+  "displayName": "UP_NO",
+  "parameters": [ {
+    "id": "UP_NO",
+    "entityType": "@UP_NO"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

@@ -1,0 +1,34 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "FORM_SUBMITTED:SCHEDULE_LABS",
+      "parameterId": "whatsapp_flow_filled"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "FORM_SUBMITTED:SCREEN_ID:",
+      "parameterId": "whatsapp_flow_filled",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "FORM_SUBMITTED",
+      "parameterId": "whatsapp_flow_filled",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "FORM_SUBMITTED:SCREEN_ID:ADDRESS_THREE",
+      "parameterId": "whatsapp_flow_filled",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

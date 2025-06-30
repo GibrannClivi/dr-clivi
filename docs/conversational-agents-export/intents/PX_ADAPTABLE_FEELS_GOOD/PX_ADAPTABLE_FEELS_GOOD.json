@@ -1,0 +1,10 @@
+{
+  "name": "cabb23ae-3b70-490c-b83b-a40e290dd30c",
+  "displayName": "PX_ADAPTABLE_FEELS_GOOD",
+  "parameters": [ {
+    "id": "PX_ADAPTABLE_FEELS_GOOD",
+    "entityType": "@PX_ADAPTABLE_FEELS_GOOD"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

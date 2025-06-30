@@ -1,0 +1,10 @@
+{
+  "name": "39e7c4bf-be0c-4008-8833-b1f855b2beda",
+  "displayName": "WHAT_CAN_YOU_DO",
+  "parameters": [ {
+    "id": "WHAT_CAN_YOU_DO",
+    "entityType": "@WHAT_CAN_YOU_DO"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 6
+}

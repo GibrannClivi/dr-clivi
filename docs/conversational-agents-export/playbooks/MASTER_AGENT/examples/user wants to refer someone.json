@@ -1,0 +1,35 @@
+{
+  "name": "a09d42e3-116e-4aae-874d-272eaa76652b",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Claro, solamente necesitas compartinos su contacto por whatsapp en este número. Gracias."
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter:\"user wants to refer someone/something or inquire about referrals\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish to the user and invoked flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user wants to refer someone",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 163,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

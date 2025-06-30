@@ -1,0 +1,13 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "TECH",
+      "auto": true
+    }, {
+      "text": "_REASON",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

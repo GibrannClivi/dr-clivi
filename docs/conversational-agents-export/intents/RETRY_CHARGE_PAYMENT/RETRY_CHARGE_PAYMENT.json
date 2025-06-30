@@ -1,0 +1,10 @@
+{
+  "name": "69868e25-985c-4191-9e44-4ab70d98d517",
+  "displayName": "RETRY_CHARGE_PAYMENT",
+  "parameters": [ {
+    "id": "RETRY_CHARGE_PAYMENT",
+    "entityType": "@RETRY_CHARGE_PAYMENT"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

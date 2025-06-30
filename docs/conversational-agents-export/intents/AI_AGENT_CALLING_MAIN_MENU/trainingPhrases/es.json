@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "No, ir al menú principal",
+      "parameterId": "AI_AGENT_CALLING_MAIN_MENU"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

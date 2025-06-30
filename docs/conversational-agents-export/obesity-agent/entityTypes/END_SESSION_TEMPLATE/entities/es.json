@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "END_SESSION_TEMPLATE",
+    "synonyms": [ "END_SESSION", "END_SESSION_TEMPLATE", "Finalizar sesión", "Reiniciar sesión" ],
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,48 @@
+{
+  "displayName": "obesity",
+  "defaultLanguageCode": "es",
+  "timeZone": "America/Chicago",
+  "enableLogging": true,
+  "projectNumber": 456314813706,
+  "speechToTextSettings": {
+  
+  },
+  "startFlow": "Default Start Flow",
+  "enableStackdriverLogging": true,
+  "advancedSettings": {
+    "audioExportGcsDestination": {
+    
+    },
+    "speechSettings": {
+      "endpointerSensitivity": 90,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    },
+    "playbackInterruptionSettings": {
+    
+    },
+    "loggingSettings": {
+      "enableStackdriverLogging": true,
+      "enableInteractionLogging": true
+    },
+    "speechAdaptationSettings": {
+    
+    }
+  },
+  "speakerIdSettings": {
+  
+  },
+  "genAppBuilderSettings": {
+    "engine": "projects/456314813706/locations/us/collections/default_collection/engines/3c7a3867-2722-433b-af0a-369cfd22c2ca-chat-1750251928"
+  },
+  "duplexSettings": {
+  
+  },
+  "answerFeedbackSettings": {
+  
+  },
+  "webClientSettings": {
+    "boxBorderRadius": "0"
+  }
+}

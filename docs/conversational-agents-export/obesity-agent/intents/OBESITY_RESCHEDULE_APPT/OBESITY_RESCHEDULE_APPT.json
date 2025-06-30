@@ -1,0 +1,10 @@
+{
+  "name": "3edbc93d-6038-4a54-892b-853628105634",
+  "displayName": "OBESITY_RESCHEDULE_APPT",
+  "parameters": [ {
+    "id": "OBESITY_RESCHEDULE_APPT",
+    "entityType": "@OBESITY_RESCHEDULE_APPT"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

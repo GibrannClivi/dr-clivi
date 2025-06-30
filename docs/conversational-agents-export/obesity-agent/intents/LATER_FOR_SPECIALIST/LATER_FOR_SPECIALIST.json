@@ -1,0 +1,10 @@
+{
+  "name": "3f7bc785-d281-407f-adfb-a446ad1ec52e",
+  "displayName": "LATER_FOR_SPECIALIST",
+  "parameters": [ {
+    "id": "LATER_FOR_SPECIALIST",
+    "entityType": "@LATER_FOR_SPECIALIST"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

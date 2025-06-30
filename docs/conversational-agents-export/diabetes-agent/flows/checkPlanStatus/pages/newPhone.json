@@ -1,0 +1,99 @@
+{
+  "name": "63ad6377-6949-4c2b-9eaf-c24fe3879aeb",
+  "displayName": "newPhone",
+  "form": {
+    "parameters": [ {
+      "displayName": "lastPhoneNumber",
+      "required": true,
+      "entityType": "@sys.phone-number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Nos regalas tu número anterior, por favor. OJO: *No el número del que nos estás escribiendo* " ]
+      },
+      "languageCode": "es"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "lastPhoneNumber",
+      "value": null
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.lastPhoneNumber != NULL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nuestro sistema está trabajando para realizar el cambio. Gracias!" ]
+        },
+        "languageCode": "es"
+      }, {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "WHATSAPP_CHANGE",
+              "params": {
+                "whatsappPreviousDirty": "$session.params.lastPhoneNumber"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "ee38a7e9-b81e-4f2c-8406-e89a03aad45e"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "89000949-c833-4a86-a1c9-94163c1a1be5"
+  } ]
+}

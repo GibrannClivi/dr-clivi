@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Validar datos",
+      "parameterId": "UPGRADE_VALIDAR_DATOS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

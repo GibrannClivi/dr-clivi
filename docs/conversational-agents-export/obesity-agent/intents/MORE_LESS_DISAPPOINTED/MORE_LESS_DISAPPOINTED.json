@@ -1,0 +1,10 @@
+{
+  "name": "39468095-13fb-4e94-92f3-125e0ac4cc08",
+  "displayName": "MORE_LESS_DISAPPOINTED",
+  "parameters": [ {
+    "id": "MORE_LESS_DISAPPOINTED",
+    "entityType": "@MORE_LESS_DISAPPOINTED"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

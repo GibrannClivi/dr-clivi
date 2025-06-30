@@ -1,0 +1,31 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "APPOINTMENT_SEND_CANCEL_LIST",
+      "parameterId": "APPT_CANCEL_REQUEST_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Cancelar la consulta",
+      "parameterId": "APPT_CANCEL_REQUEST_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Cancelar consulta",
+      "parameterId": "APPT_CANCEL_REQUEST_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Cancelar cita",
+      "parameterId": "APPT_CANCEL_REQUEST_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "7ac5538a-30ab-49bf-ba14-ae5d41abd301",
+  "displayName": "PX_COMING_TO_APPT",
+  "parameters": [ {
+    "id": "PX_COMING_TO_APPT",
+    "entityType": "@PX_COMING_TO_APPT"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

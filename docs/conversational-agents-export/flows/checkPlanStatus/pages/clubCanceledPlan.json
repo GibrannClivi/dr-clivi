@@ -1,0 +1,133 @@
+{
+  "name": "a403bea3-c357-44b7-b3d3-aceaf7718129",
+  "displayName": "clubCanceledPlan",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "YES_REACTIVATION_CLUB",
+              "text": "Si quiero reactivar"
+            }, {
+              "id": "No, gracias",
+              "text": "NO_REACTIVATION_CLUB"
+            } ],
+            "textBody": "¿Favor de confirmar?",
+            "type": "SESSION_BUTTON"
+          },
+          "delayAfterSeconds": 5,
+          "type": "SEND_MESSAGE"
+        }, {
+          "definition": {
+            "textBody": "Lo sentimos, tu membresía se encuentra cancelada. ¿Te gustaría reactivarla? ",
+            "type": "SESSION_TEXT"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "YES_REACTIVATION_CLUB",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "create_deal",
+                  "platform": "HUBSPOT",
+                  "value": "CLUB"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "textBody": "En un mmomento, te llegará la liga de pago para que reactives tu suscripción, gracias",
+              "type": "SESSION_TEXT"
+            },
+            "type": "SEND_MESSAGE"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "a71352e2-768e-4f5b-a771-63137c12c344"
+  }, {
+    "intent": "NO_REACTIVATION_CLUB",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "No te preocupes, estamos siempre para servirte. Gracias!" ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "fa646500-6997-4d6f-9a50-2158e2daa4b5"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "040ee762-47f2-4541-81e4-f2ff1a482594"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "No acepto",
+      "parameterId": "UP_NO"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

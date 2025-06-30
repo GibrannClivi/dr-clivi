@@ -1,0 +1,20 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "No",
+      "auto": true
+    }, {
+      "text": " lo necesito",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "QUESTION_INVALID",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

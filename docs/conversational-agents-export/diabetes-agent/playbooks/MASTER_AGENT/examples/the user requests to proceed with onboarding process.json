@@ -1,0 +1,51 @@
+{
+  "name": "a475f434-6db5-4ccb-8fd3-af8d3ea8cba8",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Soy Dr. Clivi. Parece que quieres iniciar con tu tratamiento. Déjame ayudarte con eso."
+    }
+  }, {
+    "toolUse": {
+      "tool": "ONBOARDING_SEND_LINK",
+      "action": "ONBOARDING_SEND_LINK",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "CALL_FUNCTION",
+          "functionName": "ONBOARDING_SEND_LINK"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "the user requests to proceed with onboarding process by writing phrases demonstrating a clear intention to proceed with the data validation (such as \"Quiero validar mis datos\", \"Iniciar tratamiento\". \"Validar datos\", \"Cómo valido los datos?\")",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and invoked tool called ONBOARDING_SEND_LINK and invoked END_SESSION flow.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "the user requests to proceed with onboarding process",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 301,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

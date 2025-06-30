@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "QUESTION_INVALID",
+    "synonyms": [ "No lo necesito", "QUESTION_INVALID" ],
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "8fbc5d87-b23d-429e-9fd9-4bc47e3c3861",
+  "displayName": "LAST_ORDER_BUTTON_PAGE",
+  "parameters": [ {
+    "id": "LAST_ORDER_BUTTON_PAGE",
+    "entityType": "@LAST_ORDER_BUTTON_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 14
+}

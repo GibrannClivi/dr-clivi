@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "LAST_PRESCRIPTION_BUTTON_PAGE",
+    "synonyms": [ "LAST_PRESCRIPTION", "LAST_PRESCRIPTION_BUTTON_PAGE" ],
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "61db93a2-e702-43c5-a98f-196c29c94eda",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Lo lamento, no entendí tu petición voy a escalar tu caso con un especialista. Gracias por tu paciencia."
+    }
+  }, {
+    "toolUse": {
+      "tool": "QUESTION_SET_LAST_MESSAGE",
+      "action": "QUESTION_SET_LAST_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "CALL_FUNCTION",
+          "category": "OBESITY",
+          "functionName": "QUESTION_SET_LAST_MESSAGE",
+          "isKnownQuestion": true,
+          "sendToHelpdesk": true
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"User is asking specific medical questions\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent invoked tool QUESTION_SET_LAST_MESSAGE and flow END_SESSION. ",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user asks specific medical questions",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 298,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

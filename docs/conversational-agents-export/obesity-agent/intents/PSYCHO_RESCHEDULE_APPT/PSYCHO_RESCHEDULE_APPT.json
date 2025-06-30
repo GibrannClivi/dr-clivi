@@ -1,0 +1,10 @@
+{
+  "name": "6e7cd661-41f9-48a3-9bb7-215c55656fec",
+  "displayName": "PSYCHO_RESCHEDULE_APPT",
+  "parameters": [ {
+    "id": "PSYCHO_RESCHEDULE_APPT",
+    "entityType": "@PSYCHO_RESCHEDULE_APPT"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

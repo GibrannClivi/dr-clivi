@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Agendar Alta especialidad",
+      "parameterId": "SCHEDULE_OBESITY"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

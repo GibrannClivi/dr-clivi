@@ -1,0 +1,59 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Confirmar A. especialidad",
+      "parameterId": "CONFIRM_APPTS_TEMPLATE_REMINDER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Confirmar",
+      "parameterId": "CONFIRM_APPTS_TEMPLATE_REMINDER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Confirmar cita",
+      "parameterId": "CONFIRM_APPTS_TEMPLATE_REMINDER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Confirmar Endocrinología",
+      "parameterId": "CONFIRM_APPTS_TEMPLATE_REMINDER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Confirmar psicología",
+      "parameterId": "CONFIRM_APPTS_TEMPLATE_REMINDER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Confirmar nutrición",
+      "parameterId": "CONFIRM_APPTS_TEMPLATE_REMINDER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Confirmar nutricional",
+      "parameterId": "CONFIRM_APPTS_TEMPLATE_REMINDER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Confirmar Endo Cita",
+      "parameterId": "CONFIRM_APPTS_TEMPLATE_REMINDER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

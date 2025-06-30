@@ -1,0 +1,157 @@
+{
+  "name": "560ba7cf-6477-4e7f-a077-a108605d8a00",
+  "displayName": "medsSuppliesStatus",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "GLUCO_ID_TRACKING",
+              "text": "Estatus glucómetro"
+            }, {
+              "id": "STRIPS_ID_TRACKING",
+              "text": "Estatus tiras"
+            }, {
+              "id": "MEDS_ID_TRACKING",
+              "text": "Estatus meds"
+            } ],
+            "textBody": "Clic al botón",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "GLUCO_ID_TRACKING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "SUPPLIES_SEND_TRACKING",
+              "params": {
+                "type": "GLUCOMETER"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "8dc724fe-0648-45e4-8161-c80ad655b99d"
+  }, {
+    "intent": "STRIPS_ID_TRACKING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "SUPPLIES_SEND_TRACKING",
+              "params": {
+                "type": "STRIPS"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "6c4fb634-ac25-4c50-a6a5-cfda941a6260"
+  }, {
+    "intent": "MEDS_ID_TRACKING",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "SUPPLIES_SEND_TRACKING",
+              "params": {
+                "type": "MEDICINE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e40afc69-dc8c-422b-b7ed-40bea3945346"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "a4fa7c23-624a-4e33-98a7-45f7f64edf44"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

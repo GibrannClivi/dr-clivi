@@ -1,0 +1,10 @@
+{
+  "name": "181f5580-5491-441d-a760-e22423a15203",
+  "displayName": "APPT_CANCEL_REQUEST_TEMPLATE",
+  "parameters": [ {
+    "id": "APPT_CANCEL_REQUEST_TEMPLATE",
+    "entityType": "@APPT_CANCEL_REQUEST_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 4
+}

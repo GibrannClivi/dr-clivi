@@ -1,0 +1,10 @@
+{
+  "name": "63e36634-65f5-452c-af36-737a23e978b5",
+  "displayName": "RECIPE_MENTAL_TIP",
+  "parameters": [ {
+    "id": "RECIPE_MENTAL_TIP",
+    "entityType": "@RECIPE_MENTAL_TIP"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 4
+}

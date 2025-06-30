@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE",
+    "synonyms": [ "PATIENT_COMPLAINT", "Presentar queja", "Queja", "Quejas", "SEND_QUESTION_COMPLAINT", "SEND_QUESTION_COMPLAINT_TEMPLATE_PAGE" ],
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,127 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Pregunta",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Enviar respuesta",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Preguntar ahora",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "CLIVI - Preguntar",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Preguntar",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Escribir una pregunta",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "pregunta",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Enviar pregunta",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Hacer pregunta",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Pregunta Psicología",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Pregunta Nutrición",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Pregunta Diabetes",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Preguntas",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "preguntas",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "QUESTION_TYPE",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "SEND_QUESTION",
+      "parameterId": "REMINDER_QUESTION_TEMPLATE",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

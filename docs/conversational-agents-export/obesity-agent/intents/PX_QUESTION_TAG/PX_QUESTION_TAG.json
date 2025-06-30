@@ -1,0 +1,10 @@
+{
+  "name": "8deee1f5-30c6-4d7d-ab90-1aab9508e2d6",
+  "displayName": "PX_QUESTION_TAG",
+  "parameters": [ {
+    "id": "PX_QUESTION_TAG",
+    "entityType": "@PX_QUESTION_TAG"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}

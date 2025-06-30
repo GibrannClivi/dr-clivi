@@ -1,0 +1,24 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Actualizar método de pago",
+      "parameterId": "UPDATE_PAYMENT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Actualizar tarjeta",
+      "parameterId": "UPDATE_PAYMENT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "UPDATE_PAYMENT",
+      "parameterId": "UPDATE_PAYMENT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

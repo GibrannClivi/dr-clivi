@@ -1,0 +1,10 @@
+{
+  "name": "a7eb4742-ed71-4473-a568-2d80fd4a95ba",
+  "displayName": "RESCHEDULE_GENMED",
+  "parameters": [ {
+    "id": "RESCHEDULE_GENMED",
+    "entityType": "@RESCHEDULE_GENMED"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

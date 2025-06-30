@@ -1,0 +1,41 @@
+{
+  "name": "f6e1cce5-b77c-48be-a9ea-3a1278a24454",
+  "displayName": "helpDeskSubMenu",
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "helpDeskOptions",
+    "name": "af9ef65e-7d13-49f2-8aa8-e153afd3cc01"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "helpDeskOptions",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "0c420922-de89-4753-b0fa-1f32dc42e3e5"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ups, no he entendido a que te refieres.", "¿Podrías repetirlo, por favor?", "¿Disculpa?", "¿Decías?", "¿Cómo?" ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "name": "7d4b94bc-40d7-4ffa-b661-37b35cf3fe8c"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "66087e84-5ab2-430c-be32-92fb3bb672e2",
+    "languageCode": "es"
+  } ]
+}

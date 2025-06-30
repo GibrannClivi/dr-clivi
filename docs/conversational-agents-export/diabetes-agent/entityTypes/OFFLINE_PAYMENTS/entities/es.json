@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "OFFLINE_PAYMENTS",
+    "synonyms": [ "Código de Pago", "OFFLINE_PAYMENTS", "Referencia", "Seguir con efectivo", "Pago en efectivo", "Codigo de pago" ],
+    "languageCode": "es"
+  } ]
+}

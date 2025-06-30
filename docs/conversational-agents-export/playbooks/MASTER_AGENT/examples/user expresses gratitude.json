@@ -1,0 +1,35 @@
+{
+  "name": "e2929a59-7dbb-40e0-953a-6bdf7a121186",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Gracias a ti."
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "the userRequest input parameter: \"User sends enthusiastic and Informal thanks, high praise, compliment or sincere formal appreciation\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and invoked flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user expresses gratitude",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 153,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

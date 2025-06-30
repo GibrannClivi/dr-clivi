@@ -1,0 +1,10 @@
+{
+  "name": "0a5310bf-a776-4188-a8a4-632ae7f8fcaf",
+  "displayName": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE",
+  "parameters": [ {
+    "id": "APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE",
+    "entityType": "@APPOINTMENT_SEND_SCHEDULER_BUTTON_AND_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 7
+}

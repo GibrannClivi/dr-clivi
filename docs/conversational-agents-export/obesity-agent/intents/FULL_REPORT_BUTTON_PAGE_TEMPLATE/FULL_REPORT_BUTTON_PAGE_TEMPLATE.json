@@ -1,0 +1,10 @@
+{
+  "name": "29eaa64c-e78d-4da4-a0a5-570133fc7d66",
+  "displayName": "FULL_REPORT_BUTTON_PAGE_TEMPLATE",
+  "parameters": [ {
+    "id": "FULL_REPORT_BUTTON_PAGE_TEMPLATE",
+    "entityType": "@FULL_REPORT_BUTTON_PAGE_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

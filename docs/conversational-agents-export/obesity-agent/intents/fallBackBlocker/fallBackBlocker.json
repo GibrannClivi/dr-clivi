@@ -1,0 +1,10 @@
+{
+  "name": "b78fe6f0-8beb-49b0-85d9-054e84c72ce1",
+  "displayName": "fallBackBlocker",
+  "parameters": [ {
+    "id": "all_good_no_action_needed",
+    "entityType": "@ALL_GOOD_NO_ACTION_NEEDED"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 101
+}

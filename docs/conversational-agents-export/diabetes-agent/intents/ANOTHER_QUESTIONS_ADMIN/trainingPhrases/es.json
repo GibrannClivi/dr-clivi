@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Tengo otra duda diferente",
+      "parameterId": "ANOTHER_QUESTIONS_ADMIN"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

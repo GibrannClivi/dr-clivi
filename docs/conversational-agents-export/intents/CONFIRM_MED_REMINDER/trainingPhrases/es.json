@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Aplicado",
+      "parameterId": "CONFIRM_MED_REMINDER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Enterado",
+      "parameterId": "CONFIRM_MED_REMINDER"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

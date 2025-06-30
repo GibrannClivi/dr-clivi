@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Quiero cambiar mi dieta",
+      "parameterId": "PX_ADAPTABLE_CHANGE_NUTRI_PLAN"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

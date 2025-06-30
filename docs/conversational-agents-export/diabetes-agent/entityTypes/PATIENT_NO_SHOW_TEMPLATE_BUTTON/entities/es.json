@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "PATIENT_NO_SHOW_TEMPLATE_BUTTON",
+    "synonyms": [ "No asistí a la cita", "PATIENT_NO_SHOW_TEMPLATE_BUTTON" ],
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "6feb49e8-6026-478f-9fbe-3770ec2a693b",
+  "displayName": "INVOICING_REQUEST",
+  "parameters": [ {
+    "id": "INVOICING_REQUEST",
+    "entityType": "@INVOICING_REQUEST"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 11
+}

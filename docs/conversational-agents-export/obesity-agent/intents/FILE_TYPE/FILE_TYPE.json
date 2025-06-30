@@ -1,0 +1,10 @@
+{
+  "name": "9a8f0c6f-da43-4abd-9525-789edbe2f176",
+  "displayName": "FILE_TYPE",
+  "parameters": [ {
+    "id": "FILE_TYPE",
+    "entityType": "@FILE_TYPE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

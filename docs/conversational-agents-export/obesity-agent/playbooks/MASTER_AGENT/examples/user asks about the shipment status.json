@@ -1,0 +1,52 @@
+{
+  "name": "b3380bc9-997f-484c-8751-fef64c47f22c",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Me parece que quieres apoyo con tus envíos. Yo te puedo ayudar"
+    }
+  }, {
+    "toolUse": {
+      "tool": "SEND_MESSAGE",
+      "action": "SEND_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "SEND_MESSAGE",
+          "templateName": "supplies_ai_catcher",
+          "type": "TEMPLATE"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"user inquiries about the shipment status of their supplies (such as Saxenda , Ozempic, Wegoby, glucometer or strips)",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and invoked tool called SEND_MESSAGE, then invoked flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user asks about the shipment status",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 284,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

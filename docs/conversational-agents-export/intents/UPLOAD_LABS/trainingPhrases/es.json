@@ -1,0 +1,24 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Labs/Recetas/Plan",
+      "parameterId": "UPLOAD_LABS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Labs/Recetas/Meds",
+      "parameterId": "UPLOAD_LABS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "UPLOAD_LABS",
+      "parameterId": "UPLOAD_LABS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "d1800056-a000-45a6-8322-1e9fcb3c9ece",
+  "displayName": "UPDATE_VIDEOCALL",
+  "parameters": [ {
+    "id": "UPDATE_VIDEOCALL",
+    "entityType": "@UPDATE_VIDEOCALL"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

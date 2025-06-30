@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Más del 75%",
+      "parameterId": "PX_ADHERENCIA_SPORT_MAS75"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

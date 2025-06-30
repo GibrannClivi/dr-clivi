@@ -1,0 +1,46 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Para qué sirves?",
+      "parameterId": "WHAT_CAN_YOU_DO"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Cuales son tus funciones?",
+      "parameterId": "WHAT_CAN_YOU_DO"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Cómo funciona el asistente?",
+      "parameterId": "WHAT_CAN_YOU_DO"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Que puedes hacer?",
+      "parameterId": "WHAT_CAN_YOU_DO",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Qué puedes hacer?",
+      "parameterId": "WHAT_CAN_YOU_DO"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "WHAT_CAN_YOU_DO",
+      "parameterId": "WHAT_CAN_YOU_DO"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

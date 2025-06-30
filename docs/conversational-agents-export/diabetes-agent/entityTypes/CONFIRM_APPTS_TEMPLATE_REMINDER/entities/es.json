@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "CONFIRM_APPTS_TEMPLATE_REMINDER",
+    "synonyms": [ "CONFIRM_APPTS_TEMPLATE_REMINDER", "Confirmar Endo Cita", "Confirmar nutrición", "Confirmar nutricional", "Confirmar psicología", "Confirmar Endocrinología", "Confirmar cita", "Confirmar" ],
+    "languageCode": "es"
+  } ]
+}

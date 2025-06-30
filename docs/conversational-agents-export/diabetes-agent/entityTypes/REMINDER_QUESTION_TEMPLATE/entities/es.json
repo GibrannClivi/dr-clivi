@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "REMINDER_QUESTION_TEMPLATE",
+    "synonyms": [ "CLIVI - Preguntar", "Enviar pregunta", "Hacer pregunta", "Preguntar", "Preguntar ahora", "preguntas", "Preguntas", "QUESTION_TYPE", "REMINDER_QUESTION_TEMPLATE", "SEND_QUESTION", "Enviar respuesta" ],
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,83 @@
+{
+  "name": "7470b3db-0dab-4dd0-9f34-826d9abc45e3",
+  "displayName": "measurementsMenu",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "LOG_GLUCOSE",
+              "text": "Glucosa"
+            }, {
+              "id": "WEIGHT_LOG",
+              "text": "Peso"
+            } ],
+            "textBody": "Qué vas a enviar?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "LOG_GLUCOSE_TEMPLATE_PAGE",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "logGlucoseTime",
+    "name": "8704eec7-ba3b-4d16-9b5e-a256da4f346e"
+  }, {
+    "intent": "WEIGHT_LOG_PAGE_AND_TEMPLATE",
+    "condition": "TRUE",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "logWeight",
+    "name": "32684a86-dc4d-4e0e-abd0-b7e3762f67ee"
+  } ],
+  "eventHandlers": [ {
+    "targetPage": "End Session",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "QUESTION_SET_LAST_MESSAGE",
+              "params": {
+                "isKnownQuestion": true
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "be171ab0-04a2-46e3-89ca-bb99efac210e"
+  } ],
+  "transitionRouteGroups": [ "CLUB_CATCHER" ]
+}

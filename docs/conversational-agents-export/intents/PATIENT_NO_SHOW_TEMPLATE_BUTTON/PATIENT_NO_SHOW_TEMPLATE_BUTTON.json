@@ -1,0 +1,10 @@
+{
+  "name": "6f979962-4c71-4d88-a769-6388aa95333c",
+  "displayName": "PATIENT_NO_SHOW_TEMPLATE_BUTTON",
+  "parameters": [ {
+    "id": "PATIENT_NO_SHOW_TEMPLATE_BUTTON",
+    "entityType": "@PATIENT_NO_SHOW_TEMPLATE_BUTTON"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

@@ -1,0 +1,10 @@
+{
+  "name": "7a455a37-65c0-4cb8-8038-7a35cde7b582",
+  "displayName": " WEIGHT_LOG_PAGE_AND_TEMPLATE",
+  "parameters": [ {
+    "id": "WEIGHT_LOG_PAGE_AND_TEMPLATE",
+    "entityType": "@WEIGHT_LOG_PAGE_AND_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 5
+}

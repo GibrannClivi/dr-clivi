@@ -1,0 +1,87 @@
+{
+  "name": "d0a36083-7d8c-44e2-903a-8e3b3cb8959d",
+  "displayName": "rateApptsMainOne",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "PSYCHOLOGIST_SURVEY",
+              "text": "Psicológica"
+            }, {
+              "id": "NUTRITION_SURVEY",
+              "text": "Nutricional"
+            }, {
+              "id": "DIABETES_SURVEY",
+              "text": "Alta especialidad"
+            } ],
+            "textBody": "¿Qué cita quieres calificar?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "PSYCHOLOGIST_SURVEY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ratingsPsychoAppt",
+    "name": "dfbc5c71-8411-476a-91b9-1f97d9013fcf"
+  }, {
+    "intent": "NUTRITION_SURVEY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ratingsNutritionAppt",
+    "name": "3f2d7535-ad67-4905-b4b5-1f343c9774ef"
+  }, {
+    "intent": "DIABETES_SURVEY",
+    "condition": "true",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "ratingsDiabetesAppt",
+    "name": "fb68d0de-8cb2-4612-9b50-d624a58f62a8"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "1aa41c4c-8f5d-44d6-99f4-a17ce10cb2b4",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

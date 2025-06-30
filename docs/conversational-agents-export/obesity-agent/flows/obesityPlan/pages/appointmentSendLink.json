@@ -1,0 +1,41 @@
+{
+  "name": "77fb8765-eec2-41a7-9523-b0062fb2c789",
+  "displayName": "appointmentSendLink",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RESEND_MEETING_LINK"
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "dcd15d9e-bf54-4821-ab11-b8c9df63aab3"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "037863b0-5aee-43fd-aa4a-7dff21c32980"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

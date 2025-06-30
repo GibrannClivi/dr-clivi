@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Tipo de archivo",
+      "parameterId": "FILE_TYPE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

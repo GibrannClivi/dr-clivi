@@ -1,0 +1,10 @@
+{
+  "name": "dbd8b5c4-d8dd-4e71-aede-6a8c7c13a704",
+  "displayName": "ACTIVE_CONVERSATION_STARTED",
+  "parameters": [ {
+    "id": "ACTIVE_CONVERSATION_STARTED",
+    "entityType": "@ACTIVE_CONVERSATION_STARTED"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

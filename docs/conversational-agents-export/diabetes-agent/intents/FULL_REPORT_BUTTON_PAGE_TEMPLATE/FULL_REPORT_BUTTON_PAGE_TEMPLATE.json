@@ -1,0 +1,10 @@
+{
+  "name": "26c05fb9-400b-46de-a390-3e6d34f3002b",
+  "displayName": "FULL_REPORT_BUTTON_PAGE_TEMPLATE",
+  "parameters": [ {
+    "id": "FULL_REPORT_BUTTON_PAGE_TEMPLATE",
+    "entityType": "@FULL_REPORT_BUTTON_PAGE_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

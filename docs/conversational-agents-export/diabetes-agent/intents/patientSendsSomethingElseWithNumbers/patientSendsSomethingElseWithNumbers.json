@@ -1,0 +1,10 @@
+{
+  "name": "1088de87-b173-486d-a49c-4d2e4833eb96",
+  "displayName": "patientSendsSomethingElseWithNumbers",
+  "parameters": [ {
+    "id": "NO_MEASURMENT_OR_QUESTION",
+    "entityType": "@NO_MEASURMENT_OR_QUESTION"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 6
+}

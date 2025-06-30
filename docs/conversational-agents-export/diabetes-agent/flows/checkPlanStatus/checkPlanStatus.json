@@ -1,0 +1,121 @@
+{
+  "name": "a4222d8c-5bb1-4c07-8720-a86d49ec648e",
+  "displayName": "checkPlanStatus",
+  "transitionRoutes": [ {
+    "intent": "OFFLINE_PAYMENTS",
+    "condition": "$session.params.userContext.patient.plan = \"PRO\" AND ($session.params.userContext.patient.planStatus = \"ACTIVE\" OR $session.params.userContext.patient.planStatus = \"SUSPENDED\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "payCashCreate",
+    "name": "4cc91dd7-a249-40c9-a519-899ab2a56ce6"
+  }, {
+    "intent": "OFFLINE_PAYMENTS",
+    "condition": "$session.params.userContext.patient.plan = \"PLUS\" AND ($session.params.userContext.patient.planStatus = \"ACTIVE\" OR $session.params.userContext.patient.planStatus = \"SUSPENDED\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "payCashCreate",
+    "name": "a000b39f-b969-497a-95e6-c28fd95fa7b4"
+  }, {
+    "condition": "$session.params.userContext.patient.plan = \"PRO\" AND ($session.params.userContext.patient.planStatus = \"ACTIVE\" OR $session.params.userContext.patient.planStatus = \"SUSPENDED\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "099164ca-e95e-4789-8062-be41e6643304"
+  }, {
+    "condition": "$session.params.userContext.patient.plan = \"PLUS\" AND ($session.params.userContext.patient.planStatus = \"ACTIVE\" OR $session.params.userContext.patient.planStatus = \"SUSPENDED\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "34ac5bc9-63ac-4007-9d26-66d46ae7b0c7"
+  }, {
+    "condition": "$session.params.userContext.patient.plan = \"CLUB\" AND ($session.params.userContext.patient.planStatus = \"ACTIVE\" OR $session.params.userContext.patient.planStatus = \"SUSPENDED\")",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "ACTIVITY_EVENT_LOG",
+              "params": {
+                "eventType": "STARTED_SESSION_DATE"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetFlow": "clubPlan",
+    "name": "09140cde-f6dc-467f-bf3f-da5f86fa5789"
+  }, {
+    "condition": "$session.params.userContext.patient.plan = \"BASIC\" AND ($session.params.userContext.patient.planStatus = \"ACTIVE\" OR $session.params.userContext.patient.planStatus = \"SUSPENDED\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "diabetesPlans",
+    "name": "c155fc8b-eebd-4d76-8b5e-3bc0b122b68a"
+  }, {
+    "condition": "$session.params.userContext = \"UNKNOWN\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "userProblems",
+    "name": "d45813df-dd77-45f9-9ec8-842eb387549e"
+  }, {
+    "condition": "$session.params.userContext.patient.plan = \"CLUB\" AND $session.params.userContext.patient.planStatus = \"CANCELED\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "clubCanceledPlan",
+    "name": "f7573925-4e62-4bdd-8a4d-0a72d40f0f16"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "e7c5f205-7391-4a7d-8634-28f436f9dbcb",
+    "targetPlaybook": "MASTER_AGENT"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ups, no he entendido a que te refieres.", "¿Podrías repetirlo, por favor?", "¿Disculpa?", "¿Decías?", "¿Cómo?" ]
+        },
+        "languageCode": "es"
+      } ]
+    },
+    "name": "797ddc7f-b110-4d84-bd41-f2ece645e4f4"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "transitionRouteGroups": [ "planStatusRouteGroup" ],
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "37b8a895-aa04-4108-af61-debbbf8fef3e",
+    "languageCode": "es"
+  } ]
+}

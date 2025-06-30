@@ -1,0 +1,24 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Enviar laboratorios",
+      "parameterId": "REMINDER_LABS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Enviar estudios",
+      "parameterId": "REMINDER_LABS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Laboratorios",
+      "parameterId": "REMINDER_LABS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

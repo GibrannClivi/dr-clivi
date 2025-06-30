@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "APPOINTMENT_SEND_CANCEL_LIST",
+    "synonyms": [ "APPOINTMENT_SEND_CANCEL_LIST", "Cancelar cita" ],
+    "languageCode": "es"
+  } ]
+}

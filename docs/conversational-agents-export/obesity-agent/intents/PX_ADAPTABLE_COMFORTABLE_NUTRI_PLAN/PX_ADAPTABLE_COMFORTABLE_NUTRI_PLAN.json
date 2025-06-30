@@ -1,0 +1,10 @@
+{
+  "name": "e4b0e27f-16f0-4a07-befa-d008bd803fbd",
+  "displayName": "PX_ADAPTABLE_COMFORTABLE_NUTRI_PLAN",
+  "parameters": [ {
+    "id": "PX_ADAPTABLE_COMFORTABLE_NUTRI_PLAN",
+    "entityType": "@PX_ADAPTABLE_COMFORTABLE_NUTRI_PLAN"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

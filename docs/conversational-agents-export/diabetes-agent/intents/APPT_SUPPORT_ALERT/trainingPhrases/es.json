@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Requiero apoyo",
+      "parameterId": "APPT_SUPPORT_ALERT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

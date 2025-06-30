@@ -1,0 +1,151 @@
+{
+  "name": "400e81e1-5cac-4aee-ab96-19adb08058cf",
+  "displayName": "appointmentNoShow",
+  "form": {
+    "parameters": [ {
+      "displayName": "staffType",
+      "entityType": "@sys.any",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Da un toque",
+            "bodyText": "¿A qué cita no pudiste asistir?",
+            "sections": [ {
+              "rows": [ {
+                "description": "",
+                "id": "NO_SHOW_GENERAL_MED",
+                "title": "Medicina General"
+              }, {
+                "description": "",
+                "id": "PSYCHOLOGY_NO_SHOW",
+                "title": "Psicología"
+              }, {
+                "description": "",
+                "id": "DIABETES_NO_SHOW",
+                "title": "Endocrinología"
+              }, {
+                "description": "",
+                "id": "NUTRITION_NO_SHOW",
+                "title": "Nutrición"
+              } ],
+              "title": "Opciones"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "NO_SHOW_GENERAL_MED",
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.staffType",
+        "value": "GENERAL_MED"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "appointmentNoShowReason",
+    "name": "f1ee885b-81b0-4aa7-b914-550778187943"
+  }, {
+    "intent": "PSYCHOLOGY_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.staffType",
+        "value": "PSYCHOLOGY"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "appointmentNoShowReason",
+    "name": "01af5a18-9480-4ae4-968d-5d8a1834622c"
+  }, {
+    "intent": "DIABETES_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.staffType",
+        "value": "DIABETES"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "appointmentNoShowReason",
+    "name": "ab4986b8-df94-4631-bb10-b0c1db8e551c"
+  }, {
+    "intent": "NUTRITION_NO_SHOW",
+    "condition": "true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "$session.params.staffType",
+        "value": "NUTRITION"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "appointmentNoShowReason",
+    "name": "ced5834f-5a9b-4d3c-b704-aa3fedde64e1"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "bb74ab96-901c-469a-ad0b-5bcae067e2fd",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "DIABETES_CATCHER" ]
+}

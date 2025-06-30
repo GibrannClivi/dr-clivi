@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Hablar con asesor",
+      "parameterId": "UP_SUPPORT_REQUESTED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

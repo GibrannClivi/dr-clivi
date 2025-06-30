@@ -1,0 +1,55 @@
+{
+  "name": "b9af3e57-1bb7-47c9-8052-253723c272e0",
+  "displayName": "PROPERTY_UPDATER",
+  "description": "Updates property in HubSpot.",
+  "toolType": "CUSTOMIZED_TOOL",
+  "functionSpec": {
+    "inputSchema": {
+      "properties": {
+        "actionType": {
+          "enum": [ "CALL_FUNCTION" ],
+          "example": "CALL_FUNCTION",
+          "type": "string"
+        },
+        "functionName": {
+          "enum": [ "PROPERTY_UPDATER" ],
+          "example": "PROPERTY_UPDATER",
+          "type": "string"
+        },
+        "properties": {
+          "items": {
+            "properties": {
+              "name": {
+                "example": "create_deal",
+                "type": "string"
+              },
+              "platform": {
+                "enum": [ "HUBSPOT", "ADMIN" ],
+                "example": "HUBSPOT",
+                "type": "string"
+              },
+              "value": {
+                "example": "CHURN_WAC",
+                "type": "string"
+              }
+            },
+            "required": [ "platform", "value", "name" ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [ "properties", "functionName", "actionType" ],
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "success": {
+          "description": "If success = true, set properties values",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

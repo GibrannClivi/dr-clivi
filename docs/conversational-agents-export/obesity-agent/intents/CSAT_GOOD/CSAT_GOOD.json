@@ -1,0 +1,10 @@
+{
+  "name": "53036be5-9bfc-4634-a8a5-6e06d3198c54",
+  "displayName": "CSAT_GOOD",
+  "parameters": [ {
+    "id": "CSAT_GOOD",
+    "entityType": "@CSAT_GOOD"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

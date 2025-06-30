@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Estoy disponible",
+      "parameterId": "PATIENT_CONTACT_AVAILABLE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "c84375a7-c480-443a-befa-053dce67111f",
+  "displayName": "NUTRI_RESCHEDULE_APPT",
+  "parameters": [ {
+    "id": "NUTRI_RESCHEDULE_APPT",
+    "entityType": "@NUTRI_RESCHEDULE_APPT"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

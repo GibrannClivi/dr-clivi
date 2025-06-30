@@ -1,0 +1,10 @@
+{
+  "name": "1e50ff92-acfe-4396-b840-31125655fcd0",
+  "displayName": "WHATSAPP_FLOW_FILLED",
+  "parameters": [ {
+    "id": "WHATSAPP_FLOW_FILLED",
+    "entityType": "@WHATSAPP_FLOW_FILLED"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 7
+}

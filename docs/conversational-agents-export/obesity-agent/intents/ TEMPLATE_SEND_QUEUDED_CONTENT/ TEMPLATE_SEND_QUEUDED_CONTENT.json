@@ -1,0 +1,10 @@
+{
+  "name": "3717c492-c5c9-4226-9422-1ac1042fbb83",
+  "displayName": " TEMPLATE_SEND_QUEUDED_CONTENT",
+  "parameters": [ {
+    "id": "TEMPLATE_SEND_QUEUDED_CONTENT",
+    "entityType": "@TEMPLATE_SEND_QUEUDED_CONTENT"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

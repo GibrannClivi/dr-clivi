@@ -1,0 +1,31 @@
+{
+  "name": "d6d3991a-fb50-4a33-9174-0f4fc7719cb6",
+  "actions": [ {
+    "flowInvocation": {
+      "flow": "helpDeskSubMenu",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter:\"user requests do not match any predefined above instructions\" or the input parameter conversationMetadata do not match any predefined above instructions.",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent invoked flows called helpDeskSubMenu and END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user requests do not match any predefined above instructions",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 147,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

@@ -1,0 +1,80 @@
+{
+  "name": "917d0fd1-c885-41ed-bd91-ed1f659588f4",
+  "displayName": "rateApptsMainOne",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "buttons": [ {
+              "id": "PSYCHOLOGIST_SURVEY",
+              "text": "Psicológica"
+            }, {
+              "id": "NUTRITION_SURVEY",
+              "text": "Nutricional"
+            }, {
+              "id": "OBESITY_SURVEY",
+              "text": "Alta especialidad"
+            } ],
+            "textBody": "¿Qué cita quieres calificar?",
+            "type": "SESSION_BUTTON"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "PSYCHOLOGIST_SURVEY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ratingsPsychoAppt",
+    "name": "4493dfbb-e06b-4b85-ae37-42008f7f3f2d"
+  }, {
+    "intent": "NUTRITION_SURVEY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ratingsNutritionAppt",
+    "name": "47909f70-95b8-460a-aeef-cec08a4df6c2"
+  }, {
+    "intent": "OBESITY_SURVEY",
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ratingsObesityAppt",
+    "name": "8fac8849-32c6-452c-aedf-403c9b33700e"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "name": "1892b69a-9ccc-4f92-bafe-7b5e797269c1",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

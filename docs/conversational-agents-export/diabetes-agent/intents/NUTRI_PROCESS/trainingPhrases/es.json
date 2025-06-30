@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Proceso nutrición",
+      "parameterId": "NUTRI_PROCESS"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

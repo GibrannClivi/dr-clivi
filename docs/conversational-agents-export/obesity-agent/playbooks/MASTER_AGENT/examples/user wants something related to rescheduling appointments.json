@@ -1,0 +1,52 @@
+{
+  "name": "420cc524-184e-4ed4-bbf5-7229d6108d36",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Hola, Me parece que quieres reagendar tu consulta. Déjame asistirte."
+    }
+  }, {
+    "toolUse": {
+      "tool": "SEND_MESSAGE",
+      "action": "SEND_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "SEND_MESSAGE",
+          "templateName": "reschedule_appt_ai_menu",
+          "type": "TEMPLATE"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"user wants something related to rescheduling appointments\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and invoked tool called SEND_MESSAGE, then called flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user wants something related to rescheduling appointments",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 271,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

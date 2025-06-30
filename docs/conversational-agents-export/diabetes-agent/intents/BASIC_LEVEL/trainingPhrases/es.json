@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Unirme básico",
+      "parameterId": "BASIC_LEVEL"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

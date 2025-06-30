@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Regular",
+      "parameterId": "CSAT_REGULAR"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "CSAT_REGULAR",
+      "parameterId": "CSAT_REGULAR"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

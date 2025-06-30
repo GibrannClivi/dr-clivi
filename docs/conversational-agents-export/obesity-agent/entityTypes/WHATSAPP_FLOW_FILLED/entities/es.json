@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "WHATSAPP_FLOW_FILLED",
+    "synonyms": [ "FORM_REPLY:flow", "FORM_SUBMITTED", "FORM_SUBMITTED:SCREEN_ID:", "FORM_SUBMITTED:SCREEN_ID:ADDRESS_THREE", "FORM_SUBMITTED:SCREEN_ID:MEDICATION_ADHERENCE", "nfm_reply", "WHATSAPP_FLOW_FILLED" ],
+    "languageCode": "es"
+  } ]
+}

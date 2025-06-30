@@ -1,0 +1,24 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Iniciar sesión",
+      "parameterId": "ACTIVE_CONVERSATION_STARTED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Iniciar conversación",
+      "parameterId": "ACTIVE_CONVERSATION_STARTED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Comenzar",
+      "parameterId": "ACTIVE_CONVERSATION_STARTED"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

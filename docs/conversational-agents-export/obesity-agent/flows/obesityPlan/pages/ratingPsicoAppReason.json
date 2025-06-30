@@ -1,0 +1,320 @@
+{
+  "name": "febf5b57-1696-4686-8631-069ee715cf0f",
+  "displayName": "ratingPsicoAppReason",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "actions": [ {
+          "definition": {
+            "actionButtonText": "Seleccionar opción",
+            "bodyText": "Hola $session.params.userContext.patient.nameDisplay, queremos saber más sobre tu calificación, ¿Qué inconveniente presentaste?.",
+            "sections": [ {
+              "rows": [ {
+                "description": "Duración de tu cita.",
+                "id": "DURATION_APPT",
+                "title": "Duración."
+              }, {
+                "description": "Puntualidad de tu especialista.",
+                "id": "PUNCTUALITY_APPT",
+                "title": "Puntualidad"
+              }, {
+                "description": "No me sentí escuchado",
+                "id": "QUALITY_APPT",
+                "title": "Calidad de tu cita"
+              }, {
+                "description": "No recibí la liga de mi cita.",
+                "id": "REMINDER_ISSUE",
+                "title": "Falló el recordatorio"
+              }, {
+                "description": "La liga de mi cita no funcionó.",
+                "id": "LINK_ISSUES",
+                "title": "Problema con la liga."
+              }, {
+                "description": "No recibí apoyo para entrar a mi cita.",
+                "id": "NO_SUPPORT",
+                "title": "No tuve asistencia"
+              } ],
+              "title": "Menú:"
+            } ],
+            "type": "SESSION_LIST"
+          },
+          "type": "SEND_MESSAGE"
+        } ]
+      },
+      "languageCode": "es"
+    } ],
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+      
+      },
+      "dtmfSettings": {
+        "useSystemEntityRule": false
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "NO_SUPPORT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "No recibí asistencia",
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "psych_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "No recibí asistencia"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "9be10445-6361-4480-b206-160d9bd2a416"
+  }, {
+    "intent": "LINK_ISSUES",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "No servía el enlace",
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "psych_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "No servía el enlace"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "727465e6-91fd-4d4a-8fdb-f68261b7ec3a"
+  }, {
+    "intent": "REMINDER_ISSUE",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "No llegó el recordatorio",
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "psych_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "No llegó el recordatorio"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "0f1ea81c-23b0-44ec-8c89-330863262be9"
+  }, {
+    "intent": "QUALITY_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "Atención del especialista",
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "psych_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "Atención del especialista"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "415cebd6-bffc-4e59-9fdc-1ac97e02b6b3"
+  }, {
+    "intent": "PUNCTUALITY_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "Puntualidad del especialista",
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "psych_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "Puntualidad del especialista"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "e36d5ad4-aa90-42bb-8dff-34cbc98b2531"
+  }, {
+    "intent": "DURATION_APPT",
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "payload": {
+          "actions": [ {
+            "definition": {
+              "functionName": "APPOINTMENT_RATE",
+              "params": {
+                "ratingFeedback": "Duración de la cita",
+                "staffType": "PSYCHOLOGY"
+              }
+            },
+            "type": "CALL_FUNCTION"
+          }, {
+            "definition": {
+              "functionName": "PROPERTY_UPDATER",
+              "params": {
+                "properties": [ {
+                  "name": "psych_complaint_appt",
+                  "platform": "HUBSPOT",
+                  "value": "Duración de la cita"
+                } ]
+              }
+            },
+            "type": "CALL_FUNCTION"
+          } ]
+        },
+        "languageCode": "es"
+      } ],
+      "advancedSettings": {
+        "playbackInterruptionSettings": {
+        
+        },
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    },
+    "targetPage": "End Session",
+    "name": "c3ec5351-56e7-4de6-9cbf-752c79230c10"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "b46ef2f8-2ae4-4528-b92f-ddaf658b3af3",
+    "targetPlaybook": "MASTER_AGENT"
+  } ],
+  "transitionRouteGroups": [ "GLP_CATCHER" ]
+}

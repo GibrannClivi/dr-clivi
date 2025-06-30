@@ -1,0 +1,52 @@
+{
+  "name": "7cfadb55-b9cf-4439-a812-3bfed1d9105f",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Hola, me parece que quieres apoyo con tus pagos. Yo te puedo ayudar."
+    }
+  }, {
+    "toolUse": {
+      "tool": "SEND_MESSAGE",
+      "action": "SEND_MESSAGE",
+      "inputActionParameters": {
+        "functionParameter": {
+          "actionType": "SEND_MESSAGE",
+          "templateName": "payment_ai_catcher",
+          "type": "TEMPLATE"
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "success": true
+        }
+      }
+    }
+  }, {
+    "flowInvocation": {
+      "flow": "END_SESSION",
+      "inputActionParameters": {
+      
+      },
+      "outputActionParameters": {
+      
+      }
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "The userRequest input parameter: \"user wants something related to payments such as an payment error, duplicated or wants to pay\"",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent responded in Spanish and invoked tool called SEND_MESSAGE, the called flow END_SESSION.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "user wants something related to payments",
+  "retrievalStrategy": "DEFAULT",
+  "tokenCount": 277,
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "es"
+}

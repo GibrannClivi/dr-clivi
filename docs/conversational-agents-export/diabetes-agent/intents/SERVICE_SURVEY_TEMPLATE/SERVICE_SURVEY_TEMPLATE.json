@@ -1,0 +1,10 @@
+{
+  "name": "038f8537-d47c-42cb-840f-06ff5fd03e5e",
+  "displayName": "SERVICE_SURVEY_TEMPLATE",
+  "parameters": [ {
+    "id": "SERVICE_SURVEY_TEMPLATE",
+    "entityType": "@SERVICE_SURVEY_TEMPLATE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 2
+}

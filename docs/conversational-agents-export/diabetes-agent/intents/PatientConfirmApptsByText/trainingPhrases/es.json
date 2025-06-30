@@ -1,0 +1,116 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Confirmo la ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    }, {
+      "text": " por favor",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "No",
+      "auto": true
+    }, {
+      "text": " me la cancelen ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " me olvidó confirmarla",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Por qué me la cancelaron la consulta si ya puse confirmar",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Quiero confirmar la ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    }, {
+      "text": " de ",
+      "auto": true
+    }, {
+      "text": "mañana",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Por favor, confirmen mi ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    }, {
+      "text": " de nuevo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Quiero confirmar la ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    }, {
+      "text": " que tengo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Ya confirmé la ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    }, {
+      "text": ", por favor ",
+      "auto": true
+    }, {
+      "text": "no",
+      "auto": true
+    }, {
+      "text": " la cancelen",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "Me gustaría confirmar la ",
+      "auto": true
+    }, {
+      "text": "cita",
+      "auto": true
+    }, {
+      "text": " que tengo ",
+      "auto": true
+    }, {
+      "text": "agendada",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

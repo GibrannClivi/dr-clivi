@@ -1,0 +1,10 @@
+{
+  "name": "44cd2710-c3f7-49e5-a776-b9ee6073e152",
+  "displayName": "ID_TRACKING",
+  "parameters": [ {
+    "id": "ID_TRACKING",
+    "entityType": "@ID_TRACKING"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

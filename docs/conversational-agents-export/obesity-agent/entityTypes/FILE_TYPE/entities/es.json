@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "FILE_TYPE",
+    "synonyms": [ "FILE_TYPE", "Tipo de archivo" ],
+    "languageCode": "es"
+  } ]
+}

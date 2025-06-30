@@ -1,0 +1,10 @@
+{
+  "name": "3c674d8e-c58b-4fe6-b66a-3c67cf80eb89",
+  "displayName": "YES_QUESTION_ABOUT_IT_PAGE",
+  "parameters": [ {
+    "id": "YES_QUESTION_ABOUT_IT_PAGE",
+    "entityType": "@YES_QUESTION_ABOUT_IT_PAGE"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 1
+}

@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Citas",
+      "parameterId": "APPOINTMENTS_MAIN_MENU_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  }, {
+    "parts": [ {
+      "text": "APPOINTMENTS",
+      "parameterId": "APPOINTMENTS_MAIN_MENU_PAGE"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

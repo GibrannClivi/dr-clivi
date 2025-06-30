@@ -1,0 +1,10 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Medición cintura",
+      "parameterId": "TEMPLATE_REMINDER_WAIST"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "es"
+  } ]
+}

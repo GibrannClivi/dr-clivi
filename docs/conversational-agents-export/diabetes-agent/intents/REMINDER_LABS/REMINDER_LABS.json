@@ -1,0 +1,10 @@
+{
+  "name": "ced96e66-5aa4-4da0-8e94-0a6f99d0e4ae",
+  "displayName": "REMINDER_LABS",
+  "parameters": [ {
+    "id": "REMINDER_LABS",
+    "entityType": "@REMINDER_LABS"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 3
+}

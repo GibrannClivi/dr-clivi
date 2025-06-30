@@ -1,0 +1,10 @@
+{
+  "name": "413f6c9d-68bb-46d9-80bc-4fa3e686b8e6",
+  "displayName": "PatientFeelsBad",
+  "parameters": [ {
+    "id": "SIDE_EFFECTS",
+    "entityType": "@SIDE_EFFECTS"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 90
+}

@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "UPLOAD_LABS",
+    "synonyms": [ "Labs/Recetas/Meds", "Labs/Recetas/Plan", "UPLOAD_LABS" ],
+    "languageCode": "es"
+  } ]
+}
