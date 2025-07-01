@@ -229,7 +229,7 @@ class DeterministicFlowHandler:
             "plan_status": user_context.plan_status.value if user_context.plan_status else None
         })
     
-    def is_deterministic_input(self, user_input: str) -> bool:
+    def is_deterministic_input(self, user_input: str, session_context: Dict[str, Any] = None) -> bool:
         """
         Check if user input matches deterministic flow patterns.
         Returns True if it should be handled by flows, False if needs AI routing.
@@ -238,6 +238,7 @@ class DeterministicFlowHandler:
         1. Saludos básicos e inicios de conversación
         2. Selecciones exactas de menú (callback IDs)
         3. Palabras clave muy específicas para navegación de menú
+        4. Números simples en contexto de medición
         
         Todo lo demás debe ir a routing inteligente.
         """
@@ -256,13 +257,49 @@ class DeterministicFlowHandler:
             "DIABETES_QUESTION", "NUTRITION_QUESTION", "PSYCHOLOGY_QUESTION",
             "SUPPLIES_QUESTION", "HIGH_SPECIALIZATION_QUESTION",
             "INVOICE", "UPLOAD_LABS", "CALL_SUPPORT", "PX_QUESTION_TAG",
-            "FULL_REPORT", "GLUCOSE_REPORT"
+            "FULL_REPORT", "GLUCOSE_REPORT",
+            # Acciones específicas de citas y mediciones
+            "SCHEDULE_NEW_APPOINTMENT", "RESCHEDULE_APPOINTMENT", "CANCEL_APPOINTMENT",
+            "BACK_TO_MAIN_MENU", "MAIN_MENU", "HOME", "MENU_PRINCIPAL",
+            # Estados de input para mediciones
+            "WAITING_FOR_WEIGHT", "WAITING_FOR_GLUCOSE", "WEIGHT_LOGGED", "GLUCOSE_LOGGED",
+            # Navegación
+            "VOLVER", "REGRESAR", "ATRAS", "MENU", "TERMINAR", "SALIR"
         ]
         
         if user_upper in exact_button_ids:
             return True
         
-        # 2. Saludos básicos muy específicos (solo para mostrar menú principal)
+        # 2. Contexto de medición: números simples cuando el usuario está registrando mediciones
+        if session_context:
+            current_flow = session_context.get("current_flow", "")
+            current_page = session_context.get("current_page", "")
+            awaiting_input = session_context.get("awaiting_input", "")
+            
+            # Si estamos esperando una medición específica, los números son determinísticos
+            measurement_contexts = [
+                "measurementsMenu", "LOG_WEIGHT", "LOG_GLUCOSE_FASTING", "LOG_GLUCOSE_POST_MEAL",
+                "WAITING_FOR_WEIGHT", "WAITING_FOR_GLUCOSE", "weight_input", "glucose_input"
+            ]
+            
+            if (current_page in measurement_contexts or 
+                awaiting_input in measurement_contexts or 
+                current_flow in measurement_contexts):
+                
+                # Verificar si es un número válido para medición
+                if self._is_valid_measurement_number(user_input):
+                    return True
+        
+        # 3. Frases de navegación comunes
+        navigation_phrases = [
+            "volver al menu", "menu principal", "regresar", "terminar",
+            "atras", "volver", "menu", "salir", "inicio", "home"
+        ]
+        
+        if any(phrase in user_lower for phrase in navigation_phrases):
+            return True
+        
+        # 4. Saludos básicos muy específicos (solo para mostrar menú principal)
         basic_greetings = [
             "hola", "inicio", "menu", "menú", "opciones", 
             "start", "comenzar", "hola doctor", "dr clivi"
@@ -283,19 +320,85 @@ class DeterministicFlowHandler:
             if any(medical in user_lower for medical in medical_keywords):
                 return False  # Tiene saludo + contenido médico -> IA
         
-        # 3. Todo lo demás va a routing inteligente
+        # 5. Todo lo demás va a routing inteligente
         # Incluyendo consultas médicas, preguntas específicas, emergencias, etc.
         return False
     
+    def _is_valid_measurement_number(self, user_input: str) -> bool:
+        """
+        Verifica si un input es un número válido para mediciones.
+        Rangos típicos:
+        - Peso: 30-300 kg
+        - Glucosa: 50-400 mg/dL
+        - Medidas corporales: 20-200 cm
+        """
+        try:
+            # Limpiar input (remover unidades comunes)
+            cleaned = user_input.lower().replace("kg", "").replace("cm", "").replace("mg/dl", "").replace("mg", "").strip()
+            
+            # Verificar si es un número
+            if "." in cleaned:
+                number = float(cleaned)
+            else:
+                number = int(cleaned)
+            
+            # Rangos razonables para mediciones corporales
+            if 10 <= number <= 500:  # Rango amplio para diferentes tipos de medición
+                return True
+                
+        except (ValueError, TypeError):
+            pass
+            
+        return False
+    
     def route_deterministic_input(self, user_context: UserContext, 
-                                user_input: str) -> Dict[str, Any]:
+                                user_input: str, session_context: Dict[str, Any] = None) -> Dict[str, Any]:
         """
         Route deterministic input through the proper flow logic.
         """
         user_lower = user_input.lower().strip()
         user_upper = user_input.upper().strip()
         
-        # Main menu triggers
+        # 1. Manejar entrada de mediciones en contexto PRIMERO (antes de navegación)
+        if session_context:
+            current_page = session_context.get("current_page", "")
+            awaiting_input = session_context.get("awaiting_input", "")
+            
+            # Si estamos esperando una medición y recibimos un número válido
+            if self._is_valid_measurement_number(user_input):
+                measurement_contexts = [
+                    "measurementsMenu", "LOG_WEIGHT", "LOG_GLUCOSE_FASTING", "LOG_GLUCOSE_POST_MEAL",
+                    "WAITING_FOR_WEIGHT", "WAITING_FOR_GLUCOSE", "weight_input", "glucose_input"
+                ]
+                
+                if (current_page in measurement_contexts or 
+                    awaiting_input in measurement_contexts):
+                    
+                    return self._handle_measurement_input(user_context, user_input, session_context)
+        
+        # 2. Manejar navegación explícita
+        navigation_triggers = [
+            "volver al menu", "menu principal", "regresar", "terminar",
+            "atras", "volver", "menu", "salir", "inicio", "home",
+            "BACK_TO_MAIN_MENU", "MAIN_MENU", "HOME", "MENU_PRINCIPAL"
+        ]
+        
+        if any(trigger in user_lower for trigger in navigation_triggers) or user_upper in navigation_triggers:
+            # Trigger main menu
+            plan_result = self.check_plan_status(user_context)
+            
+            if plan_result.get("action") == "show_main_menu":
+                menu_response = self.generate_main_menu_whatsapp(user_context)
+                return {
+                    "action": "show_main_menu",
+                    "menu_data": menu_response.get("menu_data", {}),
+                    "response_type": menu_response.get("response_type", "whatsapp_menu"),
+                    "flow": "diabetesPlans",
+                    "page": "mainMenu",
+                    "routing_type": "deterministic"
+                }
+        
+        # 3. Main menu triggers
         main_menu_triggers = [
             "hola", "menu", "inicio", "clivi", "dr clivi", 
             "opciones", "ayuda", "start", "comenzar"
@@ -318,7 +421,7 @@ class DeterministicFlowHandler:
             else:
                 return plan_result
         
-        # Check for exact button ID matches (callback queries from Telegram)
+        # 4. Check for exact button ID matches (callback queries from Telegram)
         button_mappings = {
             # Main menu buttons
             "APPOINTMENTS": ("mainMenu", "APPOINTMENTS"),
@@ -353,9 +456,16 @@ class DeterministicFlowHandler:
         
         if user_upper in button_mappings:
             page_name, selection_id = button_mappings[user_upper]
-            return self.handle_page_selection(page_name, selection_id, user_context)
+            result = self.handle_page_selection(page_name, selection_id, user_context)
+            
+            # Si es una acción de medición, agregar contexto para esperar entrada
+            if selection_id.startswith("LOG_"):
+                result["awaiting_measurement"] = selection_id
+                result["awaiting_input"] = selection_id
+                
+            return result
         
-        # Try to match menu option selection by text content
+        # 5. Try to match menu option selection by text content
         for option_id, option_data in self.menu_options.items():
             if (option_data["title"].lower() in user_lower or 
                 any(word in user_lower for word in option_data["description"].lower().split())):
@@ -367,3 +477,55 @@ class DeterministicFlowHandler:
             "reason": "ambiguous_deterministic_input",
             "user_input": user_input
         }
+    
+    def _handle_measurement_input(self, user_context: UserContext, user_input: str, 
+                                session_context: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Maneja la entrada de mediciones cuando el usuario está en contexto de registro.
+        """
+        try:
+            # Limpiar y validar el número
+            cleaned_input = user_input.lower().replace("kg", "").replace("cm", "").replace("mg/dl", "").replace("mg", "").strip()
+            
+            if "." in cleaned_input:
+                value = float(cleaned_input)
+            else:
+                value = int(cleaned_input)
+            
+            measurement_type = session_context.get("awaiting_input", "").replace("LOG_", "").lower()
+            
+            # Determinar el tipo de medición y mensaje de confirmación
+            if "weight" in measurement_type:
+                unit = "kg"
+                message = f"✅ **Peso registrado exitosamente**\n\n📏 **{value} {unit}** ha sido guardado en tu historial.\n\n¿Deseas registrar otra medición o volver al menú principal?"
+            elif "glucose" in measurement_type:
+                unit = "mg/dL"
+                message = f"✅ **Glucosa registrada exitosamente**\n\n🩸 **{value} {unit}** ha sido guardado en tu historial.\n\n¿Deseas registrar otra medición o volver al menú principal?"
+            else:
+                unit = "cm"
+                message = f"✅ **Medición registrada exitosamente**\n\n📏 **{value} {unit}** ha sido guardado en tu historial.\n\n¿Deseas registrar otra medición o volver al menú principal?"
+            
+            # Crear botones de navegación post-registro
+            inline_keyboard = [
+                [{"text": "📏 Otra medición", "callback_data": "MEASUREMENTS"}],
+                [{"text": "🏠 Menú principal", "callback_data": "BACK_TO_MAIN_MENU"}]
+            ]
+            
+            return {
+                "action": "measurement_recorded",
+                "response_type": "page_navigation",
+                "body_text": message,
+                "inline_keyboard": inline_keyboard,
+                "measurement_type": measurement_type,
+                "value": value,
+                "unit": unit,
+                "routing_type": "deterministic"
+            }
+            
+        except (ValueError, TypeError) as e:
+            return {
+                "action": "invalid_measurement",
+                "response_type": "general_response",
+                "response": f"❌ No pude interpretar la medición '{user_input}'. Por favor ingresa solo el número (ejemplo: 75, 120, 85.5)",
+                "routing_type": "deterministic"
+            }

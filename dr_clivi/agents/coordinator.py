@@ -101,27 +101,31 @@ class IntelligentCoordinator(BaseCliviAgent):
     
     @tool
     async def process_user_input(self, user_id: str, user_input: str, 
-                               phone_number: str = None) -> Dict[str, Any]:
+                               phone_number: str = None, session_context: Dict[str, Any] = None) -> Dict[str, Any]:
         """
         Main entry point - decides between deterministic flows vs AI routing.
         """
         # Get or create user context
         user_context = await self._get_user_context(user_id, phone_number)
         
+        # Store session context for this interaction
+        if session_context:
+            user_context.session_data = session_context
+        
         # First check: Is this a deterministic flow interaction?
-        if self.flow_handler.is_deterministic_input(user_input):
+        if self.flow_handler.is_deterministic_input(user_input, session_context):
             self._routing_stats["deterministic_routes"] += 1
-            return await self._handle_deterministic_flow(user_context, user_input)
+            return await self._handle_deterministic_flow(user_context, user_input, session_context)
         
         # Second check: Does this need intelligent routing?
         self._routing_stats["ai_routes"] += 1
         return await self._handle_intelligent_routing(user_context, user_input)
     
     async def _handle_deterministic_flow(self, user_context: UserContext, 
-                                       user_input: str) -> Dict[str, Any]:
+                                       user_input: str, session_context: Dict[str, Any] = None) -> Dict[str, Any]:
         """Handle structured menu interactions without AI"""
         try:
-            result = self.flow_handler.route_deterministic_input(user_context, user_input)
+            result = self.flow_handler.route_deterministic_input(user_context, user_input, session_context)
             
             if result.get("action") == "show_main_menu":
                 return {
@@ -137,6 +141,27 @@ class IntelligentCoordinator(BaseCliviAgent):
             
             elif result.get("action") == "page_transition":
                 return await self._handle_page_transition(user_context, result)
+            
+            elif result.get("action") == "measurement_recorded":
+                # Manejo específico para mediciones registradas
+                return {
+                    "response_type": "page_navigation",
+                    "body_text": result["body_text"],
+                    "inline_keyboard": result["inline_keyboard"],
+                    "routing_type": "deterministic",
+                    "measurement_data": {
+                        "type": result["measurement_type"],
+                        "value": result["value"],
+                        "unit": result["unit"]
+                    }
+                }
+            
+            elif result.get("action") == "invalid_measurement":
+                return {
+                    "response_type": "general_response",
+                    "response": result["response"],
+                    "routing_type": "deterministic"
+                }
             
             elif result.get("action") == "trigger_intelligent_routing":
                 # Deterministic handler couldn't resolve - escalate to AI
@@ -154,14 +179,42 @@ class IntelligentCoordinator(BaseCliviAgent):
         """
         Use Gemini 2.5 Flash to analyze medical query and determine routing.
         """
+        # Primero verificar si es solo un número sin contexto médico específico
+        user_input_cleaned = user_input.strip()
+        session_context = user_context.get('session_data', {})
+        
+        # Si es solo un número y estamos en contexto de medición, evitar análisis de emergencia
+        if self._is_simple_measurement_number(user_input_cleaned):
+            measurement_contexts = [
+                "measurementsMenu", "LOG_WEIGHT", "LOG_GLUCOSE_FASTING", "LOG_GLUCOSE_POST_MEAL",
+                "WAITING_FOR_WEIGHT", "WAITING_FOR_GLUCOSE", "weight_input", "glucose_input"
+            ]
+            
+            current_page = session_context.get("current_page", "")
+            awaiting_input = session_context.get("awaiting_input", "")
+            
+            if (current_page in measurement_contexts or awaiting_input in measurement_contexts):
+                # Es un número en contexto de medición - no es emergencia
+                return {
+                    "specialty": "general",
+                    "urgency": "low",
+                    "confidence": 0.9,
+                    "reasoning": "Número simple en contexto de medición, no emergencia",
+                    "suggested_action": "handle_as_measurement",
+                    "keywords_detected": []
+                }
+        
         analysis_prompt = f"""
 Eres el analizador de consultas médicas de Dr. Clivi. Tu trabajo es clasificar con precisión las consultas de pacientes para rutearlas al especialista correcto.
+
+IMPORTANTE: Si la consulta es solo un número simple (como "75", "120", "85.5") SIN palabras que indiquen emergencia, NO lo clasifiques como emergencia. Los números solos suelen ser mediciones normales.
 
 CONSULTA DEL PACIENTE: "{user_input}"
 
 INFORMACIÓN DEL PACIENTE:
 - Plan: {user_context.get('plan', 'UNKNOWN')}
 - Historial: {user_context.get('medical_history', 'No disponible')}
+- Contexto actual: {session_context.get('current_page', 'No disponible')}
 
 ESPECIALIDADES DISPONIBLES:
 
@@ -182,32 +235,34 @@ ESPECIALIDADES DISPONIBLES:
    - IMC, obesidad
    - Cirugía bariátrica
 
-3. **emergency** - Para emergencias médicas:
-   - Dolor de pecho, dificultad respiratoria
-   - Hipoglucemia severa (<70 mg/dL)
-   - Hiperglucemia extrema (>300 mg/dL)
-   - Síntomas de cetoacidosis
-   - Reacciones adversas graves
-   - "muy fuerte", "intenso", "no puedo respirar"
+3. **emergency** - SOLO para emergencias médicas CON PALABRAS de urgencia:
+   - "Dolor de pecho", "dificultad respiratoria"
+   - "Hipoglucemia severa", "muy bajo"
+   - "Hiperglucemia extrema", "muy alto"
+   - "No puedo respirar", "muy fuerte", "intenso"
+   - "Auxilio", "emergencia", "urgente"
+   - NOTA: Números solos (75, 120, 85.5) NO son emergencia
 
 4. **general** - Para todo lo demás:
    - Citas, facturas, quejas
    - Hipertensión, otras condiciones
    - Preguntas generales de salud
-   - Información sobre medicamentos no especializados
+   - Números simples sin contexto de emergencia
+   - Navegación de menú
 
 NIVELES DE URGENCIA:
 - **critical**: Emergencias que requieren atención inmediata
 - **high**: Problemas serios que necesitan respuesta rápida
 - **medium**: Consultas importantes pero no urgentes
-- **low**: Preguntas informativas o de rutina
+- **low**: Preguntas informativas, números simples, navegación
 
 INSTRUCCIONES:
 1. Analiza CUIDADOSAMENTE las palabras clave en la consulta
 2. Busca síntomas específicos de diabetes u obesidad
-3. Evalúa la urgencia basándote en la severidad
-4. Si hay palabras de emergencia, clasifica como "emergency"
-5. Responde ÚNICAMENTE con el JSON solicitado
+3. Evalúa la urgencia basándote en la severidad Y PRESENCIA DE PALABRAS DE URGENCIA
+4. Si hay palabras de emergencia Y síntomas, clasifica como "emergency"
+5. Si es solo un número, clasifica como "general" con urgencia "low"
+6. Responde ÚNICAMENTE con el JSON solicitado
 
 FORMATO DE RESPUESTA (JSON válido):
 {{
@@ -264,6 +319,32 @@ FORMATO DE RESPUESTA (JSON válido):
         except Exception as e:
             logger.error(f"Error in medical query analysis: {e}")
             return self._fallback_keyword_analysis(user_input, str(e))
+    
+    def _is_simple_measurement_number(self, user_input: str) -> bool:
+        """
+        Verifica si el input es solo un número simple que podría ser una medición.
+        """
+        try:
+            cleaned = user_input.lower().replace("kg", "").replace("cm", "").replace("mg/dl", "").replace("mg", "").strip()
+            
+            # Solo números, puntos y espacios
+            if not cleaned.replace(".", "").replace(" ", "").isdigit():
+                return False
+            
+            # Verificar si es un número válido
+            if "." in cleaned:
+                number = float(cleaned)
+            else:
+                number = int(cleaned)
+            
+            # Rangos típicos para mediciones (no emergencias)
+            if 10 <= number <= 500:
+                return True
+                
+        except (ValueError, TypeError):
+            pass
+            
+        return False
     
     def _fallback_keyword_analysis(self, user_input: str, ai_response: str = "") -> Dict[str, Any]:
         """
@@ -543,15 +624,62 @@ FORMATO DE RESPUESTA (JSON válido):
     
     async def _handle_general_query(self, user_context: UserContext, user_input: str,
                                   analysis: Dict[str, Any]) -> Dict[str, Any]:
-        """Handle general queries that don't need specialized agents"""
+        """
+        Handle general queries (citas, facturas, navegación, etc.)
+        """
+        user_lower = user_input.lower().strip()
+        
+        # Detectar intenciones de navegación de menú
+        menu_navigation_phrases = [
+            "volver al menu", "menu principal", "regresar", "terminar",
+            "atras", "volver", "menu", "salir", "inicio", "home",
+            "si", "sí", "okay", "ok", "vale", "está bien"
+        ]
+        
+        # Si es una respuesta afirmativa simple después de mostrar información
+        if any(phrase in user_lower for phrase in menu_navigation_phrases):
+            # Generar menú principal
+            plan_result = self.flow_handler.check_plan_status(user_context)
+            
+            if plan_result.get("action") == "show_main_menu":
+                menu_response = self.flow_handler.generate_main_menu_whatsapp(user_context)
+                return {
+                    "action": "show_main_menu",
+                    "response_type": "whatsapp_menu",
+                    "menu_data": menu_response.get("menu_data", {}),
+                    "flow": "diabetesPlans",
+                    "page": "mainMenu",
+                    "routing_type": "intelligent_to_deterministic"
+                }
+        
+        # Para consultas generales, proporcionar respuesta útil con navegación
+        general_response = f"""
+Entiendo tu consulta sobre "{user_input}". 
+
+Para ayudarte mejor, puedo ofrecerte las siguientes opciones:
+
+🗓️ **Citas médicas** - Consultar, agendar o reprogramar
+📏 **Mediciones** - Registrar peso, glucosa, etc.
+📈 **Reportes** - Ver tu historial de mediciones
+📂 **Facturas y estudios** - Información financiera
+❔ **Enviar pregunta** - Consultar con especialistas
+
+¿Te gustaría que te muestre el menú principal para ayudarte mejor?
+        """
+        
+        # Crear botones de navegación
+        inline_keyboard = [
+            [{"text": "🏠 Sí, mostrar menú principal", "callback_data": "BACK_TO_MAIN_MENU"}],
+            [{"text": "❔ Hacer una pregunta específica", "callback_data": "QUESTION_TYPE"}]
+        ]
+        
         return {
-            "response_type": "general_response",
-            "analysis": analysis,
-            "response": "Entiendo tu consulta. ¿Te gustaría que te muestre el menú principal para ayudarte mejor?",
-            "suggested_action": "show_main_menu",
-            "routing_type": "general"
+            "response_type": "page_navigation",
+            "body_text": general_response.strip(),
+            "inline_keyboard": inline_keyboard,
+            "routing_type": "intelligent"
         }
-    
+
     async def _handle_page_navigation(self, user_context: UserContext, 
                                     result: Dict[str, Any]) -> Dict[str, Any]:
         """Handle navigation to specific pages from menu selections"""

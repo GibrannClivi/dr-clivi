@@ -33,6 +33,9 @@ class TelegramBotHandler:
         self.coordinator = IntelligentCoordinator(config)
         self.bot_token = config.telegram.bot_token
         self.telegram_api_url = f"https://api.telegram.org/bot{self.bot_token}"
+        
+        # Session context storage for users
+        self.user_sessions = {}
     
     async def process_telegram_update(self, update_data: Dict[str, Any]) -> Dict[str, Any]:
         """
@@ -60,12 +63,19 @@ class TelegramBotHandler:
         
         logger.info(f"Processing message from user {user_id}: {text}")
         
+        # Get session context for this user
+        session_context = self.user_sessions.get(user_id, {})
+        
         # Process through the hybrid coordinator (reusing all existing logic)
         response = await self.coordinator.process_user_input(
             user_id=user_id,
             user_input=text,
-            phone_number=None  # Telegram doesn't require phone
+            phone_number=None,  # Telegram doesn't require phone
+            session_context=session_context
         )
+        
+        # Update session context based on response
+        await self._update_session_context(user_id, response)
         
         # Send response back to user
         await self._send_response_to_user(chat_id, response)
@@ -88,12 +98,19 @@ class TelegramBotHandler:
         # Answer the callback query to remove loading state
         await self._answer_callback_query(callback_query.get('id'))
         
+        # Get session context for this user
+        session_context = self.user_sessions.get(user_id, {})
+        
         # Process the selection through coordinator
         response = await self.coordinator.process_user_input(
             user_id=user_id,
             user_input=data,  # Button data acts as user input
-            phone_number=None
+            phone_number=None,
+            session_context=session_context
         )
+        
+        # Update session context based on response
+        await self._update_session_context(user_id, response)
         
         # Send response
         await self._send_response_to_user(chat_id, response)
@@ -104,6 +121,47 @@ class TelegramBotHandler:
             "response_type": response.get("response_type"),
             "routing_type": response.get("routing_type")
         }
+    
+    async def _update_session_context(self, user_id: str, response: Dict[str, Any]) -> None:
+        """Update session context based on the response"""
+        if user_id not in self.user_sessions:
+            self.user_sessions[user_id] = {}
+        
+        # Update current page/flow based on response
+        if "page" in response:
+            self.user_sessions[user_id]["current_page"] = response["page"]
+        
+        if "flow" in response:
+            self.user_sessions[user_id]["current_flow"] = response["flow"]
+        
+        # Set awaiting input for measurements - mejorado
+        if response.get("action") == "navigate_to_page" and response.get("target_page"):
+            target_page = response.get("target_page")
+            if target_page.startswith("LOG_"):
+                self.user_sessions[user_id]["awaiting_input"] = target_page
+                self.user_sessions[user_id]["current_page"] = target_page  
+                logger.info(f"User {user_id} now awaiting input for: {target_page}")
+        
+        # Detectar cuando se selecciona una medición específica
+        if response.get("awaiting_measurement") or response.get("awaiting_input"):
+            awaiting = response.get("awaiting_measurement") or response.get("awaiting_input")
+            self.user_sessions[user_id]["awaiting_input"] = awaiting
+            self.user_sessions[user_id]["current_page"] = awaiting
+            logger.info(f"User {user_id} now awaiting measurement input for: {awaiting}")
+        
+        # Clear awaiting input after successful measurement
+        if response.get("action") == "measurement_recorded":
+            self.user_sessions[user_id].pop("awaiting_input", None)
+            self.user_sessions[user_id]["current_page"] = "measurement_complete"
+            logger.info(f"User {user_id} measurement recorded, cleared awaiting input")
+        
+        # Clear session on main menu
+        if response.get("action") == "show_main_menu":
+            self.user_sessions[user_id] = {
+                "current_page": "mainMenu",
+                "current_flow": "diabetesPlans"
+            }
+            logger.info(f"User {user_id} returned to main menu, session reset")
     
     async def _send_response_to_user(self, chat_id: str, response: Dict[str, Any]) -> bool:
         """
