@@ -3,21 +3,24 @@
 ![Python](https://img.shields.io/badge/python-v3.11+-blue.svg)
 ![ADK](https://img.shields.io/badge/ADK-Ready-green.svg)
 ![WhatsApp](https://img.shields.io/badge/WhatsApp-Business%20API-25D366.svg)
+![Telegram](https://img.shields.io/badge/Telegram-Bot%20API-0088CC.svg)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
 ## 📋 Resumen
 
-Dr. Clivi es un sistema avanzado de asistencia médica multi-agente construido para migrar desde Google Cloud Conversational Agents (ex-Dialogflow CX) a Google ADK (Agent Development Kit). El sistema proporciona atención especializada para diabetes y obesidad a través de WhatsApp, usando agentes especializados con inteligencia artificial.
+Dr. Clivi es un sistema avanzado de asistencia médica multi-agente construido para migrar desde Google Cloud Conversational Agents (ex-Dialogflow CX) a Google ADK (Agent Development Kit). El sistema proporciona atención especializada para diabetes y obesidad a través de múltiples canales (WhatsApp, Telegram), usando agentes especializados con inteligencia artificial y una arquitectura híbrida determinística + IA.
 
 ### 🚀 Características Principales
 
 - 🤖 **Arquitectura Multi-Agente**: Agentes especializados para diabetes y obesidad
 - 🔄 **Protocolo A2A**: Comunicación entre agentes para flujos complejos  
-- 📱 **Integración WhatsApp**: Soporte nativo via WhatsApp Business API
-- 🏥 **Enfoque Médico**: Guías basadas en evidencia médica y soporte profesional
+- 📱 **Multi-Canal**: Soporte nativo para WhatsApp Business API y Telegram Bot API
+- � **Arquitectura Híbrida**: Combinación de flujos determinísticos y IA para respuestas precisas y flexibles
+- �🏥 **Enfoque Médico**: Guías basadas en evidencia médica y soporte profesional
 - ☁️ **Vertex AI Ready**: Optimizado para despliegue en Google Cloud
 - 🔒 **Privacidad Médica**: Diseño que considera estándares de privacidad sanitaria
 - 📊 **Analytics Avanzado**: Seguimiento de actividad y métricas de uso
+- 🚨 **Manejo de Emergencias**: Detección automática y ruteo de situaciones médicas críticas
 
 ### 🏗️ Arquitectura del Sistema
 
@@ -26,6 +29,7 @@ Sistema Dr. Clivi
 ├── 🎯 DrCliviCoordinator (Enrutador Principal)
 │   ├── Validación de plan de usuario
 │   ├── Enrutamiento inteligente por especialidad
+│   ├── Arquitectura híbrida (determinística + IA)
 │   └── Manejo de usuarios desconocidos
 │
 ├── 🩺 DiabetesAgent (Especialista en Diabetes)
@@ -40,11 +44,99 @@ Sistema Dr. Clivi
 │   ├── Seguimiento de peso y medidas
 │   └── Medicina deportiva
 │
-└── 🔧 Capa de Integración
+├── 🤖 Flujos Determinísticos
+│   ├── Manejo de menús estructurados
+│   ├── Navegación por botones inline
+│   ├── Validación de entradas específicas
+│   └── Gestión de contexto de sesión
+│
+└── 🔧 Capa de Integración Multi-Canal
     ├── WhatsApp Business API
+    ├── Telegram Bot API (con webhooks)
     ├── n8n Webhooks (Plataforma Clivi)
     ├── Sistemas Clivi específicos
     └── Vertex AI
+```
+
+## 📱 Integración con Telegram
+
+### 🔧 Configuración del Bot
+
+Dr. Clivi incluye soporte completo para Telegram Bot API con arquitectura de webhooks para comunicación en tiempo real.
+
+#### Características de Telegram:
+- ✅ **Webhooks con HTTPS**: Integración segura usando ngrok para desarrollo
+- ✅ **Botones Inline**: Navegación intuitiva con teclados estructurados
+- ✅ **Manejo de Sesiones**: Contexto persistente durante las conversaciones
+- ✅ **Respuestas Inmediatas**: Callback queries para interacción fluida
+- ✅ **Manejo de Emergencias**: Detección automática y alertas críticas
+
+#### Flujos Implementados:
+- 🏠 **Menú Principal**: Navegación entre diabetes y obesidad
+- 📊 **Registro de Mediciones**: Glucosa y peso con validación
+- 📅 **Gestión de Citas**: Agendamiento y reprogramación
+- 🆘 **Emergencias Médicas**: Detección y ruteo automático
+- 🔄 **Navegación Contextual**: Botones de regreso y menú principal
+
+### 🚀 Configuración para Desarrollo
+
+1. **Crear Bot en Telegram**
+   ```bash
+   # Conversa con @BotFather en Telegram
+   /newbot
+   # Guarda el token en .env como TELEGRAM_BOT_TOKEN
+   ```
+
+2. **Configurar Webhooks con ngrok**
+   ```bash
+   # Instalar ngrok
+   brew install ngrok  # macOS
+   
+   # Exponer puerto local
+   ngrok http 8000
+   
+   # Configurar webhook
+   curl -X POST https://api.telegram.org/bot{TOKEN}/setWebhook \
+     -H "Content-Type: application/json" \
+     -d '{"url": "https://tu-ngrok-url.ngrok.io/telegram/webhook"}'
+   ```
+
+3. **Ejecutar el Bot**
+   ```bash
+   # Instalar dependencias
+   poetry install
+   
+   # Configurar variables de entorno
+   export TELEGRAM_BOT_TOKEN="tu-token-aqui"
+   export GOOGLE_AI_STUDIO_API_KEY="tu-api-key-aqui"
+   
+   # Ejecutar servidor
+   poetry run python telegram_main.py
+   ```
+
+### 🏗️ Arquitectura Híbrida
+
+El sistema implementa una arquitectura híbrida que combina:
+
+#### 🤖 Flujos Determinísticos
+- **Menús Estructurados**: Botones predefinidos para navegación
+- **Validación de Entradas**: Reconocimiento de comandos específicos
+- **Contexto de Sesión**: Mantenimiento de estado entre mensajes
+- **Rutas Fijas**: Flujos predecibles para casos comunes
+
+#### 🧠 IA Generativa (Fallback)
+- **Procesamiento de Lenguaje Natural**: Para entradas no estructuradas
+- **Análisis de Emergencias**: Detección inteligente de situaciones críticas
+- **Respuestas Contextuales**: Cuando los flujos determinísticos no aplican
+- **Escalación Inteligente**: Ruteo automático a especialistas
+
+```python
+# Ejemplo de lógica híbrida
+def route_message(message):
+    if is_deterministic_input(message):
+        return handle_deterministic_flow(message)
+    else:
+        return route_to_ai_agent(message)
 ```
 
 ## 🚀 Inicio Rápido
@@ -90,10 +182,17 @@ GOOGLE_CLOUD_PROJECT=tu-proyecto-id
 GOOGLE_CLOUD_LOCATION=us-central1
 GOOGLE_CLOUD_STORAGE_BUCKET=tu-bucket
 
+# Google AI Studio
+GOOGLE_AI_STUDIO_API_KEY=tu-api-key-ai-studio
+
 # WhatsApp Business API
 WHATSAPP_BUSINESS_API_URL=https://graph.facebook.com/v17.0
 WHATSAPP_BUSINESS_TOKEN=tu-token
 WHATSAPP_PHONE_ID=tu-phone-id
+
+# Telegram Bot API
+TELEGRAM_BOT_TOKEN=tu-bot-token
+TELEGRAM_WEBHOOK_URL=https://tu-ngrok-url.ngrok.io/telegram/webhook
 
 # Integración con Plataforma Clivi
 # Nota: Clivi no tiene una API unificada. Se integra vía n8n webhooks y servicios específicos
@@ -125,10 +224,19 @@ dr-clivi/
 │   │   ├── coordinator.py      # Coordinador principal
 │   │   ├── diabetes_agent.py   # Agente de diabetes
 │   │   └── obesity_agent.py    # Agente de obesidad
+│   ├── flows/                  # Flujos determinísticos
+│   │   ├── deterministic_handler.py  # Lógica híbrida principal
+│   │   └── pages/              # Páginas de interfaz
+│   │       ├── appointment_pages.py  # Gestión de citas
+│   │       ├── diabetes_pages.py     # Flujos de diabetes
+│   │       └── obesity_pages.py      # Flujos de obesidad
+│   ├── telegram/               # Integración Telegram
+│   │   └── telegram_handler.py # Handler de webhooks y mensajes
 │   └── tools/                  # Herramientas especializadas
 │       ├── messaging.py        # WhatsApp Business API
 │       ├── image_processing.py # Procesamiento de imágenes
 │       └── generative_ai.py    # IA generativa fallback
+├── telegram_main.py            # Servidor FastAPI para Telegram
 ├── docs/                       # Documentación
 │   ├── analysis/              # Análisis de flujos exportados
 │   ├── conversational-agents-export/  # Archivos exportados
@@ -213,7 +321,11 @@ Usuario → Coordinador → Verificación de Plan
 
 ### Ejecutar Suite de Pruebas
 ```bash
+# Suite completa de agentes
 poetry run python test_agents.py
+
+# Servidor Telegram para pruebas en vivo
+poetry run python telegram_main.py
 ```
 
 **Incluye testing de**:
@@ -222,7 +334,11 @@ poetry run python test_agents.py
 - ✅ Flujos completos de obesidad (ejercicio, nutrición)
 - ✅ Manejo de errores y fallbacks
 - ✅ Herramientas de mensajería WhatsApp
+- ✅ Integración con Telegram Bot API
+- ✅ Arquitectura híbrida determinística + IA
+- ✅ Manejo de contexto de sesión
 - ✅ Validaciones médicas críticas
+- ✅ Webhooks y callbacks de Telegram
 
 ### Casos de Prueba Específicos
 ```python
@@ -237,7 +353,34 @@ await test_club_plan_reactivation()
 
 # Valores críticos - alertas médicas
 await test_critical_glucose_values()
+
+# Flujos específicos de Telegram
+telegram_test_flows = {
+    "menu_navigation": "Navegación por botones inline",
+    "measurement_input": "Registro de peso/glucosa con validación",
+    "appointment_booking": "Gestión de citas médicas",
+    "emergency_detection": "Detección automática de emergencias",
+    "session_context": "Mantenimiento de contexto entre mensajes"
+}
 ```
+
+### 🔄 Pruebas en Tiempo Real con Telegram
+
+1. **Configurar webhook**
+   ```bash
+   # Verificar estado del webhook
+   curl https://api.telegram.org/bot{TOKEN}/getWebhookInfo
+   
+   # Health check del servidor
+   curl http://localhost:8000/health
+   ```
+
+2. **Flujos de prueba recomendados**
+   - Iniciar con `/start` o "Hola"
+   - Navegar por menús usando botones
+   - Registrar mediciones (peso: 70.5 kg, glucosa: 120 mg/dL)
+   - Agendar citas médicas
+   - Probar detección de emergencias (glucosa: 400 mg/dL)
 
 ## 🚀 Despliegue
 
@@ -246,8 +389,25 @@ await test_critical_glucose_values()
 # Ejecutar agentes en modo simulación
 poetry run python test_agents.py
 
+# Ejecutar servidor Telegram (desarrollo)
+poetry run python telegram_main.py
+
 # Ejecutar con configuración específica
-LOG_LEVEL=DEBUG poetry run python test_agents.py
+LOG_LEVEL=DEBUG poetry run python telegram_main.py
+```
+
+#### Configuración de Webhooks para Desarrollo
+```bash
+# 1. Instalar y configurar ngrok
+ngrok http 8000
+
+# 2. Configurar webhook de Telegram
+curl -X POST https://api.telegram.org/bot{TOKEN}/setWebhook \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://tu-url.ngrok.io/telegram/webhook"}'
+
+# 3. Verificar configuración
+curl https://api.telegram.org/bot{TOKEN}/getWebhookInfo
 ```
 
 ### ☁️ Vertex AI Agent Engine
@@ -369,9 +529,30 @@ Este proyecto está licenciado bajo la Licencia Apache 2.0 - ver el archivo [LIC
 ---
 
 **Estado del Proyecto**: ✅ **IMPLEMENTACIÓN COMPLETA**  
-**Versión**: 1.0.0  
-**Última Actualización**: 30 de junio de 2025  
-**Commit**: `30dcfe8`
+**Versión**: 1.1.0  
+**Última Actualización**: 4 de enero de 2025  
+**Rama**: `dev` 
+
+### 🆕 Novedades v1.1.0 (Rama dev)
+
+- ✅ **Integración completa con Telegram Bot API**
+- ✅ **Arquitectura híbrida determinística + IA**
+- ✅ **Webhooks con HTTPS y ngrok para desarrollo**
+- ✅ **Manejo avanzado de contexto de sesión**
+- ✅ **Detección inteligente de emergencias médicas**
+- ✅ **Navegación por botones inline y callbacks**
+- ✅ **Validación mejorada de mediciones (peso/glucosa)**
+- ✅ **Sistema de ruteo optimizado para múltiples canales**
+- ✅ **Pruebas en tiempo real con bot funcionando**
+- ✅ **Documentación actualizada y versionado en git**
+
+### 🔧 Arquitectura Implementada
+
+- **Servidor FastAPI**: `telegram_main.py` con endpoints de webhook y health check
+- **Handler de Telegram**: `telegram_handler.py` con manejo completo de mensajes y callbacks
+- **Flujos Determinísticos**: `deterministic_handler.py` con lógica híbrida avanzada
+- **Páginas de Interface**: Sistema modular de páginas con navegación contextual
+- **Coordinador Mejorado**: Ruteo inteligente entre canales y agentes especializados
 
 ## 🔗 Integración con Plataforma Clivi
 
