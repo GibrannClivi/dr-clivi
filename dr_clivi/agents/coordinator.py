@@ -35,11 +35,15 @@ class IntelligentCoordinator(BaseCliviAgent):
         super().__init__(config)
         
         # Deterministic flow handler for structured interactions
-        self.flow_handler = DeterministicFlowHandler()
+        self.flow_handler = DeterministicFlowHandler(config)
         
         # Specialized agents for complex cases
         self.diabetes_agent = DiabetesAgent(config)
         self.obesity_agent = ObesityAgent(config)
+        
+        # Import and initialize AI tools
+        from ..tools import generative_ai
+        self.generative_ai_tool = generative_ai
         
         # Routing statistics
         self._routing_stats = {
@@ -131,6 +135,9 @@ class IntelligentCoordinator(BaseCliviAgent):
             elif result.get("action") == "navigate_to_page":
                 return await self._handle_page_navigation(user_context, result)
             
+            elif result.get("action") == "page_transition":
+                return await self._handle_page_transition(user_context, result)
+            
             elif result.get("action") == "trigger_intelligent_routing":
                 # Deterministic handler couldn't resolve - escalate to AI
                 return await self._handle_intelligent_routing(user_context, user_input)
@@ -148,43 +155,183 @@ class IntelligentCoordinator(BaseCliviAgent):
         Use Gemini 2.5 Flash to analyze medical query and determine routing.
         """
         analysis_prompt = f"""
-        Analiza esta consulta médica y determina la especialidad y urgencia:
+Eres el analizador de consultas médicas de Dr. Clivi. Tu trabajo es clasificar con precisión las consultas de pacientes para rutearlas al especialista correcto.
 
-        Consulta del paciente: "{user_input}"
-        
-        Plan del paciente: {user_context.get('plan', 'UNKNOWN')}
-        Historial: {user_context.get('medical_history', 'No disponible')}
+CONSULTA DEL PACIENTE: "{user_input}"
 
-        Responde en formato JSON:
-        {{
-            "specialty": "diabetes|obesity|general|emergency",
-            "urgency": "low|medium|high|critical",
-            "confidence": 0.0-1.0,
-            "reasoning": "explicación breve",
-            "suggested_action": "acción recomendada",
-            "keywords_detected": ["palabra1", "palabra2"]
-        }}
+INFORMACIÓN DEL PACIENTE:
+- Plan: {user_context.get('plan', 'UNKNOWN')}
+- Historial: {user_context.get('medical_history', 'No disponible')}
+
+ESPECIALIDADES DISPONIBLES:
+
+1. **diabetes** - Para consultas sobre:
+   - Glucosa, niveles de azúcar, mg/dL
+   - Diabetes tipo 1, tipo 2, gestacional
+   - Medicamentos: metformina, insulina, glibenclamida
+   - Hipoglucemia, hiperglucemia
+   - Complicaciones diabéticas
+   - Monitoreo de glucosa
+   - Hemoglobina glucosilada (HbA1c)
+
+2. **obesity** - Para consultas sobre:
+   - Pérdida de peso, bajar de peso
+   - Medicamentos GLP-1: Ozempic, Saxenda, Wegovy
+   - Dieta, nutrición, alimentación
+   - Ejercicio, actividad física
+   - IMC, obesidad
+   - Cirugía bariátrica
+
+3. **emergency** - Para emergencias médicas:
+   - Dolor de pecho, dificultad respiratoria
+   - Hipoglucemia severa (<70 mg/dL)
+   - Hiperglucemia extrema (>300 mg/dL)
+   - Síntomas de cetoacidosis
+   - Reacciones adversas graves
+   - "muy fuerte", "intenso", "no puedo respirar"
+
+4. **general** - Para todo lo demás:
+   - Citas, facturas, quejas
+   - Hipertensión, otras condiciones
+   - Preguntas generales de salud
+   - Información sobre medicamentos no especializados
+
+NIVELES DE URGENCIA:
+- **critical**: Emergencias que requieren atención inmediata
+- **high**: Problemas serios que necesitan respuesta rápida
+- **medium**: Consultas importantes pero no urgentes
+- **low**: Preguntas informativas o de rutina
+
+INSTRUCCIONES:
+1. Analiza CUIDADOSAMENTE las palabras clave en la consulta
+2. Busca síntomas específicos de diabetes u obesidad
+3. Evalúa la urgencia basándote en la severidad
+4. Si hay palabras de emergencia, clasifica como "emergency"
+5. Responde ÚNICAMENTE con el JSON solicitado
+
+FORMATO DE RESPUESTA (JSON válido):
+{{
+    "specialty": "diabetes|obesity|general|emergency",
+    "urgency": "low|medium|high|critical",
+    "confidence": 0.0-1.0,
+    "reasoning": "explicación breve de por qué elegiste esta especialidad",
+    "suggested_action": "acción recomendada",
+    "keywords_detected": ["palabra1", "palabra2", "palabra3"]
+}}
         """
         
         try:
-            # This would call Gemini 2.5 Flash via the generative AI tool
-            response = await self.generative_ai_tool.generate_response(
-                prompt=analysis_prompt,
-                model="gemini-2.5-flash",
-                response_format="json"
+            # Call Gemini 2.5 Flash via the generative AI tool
+            response = await self.generative_ai_tool.ask_generative_ai(
+                user_request=analysis_prompt,
+                context=f"Medical routing analysis for Dr. Clivi - Plan: {user_context.get('plan', 'UNKNOWN')}",
+                user_id=user_context.get('user_id', 'unknown'),
+                model="gemini-2.5-flash"
             )
+            
+            # Try to parse JSON response
+            if isinstance(response, dict) and 'response' in response:
+                try:
+                    import json
+                    response_text = response['response'].strip()
+                    
+                    # Try to extract JSON from response if it has extra text
+                    if response_text.startswith('{') and response_text.endswith('}'):
+                        parsed_response = json.loads(response_text)
+                    else:
+                        # Look for JSON block in response
+                        import re
+                        json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
+                        if json_match:
+                            parsed_response = json.loads(json_match.group())
+                        else:
+                            raise json.JSONDecodeError("No JSON found", response_text, 0)
+                    
+                    # Validate required fields
+                    required_fields = ['specialty', 'urgency', 'confidence']
+                    if all(field in parsed_response for field in required_fields):
+                        return parsed_response
+                    else:
+                        raise ValueError("Missing required fields in JSON response")
+                        
+                except (json.JSONDecodeError, ValueError) as e:
+                    logger.warning(f"Failed to parse JSON response: {e}. Raw response: {response_text}")
+                    # Fallback: analyze keywords manually
+                    return self._fallback_keyword_analysis(user_input, response_text)
             
             return response
             
         except Exception as e:
             logger.error(f"Error in medical query analysis: {e}")
+            return self._fallback_keyword_analysis(user_input, str(e))
+    
+    def _fallback_keyword_analysis(self, user_input: str, ai_response: str = "") -> Dict[str, Any]:
+        """
+        Fallback keyword-based analysis when JSON parsing fails.
+        """
+        user_lower = user_input.lower()
+        
+        # Emergency keywords
+        emergency_keywords = [
+            "dolor pecho", "no puedo respirar", "dificultad respirar", "muy fuerte",
+            "severo", "grave", "urgente", "emergencia", "auxilio"
+        ]
+        
+        # Diabetes keywords  
+        diabetes_keywords = [
+            "glucosa", "diabetes", "diabético", "azúcar", "mg/dl", "mg/dL",
+            "metformina", "insulina", "hipoglucemia", "hiperglucemia",
+            "glucómetro", "hemoglobina", "hba1c"
+        ]
+        
+        # Obesity keywords
+        obesity_keywords = [
+            "peso", "bajar", "adelgazar", "obesidad", "ozempic", "saxenda",
+            "dieta", "ejercicio", "imc", "gordura", "grasa"
+        ]
+        
+        # Check for emergency first
+        if any(keyword in user_lower for keyword in emergency_keywords):
             return {
-                "specialty": "general",
-                "urgency": "medium", 
-                "confidence": 0.5,
-                "reasoning": f"Error en análisis: {e}",
-                "suggested_action": "escalate_to_master_agent"
+                "specialty": "emergency",
+                "urgency": "critical",
+                "confidence": 0.9,
+                "reasoning": "Detected emergency keywords",
+                "suggested_action": "immediate_attention",
+                "keywords_detected": [kw for kw in emergency_keywords if kw in user_lower]
             }
+        
+        # Check for diabetes
+        if any(keyword in user_lower for keyword in diabetes_keywords):
+            return {
+                "specialty": "diabetes", 
+                "urgency": "medium",
+                "confidence": 0.8,
+                "reasoning": "Detected diabetes-related keywords",
+                "suggested_action": "route_to_diabetes_specialist",
+                "keywords_detected": [kw for kw in diabetes_keywords if kw in user_lower]
+            }
+        
+        # Check for obesity
+        if any(keyword in user_lower for keyword in obesity_keywords):
+            return {
+                "specialty": "obesity",
+                "urgency": "medium", 
+                "confidence": 0.8,
+                "reasoning": "Detected obesity/weight management keywords",
+                "suggested_action": "route_to_obesity_specialist",
+                "keywords_detected": [kw for kw in obesity_keywords if kw in user_lower]
+            }
+        
+        # Default to general
+        return {
+            "specialty": "general",
+            "urgency": "medium",
+            "confidence": 0.6,
+            "reasoning": f"No specific specialty keywords detected. AI response: {ai_response[:100]}...",
+            "suggested_action": "route_to_general",
+            "keywords_detected": []
+        }
     
     @tool
     async def route_to_specialist(self, analysis: Dict[str, Any], user_context: UserContext, 
@@ -241,19 +388,20 @@ class IntelligentCoordinator(BaseCliviAgent):
         try:
             # Create session context for diabetes agent
             session_context = SessionContext(
-                user_id=user_context.user_id,
-                conversation_id=f"diabetes_{user_context.user_id}",
                 patient=PatientContext(
-                    user_id=user_context.user_id,
-                    name=user_context.patient_name,
+                    patient_id=user_context.user_id,
+                    name_display=user_context.patient_name,
                     plan=user_context.plan.value,
-                    plan_status=user_context.plan_status.value
-                )
+                    plan_status=user_context.plan_status.value,
+                    phone_number=user_context.phone_number
+                ),
+                current_flow="diabetes_specialist",
+                current_page="diabetes_consultation"
             )
             
-            # Hand off to diabetes agent
+            # Hand off to diabetes agent with correct parameters
             diabetes_response = await self.diabetes_agent.process_diabetes_query(
-                session_context, user_input
+                user_input, user_context.user_id, session_context, session_context.patient
             )
             
             return {
@@ -274,19 +422,20 @@ class IntelligentCoordinator(BaseCliviAgent):
         try:
             # Create session context for obesity agent  
             session_context = SessionContext(
-                user_id=user_context.user_id,
-                conversation_id=f"obesity_{user_context.user_id}",
                 patient=PatientContext(
-                    user_id=user_context.user_id,
-                    name=user_context.patient_name,
+                    patient_id=user_context.user_id,
+                    name_display=user_context.patient_name,
                     plan=user_context.plan.value,
-                    plan_status=user_context.plan_status.value
-                )
+                    plan_status=user_context.plan_status.value,
+                    phone_number=user_context.phone_number
+                ),
+                current_flow="obesity_specialist",
+                current_page="obesity_consultation"
             )
             
-            # Hand off to obesity agent
+            # Hand off to obesity agent with correct parameters
             obesity_response = await self.obesity_agent.process_obesity_query(
-                session_context, user_input
+                user_context.user_id, user_input, {"session_context": session_context, "patient_context": session_context.patient}
             )
             
             return {
@@ -406,14 +555,79 @@ class IntelligentCoordinator(BaseCliviAgent):
     async def _handle_page_navigation(self, user_context: UserContext, 
                                     result: Dict[str, Any]) -> Dict[str, Any]:
         """Handle navigation to specific pages from menu selections"""
-        # This would implement the specific page logic from the original flows
+        target_page = result.get("target_page")
+        
+        if target_page:
+            # Renderizar la página específica usando el implementador de Dialogflow
+            page_response = self.flow_handler.render_page(target_page, user_context)
+            
+            # Agregar información de navegación
+            page_response["navigation_info"] = {
+                "source_action": result.get("action"),
+                "selected_option": result.get("selected_option"),
+                "target_page": target_page
+            }
+            
+            # Log del evento si está definido
+            if "event_log" in result:
+                logger.info(f"Logging event: {result['event_log']}")
+            
+            return page_response
+        
+        # Fallback si no hay página target
         return {
-            "response_type": "page_navigation",
-            "target_page": result.get("target_page"),
-            "target_flow": result.get("target_flow"),  
-            "selected_option": result.get("selected_option"),
-            "routing_type": "deterministic"
+            "response_type": "general_response",
+            "response": "Navegación no disponible. Regresando al menú principal.",
+            "suggested_action": "show_main_menu",
+            "routing_type": "navigation_error"
         }
+    
+    async def _handle_page_transition(self, user_context: UserContext, 
+                                    result: Dict[str, Any]) -> Dict[str, Any]:
+        """Maneja transiciones específicas entre páginas según Dialogflow"""
+        action = result.get("action")
+        
+        if action == "navigate_to_page":
+            target_page = result.get("target_page")
+            if target_page == "End Session":
+                return {
+                    "response_type": "general_response",
+                    "response": "Sesión finalizada. ¡Que tengas un buen día!",
+                    "routing_type": "session_end"
+                }
+            else:
+                return await self._handle_page_navigation(user_context, result)
+        
+        elif action == "navigate_to_flow":
+            target_flow = result.get("target_flow")
+            return {
+                "response_type": "general_response",
+                "response": f"Redirigiendo a {target_flow}. Esta funcionalidad se implementará próximamente.",
+                "target_flow": target_flow,
+                "routing_type": "flow_redirect"
+            }
+        
+        elif action == "execute_function":
+            function_name = result.get("function_call")
+            function_params = result.get("function_params", {})
+            
+            # Simular llamada a función (implementar según necesidades)
+            logger.info(f"Ejecutando función: {function_name} con parámetros: {function_params}")
+            
+            return {
+                "response_type": "general_response",
+                "response": f"Función {function_name} ejecutada. Por favor espera...",
+                "function_call": function_name,
+                "function_params": function_params,
+                "routing_type": "function_execution"
+            }
+        
+        else:
+            return {
+                "response_type": "general_response",
+                "response": "Acción no reconocida. Regresando al menú principal.",
+                "routing_type": "unknown_action"
+            }
         patient = context.patient
         
         if not patient:
@@ -628,6 +842,38 @@ class IntelligentCoordinator(BaseCliviAgent):
             "next_step": "proceed_to_routing"
         }
     
+    @tool
+    async def main_menu_flow(self, user_id: str) -> Dict[str, Any]:
+        """
+        Main menu flow implementation for coordinator.
+        Routes through the hybrid architecture.
+        """
+        try:
+            # Get user context
+            user_context = await self._get_user_context(user_id)
+            
+            # Check plan status and route accordingly
+            plan_result = self.flow_handler.check_plan_status(user_context)
+            
+            if plan_result.get("action") == "show_main_menu":
+                return {
+                    "response_type": "whatsapp_menu",
+                    "menu_data": self.flow_handler.generate_main_menu_whatsapp(user_context),
+                    "flow": "diabetesPlans",
+                    "page": "mainMenu",
+                    "routing_type": "deterministic"
+                }
+            else:
+                return plan_result
+                
+        except Exception as e:
+            logger.error(f"Error in main_menu_flow: {e}")
+            return await self._escalate_to_master_agent(
+                await self._get_user_context(user_id), 
+                "main_menu_request", 
+                str(e)
+            )
+
     # Helper methods
     async def _determine_specialization(self, user_id: str, context: SessionContext) -> str:
         """Determine user specialization based on history and context"""

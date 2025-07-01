@@ -4,7 +4,7 @@ Based on "Ask OpenAI" tool analysis, migrated to Vertex AI.
 """
 
 import logging
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, List
 import json
 
 logger = logging.getLogger(__name__)
@@ -177,19 +177,95 @@ async def _call_vertex_ai(
     specialty: str = None
 ) -> Dict[str, Any]:
     """
-    Call Vertex AI Gemini API.
-    TODO: Replace with actual Vertex AI implementation.
+    Call Google AI (Gemini) API using google-genai.
+    Real implementation using the configured GOOGLE_API_KEY.
     """
     import time
     import asyncio
+    import os
+    from typing import Dict, Any
     
-    # Simulate API delay
-    await asyncio.sleep(0.5)
+    try:
+        # Import Google AI
+        import google.genai as genai
+        
+        # Configure API key from environment
+        api_key = os.getenv('GOOGLE_API_KEY')
+        if not api_key:
+            logger.error("GOOGLE_API_KEY not found in environment")
+            return {
+                "success": False,
+                "error": "API key not configured",
+                "text": "Error de configuración: clave API no encontrada"
+            }
+        
+        # Initialize client
+        client = genai.Client(api_key=api_key)
+        
+        # Map model names
+        model_mapping = {
+            "gemini-2.5-flash": "gemini-2.0-flash-exp",
+            "gemini-2.5-pro": "gemini-2.0-flash-exp",  # Use flash for now
+            "gemini-flash": "gemini-2.0-flash-exp"
+        }
+        
+        actual_model = model_mapping.get(model, "gemini-2.0-flash-exp")
+        
+        start_time = time.time()
+        
+        # Generate content
+        response = await asyncio.to_thread(
+            client.models.generate_content,
+            model=actual_model,
+            contents=prompt,
+            config={
+                "temperature": 0.3,  # Lower for medical accuracy
+                "max_output_tokens": 1000,
+                "top_p": 0.8,
+                "top_k": 40
+            }
+        )
+        
+        response_time = time.time() - start_time
+        
+        if response and response.text:
+            logger.info(f"Gemini API successful response for user {user_id} in {response_time:.2f}s")
+            
+            return {
+                "success": True,
+                "text": response.text.strip(),
+                "confidence": 0.95,  # High confidence for real API
+                "tokens_used": len(prompt.split()) + len(response.text.split()),
+                "response_time": response_time,
+                "model": actual_model
+            }
+        else:
+            logger.error(f"Empty response from Gemini API for user {user_id}")
+            return {
+                "success": False,
+                "error": "Empty response from AI",
+                "text": "Lo siento, no pude generar una respuesta. Intenta de nuevo."
+            }
+            
+    except ImportError as e:
+        logger.error(f"google-genai not available: {e}")
+        return _fallback_to_simulation(prompt, model, user_id, specialty)
+        
+    except Exception as e:
+        logger.error(f"Error calling Gemini API: {str(e)}")
+        return _fallback_to_simulation(prompt, model, user_id, specialty)
+
+
+def _fallback_to_simulation(prompt: str, model: str, user_id: str, specialty: str = None) -> Dict[str, Any]:
+    """
+    Fallback to simulation when real API fails.
+    """
+    logger.warning(f"Falling back to simulation for user {user_id}")
     
     # Simulate AI response
     response_templates = {
         "diabetes": "Basándome en tu consulta sobre diabetes, puedo ayudarte con información general...",
-        "obesity": "Respecto a tu pregunta sobre manejo de peso...",
+        "obesity": "Respecto a tu pregunta sobre manejo de peso...", 
         "general": "Te puedo ayudar con información general sobre salud..."
     }
     

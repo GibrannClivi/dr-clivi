@@ -123,8 +123,17 @@ class GoogleCloudSettings(BaseSettings):
         env_prefix = "GOOGLE_CLOUD_"
 
 
+class TelegramSettings(BaseSettings):
+    """Telegram Bot API configuration"""
+    bot_token: Optional[str] = None
+    webhook_url: Optional[str] = None
+
+    class Config:
+        env_prefix = "TELEGRAM_"
+
+
 class WhatsAppSettings(BaseSettings):
-    """WhatsApp Business API configuration"""
+    """WhatsApp Business API configuration (for production)"""
     business_access_token: Optional[str] = None
     business_phone_id: Optional[str] = None
     verify_token: Optional[str] = None
@@ -241,6 +250,7 @@ class Config:
         self.obesity_agent = ObesityAgentSettings()
         self.coordinator_agent = CoordinatorAgentSettings()
         self.google_cloud = GoogleCloudSettings()
+        self.telegram = TelegramSettings()
         self.whatsapp = WhatsAppSettings()
         self.a2a = A2ASettings()
         self.clivi = CliviIntegrationSettings()

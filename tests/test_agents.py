@@ -6,7 +6,7 @@ Demonstrates the enhanced ADK-based implementation with analysis-driven features
 import asyncio
 import logging
 from dr_clivi.config import Config
-from dr_clivi.agents.coordinator import DrCliviCoordinator
+from dr_clivi.agents.coordinator import IntelligentCoordinator
 from dr_clivi.agents.diabetes_agent import DiabetesAgent
 from dr_clivi.agents.obesity_agent import ObesityAgent
 
@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 async def test_coordinator_routing():
     """Test coordinator routing logic based on plan status analysis"""
     config = Config()
-    coordinator = DrCliviCoordinator(config)
+    coordinator = IntelligentCoordinator(config)
     
     # Test case 1: Unknown user
     logger.info("=== Testing Unknown User Routing ===")
@@ -160,7 +160,7 @@ async def test_obesity_agent_flows():
 async def test_error_handling():
     """Test error handling and fallback scenarios"""
     config = Config()
-    coordinator = DrCliviCoordinator(config)
+    coordinator = IntelligentCoordinator(config)
     
     logger.info("=== Testing Error Handling ===")
     

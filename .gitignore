@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Telegram test conversations (local testing data)
+telegram_conversations/
+
 # C extensions
 *.so
 

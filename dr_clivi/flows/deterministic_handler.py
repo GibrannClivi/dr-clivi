@@ -9,6 +9,8 @@ from enum import Enum
 from dataclasses import dataclass
 from datetime import datetime
 
+from .dialogflow_pages import DialogflowPageImplementor
+
 logger = logging.getLogger(__name__)
 
 
@@ -58,7 +60,9 @@ class DeterministicFlowHandler:
     No AI interpretation - pure button/menu logic.
     """
     
-    def __init__(self):
+    def __init__(self, config=None):
+        self.config = config  # Optional config for future use
+        self.page_implementor = DialogflowPageImplementor(config)
         self.menu_options = self._load_menu_structure()
     
     def _load_menu_structure(self) -> Dict[str, Dict[str, Any]]:
@@ -194,71 +198,93 @@ class DeterministicFlowHandler:
     
     def generate_main_menu_whatsapp(self, user_context: UserContext) -> Dict[str, Any]:
         """
-        Generate WhatsApp interactive menu based on mainMenu.json structure.
-        Returns exact format for WhatsApp Business API.
+        Generate WhatsApp interactive menu usando la implementación exacta de Dialogflow.
         """
-        sections = [{
-            "title": "Menú:",
-            "rows": []
-        }]
-        
-        for option_id, option_data in self.menu_options.items():
-            sections[0]["rows"].append({
-                "id": option_id,
-                "title": option_data["title"],
-                "description": option_data["description"]
-            })
-        
-        return {
-            "type": "interactive",
-            "interactive": {
-                "type": "list", 
-                "header": {
-                    "type": "text",
-                    "text": "Dr. Clivi"
-                },
-                "body": {
-                    "text": f"Hola {user_context.patient_name}, por favor utiliza el menú de opciones."
-                },
-                "action": {
-                    "button": "Seleccionar opción",
-                    "sections": sections
-                }
+        return self.page_implementor.render_page("mainMenu", {
+            "patient_name": user_context.patient_name
+        })
+    
+    def handle_page_selection(self, current_page: str, selection_id: str, 
+                            user_context: UserContext) -> Dict[str, Any]:
+        """
+        Maneja selección en una página específica siguiendo las transiciones de Dialogflow
+        """
+        return self.page_implementor.handle_page_selection(
+            current_page, selection_id, {
+                "patient_name": user_context.patient_name,
+                "user_id": user_context.user_id,
+                "plan": user_context.plan.value if user_context.plan else None,
+                "plan_status": user_context.plan_status.value if user_context.plan_status else None
             }
-        }
+        )
+    
+    def render_page(self, page_name: str, user_context: UserContext) -> Dict[str, Any]:
+        """
+        Renderiza una página específica
+        """
+        return self.page_implementor.render_page(page_name, {
+            "patient_name": user_context.patient_name,
+            "user_id": user_context.user_id,
+            "plan": user_context.plan.value if user_context.plan else None,
+            "plan_status": user_context.plan_status.value if user_context.plan_status else None
+        })
     
     def is_deterministic_input(self, user_input: str) -> bool:
         """
         Check if user input matches deterministic flow patterns.
         Returns True if it should be handled by flows, False if needs AI routing.
+        
+        Solo debe considerar determinístico:
+        1. Saludos básicos e inicios de conversación
+        2. Selecciones exactas de menú (callback IDs)
+        3. Palabras clave muy específicas para navegación de menú
+        
+        Todo lo demás debe ir a routing inteligente.
         """
-        # Check for main menu trigger keywords (from keyWordMainMenu intent)
-        main_menu_triggers = [
-            "hola", "menu", "inicio", "clivi", "dr clivi", 
-            "opciones", "ayuda", "start", "comenzar"
+        # Limpiar input
+        user_input = user_input.strip()
+        user_upper = user_input.upper()
+        user_lower = user_input.lower()
+        
+        # 1. Callback queries exactos (botones presionados)
+        exact_button_ids = [
+            "APPOINTMENTS", "MEASUREMENTS", "MEASUREMENTS_REPORT", "INVOICE_LABS",
+            "MEDS_GLP", "QUESTION_TYPE", "NO_NEEDED_QUESTION_PATIENT", "PATIENT_COMPLAINT",
+            "APPOINTMENTS_LIST_SEND", "APPOINTMENT_RESCHEDULER", "SEND_QUESTION",
+            "LOG_WEIGHT", "LOG_GLUCOSE_FASTING", "LOG_GLUCOSE_POST_MEAL",
+            "LOG_HIP", "LOG_WAIST", "LOG_NECK",
+            "DIABETES_QUESTION", "NUTRITION_QUESTION", "PSYCHOLOGY_QUESTION",
+            "SUPPLIES_QUESTION", "HIGH_SPECIALIZATION_QUESTION",
+            "INVOICE", "UPLOAD_LABS", "CALL_SUPPORT", "PX_QUESTION_TAG",
+            "FULL_REPORT", "GLUCOSE_REPORT"
         ]
         
-        # Check for menu option selections
-        menu_option_patterns = list(self.menu_options.keys())
-        
-        # Check for button/menu selection patterns
-        user_lower = user_input.lower().strip()
-        
-        if any(trigger in user_lower for trigger in main_menu_triggers):
+        if user_upper in exact_button_ids:
             return True
-            
-        if any(option.lower() in user_lower for option in menu_option_patterns):
-            return True
-            
-        # Check for specific deterministic patterns
-        deterministic_patterns = [
-            "citas", "mediciones", "reporte", "facturas", "envios", 
-            "pregunta", "queja", "no necesario", "estudios"
+        
+        # 2. Saludos básicos muy específicos (solo para mostrar menú principal)
+        basic_greetings = [
+            "hola", "inicio", "menu", "menú", "opciones", 
+            "start", "comenzar", "hola doctor", "dr clivi"
         ]
         
-        if any(pattern in user_lower for pattern in deterministic_patterns):
+        # Debe ser coincidencia exacta o muy cercana para saludos
+        if user_lower in basic_greetings:
             return True
             
+        # Si contiene saludo pero también contenido médico, va a IA
+        medical_keywords = [
+            "glucosa", "diabetes", "peso", "dolor", "medicamento", 
+            "metformina", "ozempic", "insulina", "presión", "mg/dl",
+            "ayuda", "problema", "síntoma", "tratamiento", "plan"
+        ]
+        
+        if any(greeting in user_lower for greeting in basic_greetings):
+            if any(medical in user_lower for medical in medical_keywords):
+                return False  # Tiene saludo + contenido médico -> IA
+        
+        # 3. Todo lo demás va a routing inteligente
+        # Incluyendo consultas médicas, preguntas específicas, emergencias, etc.
         return False
     
     def route_deterministic_input(self, user_context: UserContext, 
@@ -267,6 +293,7 @@ class DeterministicFlowHandler:
         Route deterministic input through the proper flow logic.
         """
         user_lower = user_input.lower().strip()
+        user_upper = user_input.upper().strip()
         
         # Main menu triggers
         main_menu_triggers = [
@@ -279,16 +306,56 @@ class DeterministicFlowHandler:
             plan_result = self.check_plan_status(user_context)
             
             if plan_result.get("action") == "show_main_menu":
+                menu_response = self.generate_main_menu_whatsapp(user_context)
                 return {
                     "action": "show_main_menu",
-                    "menu_data": self.generate_main_menu_whatsapp(user_context),
+                    "menu_data": menu_response.get("menu_data", {}),
+                    "response_type": menu_response.get("response_type", "whatsapp_menu"),
                     "flow": "diabetesPlans",
-                    "page": "mainMenu"
+                    "page": "mainMenu",
+                    "routing_type": "deterministic"
                 }
             else:
                 return plan_result
         
-        # Try to match menu option selection
+        # Check for exact button ID matches (callback queries from Telegram)
+        button_mappings = {
+            # Main menu buttons
+            "APPOINTMENTS": ("mainMenu", "APPOINTMENTS"),
+            "MEASUREMENTS": ("mainMenu", "MEASUREMENTS"),
+            "MEASUREMENTS_REPORT": ("mainMenu", "MEASUREMENTS_REPORT"),
+            "INVOICE_LABS": ("mainMenu", "INVOICE_LABS"),
+            "MEDS_GLP": ("mainMenu", "MEDS_GLP"),
+            "QUESTION_TYPE": ("mainMenu", "QUESTION_TYPE"),
+            "NO_NEEDED_QUESTION_PATIENT": ("mainMenu", "NO_NEEDED_QUESTION_PATIENT"),
+            "PATIENT_COMPLAINT": ("mainMenu", "PATIENT_COMPLAINT"),
+            
+            # Appointments menu buttons
+            "APPOINTMENTS_LIST_SEND": ("apptsMenu", "APPOINTMENTS_LIST_SEND"),
+            "APPOINTMENT_RESCHEDULER": ("apptsMenu", "APPOINTMENT_RESCHEDULER"),
+            "SEND_QUESTION": ("apptsMenu", "SEND_QUESTION"),
+            
+            # Measurements menu buttons
+            "LOG_WEIGHT": ("measurementsMenu", "LOG_WEIGHT"),
+            "LOG_GLUCOSE_FASTING": ("measurementsMenu", "LOG_GLUCOSE_FASTING"),
+            "LOG_GLUCOSE_POST_MEAL": ("measurementsMenu", "LOG_GLUCOSE_POST_MEAL"),
+            "LOG_HIP": ("measurementsMenu", "LOG_HIP"),
+            "LOG_WAIST": ("measurementsMenu", "LOG_WAIST"),
+            "LOG_NECK": ("measurementsMenu", "LOG_NECK"),
+            
+            # Questions menu buttons
+            "DIABETES_QUESTION": ("questionsTags", "DIABETES_QUESTION"),
+            "NUTRITION_QUESTION": ("questionsTags", "NUTRITION_QUESTION"),
+            "PSYCHOLOGY_QUESTION": ("questionsTags", "PSYCHOLOGY_QUESTION"),
+            "SUPPLIES_QUESTION": ("questionsTags", "SUPPLIES_QUESTION"),
+            "HIGH_SPECIALIZATION_QUESTION": ("questionsTags", "HIGH_SPECIALIZATION_QUESTION")
+        }
+        
+        if user_upper in button_mappings:
+            page_name, selection_id = button_mappings[user_upper]
+            return self.handle_page_selection(page_name, selection_id, user_context)
+        
+        # Try to match menu option selection by text content
         for option_id, option_data in self.menu_options.items():
             if (option_data["title"].lower() in user_lower or 
                 any(word in user_lower for word in option_data["description"].lower().split())):
