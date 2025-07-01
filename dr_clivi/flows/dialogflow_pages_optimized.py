@@ -12,16 +12,16 @@ This replaces the monolithic dialogflow_pages.py with a clean, modular structure
 import logging
 from typing import Any, Dict, List, Optional
 
-from .pages.page_types import PageType
-from ..presentation.page_renderer import PageRenderer
-from ..application.page_router import PageRouter
-from .pages.main_menu_pages import (
+from .page_types import PageType
+from .page_renderer import PageRenderer
+from .page_router import PageRouter
+from .main_menu_pages import (
     get_main_menu_page,
     get_end_session_page,
     get_questions_tags_page,
     get_send_question_page
 )
-from .pages.appointment_pages import (
+from .appointment_pages import (
     get_appointments_menu_page,
     get_appointments_list_page,
     get_appointments_view_page,
@@ -30,7 +30,7 @@ from .pages.appointment_pages import (
     get_appointment_reschedule_page,
     get_appointment_cancel_page
 )
-from .pages.measurement_pages import (
+from .measurement_pages import (
     get_measurements_menu_page,
     get_measurements_reports_page,
     get_log_weight_page,
@@ -40,7 +40,7 @@ from .pages.measurement_pages import (
     get_log_waist_page,
     get_log_neck_page
 )
-from .pages.admin_pages import (
+from .admin_pages import (
     get_invoice_labs_menu_page,
     get_invoice_updated_info_page,
     get_last_file_available_page,
