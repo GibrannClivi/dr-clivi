@@ -10,8 +10,10 @@ import os
 import sys
 from typing import Dict, Any
 
-# Add current directory to path for imports
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Add project root to path for imports
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+os.chdir(project_root)  # Change to project root to find .env
 
 from dr_clivi.config import Config
 from dr_clivi.telegram.telegram_handler import TelegramBotHandler
