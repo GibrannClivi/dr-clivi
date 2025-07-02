@@ -12,9 +12,9 @@ This replaces the monolithic dialogflow_pages.py with a clean, modular structure
 import logging
 from typing import Any, Dict, List, Optional
 
-from .page_types import PageType
-from .page_renderer import PageRenderer
-from .page_router import PageRouter
+from ..core.page_types import PageType
+from ..core.page_renderer import PageRenderer
+from ..core.page_router import PageRouter
 from .main_menu_pages import (
     get_main_menu_page,
     get_end_session_page,

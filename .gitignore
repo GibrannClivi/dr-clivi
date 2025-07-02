@@ -220,6 +220,13 @@ logs/
 *.log.*
 log.txt
 
+# Logs organizados
+logs/
+*.log
+
+# Archivos temporales de test
+telegram_test_*.json
+
 # Database
 *.db
 *.sqlite

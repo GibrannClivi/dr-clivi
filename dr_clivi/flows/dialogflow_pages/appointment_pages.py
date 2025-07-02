@@ -106,10 +106,34 @@ def get_appointments_view_page() -> Dict[str, Any]:
     return {
         "display_name": "appointmentsView",
         "entry_fulfillment": {
-            "message_type": "text",
-            "text": "📋 **Tus Citas Programadas:**\n\n🔹 **Próxima cita:** Endocrinología\n📅 Fecha: 15 de Julio, 2025\n🕐 Hora: 10:00 AM\n👩‍⚕️ Dr. María González\n💻 Modalidad: Virtual\n\n✅ Estado: Confirmada\n\n📝 **Preparación:**\n- Ten lista tu glucómetro\n- Lleva tu registro de glucosas\n- Prepara tus medicamentos actuales\n\n¿Te gustaría modificar esta cita o agendar una nueva?"
+            "message_type": "button_menu",
+            "text_body": "📋 **Tus Citas Programadas:**\n\n🔹 **Próxima cita:** Endocrinología\n📅 Fecha: 15 de Julio, 2025\n🕐 Hora: 10:00 AM\n👩‍⚕️ Dr. María González\n💻 Modalidad: Virtual\n\n✅ Estado: Confirmada\n\n📝 **Preparación:**\n- Ten lista tu glucómetro\n- Lleva tu registro de glucosas\n- Prepara tus medicamentos actuales\n\n¿Qué te gustaría hacer ahora?",
+            "buttons": [
+                {
+                    "id": "SCHEDULE_NEW_APPOINTMENT",
+                    "text": "📝 Agendar nueva cita"
+                },
+                {
+                    "id": "RESCHEDULE_APPOINTMENT", 
+                    "text": "🔄 Re-agendar esta cita"
+                },
+                {
+                    "id": "BACK_TO_MAIN_MENU",
+                    "text": "🏠 Volver al menú principal"
+                }
+            ]
         },
-        "transition_routes": {}
+        "transition_routes": {
+            "SCHEDULE_NEW_APPOINTMENT": {
+                "target_page": "appointmentSchedule"
+            },
+            "RESCHEDULE_APPOINTMENT": {
+                "target_page": "appointmentReschedule"
+            },
+            "BACK_TO_MAIN_MENU": {
+                "target_page": "mainMenu"
+            }
+        }
     }
 
 
@@ -165,10 +189,34 @@ def get_appointment_confirm_page() -> Dict[str, Any]:
     return {
         "display_name": "appointmentConfirm",
         "entry_fulfillment": {
-            "message_type": "text",
-            "text": "✅ **Cita Programada Exitosamente**\n\n📋 **Detalles de tu cita:**\n🔹 Especialidad: {specialty}\n📅 Fecha: Próximo disponible\n🕐 Hora: Se te notificará\n\n📞 **Próximos pasos:**\n1. Recibirás confirmación en 24 horas\n2. Te enviaremos el enlace de videollamada\n3. Recordatorio 1 día antes\n\n¿Necesitas algo más?"
+            "message_type": "button_menu",
+            "text_body": "✅ **Cita Programada Exitosamente**\n\n📋 **Detalles de tu cita:**\n🔹 Especialidad: {specialty}\n📅 Fecha: Próximo disponible\n🕐 Hora: Se te notificará\n\n📞 **Próximos pasos:**\n1. Recibirás confirmación en 24 horas\n2. Te enviaremos el enlace de videollamada\n3. Recordatorio 1 día antes\n\n¿Necesitas algo más?",
+            "buttons": [
+                {
+                    "id": "SCHEDULE_ANOTHER_APPOINTMENT",
+                    "text": "📅 Agendar otra cita"
+                },
+                {
+                    "id": "VIEW_APPOINTMENTS",
+                    "text": "👀 Ver mis citas"
+                },
+                {
+                    "id": "BACK_TO_MAIN_MENU",
+                    "text": "🏠 Menú principal"
+                }
+            ]
         },
-        "transition_routes": {}
+        "transition_routes": {
+            "SCHEDULE_ANOTHER_APPOINTMENT": {
+                "target_page": "appointmentSchedule"
+            },
+            "VIEW_APPOINTMENTS": {
+                "target_page": "appointmentsView"
+            },
+            "BACK_TO_MAIN_MENU": {
+                "target_page": "mainMenu"
+            }
+        }
     }
 
 
@@ -177,10 +225,27 @@ def get_appointment_reschedule_page() -> Dict[str, Any]:
     return {
         "display_name": "appointmentReschedule", 
         "entry_fulfillment": {
-            "message_type": "text",
-            "text": "🔄 **Re-agendar Cita**\n\nPara re-agendar tu cita, por favor contacta a nuestro equipo:\n\n📞 **Teléfono:** +52 55 8840 9477\n💬 **WhatsApp:** Disponible 24/7\n\nNuestro equipo te ayudará a encontrar una nueva fecha que se ajuste a tu agenda."
+            "message_type": "button_menu",
+            "text_body": "🔄 **Re-agendar Cita**\n\nPara re-agendar tu cita, por favor contacta a nuestro equipo:\n\n📞 **Teléfono:** +52 55 8840 9477\n💬 **WhatsApp:** Disponible 24/7\n\nNuestro equipo te ayudará a encontrar una nueva fecha que se ajuste a tu agenda.\n\n¿Qué te gustaría hacer mientras tanto?",
+            "buttons": [
+                {
+                    "id": "VIEW_APPOINTMENTS",
+                    "text": "👀 Ver mis citas actuales"
+                },
+                {
+                    "id": "BACK_TO_MAIN_MENU",
+                    "text": "🏠 Volver al menú principal"
+                }
+            ]
         },
-        "transition_routes": {}
+        "transition_routes": {
+            "VIEW_APPOINTMENTS": {
+                "target_page": "appointmentsView"
+            },
+            "BACK_TO_MAIN_MENU": {
+                "target_page": "mainMenu"
+            }
+        }
     }
 
 
@@ -189,8 +254,32 @@ def get_appointment_cancel_page() -> Dict[str, Any]:
     return {
         "display_name": "appointmentCancel",
         "entry_fulfillment": {
-            "message_type": "text", 
-            "text": "❌ **Cancelar Cita**\n\n⚠️ **Importante:** Las cancelaciones deben hacerse con al menos 24 horas de anticipación.\n\nPara cancelar tu cita, por favor contacta:\n\n📞 **Teléfono:** +52 55 8840 9477\n💬 **WhatsApp:** Disponible 24/7\n\n¿Estás seguro que quieres cancelar? Nuestro equipo puede ayudarte a encontrar una mejor fecha."
+            "message_type": "button_menu", 
+            "text_body": "❌ **Cancelar Cita**\n\n⚠️ **Importante:** Las cancelaciones deben hacerse con al menos 24 horas de anticipación.\n\nPara cancelar tu cita, por favor contacta:\n\n📞 **Teléfono:** +52 55 8840 9477\n💬 **WhatsApp:** Disponible 24/7\n\n¿Estás seguro que quieres cancelar? Nuestro equipo puede ayudarte a encontrar una mejor fecha.\n\n¿Qué te gustaría hacer?",
+            "buttons": [
+                {
+                    "id": "RESCHEDULE_INSTEAD",
+                    "text": "🔄 Mejor re-agendar"
+                },
+                {
+                    "id": "VIEW_APPOINTMENTS",
+                    "text": "👀 Ver mis citas"
+                },
+                {
+                    "id": "BACK_TO_MAIN_MENU",
+                    "text": "🏠 Volver al menú"
+                }
+            ]
         },
-        "transition_routes": {}
+        "transition_routes": {
+            "RESCHEDULE_INSTEAD": {
+                "target_page": "appointmentReschedule"
+            },
+            "VIEW_APPOINTMENTS": {
+                "target_page": "appointmentsView"
+            },
+            "BACK_TO_MAIN_MENU": {
+                "target_page": "mainMenu"
+            }
+        }
     }

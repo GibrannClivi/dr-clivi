@@ -12,13 +12,11 @@ from .base_agent import BaseCliviAgent, PatientContext, SessionContext
 
 try:
     from .diabetes_agent import DiabetesAgent
-    from .diabetes_agent_with_backend import DiabetesAgentWithBackend
     from .obesity_agent import ObesityAgent
     from .coordinator import Coordinator
 except ImportError:
     # Agentes legacy pueden no estar disponibles en todos los entornos
     DiabetesAgent = None
-    DiabetesAgentWithBackend = None
     ObesityAgent = None
     Coordinator = None
 
@@ -65,7 +63,6 @@ __all__ = [
     
     # Agentes legacy
     "DiabetesAgent", 
-    "DiabetesAgentWithBackend",
     "ObesityAgent",
     "Coordinator",
     
@@ -103,8 +100,7 @@ AVAILABLE_AGENTS = {
     # Agentes de producción
     "diabetes": {
         "legacy": DiabetesAgent,
-        "modern": ModernDiabetesAgent,
-        "with_backend": DiabetesAgentWithBackend
+        "modern": ModernDiabetesAgent
     },
     "obesity": {
         "legacy": ObesityAgent,

@@ -114,6 +114,57 @@ Dr. Clivi incluye soporte completo para Telegram Bot API con arquitectura de web
    poetry run python telegram_main.py
    ```
 
+## 🎯 Inicio Rápido
+
+Para facilitar el desarrollo y testing, se incluye un script de acceso rápido:
+
+```bash
+# Ejecutar menú interactivo
+python run.py
+```
+
+Este script proporciona acceso directo a:
+- ⚙️ Scripts de configuración y verificación
+- 🚀 Servidores de Telegram (webhook y polling)
+- 📊 Ejemplos y demos
+- 🧪 Tests y herramientas de debug
+
+### 🚀 Configuración para Desarrollo
+
+1. **Crear Bot en Telegram**
+   ```bash
+   # Conversa con @BotFather en Telegram
+   /newbot
+   # Guarda el token en .env como TELEGRAM_BOT_TOKEN
+   ```
+
+2. **Configurar Webhooks con ngrok**
+   ```bash
+   # Instalar ngrok
+   brew install ngrok  # macOS
+   
+   # Exponer puerto local
+   ngrok http 8000
+   
+   # Configurar webhook
+   curl -X POST https://api.telegram.org/bot{TOKEN}/setWebhook \
+     -H "Content-Type: application/json" \
+     -d '{"url": "https://tu-ngrok-url.ngrok.io/telegram/webhook"}'
+   ```
+
+3. **Ejecutar el Bot**
+   ```bash
+   # Instalar dependencias
+   poetry install
+   
+   # Configurar variables de entorno
+   export TELEGRAM_BOT_TOKEN="tu-token-aqui"
+   export GOOGLE_AI_STUDIO_API_KEY="tu-api-key-aqui"
+   
+   # Ejecutar servidor
+   poetry run python telegram_main.py
+   ```
+
 ### 🏗️ Arquitectura Híbrida
 
 El sistema implementa una arquitectura híbrida que combina:
@@ -212,37 +263,70 @@ NO_INPUT_TIMEOUT_SECONDS=300
 ACTIVITY_LOGGING_ENABLED=true
 ```
 
-## � Estructura del Proyecto
+## 📁 Estructura del Proyecto
 
 ```
 dr-clivi/
 ├── dr_clivi/                    # Código principal
 │   ├── __init__.py
 │   ├── config.py               # Configuración con Pydantic
+│   ├── agent.py                # Agente principal ADK
 │   ├── agents/                 # Implementación de agentes
 │   │   ├── base_agent.py       # Clase base común
 │   │   ├── coordinator.py      # Coordinador principal
 │   │   ├── diabetes_agent.py   # Agente de diabetes
 │   │   └── obesity_agent.py    # Agente de obesidad
-│   ├── flows/                  # Flujos determinísticos
+│   ├── flows/                  # Flujos determinísticos y páginas
 │   │   ├── deterministic_handler.py  # Lógica híbrida principal
-│   │   └── pages/              # Páginas de interfaz
+│   │   ├── agents/             # Agentes de flujo ADK
+│   │   │   ├── diabetes_flow.py # Agente de flujo diabetes
+│   │   │   └── obesity_flow.py  # Agente de flujo obesidad
+│   │   ├── core/               # Núcleo de renderizado
+│   │   │   ├── page_renderer.py # Renderizado de páginas
+│   │   │   ├── page_router.py   # Enrutamiento de páginas
+│   │   │   └── page_types.py    # Tipos de páginas
+│   │   └── dialogflow_pages/   # Páginas Dialogflow modulares
 │   │       ├── appointment_pages.py  # Gestión de citas
 │   │       ├── diabetes_pages.py     # Flujos de diabetes
 │   │       └── obesity_pages.py      # Flujos de obesidad
 │   ├── telegram/               # Integración Telegram
 │   │   └── telegram_handler.py # Handler de webhooks y mensajes
-│   └── tools/                  # Herramientas especializadas
-│       ├── messaging.py        # WhatsApp Business API
-│       ├── image_processing.py # Procesamiento de imágenes
-│       └── generative_ai.py    # IA generativa fallback
-├── telegram_main.py            # Servidor FastAPI para Telegram
+│   └── tools/                  # Herramientas especializadas ADK
+│       ├── clivi_tools.py      # Herramientas Clivi
+│       └── whatsapp_tools.py   # Herramientas WhatsApp
+├── scripts/                    # Scripts de utilidad
+│   ├── quick_start.py          # Inicio rápido
+│   ├── telegram_main.py        # Servidor FastAPI para Telegram
+│   ├── telegram_polling.py     # Modo polling para desarrollo
+│   ├── setup/                  # Scripts de configuración
+│   │   ├── check_config.py     # Verificación de configuración
+│   │   ├── check_status.py     # Verificación de estado
+│   │   ├── setup_credentials.py # Configuración de credenciales
+│   │   ├── setup_ngrok.py      # Configuración de ngrok
+│   │   ├── setup_telegram.py   # Configuración de Telegram
+│   │   └── setup_webhook_production.py # Webhook producción
+│   └── tools/                  # Herramientas de desarrollo
+│       ├── debug_intelligent_routing.py # Debug routing
+│       └── migrate_dialogflow_pages.py  # Migración (histórico)
+├── examples/                   # Ejemplos de uso
+│   ├── example_usage.py        # Ejemplo general
+│   ├── quick_ask_demo.py       # Demo funcionalidad Ask
+│   └── demo_backend_integration.py # Demo integración backend
 ├── docs/                       # Documentación
 │   ├── analysis/              # Análisis de flujos exportados
 │   ├── conversational-agents-export/  # Archivos exportados
-│   └── implementation-summary.md      # Resumen ejecutivo
-├── test_agents.py             # Suite de pruebas completa
-├── pyproject.toml            # Configuración del proyecto
+│   └── *.md                   # Documentación adicional
+├── tests/                      # Suite de pruebas
+│   ├── test_agents.py         # Pruebas de agentes
+│   ├── test_dialogflow_flows.py # Pruebas de flujos
+│   └── *.py                   # Otras pruebas
+├── logs/                       # Archivos de registro
+│   ├── telegram_logs.txt       # Logs de Telegram
+│   └── telegram_local_test.log # Logs de pruebas locales
+├── telegram_conversations/     # Conversaciones guardadas
+├── test_adk_compliance.py      # Test de cumplimiento ADK
+├── ADK_COMPLIANCE_REPORT.md    # Reporte de cumplimiento
+├── pyproject.toml             # Configuración del proyecto
 └── README.md
 ```
 
@@ -576,7 +660,7 @@ La integración con la plataforma Clivi se realiza a través de:
    - **Citas**: Sistema de gestión de citas médicas
    - **Mensajería**: WhatsApp Business API directa
 
-3. **Webhooks Identificados en el Análisis**
+3. **Webhooks Identificados en el Análisis
    ```
    https://n8n.clivi.com.mx/webhook/imgfile-measurement-recognition
    https://n8n.clivi.com.mx/webhook/appointment
