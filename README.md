@@ -7,7 +7,7 @@
 
 ## 📋 Resumen
 
-Dr. Clivi es un sistema avanzado de asistencia médica multi-agente construido para migrar desde Google Cloud Conversational Agents (ex-Dialogflow CX) a Google ADK (Agent Development Kit). El sistema proporciona atención especializada para diabetes y obesidad a través de WhatsApp, usando agentes especializados con inteligencia artificial.
+Dr. Clivi es un sistema avanzado de asistencia médica multi-agente construido para migrar desde Google Cloud Conversational Agents (ex-Dialogflow CX) a Google ADK (Agent Development Kit). El sistema proporciona atención especializada para diabetes y obesidad a través de WhatsApp O Telegram en esta version, usando agentes especializados con inteligencia artificial.
 
 ### 🚀 Características Principales
 
